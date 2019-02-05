@@ -33,3 +33,7 @@ button {
 .hidden {
     background-color: gray;
 }
+
+.hidden-2 {
+    color: white;
+}
