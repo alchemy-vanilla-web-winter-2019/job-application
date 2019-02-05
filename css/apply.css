@@ -143,6 +143,10 @@ hr {
     color: #92CDED;
 }
 
+#results p {
+    margin: 35px 0px;
+}
+
 #results a {
     border: 1px solid #92CDED;
     padding: 10px 15px;
@@ -150,6 +154,6 @@ hr {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    margin: 35px;
+    margin: 55px;
     font-size: 18px;
 }

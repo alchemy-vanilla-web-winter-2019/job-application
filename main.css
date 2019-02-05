@@ -42,6 +42,13 @@ header a:hover {
     background: #e2edef;
 }
 
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 50px;
+}
+
 h1 {
     font-family: 'Lato', sans-serif;
     font-weight: bold;
@@ -64,14 +71,14 @@ main {
 
 
 #apply-button {
-    display: flex;
     border: 1px solid #92CDED;
     padding: 10px 15px;
-    background: #C7EBF0;
+    background: #F7AEF8;
     text-decoration: none;
     text-transform: uppercase;
-    color: #F7AEF8;
-    margin: 15px;
+    color: white;
+    margin-bottom: 55px;
+    font-size: 22px;
 }
 
 footer {
