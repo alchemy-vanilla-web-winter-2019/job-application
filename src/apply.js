@@ -57,6 +57,7 @@ noEscapeNode.addEventListener('change', function() {
 userInputNode.addEventListener('submit', function(event) {
     event.preventDefault();
 
+    // eslint-disable-next-line no-unused-vars
     const applicant = {
         name: nameNode.value,
         city: cityNode.value,
