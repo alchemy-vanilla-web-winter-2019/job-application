@@ -16,25 +16,44 @@
             <legend>Personal Info:</legend>
             <p>
                 <label>Name:</label>
-                <input type="text">
+                <input type="text" id="name" value="" name="name">
             </p>
             <p>
                 <label>Email:</label>
-                <input type="email">
+                <input type="email" id="email" value="">
             </p>
             <p>
                 <label>Phone No.:</label>
-                <input type="tel">
+                <input type="tel" id="phone" value="">
             </p>
         </fieldset>
         
         <fieldset>
             <legend>Gender:</legend>
+            <p>
+                <label>Gender:</label>
+                <input type="text" id="gender" value="">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Full-time or Part-time desired:</legend>
+            
         </fieldset>
 
         <fieldset>
             <legend>Position Applying For:</legend>
+            <label>Positions Available:</label>
+            <select id="positions-available">
+                <option value="">-Please choose a position-</option>
+                <option value="front-end">Front-end Developer</option>
+                <option value="back-end">Back-end Developer</option>
+                <option value="full-stack">Full Stack Developer</option>
+                <option value="devops">DevOps</option>
+            </select>
         </fieldset>
+
+        <button type="submit">Submit</button>
     </form>
 
     <script type="module" src="./src/apply.js"></script>
