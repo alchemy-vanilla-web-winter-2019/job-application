@@ -50,6 +50,7 @@ formNode.addEventListener('submit', function(event) {
         hours: hoursNode.value,
         genres: genreSelections
     };
-    return applicant;
-
+    const jsonApplicant = JSON.stringify(applicant);
+    window.localStorage.setItem('applicant', jsonApplicant);
+    window.location = './applicant-details.html';
 });
