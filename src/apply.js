@@ -84,6 +84,6 @@ applicationFormNode.addEventListener('submit', function() {
     }
 
     else {
-        document.location = '/pages/application-accepted.html';
+        document.location = '/pages/application-review.html';
     }
 });
