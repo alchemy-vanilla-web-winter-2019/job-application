@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="apply.css">
+    <title>Full-Time Netflix Viewer Job Application</title>
+</head>
+<body>
+    <header>
+        <h1>Full-Time Netflix Viewer Job Application</h1>
+    </header>
+    <main>
+        <form id="form">
+            <section id="personal-information">
+                <h2>Personal Information</h2>
+                <p>
+                    <label for="first-name">First Name:</label>
+                    <input
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        minlength="1"
+                        autocomplete="off"
+                        required
+                    >
+                </p>
+                <p>
+                    <label for="last-name">Last Name:</label>
+                    <input
+                        type="text"
+                        name="last-name"
+                        id="last-name"
+                        minlength="1"
+                        autocomplete="off"
+                        required
+                    >
+                </p>
+                <p>
+                    <label for="zip-code">Zip Code:</label>
+                    <input
+                        type=""
+                        name="zip-code"
+                        id="zip-code"
+                        minlength="5"
+                        autocomplete="off"
+                        required
+                    >
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        minlength="1"
+                        autocomplete="off"
+                        required
+                    >
+                </p>
+            </section>
+            <section id="experience">
+                <h2>Experience</h2>
+                <p>Have you used Netflix before?</p>
+                <p>
+                    <label for="yes-netflix">Yes</label>
+                    <input
+                        type="radio"
+                        name="yes-netflix"
+                        id="yes"
+                        value="yes"
+                    >
+                    <label for="no-netflix">No</label>
+                    <input
+                        type="radio"
+                        name="no-netflix"
+                        id="no"
+                        value="no"
+                    >
+                </p>
+                <p>If yes - how long?</p>
+                <p>
+                    <label for=length>Length:</label>
+                    <select id="length" name="length">
+                        <option value="0-2">0-2 years</option>
+                        <option value="2-6">2-6 years</option>
+                        <option value="6-10">6-10 years</option>
+                    </select>
+                </p>
+                <p>How many hours can you watch Netflix until you fall asleep?</p>
+                <p>
+                   <label for="hours">Hours:</label>
+                   <input
+                        type="number"
+                        id="hours"
+                        minlength="1"
+                   >
+                </p>
+            </section>
+            <section>
+                <h2>Interests</h2>
+                <p>What genres do you enjoy watching?</p>
+                <p id=genre class="genre">
+                    <label for="action">Action</label>
+                    <input
+                        type="checkbox"
+                        id="action"
+                        name="genre[]"
+                        value="action"
+                    >
+                    <label for="rom-com">Romantic Comedy</label>
+                    <input
+                        type="checkbox"
+                        id="rom-com"
+                        name="genre[]"
+                        value="action"
+                    >
+                    <label for="sci-fi">Science Fiction</label>
+                    <input
+                        type="checkbox"
+                        id="sci-fi"
+                        name="genre[]"
+                        value="sci-fi"
+                    >
+                    <label for="documentary">Documentary</label>
+                    <input
+                        type="checkbox"
+                        id="documentary"
+                        name="genre[]"
+                        value="documentary"
+                    >
+                </p>
+            </section>
+            <p><button>Submit Application</button></p>
+        </form>
+
+    </main>
+    <footer>
+        <p>&copy; Leslie Shea 2019</p>
+    </footer>
+    <script type="module" src="../src/apply.js"></script>
+</body>
+</html>

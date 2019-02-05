@@ -1,0 +1,36 @@
+header {
+    display: flex;
+    justify-content: center;
+}
+footer {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    font-family: monospace;
+}
+
+h1 {
+    background-color: red;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+a:hover {
+    background: red;
+    color: white;
+}
