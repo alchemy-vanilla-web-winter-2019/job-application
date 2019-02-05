@@ -7,24 +7,25 @@ const yesNode = document.getElementById('yes-netflix');
 const noNode = document.getElementById('no-netflix');
 const lengthTimeNode = document.getElementById('length-time');
 const hoursNode = document.getElementById('hours');
+const lengthNode = document.querySelectorAll('.length');
 
 
 yesNode.addEventListener('change', function() {
     if(yesNode.checked) {
-        // const hidden = document.getElementsByClassName('length');
-        // hidden.classList.remove('hidden');
+        for(let index = 0; index < lengthNode.length; index++) {
+            lengthNode[index].classList.remove('hidden');
+        }
         lengthTimeNode.disabled = false;
-        lengthTimeNode.checked = true;
-        
+        lengthTimeNode.classList.remove('hidden');
     }
 });
 
 noNode.addEventListener('change', function() {
     if(noNode.checked) {
-        // const hidden = document.getElementsByClassName('length');
-        // hidden.classList.add('hidden');
+        for(let index = 0; index < lengthNode.length; index++) {
+            lengthNode[index].classList.add('hidden');
+        }
         lengthTimeNode.disabled = true;
-        lengthTimeNode.checked = false;
         lengthTimeNode.classList.add('hidden');
     }
 });

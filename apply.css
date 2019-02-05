@@ -28,3 +28,7 @@ button:hover {
 .hidden {
     color: gray;
 }
+
+.grey-out {
+    color: gray;
+}
