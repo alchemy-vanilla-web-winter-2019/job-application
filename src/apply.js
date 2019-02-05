@@ -1,13 +1,13 @@
 const applicationFormNode = document.getElementById('application-form');
 const nameNode = document.getElementById('name');
-const cityNode = document.getElementById('city');
-const computersNode = document.getElementById('computers');
-const artsNode = document.getElementById('arts');
-const musicNode = document.getElementById('music');
-const engineeringNode = document.getElementById('engineering');
-const domesticNode = document.getElementById('domestic');
+// const cityNode = document.getElementById('city');
+// const computersNode = document.getElementById('computers');
+// const artsNode = document.getElementById('arts');
+// const musicNode = document.getElementById('music');
+// const engineeringNode = document.getElementById('engineering');
+// const domesticNode = document.getElementById('domestic');
 
-const strongestSkill = [];
+let strongestSkill = "";
 
 // console.log(applicationFormNode);
 // console.log(nameNode);
@@ -24,16 +24,15 @@ applicationFormNode.addEventListener('submit', function() {
 
     for(let index = 0; index < skills.length; index++) {
         if(skills[index].checked) {
-            console.log(skills[index].value);
+            strongestSkill = skills[index].value;
         }
     }
 
-    // console.log(skills);
 
 
     const applicant = {
-        name: nameNode.value
-        // skill: 
+        name: nameNode.value,
+        skill: strongestSkill
     };
     
     console.log(applicant);
