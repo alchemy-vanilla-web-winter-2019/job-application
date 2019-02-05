@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const formNode = document.getElementById('application');
 const nameNode = document.getElementById('name');
 const cityNode = document.getElementById('city');

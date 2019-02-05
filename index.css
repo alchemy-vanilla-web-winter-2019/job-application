@@ -1,12 +1,14 @@
 header {
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
+    background: lightcoral;
 }
 
 main {
     display: flex;
     justify-content: center;
+    background: lightblue;
+    padding: 60px;
 }
 
 a {
@@ -14,6 +16,7 @@ a {
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
+    background: lightgreen;
 }
 
 a:hover {
@@ -21,8 +24,11 @@ a:hover {
     color: white;
 }
 
+a:visited {
+    color: black;
+}
+
 footer {
-    margin-top: 60px;
     padding: 20px;
     background: black;
     color: white;

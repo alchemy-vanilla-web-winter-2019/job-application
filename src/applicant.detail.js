@@ -8,8 +8,6 @@ const certified = document.getElementById('certified');
 const type = document.getElementById('type');
 const message = document.getElementById('message');
 
-console.log(applicant);
-
 name.textContent = applicant.name;
 city.textContent = applicant.city;
 if(applicant.experience === '0') {
