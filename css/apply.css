@@ -127,3 +127,29 @@ hr {
     height: 3px;
     margin: 35px 5px 35px 5px;
 }
+
+#results {
+    text-align: center;
+    padding: 25px 0px;
+    margin: 0px 25px;
+}
+
+#results h2 {
+    color: #F7AEF8;
+
+}
+
+#results h3 {
+    color: #92CDED;
+}
+
+#results a {
+    border: 1px solid #92CDED;
+    padding: 10px 15px;
+    background: #F7AEF8;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    margin: 35px;
+    font-size: 18px;
+}
