@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./apply.css">
     <title>Ninja Application</title>
 </head>
 <body>
     <header>
         <h1>Ninja Application</h1>
-        <a href="./index.html">Home</a>
+        <a href="./index.html" class="link">Home</a>
     </header>
     <main>
         <section>
@@ -23,13 +24,15 @@
                     </p>
                 </div>
                 <div>
-                    <label>                        
-                        Have you ever assassinated someone?
-                        <p>
-                            Yes <input type="radio" name="assassination" value="yes">
-                            No <input type="radio" name="assassination" value="no">
-                        </p>
-                    </label>
+                    <p>
+                        <label>                        
+                            Have you ever assassinated someone?
+                            <div class="assassination-radios">                                
+                                Yes <input type="radio" name="assassination" value="yes">
+                                No <input type="radio" name="assassination" value="no">                            
+                            </div>                                                            
+                        </label>
+                    </p>
                 </div>
                 <div>
                     <p>
@@ -49,36 +52,40 @@
                 <div>
                     <fieldset>
                         <legend>Skills</legend>
-                            <p>
+                            <p class="skills">
                                 <input type="checkbox" name="skills" value="knife"> Knife
                             </p>
-                            <p>
+                            <p class="skills">
                                 <input type="checkbox" name="skills" value="silence"> Silence
                             </p>
-                            <p>
+                            <p class="skills">
                                 <input type="checkbox" name="skills" value="poisons"> Poisons
                             </p>
-                            <p>                                
+                            <p class="skills">                                
                                 <input type="checkbox" name="skills" value="patience"> Patience
                             </p>
-                            <p>                                
+                            <p class="skills">                                
                                 <input type="checkbox" name="skills" value="shuriken"> Shuriken
                             </p>
-                            <p>    
+                            <p class="skills">    
                                 <input type="checkbox" name="skills" value="sword"> Sword    
                             </p>
                     </fieldset>
                 </div>
-                <div>
+                <div class="snuck">
                     <p>                        
                         <label>
                             Tell us about the last time you snuck up on someone:
-                            <textarea name="snuck" cols="60" rows="10" placeholder="Enter your story here..."></textarea>
+                            <p>                                
+                                <textarea name="snuck" cols="60" rows="10" placeholder="Enter your story here..."></textarea>
+                            </p>
                         </label>
                     </p>
                 </div>
-                <div>
-                    <button id="submit-button" type="submit" name="submit">Submit Application</button>
+                <div class="button">
+                    <p class="button">                        
+                        <button id="submit-button" type="submit" name="submit">Submit Application</button>
+                    </p>
                 </div>
             </form>
         </section>
