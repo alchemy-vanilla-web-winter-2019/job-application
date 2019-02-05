@@ -55,4 +55,6 @@ formNode.addEventListener('submit', function(event) {
         cuddles: cuddleTypes
     };
 
+    console.log("Hello");
+
 });
