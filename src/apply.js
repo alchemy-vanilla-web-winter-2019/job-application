@@ -74,9 +74,10 @@ applicationFormNode.addEventListener('submit', function() {
 
     
     if(applicant.morality >= 3) {
-
+        document.location = '/pages/application-denied.html';
     }
 
     else {
+        document.location = '/pages/application-accepted.html';
     }
 });
