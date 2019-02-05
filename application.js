@@ -21,7 +21,7 @@ addEventListener('submit', function(){
     for(let i = 0; i < pizza.length; i++){
         const choices = pizza[i];
         if(choices.checked){
-            pizzaPreference[i] = choices.value;
+            pizzaPreference.push(choices.value);
         }
     }
     
