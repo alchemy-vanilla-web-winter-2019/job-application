@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="apply.css">
+    <title>Application</title>
+</head>
+<body>
+    <header>
+        <h1>Rental Application</h1>
+    </header>
+    <main>
+        <form id="detail-form">
+            <section id="section-one">
+                <h2>About You</h2>
+                <p>
+                    <label for="name">Name:</label>
+                    <input 
+                        type="text"
+                        name="name"
+                        id="name"
+                        minlength="2"
+                        required
+                    >
+                </p>
+                <p>
+                    <p id="status">Marital Status:</p>
+                    <label for="married">Married:</label>
+                    <input  
+                        type="radio"
+                        name="status"
+                        id="married"
+                        required
+                    >
+                    <label for="no">Single:</label>
+                    <input  
+                        type="radio"
+                        name="status"
+                        id="single"
+                        required
+                    >
+                </p>
+        </section>
+        <section id="income">
+            <h2>Job and Income</h2>
+            <p>
+                <p>Are you currently employed?</p>
+                <label for="yes">Yes:</label>
+                <input  
+                    type="radio"
+                    id="yes"
+                    name="employment"
+                >
+                <label for="no">No:</label>
+                <input
+                    type="radio"
+                    id="no"
+                    name="employment"
+                > 
+            </p>
+            <p>
+                <label for="salary">If YES, what is your current salary?</label>
+                <select id="salary" name="salary" required>
+                    <option value="" hidden disable selected>Choose a range</option>
+                    <option value="0-30">$0 to $30,000</option>
+                    <option value="31-60">$31,000 to $60,000</option>
+                    <option value="61-over">$61,000 & over</option>
+                </select>
+            </p>
+        </section>
+        <section id="lifestyle">
+            <h2>Your Lifestyle</h2>
+            <p class="habits">Please check all items that apply to you:</p>
+            <p id="habits" class="habits">
+                <label for="light-sleeper">Light Sleeper</label>
+                <input  
+                type="checkbox"
+                id="light-sleeper"
+                name="habits[]"
+                value="light-sleeper"
+                >
+                <p>
+                    <label for="smoker">Tobacco Smoker</label>
+                    <input  
+                        type="checkbox"
+                        id="smoker"
+                        name="habits[]"
+                        value="smoker"
+                    >
+                </p>
+                <p>
+                    <label for="party-animal">Party Animal</label>
+                    <input  
+                        type="checkbox"
+                        id="party-animal"
+                        name="habits[]"
+                        value="party-animal"
+                    >
+                </p>
+                <p>
+                    <label for="mooch">I like to eat other people's food</label>
+                    <input  
+                        type="checkbox"
+                        id="mooch"
+                        name="habits[]"
+                        value="mooch"
+                    >
+                </p>
+                <label for="easygoing">Easygoing</label>
+                    <input
+                        type="checkbox"
+                        id="easygoing"
+                        name="habits[]"
+                        value="easygoing"
+                    >
+            </p>
+        </section>
+        <button>Submit Application</button>
+        </form>
+    </main>
+    <script type="module" src="./src/apply.js"></script>
+</body>
+</html>
