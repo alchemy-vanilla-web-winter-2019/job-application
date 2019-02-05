@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Apply for Dweebhood</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Apply for Dweebhood</h1>
+        <section id="dweeb-image">
+            <a href="./index.html"><img src="./assets/kubo.jpg" alt="nerd human"></a> 
+        </section>
+    </header>
+    
+    <main>
+        <form id="form">
+            
+            <fieldset>
+                <legend>Call Sign</legend>
+
+                <label>
+                    Name: <input type="text" name="name" placeholder="Rogue One">
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                 <legend>Hail from where, do you?</legend>
+
+                Homeworld <input type="text" name="homeWorld" placeholder="Q'onoS">
+                City <input type="text" name="homeCity" placeholder="Cloud City">
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Origin Story</legend>
+
+                <label>
+                    <textarea name="story" id="origin-story" cols="90" rows="6"></textarea>
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>With who does your Loyalty Lie?</legend>
+                
+                <label>
+                    Han Solo<input type="radio" name="loyalty" value="han-solo">
+                </label>
+                
+                <label>
+                    Picard<input type="radio" name="loyalty" value="picard">
+                </label>
+                
+                <label>
+                    Shiro<input type="radio" name="loyalty" value="shiro">
+                </label>
+            
+            </fieldset>
+
+            <fieldset>
+                <legend>Between 0 and Sheldon Cooper, how well can you math?</legend>
+                
+                <label>
+                    <input type="range" name="code-scale" id="math-prowess" min="0" max="10">
+                    <span id="how-well-do-you-code">5</span>
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Of which religions do you follow?</legend>
+
+                <label>
+                    StarTrek<input type="checkbox" name="religions" value="star-trek">
+                </label>
+                <label>
+                    D&D<input type="checkbox" name="religions" value="dnd">
+                </label>
+                <label>
+                    Marvel<input type="checkbox" name="religions" value="marvel">
+                </label>
+                <label>
+                    Buffy<input type="checkbox" name="religions" value="buffy">
+                </label>
+                <label>
+                    Voltron<input type="checkbox" name="religions" value="voltron">
+                </label>
+                <label>
+                    Death Note<input type="checkbox" name="religions" value="death-note">
+                </label>
+                <label>
+                    Star Wars<input type="checkbox" name="religions" value="star-wars">
+                </label>
+            </fieldset>
+
+    
+            
+            
+            <button id="Apply">Apply</button>
+
+        </form>
+
+    </main>
+                
+
+    <script src="./src/main.js"></script>
+</body>
+</html>
