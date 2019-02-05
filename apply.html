@@ -16,28 +16,34 @@
             <form id="application-form">
                 <div>
                     <p>
-                        Name:
-                        <input id="name-input" type="text" name="name">
+                        <label>                        
+                            Name:
+                            <input id="name-input" type="text" name="name">
+                        </label>
                     </p>
                 </div>
                 <div>
-                    Have you ever assassinated someone?
-                    <p>
-                        Yes <input type="radio" name="assassination" value="yes">
-                        No <input type="radio" name="assassination" value="no">
-                    </p>
+                    <label>                        
+                        Have you ever assassinated someone?
+                        <p>
+                            Yes <input type="radio" name="assassination" value="yes">
+                            No <input type="radio" name="assassination" value="no">
+                        </p>
+                    </label>
                 </div>
                 <div>
                     <p>
-                        What color are your clothes?
-                        <select name="clothes">
-                            <option value="white">White</option>
-                            <option value="blue">Blue</option>
-                            <option value="red">Red</option>
-                            <option value="dark">Dark</option>
-                            <option value="black">Black</option>
-                            <option value="night">Night</option>
-                        </select>
+                        <label>                            
+                            What color are your clothes?
+                            <select name="clothes">
+                                <option value="white">White</option>
+                                <option value="blue">Blue</option>
+                                <option value="red">Red</option>
+                                <option value="dark">Dark</option>
+                                <option value="black">Black</option>
+                                <option value="night">Night</option>
+                            </select>
+                        </label>
                     </p>
                 </div>
                 <div>
@@ -64,7 +70,12 @@
                     </fieldset>
                 </div>
                 <div>
-                    
+                    <p>                        
+                        <label>
+                            Tell us about the last time you snuck up on someone:
+                            <textarea name="snuck" cols="60" rows="10" placeholder="Enter your story here..."></textarea>
+                        </label>
+                    </p>
                 </div>
                 <div>
                     <button id="submit-button" type="submit" name="submit">Submit Application</button>

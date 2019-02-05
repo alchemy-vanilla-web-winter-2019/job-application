@@ -7,7 +7,7 @@ applicationFormNode.addEventListener('submit', function(event) {
     const skillsArray = [];
     for(let i = 0; i < applicationFormNode.skills.length; i++) {
         if(applicationFormNode.skills[i].checked) {
-            skillsArray.push(applicationFormNode.skills[i].value)
+            skillsArray.push(applicationFormNode.skills[i].value);
         }   
     }
 
@@ -15,7 +15,8 @@ applicationFormNode.addEventListener('submit', function(event) {
         name: applicationFormNode.name.value,
         assassination: applicationFormNode.assassination.value,
         clothes: applicationFormNode.clothes.value,
-        skills: skillsArray
+        skills: skillsArray,
+        snuck: applicationFormNode.snuck.value
     };
     console.log('New App', newApplication);
 });
