@@ -13,7 +13,63 @@
     </header>
     <main>
         <section>
-            
+            <form id="application-form">
+                <div>
+                    <p>
+                        Name:
+                        <input id="name-input" type="text" name="name">
+                    </p>
+                </div>
+                <div>
+                    Have you ever assassinated someone?
+                    <p>
+                        Yes <input type="radio" name="assassination" value="yes">
+                        No <input type="radio" name="assassination" value="no">
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        What color are your clothes?
+                        <select name="clothes">
+                            <option value="white">White</option>
+                            <option value="blue">Blue</option>
+                            <option value="red">Red</option>
+                            <option value="dark">Dark</option>
+                            <option value="black">Black</option>
+                            <option value="night">Night</option>
+                        </select>
+                    </p>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Skills</legend>
+                            <p>
+                                <input type="checkbox" name="skills" value="knife"> Knife
+                            </p>
+                            <p>
+                                <input type="checkbox" name="skills" value="silence"> Silence
+                            </p>
+                            <p>
+                                <input type="checkbox" name="skills" value="poisons"> Poisons
+                            </p>
+                            <p>                                
+                                <input type="checkbox" name="skills" value="patience"> Patience
+                            </p>
+                            <p>                                
+                                <input type="checkbox" name="skills" value="shuriken"> Shuriken
+                            </p>
+                            <p>    
+                                <input type="checkbox" name="skills" value="sword"> Sword    
+                            </p>
+                    </fieldset>
+                </div>
+                <div>
+                    
+                </div>
+                <div>
+                    <button id="submit-button" type="submit" name="submit">Submit Application</button>
+                </div>
+            </form>
         </section>
     </main>
     <footer>
