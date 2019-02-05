@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>apply</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <h1>Job Application</h1>
+    </header>
+
+    <main>  
+        <p>Please Fill out:</p>
+        <form id="job-app">
+            <section>
+                <p>
+                    <label for="name">Name:</label>       
+                    <input type="text" name="name" id="name">             
+                </p>
+            </section>
+            <section>
+                <p>
+                    <label for="positions">Positions</label>
+                    <select id="positions" name="positions">
+                        <option hidden disabled selected>Choose one</option>
+                            <option value="ticket-office">Ticket Office</option>
+                            <option value="concessions">Concessions</option>
+                            <option value="janitorial">Janitorial</option>
+                    </select>
+                </p>
+            </section>
+            <section>
+                <p>
+                    <label for="popcorn">How much do you like popcorn</label>
+                    <p>
+                        <span>hate it</span>
+                        <input type="range" name="popcorn" id="popcorn" min="0" max="10">
+                        <span>love it</span>
+                    </p>
+                </p>
+            </section>
+
+            <section>
+                <fieldset>
+                    <legend>Do romantic comedies make you nauseous?</legend>
+                    <label for="yes">yes</label>
+                    <input type="radio" name="rom-com" id="yes" value="yes">
+                    <br>
+                    <label for="no">no</label>
+                    <input type="radio" name="rom-com" id="no" value="no">
+                </fieldset>
+            </section>
+
+            <section>
+                <fieldset>
+                    <legend>Favorite Types of Movies</legend>
+                    <label for="action">Action</label>
+                    <input type="checkbox" name="films" id="action" value="action">
+                    <label for="horror">Horror</label>
+                    <input type="checkbox" name="films" id="horror" value="horror">
+                    <label for="comedy">Comedy</label>
+                    <input type="checkbox" name="films" id="comedy" value="comedy">
+                    <label for="docu">Documentaries</label>
+                    <input type="checkbox" name="films" id="docu" value="docu">
+                </fieldset>
+            </section>
+
+
+            <section>
+                <button id="submit">APPLY HERE</button>
+            </section>
+
+
+
+
+        </form>
+
+
+    </main>
+
+    <footer></footer>
+
+
+    <script type="module" src=".src/main.js"></script>
+</body>
+</html>
