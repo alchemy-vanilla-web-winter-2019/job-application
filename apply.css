@@ -6,3 +6,7 @@ body{
 a{
     color:rgb(114, 15, 11);
 }
+
+button{
+    margin-top: 15px;
+}
