@@ -14,5 +14,6 @@ applicationForm.addEventListener('submit', function(event) {
         gender: genderNode.value
     };
 
+    // eslint-disable-next-line no-console
     console.log('hi', submitForm);
 });
