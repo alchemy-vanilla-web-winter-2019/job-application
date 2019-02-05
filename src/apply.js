@@ -59,7 +59,7 @@ applicationFormNode.addEventListener('submit', function() {
     if(applicant.skill === 'computers') {
         jobTitle = 'Junior Data Entry Clerk';
     }
-    else if(applicant.skill === 'arts') {
+    else if(applicant.skill === 'art') {
         jobTitle = 'Apprentice Business Card Designer';
     }
     else if(applicant.skill === 'music') {
@@ -85,10 +85,6 @@ applicationFormNode.addEventListener('submit', function() {
         preSumbitNode.style.display = 'none';
         resultsNode.innerHTML = jobOffer;
         resultsNode.style.display = 'block';
-        returnToTop();
+        window.scrollTo(0, 0);
     }
 });
-
-function returnToTop() {
-    document.getElementById('return').click();
-}
