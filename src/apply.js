@@ -7,6 +7,7 @@ const employmentNode = document.getElementsByName('employment');
 const yesEmployedNode = document.getElementById('yes');
 const noEmployedNode = document.getElementById('no');
 const salaryNode = document.getElementById('salary');
+const emailNode = document.getElementById('email');
 
 marriedNode.addEventListener('change', function() {
     if(marriedNode.checked) {
@@ -53,7 +54,8 @@ formNode.addEventListener('submit', function(event) {
         status: statusNode.value,
         employment: employmentNode.value,
         salary: salaryNode.value,
-        habitList: habitsSelected
+        habitList: habitsSelected,
+        email: emailNode.value
     };
 
     const jsonApplicant = JSON.stringify(applicant);
