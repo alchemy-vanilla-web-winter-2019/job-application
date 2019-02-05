@@ -69,17 +69,17 @@ applicationFormNode.addEventListener('submit', function() {
         jobTitle = 'Apprentice Business Card Designer';
     }
     else if(applicant.skill === 'music') {
-        jobTitle = 'Assistant to the Regional Corporate Podcast Lead Sound Engineer';
+        jobTitle = 'Corporate Podcast Sound Engineer Intern';
     }
     else if(applicant.skill === 'engineering') {
-        jobTitle = 'General Contractor\'s Support Laborer';
+        jobTitle = 'Support Laborer to the Regional General Contractor';
     }
-    else if(applicant.skill === 'domestic') {
+    else if(applicant.skill === 'cooking') {
         jobTitle = 'Associate Cafeteria Assistant';
     }
 
     
-    if(applicant.morality >= 3) {
+    if(applicant.morality >= 4) {
         const rejection = '<p>Thank you for your application, ' + applicant.name + '!</p>' + '<p>Unfortunately, based on your morality score, you seem like a very selfless person who would be willing to risk their own safety to ensure the safety of others. At The Good Company, we expect our employees to make their own personal safety their number one priority. Therefore, we will not be able to offer you employment at this time. Please try to increase your sense of self-preservation and apply again at a later date.</p><p><a id="accept-job" href="index.html">Return Home</a></p>';
         preSumbitNode.style.display = 'none';
         resultsNode.innerHTML = rejection;

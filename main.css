@@ -51,6 +51,11 @@ header a:hover {
     margin: 25px 50px;
 }
 
+#intro h1 {
+    width: 60%;
+    margin-right: 25px;
+}
+
 h1 {
     font-family: 'Lato', sans-serif;
     font-weight: bold;
