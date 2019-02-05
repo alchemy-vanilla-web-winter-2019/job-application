@@ -33,7 +33,7 @@
       <p>
         <label for="claustrophobic">How claustrophobic are you? (0 being not at all)</label>
         <br>
-        <input type="range" name ="claustrophobic" id="claustrophobic">
+        <input type="range" name ="claustrophobic" id="claustrophobic" min="0" max="10">
         <span id="slider-display"></span>
       </p>
 
@@ -41,13 +41,13 @@
         <legend>Select Your Space Gear</legend>
 
         <label for="space-suit">Extravehicular Mobility Unit (Spacesuit):</label>
-        <input type="checkbox" name="space-gear" id="space-suit"> 
+        <input type="checkbox" name="spacegear" id="space-suit" value="spacesuit"> 
 
         <label for="space-boots">Spaceboots:</label>
-        <input type="checkbox" name="space-gear" id="space-boots">
+        <input type="checkbox" name="spacegear" id="space-boots" value="spaceboots">
 
         <label for="helmet">Helmet:</label>
-        <input type="checkbox" name="space-gear" id="helmet">
+        <input type="checkbox" name="spacegear" id="helmet" value="helmet">
 
       </fieldset>
 
