@@ -2,8 +2,9 @@ const application = document.getElementById('application');
 const heroName = document.getElementById('hero-name');
 const alias = document.getElementById('alias');
 /* eslint-disable-next-line */
-const profession = document.getElementsByName('profession');    //this lints as not used, but it's used in applicant.profession in eventListener
+// const profession = document.getElementsByName('profession');    //this lints as not used, but it's used in applicant.profession in eventListener
 const combatNodeList = document.getElementsByName('combat');
+const joinReason = document.getElementById('join-reason');
 
 
 const applicant = {};
@@ -16,6 +17,8 @@ application.addEventListener('submit', function(event) {
     applicant.alias = alias.value;
     applicant.profession = application.profession.value;
     applicant.combat = combatStyles;
+    applicant.joinReason = joinReason.value;
+
 
     for(let i = 0; i < combatNodeList.length; i++) {
         const style = combatNodeList[i];
