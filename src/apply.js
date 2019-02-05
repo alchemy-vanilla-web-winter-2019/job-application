@@ -31,7 +31,7 @@ noNode.addEventListener('change', function() {
 });
 
 formNode.addEventListener('submit', function(event) {
-    event.defaultPrevented();
+    event.preventDefault();
 
     const genres = document.getElementsByName('genre[]');
     const genreSelections = [];
@@ -50,6 +50,6 @@ formNode.addEventListener('submit', function(event) {
         hours: hoursNode.value,
         genres: genreSelections
     };
-    console.log(applicant);
+    return applicant;
 
 });
