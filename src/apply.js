@@ -35,6 +35,8 @@ formNode.addEventListener('submit', function(event) {
         comfort: comfortNode.value,
         burial: burialNode.value
     };
-    console.log(applicant);
-    
+    const serializeApplication = JSON.stringify(applicant);
+    console.log(serializeApplication);
+    window.localStorage.setItem('job-applicant', serializeApplication);
+    window.location = 'applicant-details.html';
 });
