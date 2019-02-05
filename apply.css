@@ -30,7 +30,11 @@ section {
 }
 
 button {
-    font-size: 20px;
+    font-size: 15px;
     background: yellow;
     margin-top: 10px;
+}
+
+.hidden {
+    color: gray;
 }
