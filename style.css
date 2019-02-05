@@ -28,6 +28,20 @@ form {
     justify-content: center;
 }
 
+#splash-dweeb-image {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#apply-link {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    background: white;
+
+}
+
 h1 {
     background: rgb(235, 190, 13);
     color: rgb(48, 157, 225);
@@ -43,4 +57,10 @@ body {
 
 input {
     font-size: 15px;
+}
+
+button {
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 30px;
 }
