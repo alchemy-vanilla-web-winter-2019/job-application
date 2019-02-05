@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <title>Application</title>
+</head>
+<body>
+    <header>
+        <h1>Food Tester Application</h1>
+        <a href="index.htm">Home</a>
+    </header>
+    <main>
+        <h2>Please fill out:</h2>
+        <form action="">
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name"> 
+            </p>
+            <p>
+                <label for="position">Positions Available:</label>
+                <select name="position" id="position">
+                    <option hidden disabled selected>Choose desired position</option>
+                    <option value="appetizer">Appetizer Taster</option>
+                    <option value="main-course">Main Course Taster</option>
+                    <option value="dessert">Dessert Taster</option>
+                </select>    
+            </p> 
+            <p>
+                <label for="food-love">How Much Do You Love Food?</label>
+                <span>Not Much</span>
+                <input type="range" name=food-love id="food-love" min="not-much" max="adore">
+                <span>Adore it!</span>
+            </p>
+            <fieldset>
+                <legend>Do You Have Allergies?</legend>
+                <input type="radio" name="allergies" id="yes" value="yes">Yes</input>
+                <input type="radio" name="allergies" id="no" value="no">No</input>
+            </fieldset>
+            <fieldset>
+                <legend>Choose All That Apply-Do you like to eat:</legend>
+                <input type="checkbox" name="food-types" id="chinese" value="chinese">Chinese</input>
+                <input type="checkbox" name="food-types" id="american" value="american">American</input>
+                <input type="checkbox" name="food-types" id="indian" value="indian">Indian</input>
+                <input type="checkbox" name="food-types" id="thai" value="thai">Thai</input>
+                <input type="checkbox" name="food-types" id="italian" value="italian">Italian</input>
+                <input type="checkbox" name="food-types" id="peruvian" value="peruvian">Peruvian</input>
+            </fieldset>
+        </form>
+    </main>
+    <footer></footer>
+<script type="module" src="./index.js"></script>
+</body>
+</html>
