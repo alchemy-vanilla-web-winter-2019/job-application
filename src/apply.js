@@ -23,7 +23,7 @@ singleNode.addEventListener('change', function() {
 yesEmployedNode.addEventListener('change', function() {
     if(yesEmployedNode.checked) {
         salaryNode.disabled = false;
-        employmentNode.value = "employed";
+        employmentNode.value = 'employed';
     }
 });
 
@@ -34,16 +34,24 @@ noEmployedNode.addEventListener('change', function() {
     }
 });
 
-
 formNode.addEventListener('submit', function(event) {
     event.preventDefault();
-    const habits = document.getElementsByName('habits[]')
-    console.log(habits);
+
+    const habits = document.getElementsByName('habits[]');
+
+    const habitsSelected = [];
+
+    for(let index = 0; index < habits.length; index++) {
+        if(habits[index].checked) {
+            habitsSelected.push(habits[index].value);
+        }
+    }
     const applicant = {
         name: nameNode.value,
         status: statusNode.value,
-        employment: employmentNode.value
-    
+        employment: employmentNode.value,
+        salary: salaryNode.value,
+        habitList: habitsSelected
     };
 console.log(applicant);
 });
