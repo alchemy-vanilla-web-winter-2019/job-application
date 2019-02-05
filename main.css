@@ -23,14 +23,24 @@ legend {
     font-weight: 600;
 }
 
-label {
-    margin-left: 15px;
+input[type="radio"] {
+    margin-left: 5px;
     margin-right: 15px;
   }
 
   input[type="checkbox"] {
-    margin-left: 5px;
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+  button {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #4286f4;
+    color: white;
+
   }
 
   footer {
