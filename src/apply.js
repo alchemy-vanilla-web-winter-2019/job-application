@@ -81,7 +81,11 @@ userInputNode.addEventListener('submit', function(event) {
         
     
         
-        
     };
-    // console.log(applicant);
+   
+    const serialize = JSON.stringify(applicant); 
+    console.log(serialize);
+
+    window.localStorage.setItem('lectric-eye', serialize);
+    window.location = './details-applicant.html';
 });
