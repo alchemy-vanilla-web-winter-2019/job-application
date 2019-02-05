@@ -24,7 +24,7 @@ form.addEventListener('submit', function(event) {
     for(let i = 0; i < religion.length; i++) {
         const choosenReligion = religion[i];
         if(choosenReligion.checked) {
-            followerOf[i] = choosenReligion.value;
+            followerOf.push(choosenReligion.value);
         }
     }
     
@@ -36,6 +36,11 @@ form.addEventListener('submit', function(event) {
         religion: followerOf,
         originStory: story.value
     };
-    console.log(ensignApplication);
+
+    const serialize = JSON.stringify(ensignApplication);
+    window.localStorage.setItem('applicant', serialize);
+    window.location = './thank-you.html';
+
+
 });
 
