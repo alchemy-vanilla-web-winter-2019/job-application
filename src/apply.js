@@ -9,6 +9,8 @@ const cityNode = document.getElementById('city');
 
 let strongestSkill = '';
 let mainPhilosophy = '';
+let mainMorality = '';
+let salaryRequirement = '';
 
 // console.log(applicationFormNode);
 // console.log(nameNode);
@@ -22,6 +24,8 @@ applicationFormNode.addEventListener('submit', function() {
 
     const skills = document.getElementsByName('skills');
     const philosophy = document.getElementsByName('philosophy');
+    const morality = document.getElementsByName('morality');
+    const salary = document.getElementsByName('salary');
 
     for(let index = 0; index < skills.length; index++) {
         if(skills[index].checked) {
@@ -35,6 +39,16 @@ applicationFormNode.addEventListener('submit', function() {
         }
     }
 
+    //morality
+
+
+    for(let index = 0; index < salary.length; index++) {
+        if(salary[index].selected) {
+            salaryRequirement = salary[index].value;
+
+        }
+    }
+
 
 
 
@@ -42,7 +56,9 @@ applicationFormNode.addEventListener('submit', function() {
         name: nameNode.value,
         city: cityNode.value,
         skill: strongestSkill,
-        philosophy: mainPhilosophy
+        philosophy: mainPhilosophy,
+        // morality = mainMorality
+        salary: salaryRequirement
     };
     
     console.log(applicant);
