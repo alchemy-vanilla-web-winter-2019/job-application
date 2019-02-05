@@ -5,10 +5,11 @@ const emailInputNode = document.getElementById('email-input');
 
 appFormNode.addEventListener('submit', function(event) {
     event.preventDefault();
+    
     let formSubmittal = {
         name: nameInputNode.value,
         digits: digitsInputNode.value,
-        email: emailInputNode.value
+        email: emailInputNode.value,
     };
     console.log('I did it', formSubmittal);
 });
