@@ -1,17 +1,27 @@
-# Job Application
+Config assets for Alchemy Vanilla Web Module
+===
 
-Let's apply for a job somewhere wacky! Your choice. If it's hard to think of something fun, the default is apply to join the Mafia.
+## `.eslintrc`
 
-* Create a multi-page application using anchor tags 
+Our coding and style standards for linting our JavaScript with `eslint`
 
-    `<a href="page.html">`
+## `.travis.yml`
 
-* No script tag for your `index.html` landing page - that's only necesary on the interactive pages of your application.
+Configuration for running linting and testing on TravisCI (Continous Integration)
 
-* Your js should create `const` variables for all needed dom elements via `document.getElementBydId('id-you-want')`
+## `test` config
 
-* You'll need to add an event listener to the form submission and prevent the page refreshing with `event.preventDefault()`
+### `index.html`
 
-* You only need to use simple input elements; radio buttons and text boxes, for example.
+Standard setup for running qunit tests in the browser. If you are running the project repo with live server, navigate to `http://127.0.0.1:5500/test/`
 
-* You'll log successful user applications to the console.
+### `index.js`
+
+A file required to run our qunit tests on travis, briding between ESModules and CJS modules
+
+### `tests.js`
+
+Starter test file for writing unit tests
+
+
+
