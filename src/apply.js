@@ -3,7 +3,10 @@ const nameNode = document.getElementById('name');
 const cityNode = document.getElementById('city');
 const moralityNode = document.getElementById('morality');
 const moralityScoreNode = document.getElementById('morality-score');
+const preSumbitNode = document.getElementById('pre-submit');
+const resultsNode = document.getElementById('results');
 
+resultsNode.style.display = 'none';
 
 let strongestSkill = '';
 let mainPhilosophy = '';
@@ -53,6 +56,10 @@ applicationFormNode.addEventListener('submit', function() {
         morality: morality,
         salary: salaryRequirement
     };
+
+    preSumbitNode.style.display = 'none';
+
+    resultsNode.style.display = 'block';
     
-    console.log(applicant);
+    console.log(preSumbitNode, resultsNode);
 });
