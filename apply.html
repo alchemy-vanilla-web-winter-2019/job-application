@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Application</title>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <section id="intro">
+            <h1>You're just a few clicks away from a better life.</h1>
+            <p>Here at The Good Company, we've helped millions of hard-working individuals find careers that best suit their talents and interests. Simply fill out the form below and we'll place you in a job that best suits your unique self.</p>
+        </section>  
+
+        <form id="application-form">
+            <section id="general-info">
+                <h2>General Info</h2>
+                <label>Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                >
+                <label>Current City</label>
+                <input
+                    type="text"
+                    name="city"
+                    id="city"
+                >
+            </section>
+
+            <section id="skills">
+                <h2>Your Skills</h2>
+                <p>How would you best describe your strongest skillset?</p>
+                <label>Computers and techonology</label>
+                <input
+                    type="radio"
+                    name="skills"
+                    id="computers"
+                >
+                <label>Arts and the humanities</label>
+                <input
+                    type="radio"
+                    name="skills"
+                    id="arts"
+                >
+                <label>Music and performance</label>
+                <input
+                    type="radio"
+                    name="skills"
+                    id="music"
+                >
+                <label>Engineering and construction</label>
+                <input
+                    type="radio"
+                    name="skills"
+                    id="engineering"
+                >
+                <label>Domestic</label>
+                <input
+                    type="radio"
+                    name="skills"
+                    id="domestic"
+                >
+            </section>
+
+            <section id="philosophy">
+                <h2>Your Philosophy</h2>
+                <p>How would you best describe your personal philosophy?</p>
+                <label>Logic is the only truth</label>
+                <input
+                type="radio"
+                >
+                <label>There is an unseen world that exists all around us.</label>
+                <input
+                type="radio"
+                >
+                <label>There are good points to glean from each side of an argument.</label>
+                <input
+                type="radio"
+                >
+                <label>Beauty is the only thing that matters in this world.</label>
+                <input
+                type="radio"
+                >
+            </section>
+
+            <section id="morality">
+                <h2>Your Morality</h2>
+                <p>On a scale of one to five, how likely are you to try to save a stranger's life if it meant risking your own?</p>
+                <span>Not Likely At All</span>
+                <input
+                    type="range"
+                    min="0"
+                    max="5"
+                >
+                <span>Very Likely</span><br />
+                <span>3</span>
+            </section>
+
+            <section id="compensation">
+                <h2>Compensation Requirements</h2>
+                <label>How much do you think you deserve to be paid?</label>
+                <select>
+                    <option>$50,000 - $75,000</option>
+                    <option>$75,000 - $100,000</option>
+                    <option>$100,000 - $125,000</option>
+                    <option>$125,000 - $150,000</option>
+                    <option>$150,000+</option>
+                </select>
+            </section>
+            <button>Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; The Good Company 2019</p>
+    </footer>
+    <script type="module" src="../src/apply.js"></script>
+</body>
+</html>
