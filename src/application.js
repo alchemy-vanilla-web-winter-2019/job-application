@@ -23,21 +23,21 @@ submit.addEventListener('submit', function() {
     for(let i = 0; i < allOptions.length; i++) {
         const selected = allOptions[i];
         if(selected.checked) {
-            chosenOptions[i] = selected.value;
+            chosenOptions.push(selected.value);
         }
     }
 
     const submittedApp = {
         name: name,
         ssn: ssn,
-        literacy: read,
-        areShortsReal: shorts,
+        read: read,
+        shorts: shorts,
         favoriteOptions: chosenOptions,
         hateShortsAmmount: slider.value
-    }
+    };
 
-    console.log(submittedApp);
-    
+    const serialize = JSON.stringify(submittedApp);
+    window.localStorage.setItem('applicant', serialize);
+
+    window.location = 'applicant-detail.html';
 });
-
-
