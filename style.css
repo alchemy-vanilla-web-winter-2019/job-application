@@ -1,0 +1,46 @@
+fieldset {
+    width: 600px;
+    background-color: rgb(204, 168, 238);
+    color: blue;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 8px;
+}
+
+legend {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(173, 113, 230);
+    border: 1px solid white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#dweeb-image {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    background: rgb(235, 190, 13);
+    color: rgb(48, 157, 225);
+    text-align: center;
+    font-size: 70px;
+}
+
+body {
+    background-image: url("./assets/keep-calm-nerds.jpg");
+    background-size: 25%;
+    
+}
+
+input {
+    font-size: 15px;
+}
