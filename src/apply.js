@@ -1,30 +1,25 @@
 const applicationFormNode = document.getElementById('application-form');
 const nameNode = document.getElementById('name');
 const cityNode = document.getElementById('city');
-// const computersNode = document.getElementById('computers');
-// const artsNode = document.getElementById('arts');
-// const musicNode = document.getElementById('music');
-// const engineeringNode = document.getElementById('engineering');
-// const domesticNode = document.getElementById('domestic');
+const moralityNode = document.getElementById('morality');
+const moralityScoreNode = document.getElementById('morality-score');
+
 
 let strongestSkill = '';
 let mainPhilosophy = '';
-let mainMorality = '';
 let salaryRequirement = '';
+let morality = '';
 
-// console.log(applicationFormNode);
-// console.log(nameNode);
-
-//get skills
-
-
+moralityNode.addEventListener('change', function() {
+    morality = moralityNode.value;
+    moralityScoreNode.innerHTML = morality;
+});
 
 applicationFormNode.addEventListener('submit', function() {
     event.preventDefault();
 
     const skills = document.getElementsByName('skills');
     const philosophy = document.getElementsByName('philosophy');
-    const morality = document.getElementsByName('morality');
     const salary = document.getElementsByName('salary');
 
     for(let index = 0; index < skills.length; index++) {
@@ -42,6 +37,7 @@ applicationFormNode.addEventListener('submit', function() {
     //morality
 
 
+
     for(let index = 0; index < salary.length; index++) {
         if(salary[index].selected) {
             salaryRequirement = salary[index].value;
@@ -49,15 +45,12 @@ applicationFormNode.addEventListener('submit', function() {
         }
     }
 
-
-
-
     const applicant = {
         name: nameNode.value,
         city: cityNode.value,
         skill: strongestSkill,
         philosophy: mainPhilosophy,
-        // morality = mainMorality
+        morality: morality,
         salary: salaryRequirement
     };
     
