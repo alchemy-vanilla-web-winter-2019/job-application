@@ -72,6 +72,12 @@ applicationFormNode.addEventListener('submit', function() {
         jobTitle = 'Associate Cafeteria Assistant';
     }
 
+    const applicantJSON = JSON.stringify(applicant);
+
+    window.localStorage.setItem('applicant', applicantJSON);
+
+    console.log(applicantJSON);
+
     
     if(applicant.morality >= 3) {
         document.location = '/pages/application-denied.html';
