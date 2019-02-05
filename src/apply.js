@@ -46,7 +46,7 @@ formNode.addEventListener('submit', function(event) {
             cuddleTypes.push(cuddleTypesNode[i].value);
         }
     }
-    
+
     const applicant = {
         name: nameNode.value,
         city: cityNode.value,
@@ -55,5 +55,4 @@ formNode.addEventListener('submit', function(event) {
         cuddles: cuddleTypes
     };
 
-    console.log(applicant);
 });
