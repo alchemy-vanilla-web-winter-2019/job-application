@@ -12,8 +12,6 @@ function updateCounter(event) {
 snuckText.addEventListener('focus', updateCounter);
 snuckText.addEventListener('input', updateCounter);
 
-
-
 applicationFormNode.addEventListener('submit', function(event) {
     event.preventDefault();
 
