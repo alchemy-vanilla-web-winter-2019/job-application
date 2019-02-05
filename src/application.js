@@ -1,10 +1,9 @@
 const application = document.getElementById('application');
 const heroName = document.getElementById('hero-name');
 const alias = document.getElementById('alias');
-const profession = document.getElementsByName('profession');
+const profession = document.getElementsByName('profession');    //this lints as not used, but it's used in applicant.profession in eventListener
 const combatNodeList = document.getElementsByName('combat');
 
-// console.log('combatNodeList', combatNodeList);
 
 const applicant = {};
 
@@ -17,17 +16,12 @@ application.addEventListener('submit', function(event) {
     applicant.profession = application.profession.value;
     applicant.combat = combatStyles;
 
-
     for(let i = 0; i < combatNodeList.length; i++) {
         const style = combatNodeList[i];
         if(style.checked) {
-            // console.log('style checked', style);
             combatStyles.push(style.value);
         }
         console.log('combatStyles array', combatStyles);
-        // console.log('style', style);
     }
-
-console.log('applicant', applicant);
-
+    console.log('applicant', applicant);
 });
