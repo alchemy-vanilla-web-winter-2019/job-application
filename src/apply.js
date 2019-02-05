@@ -7,7 +7,7 @@ const noEscapeNode = document.getElementById('no-escape');
 const boredomNode = document.getElementById('boredom');
 const delusionalNode = document.getElementById('delusional');
 const bowieNode = document.getElementById('bowie');
-const selfDescription = document.getElementById('self-description');
+// const selfDescription = document.getElementById('self-description');
 
 
 yesEscapeNode.addEventListener('change', function() {
@@ -83,5 +83,5 @@ userInputNode.addEventListener('submit', function(event) {
         
         
     };
-    console.log(applicant);
+    // console.log(applicant);
 });
