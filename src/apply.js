@@ -55,4 +55,6 @@ formNode.addEventListener('submit', function(event) {
         salary: salaryNode.value,
         habitList: habitsSelected
     };
+
+    return applicant;
 });
