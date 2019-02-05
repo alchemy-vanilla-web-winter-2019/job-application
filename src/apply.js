@@ -85,5 +85,10 @@ applicationFormNode.addEventListener('submit', function() {
         preSumbitNode.style.display = 'none';
         resultsNode.innerHTML = jobOffer;
         resultsNode.style.display = 'block';
+        returnToTop();
     }
 });
+
+function returnToTop() {
+    document.getElementById('return').click();
+}
