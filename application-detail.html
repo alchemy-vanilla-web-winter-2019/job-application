@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Application Submitted</title>
+    <link rel="stylesheet" href="application-detail.css">
 </head>
 <body>
     <header>
@@ -12,10 +13,10 @@
     </header>
 
     <main>
-        <section>
+        <section id="heading">
             <h2>Your Application Details</h2>
         </section>
-        <section>
+        <section id="details">
             <dl>
                 <dt>Your Name:</dt>
                 <dd id="name"></dd>
@@ -29,7 +30,16 @@
                 <dd id="type"></dd>
             </dl>
         </section>
+        <section id="msg">
+            <br>
+            <p id="message"></p>
+            <br>
+        </section>
     </main>
+
+    <footer>
+            <p>&copy; Bonnie McNeil</p>
+    </footer> 
     
     <script type="module" src="./src/applicant.detail.js"></script>
 </body>

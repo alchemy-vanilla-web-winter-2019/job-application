@@ -1,0 +1,34 @@
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+section {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 10px;
+}
+
+#heading {
+    background: lightblue;
+}
+
+#details {
+    background: lightcoral;
+}
+
+#msg {
+    background: lightgreen;
+}
+
+footer {
+    margin-top: 5px;
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+dt {
+    font-weight: bold;
+}
