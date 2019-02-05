@@ -24,3 +24,7 @@ button:hover {
     background: red;
     color: white;
 }
+
+.hidden {
+    color: gray;
+}

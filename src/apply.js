@@ -9,6 +9,26 @@ const lengthTimeNode = document.getElementById('length-time');
 const hoursNode = document.getElementById('hours');
 
 
+yesNode.addEventListener('change', function() {
+    if(yesNode.checked) {
+        // const hidden = document.getElementsByClassName('length');
+        // hidden.classList.remove('hidden');
+        lengthTimeNode.disabled = false;
+        lengthTimeNode.checked = true;
+        
+    }
+});
+
+noNode.addEventListener('change', function() {
+    if(noNode.checked) {
+        // const hidden = document.getElementsByClassName('length');
+        // hidden.classList.add('hidden');
+        lengthTimeNode.disabled = true;
+        lengthTimeNode.checked = false;
+        lengthTimeNode.classList.add('hidden');
+    }
+});
+
 formNode.addEventListener('submit', function(event) {
     event.defaultPrevented();
 
@@ -29,28 +49,6 @@ formNode.addEventListener('submit', function(event) {
         hours: hoursNode.value,
         genres: genreSelections
     };
-    console.log(applicant);
+    // console.log(applicant);
 
-});
-
-yesNode.addEventListener('change', function() {
-    if(yesNode.checked) {
-        const hidden = document.querySelectorAll('.length-time');
-        for(let index = 0; index < hidden.length; index++) {
-            hidden.classList.remove('hidden');
-        }
-        lengthTimeNode.disabled = false;
-        lengthTimeNode.checked = true;
-    }
-});
-
-noNode.addEventListener('change', function() {
-    if(noNode.checked) {
-        const hidden = document.querySelectorAll('.length-time');
-        for(let index = 0; index < hidden.length; index++) {
-            hidden.classList.add('hidden');
-        }
-        lengthTimeNode.disabled = true;
-        lengthTimeNode.checked = false;
-    }
 });
