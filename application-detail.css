@@ -4,6 +4,32 @@ header {
     margin-bottom: 10px;
     font-style: italic;
 }
+nav {
+    border: 1px solid black;
+    background: yellow;
+    padding: 5px;
+}
+
+li {
+    display: inline;
+}
+
+.nav {
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+                    
+.nav:hover {
+    background: rgb(55, 55, 238);
+    font-weight: bold;
+}
 
 section {
     border: 1px solid black;
