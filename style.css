@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f1ede6;
+}
+
+main {
+    padding: 20px;
+}
+
+header {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 6em;
+    line-height: 90px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    padding-bottom: 10px;
+    text-decoration: underline;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+button {
+    display: block;
+}
+
+button:hover {
+    background: #f1ede6;
+}
+
+a {
+    color:inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 30px 0 30px 0;
+    border-bottom: #ffffff solid 1px;
+}
+
+
+#personal {
+    padding-top: 0;
+}
+
+#hate {
+    border-bottom: 0;
+}
+
+button {
+    background: white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+select {
+    margin-left: 2px;
+}
+
+.text-input {
+    margin-left: 2px;
+    margin-right: 15px;
+}
+
+.radio {
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+#radio-left {
+    margin-left: 0;
+}
+
+.checked {
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+#checked-left {
+    margin-left: 0;
+}

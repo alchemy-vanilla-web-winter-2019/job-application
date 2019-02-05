@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prefecture Pants</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Prefecture Pants</a></h1>
+    </header>
+
+    <main>
+        <form id="form">
+            <section id="personal">
+                <h2>Personal Informtation</h2>
+            
+                <label>Name: <input type="text" id="name" placeholder="First + Last Name" class="text-input">
+                </label>
+    
+                <label>Social Security Number: </label> <input type="text" id="ssn" placeholder="xxx-xxx-xxxx" class="text-input"></label>
+            </section>
+            
+            <section id="qualification">
+                <h2>Qualifications</h2>
+    
+                <label>Can you read: <select id="read">
+                    <option hidden disabled selected>Select Answer</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select></label> 
+            </section>
+
+            <section id="more">
+                <h2>Tell me more ;)</h2>
+                <h3>Are shorts REALLY pants???</h3>
+                <label><input type="radio" name="shorts" value="yes" class="radio" id="radio-left">Sure, why not?</label>
+                <label><input type="radio" name="shorts" value="no" class="radio">How dare you? No!</label>
+    
+                <h3>Select your favorite options</h3>
+                <label><input type="checkbox" name="options" value="cargo" class="checked" id="checked-left">Cargo</label>
+                <label><input type="checkbox" name="options" value="tear" class="checked">Tear Away</label>
+                <label><input type="checkbox" name="options" value="rhinestone" class="checked">Rhinestones</label>
+            </section>
+
+            <section id="hate">
+                <h2>On a scale of 1-10 how much do you hate shorts</h2>
+                <input type="range" name="hate-shorts" min="0" max="10" id="slider" class="slider"> <span id="slider-value">5</span>
+            </section>
+
+            <button id="submit">Submit</button>
+        </form>
+    </main>
+
+    
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
