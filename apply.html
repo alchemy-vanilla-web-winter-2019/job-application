@@ -9,23 +9,23 @@
 </head>
 <body> 
     <header>
-        <h1>Apprentice  Moonage Daydreamer</h1>
+        <h1>Apprentice Moonage Daydreamer</h1>
     </header>
     <main>
         <form id="user-input">
             <section id="about-user">
                 <h2>About You:</h2>
                 <p>
-                        <label for="name">Your Name:</label>
-                        <input 
-                        type="text"
-                        name="name"
-                        value=""
-                        id="name"
-                        autocomplete="off"
-                        minlength="1"
-                        required>                                   
-                
+                    <label for="name">Your Name:</label>
+                    <input 
+                    type="text"
+                    name="name"
+                    value=""
+                    id="name"
+                    autocomplete="off"
+                    minlength="1"
+                    required>                                   
+            
                 </p>
                 <p>
                     <label for="city">City:</label>
@@ -35,30 +35,42 @@
                     value=""
                     id="city"
                     autocomplete="off"
-                    minlength="1">
+                    minlength="1"
+                    >
+                </p>
+                <p>
+                    <label for="phone-number">Phone Number</label>
+                    <input type="number"
+                    name="phone-number"
+                    value=""
+                    id="phone-number"
+                    autocomplete="off"
+                    required>
                 </p>
             </section>
             <section id="qualifications">
                 <p>
                     <h2>Do you like to escape reality?</h2>
                     
-                    <label for="yes">Yes</label>
+                    <label for="yes-reality">Yes</label>
                     <input 
                      type="radio"
                      value="yes"
-                     id="yes"
-                     name="escape-reality"
+                     id="yes-reality"
+                     name="escape"
                      required
                      >
 
-                     <label for="no">No</label>
+                     <label for="no-reality">No</label>
                      <input 
                      type="radio"
                      value="no"
-                     id="no"
-                     name="escape-reality">
+                     id="no-reality"
+                     name="escape"
+                     >
+
                 </p>
-                <p>If yes, Why?</p>
+                <p class="escape-reason">If yes, Why?</p>
                 <p>
                     <label for="boredom">I'm Bored</label>
                     <input 
@@ -90,11 +102,13 @@
                     <label for="self-description"></label>
                     <select name="self-description" id="self=description">
                         <option value="alligator">I'm an Alligator</option>
-                        <option value="mama-papa"></option>
-                        <option value="space-inavder">I'm the Space Invader</option>
+                        <option value="mama-papa">I'm a Mama Papa</option>
+                        <option value="space-invader">I'm the Space Invader</option>
+                        <option value="all">All of the Above</option>
                     </select>
                 </p>
             </section>
+            <button>Submit</button>
         </form>
     </main>
     
