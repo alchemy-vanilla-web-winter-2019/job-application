@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const formNode = document.getElementById('application');
 const nameNode = document.getElementById('name');
 const cityNode = document.getElementById('city');
@@ -54,7 +55,9 @@ formNode.addEventListener('submit', function(event) {
         professional: isCertified,
         cuddles: cuddleTypes
     };
+    console.log('Hello');
 
-    console.log("Hello");
+    return applicant;
+
 
 });
