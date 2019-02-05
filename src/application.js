@@ -1,8 +1,6 @@
 const application = document.getElementById('application');
 const heroName = document.getElementById('hero-name');
 const alias = document.getElementById('alias');
-/* eslint-disable-next-line */
-// const profession = document.getElementsByName('profession');    //this lints as not used, but it's used in applicant.profession in eventListener
 const combatNodeList = document.getElementsByName('combat');
 const joinReason = document.getElementById('join-reason');
 

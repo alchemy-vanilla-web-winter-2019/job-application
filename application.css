@@ -1,13 +1,33 @@
+body {
+    background-color: goldenrod;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
 button {
     padding: 10px;
     margin-top: 15px;
     width: 100%;
     background-color: rgb(69, 69, 192);
     cursor: pointer;
+    color: white;
+    font-weight: bolder;
 }
 
 fieldset {
-    margin: 15px;
+    margin: auto;
+    margin-top: 15px;
+    width: 450px;
 }
 
 input[type=text] {
@@ -18,7 +38,11 @@ input[type=text] {
 }
 
 input[type=radio] {
-    display: block;
+    display: inline block;
+}
+
+input[type=checkbox] {
+
 }
 
 select {
