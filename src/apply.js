@@ -50,6 +50,6 @@ formNode.addEventListener('submit', function(event) {
         hours: hoursNode.value,
         genres: genreSelections
     };
-    // console.log(applicant);
+    console.log(applicant);
 
 });
