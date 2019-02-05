@@ -12,7 +12,7 @@
         <h1>Application</h1>
     </header>
     <main>
-        <form id="form-details">
+        <form id="detail-form">
             <section id="section-one">
                 <h2>About You</h2>
                 <p>
@@ -20,23 +20,26 @@
                     <input 
                         type="text"
                         name="name"
-                        id="id"
+                        id="name"
                         minlength="2"
+                        required
                     >
                 </p>
                 <p>
-                        <p id="status">Are you Married?</p>
-                    <label for="yes">Yes:</label>
+                    <p id="status">Marital Status:</p>
+                    <label for="married">Married:</label>
                     <input  
                         type="radio"
                         name="status"
-                        id="yes"
+                        id="married"
+                        required
                     >
-                    <label for="no">No:</label>
+                    <label for="no">Single:</label>
                     <input  
                         type="radio"
                         name="status"
-                        id="no"
+                        id="single"
+                        required
                     >
                 </p>
         </section>
@@ -114,7 +117,7 @@
                     >
             </p>
         </section>
-        <button id="submit">Submit Application</button>
+        <button>Submit Application</button>
         </form>
     </main>
     <script type="module" src="./src/apply.js"></script>
