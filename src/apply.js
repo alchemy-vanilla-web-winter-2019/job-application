@@ -24,6 +24,7 @@ yesEmployedNode.addEventListener('change', function() {
     if(yesEmployedNode.checked) {
         salaryNode.disabled = false;
         employmentNode.value = 'employed';
+        salaryNode.classList.remove('hidden');
     }
 });
 
@@ -31,6 +32,7 @@ noEmployedNode.addEventListener('change', function() {
     if(noEmployedNode.checked) {
         salaryNode.disabled = true;
         employmentNode.value = 'not employed';
+        salaryNode.classList.add('hidden');
     }
 });
 
