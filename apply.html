@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="apply.css">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>You too can be a WIZARD!</h1>
+    <a href="./index.html">Portal</a>
+  </header>
+
+  <main>
+    <form>
+        <p>
+            <fieldset>
+            <legend>
+                <strong>
+                    Sorting Hat
+                </strong>
+            </legend>
+               <p>
+                   <label>
+                       Name: <input type="text" name="name" id="name-input">
+                    </label>
+               </p>
+               <p>
+                   <label>
+                       Mailing Address: <input type="text" name="address" id="mailing-address">
+                    </label>
+               </p> 
+               <p>
+                   <label for="biggest-fear">
+                   Biggest Fear:
+                   </label> 
+                   <select name="fears" id="biggest-fear">
+                        <option value="inferiority">Being looked down on</option>
+                        <option value="loneliness">Being left alone</option>
+                        <option value="stupidity">Not understanding</option>
+                        <option value="compassion">Being unkind</option>
+                   </select> 
+               </p>
+               <p>
+                   <label for="pick-one">
+                   Pick ONE!:
+                   </label>
+                   <select name="animals" id="pick-one">
+                     <option value="">Bear</option>  
+                     <option value="">Black Cat</option>  
+                     <option value="">Wolf</option>  
+                   </select>
+               </p>
+            </fieldset>
+        </p>
+        <button>Mischief Managed</button>
+    </form>
+  </main>
+
+  <footer>
+
+  </footer> 
+  <script type="module" src="./src/apply.js"></script> 
+</body>
+</html>
