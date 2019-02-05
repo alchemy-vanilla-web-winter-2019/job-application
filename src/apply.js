@@ -5,9 +5,9 @@ const yesExperience = document.getElementById('yes-experience');
 const noExperience = document.getElementById('no-experience');
 const yearsExperience = document.getElementById('years-experience');
 const yearsExperienceQuestion = document.getElementById('years');
-const professionalNode = document.getElementsByName('cert');
 const yesCertified = document.getElementById('yes-cert');
 const noCertified = document.getElementById('no-cert');
+
 
 yesExperience.addEventListener('change', function() {
     if(yesExperience.checked) {
@@ -38,11 +38,23 @@ formNode.addEventListener('submit', function(event) {
         isCertified = false;
     }
 
+    const cuddleTypesNode = document.getElementsByName('types[]');
+   
+    let cuddleTypes = [];
+    for(let i = 0; i < cuddleTypesNode.length; i++) {
+        if(cuddleTypesNode[i].checked) {
+            cuddleTypes.push(cuddleTypesNode[i].value);
+        }
+    }
+
+
+
     const applicant = {
         name: nameNode.value,
         city: cityNode.value,
         experience: yearsExperience.value, 
-        professional: isCertified
+        professional: isCertified,
+        cuddles: cuddleTypes
     };
 
     console.log(applicant);
