@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Awesome Knitting Store Application</title>
+</head>
+<body>
+    <header>
+        <h1>Application</h1>
+    </header>
+    <main>
+        <h2>Please fill out the application below.</h2>
+        <p><em>Not ready to apply? <a href="index.html">Continue browsing our site.</a></em></p>
+        <form id="yarn-application">
+        <section>
+           <p>
+               <label for="name">Full Name: </label>
+               <input type="text" id="name" name="name">
+           </p>
+        </section>
+
+        <section>
+           <p>
+               <label for="position">Positions Available: </label>
+               <select id="position" name="position">
+                   <option hidden disabled selected>Please Select One</option>
+                   <option value="resident-knitter">Resident Knitter</option>
+                   <option value="yarn-winder">Yarn Winder</option>
+                   <option value="people-pleaser">People Pleaser</option>
+                   <option value="cash-taker">Cash Taker</option>
+               </select>
+           </p>
+        </section>
+        
+        <section>
+           <fieldset>
+               <legend>On a scale from 1 to 11, what is your knitting experience?</legend>
+               <input type="range" id="knitting-skills" name="knitting-skills" min="1" max="11">
+               <span id="skills-range"></span>
+            
+            </fieldset> 
+        </section>
+
+        <section>
+            <fieldset>
+                <legend>Are you allergic to wool?</legend>
+                <label for ="yes-allergic">Yes</label>
+                <input type="radio" id="yes-allergic" name="yes-allergic" value="yes">
+                <label for="no-allergic">No</label>
+                <input type="radio" id="no-allergic" name="no-allergic" value="no">
+                <label for="maybe-allergic">Maybe so?</label>
+                <input type="radio" id="maybe-allergic" name="maybe-allergic" value="maybe">
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                <legend>What yarn brands are you familiar with?</legend>
+                <label for="noro">Noro</label>
+                <input type="checkbox" name="yarn" id="noro" value="noro">
+                <label for="madelinetosh">Madelinetosh</label>
+                <input type="checkbox" name="yarn" id="madelinetosh" value="madelinetosh">
+                <label for="the-dye-project">The Dye Project</label>
+                <input type="checkbox" name="yarn" id="madelinetosh" value="madelinetosh">
+                <label for="knitted-wit">Knitted Wit</label>
+                <input type="checkbox" name="yarn" id="knitted-wit" value="knitted-wit" >
+                <label for="republic-of-wool">Republic of Wool</label>
+                <input type="checkbox" name="yarn" id="republic-of-wool" value="republic-of-wool">
+                <label for="none-of-them">None of these!</label>
+                <input type="checkbox" name="yarn" id="none-of-these" value="none-of-these">
+            </fieldset>
+        </section>
+        <section>
+            <button id="submit">Submit Your Application</button>
+        </section>
+        </form>
+    </main>
+    <footer>
+        <p><em>this imaginary yarn store was made by emily 2/4/19</em></p>
+    </footer>
+
+<script type="module" src="apply.js"></script>
+</body>
+</html>
