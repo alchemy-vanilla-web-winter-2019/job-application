@@ -40,10 +40,6 @@ applicationFormNode.addEventListener('submit', function() {
         }
     }
 
-    //morality
-
-
-
     for(let index = 0; index < salary.length; index++) {
         if(salary[index].selected) {
             salaryRequirement = salary[index].value;
@@ -59,8 +55,6 @@ applicationFormNode.addEventListener('submit', function() {
         morality: morality,
         salary: salaryRequirement
     };
-
-    console.log(applicant.philosophy);
 
     if(applicant.skill === 'computers') {
         jobTitle = 'Junior Data Entry Clerk';
