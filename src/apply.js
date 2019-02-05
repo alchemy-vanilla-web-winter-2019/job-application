@@ -56,16 +56,32 @@ noEscapeNode.addEventListener('change', function() {
 
 userInputNode.addEventListener('submit', function(event) {
     event.preventDefault();
+    
+// experiment with this code using value from check boxes insted of select
 
-    // eslint-disable-next-line no-unused-vars
+    // const description = document.getElementById('self-description[]');
+    // const descriptionSelect = [];
+
+
+
+    // for(let index = 0; index < description.length; index++) {
+    //     if(description[index].checked) {
+    //         descriptionSelect.push(description[index].value);
+    //     }
+    // }
+    
+
+
+    
     const applicant = {
         name: nameNode.value,
         city: cityNode.value,
         phone: phoneNumberNode.value,
-        describeSelf: selfDescription.value,
+        // describeSelf: selfDescription.value,
+        
     
         
         
     };
-    
+    console.log(applicant);
 });
