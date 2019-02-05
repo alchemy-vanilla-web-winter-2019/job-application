@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curly Boiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><h1>{Curly Boiz}</h1></a>
+    </header>
+    <main>
+        <form id="form">
+            <fieldset>
+                <legend><h3>New phone, who dis?</h3></legend>
+                <label> Name:
+                    <input type="text" name="name" placeholder="Enter name here">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend><h3>Where u from?</h3></legend>
+                <label>City:
+                    <input type="text" name="city" placeholder="Enter city here">
+                </label>
+                <label>State:
+                    <select name="state">
+                        <option value="" hidden disabled selected>Choose a state</option>
+                        <option value="Washington">Washington</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="California">California</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend><h3>I like my steak...</h3></legend>
+                <label>
+                <input type="radio" name="steak" value="rare">Rare
+                    </label>
+                    <label>
+                        <input type="radio" name="steak" value="medium">Medium
+                    </label>
+                    <label>
+                    <input type="radio" name="steak" value="well">Well
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend><h3>What belongs on a salad?</h3></legend>
+                <label>Lettuce
+                    <input type="checkbox" name="salad" value="lettuce">
+                </label>
+                <label>Tomatoes
+                    <input type="checkbox" name="salad" value="tomatoes">
+                </label>
+                <label>Bacon
+                    <input type="checkbox" name="salad" value="bacon">
+                </label>
+                <label>Ramen
+                    <input type="checkbox" name="salad" value="ramen">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend><h3>Rate your Curliness</h3></legend>
+                <span id="slider-display">5</span>
+                <input type="range" name="curliness" min="0" max="10">
+            </fieldset>
+            <button>Sign your life away</button>
+        </form>
+        <script src="./src/application.js"></script>
+    </main>
+</body>
+</html>
