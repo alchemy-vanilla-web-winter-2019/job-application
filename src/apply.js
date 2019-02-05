@@ -1,5 +1,18 @@
 const applicationFormNode = document.getElementById('application-form');
-// const nameInputNode = document.getElementById('name-input');
+const snuckText = document.getElementById('snuck-text');
+const sunckCountNode = document.getElementById('snuck-count');
+
+function updateCounter(event) {
+    const target = event.target;
+    const count = target.value.length;
+    const countMsg = count + ' characters';
+    sunckCountNode.innerHTML = countMsg;
+}
+
+snuckText.addEventListener('focus', updateCounter);
+snuckText.addEventListener('input', updateCounter);
+
+
 
 applicationFormNode.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -19,4 +32,6 @@ applicationFormNode.addEventListener('submit', function(event) {
         snuck: applicationFormNode.snuck.value
     };
     console.log('New App', newApplication);
+
+    window.location = './thank-you.html';
 });
