@@ -50,23 +50,23 @@
                 <section id="skills">
                     <h2>Your Skills</h2>
                     <p>How would you best describe your strongest skillset?</p>
-                    <p>
+                    <section>
                     <input
                         type="radio"
                         name="skills"
                         id="computers"
                         value="computers"
                     >
-                    <label for="computers">Computers and techonology</label></p>
-                    <p>
+                    <label for="computers">Computers and techonology</label></section>
+                    <section>
                     <input
                         type="radio"
                         name="skills"
                         id="art"
                         value="art"
                     >
-                    <label for="art">Arts and the humanities</label></p>
-                    <p>
+                    <label for="art">Arts and the humanities</label></section>
+                    <section>
                     <input
                         type="radio"
                         name="skills"
@@ -74,8 +74,8 @@
                         value="music"
                     >                    
                     <label for="music">Music and performance</label>
-                    </p>
-                    <p>
+                    </section>
+                    <section>
                     <input
                         type="radio"
                         name="skills"
@@ -83,8 +83,8 @@
                         value="engineering"
                     >
                     <label for="engineering">Engineering and construction</label>
-                    </p>
-                    <p>
+                    </section>
+                    <section>
                     <input
                         type="radio"
                         name="skills"
@@ -92,15 +92,15 @@
                         value="cooking"
                     >
                     <label for="cooking">Domestic</label>
-                    </p>
+                    </section>
                 </section>
                 <hr>
 
 
                 <section id="philosophy">
                     <h2>Your Philosophy</h2>
-                    <p>How would you best describe your personal philosophy?</p>
-                    <p>
+                    <section>How would you best describe your personal philosophy?</p>
+                    <section>
                     <input
                         type="radio"
                         name="philosophy"
@@ -108,8 +108,8 @@
                         value="logical"
                     >
                     <label for="logical">Logic is the only truth</label>
-                    </p>
-                    <p>
+                    </section>
+                    <section>
                     <input
                         type="radio"
                         name="philosophy"
@@ -117,8 +117,8 @@
                         value="metaphysical"                
                     >
                     <label for="metaphysical">There is an unseen world that exists all around us.</label>
-                    </p>
-                    <p>
+                    </section>
+                    <section>
                     <input
                         type="radio"
                         name="philosophy"
@@ -126,8 +126,8 @@
                         value="fair"                
                     >
                     <label for="fair">There are good points to glean from each side of an argument.</label>
-                    </p>
-                    <p>
+                    </section>
+                    <section>
                     <input
                         type="radio"
                         name="philosophy"
@@ -135,7 +135,7 @@
                         value="cultured"                
                     >
                     <label for="cultured">Beauty is the only thing that matters in this world.</label>
-                    </p>
+                    </section>
                 </section>
                 <hr>
 
@@ -143,6 +143,7 @@
                 <section id="morality-area">
                     <h2>Your Morality</h2>
                     <p>On a scale of one to five, how likely are you to try to save a stranger's life if it meant risking your own?</p>
+                    <span id="morality-score-section">
                     <span>Not Likely At All</span>
                     <input
                         type="range"
@@ -151,7 +152,8 @@
                         name="morality"
                         id="morality"
                     >
-                    <span>Very Likely</span><br />
+                    <span>Very Likely</span></span>
+                    <br />
                     <p>Your morality score: <span id="morality-score">3</span></p>
                 </section>
                 <hr>

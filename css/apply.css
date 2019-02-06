@@ -93,6 +93,20 @@ h2 {
 
 }
 
+#morality-score-section {
+    display: inline-block;
+    margin: 10px 25px;
+    padding: 15px 25px;
+    border: 1px solid white;
+}
+
+#morality-score {
+    margin-left: 3px;
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+
 
 #apply-button {
     display: flex;
