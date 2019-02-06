@@ -66,13 +66,13 @@ applicationFormNode.addEventListener('submit', function() {
 
     window.localStorage.setItem('applicant', newApplicantJSON);
     
-    // if(applicant.morality >= 3) {
-    //     document.location = '/pages/application-denied.html';
-    // }
+    if(applicant.morality >= 3) {
+        document.location = '/pages/application-denied.html';
+    }
 
-    // else {
-    //     document.location = '/pages/application-review.html';
-    // }
+    else {
+        document.location = '/pages/application-review.html';
+    }
 
     console.log(applications, newApplicantJSON);
 });

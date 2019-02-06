@@ -1,5 +1,7 @@
-const applicant = window.localStorage.getItem('applicant');
-const newApplicant = JSON.parse(applicant);
+const applicants = window.localStorage.getItem('applicant');
+const newApplicants = JSON.parse(applicants);
+
+const newApplicant = newApplicants[newApplicants.length - 1];
 
 const nameNode = document.getElementById('name');
 const philosophyNode = document.getElementById('philosophy');
@@ -16,3 +18,4 @@ skillNode.textContent = newApplicant.skill;
 moralityNode.textContent = newApplicant.morality;
 cityNode.textContent = newApplicant.city;
 salaryNode.textContent = newApplicant.salary;
+
