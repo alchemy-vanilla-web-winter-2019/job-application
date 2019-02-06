@@ -14,7 +14,7 @@ comfortNode.addEventListener('change', function(){
         case '2': 
             messageSelector = 'I am mildly averse to being burnt to a crisp.';
             break;
-        case '3': 
+        case '3':
             messageSelector = 'I am neither pleased nor displeased by my calories being released as thermal energy.';
             break;
         case '4': 
