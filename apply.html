@@ -14,7 +14,6 @@
     </header>
     <main>
         <h2>Knit with us! Apply using the form below.</h2>
-        <p><em>Not ready to apply? <a href="index.html">Continue browsing our site.</a></em></p>
         <form id="yarn-application">
         <section>
            <fieldset>
@@ -63,17 +62,24 @@
         </section>
         <section>
             <fieldset>
-                <legend>What yarn brands are you familiar with?</legend>
-                <label for="noro">Noro</label>
-                <input type="checkbox" name="yarn" id="noro" value="noro">
-                <label for="madelinetosh">Madelinetosh</label>
-                <input type="checkbox" name="yarn" id="madelinetosh" value="madelinetosh">
-                <label for="the-dye-project">The Dye Project</label>
-                <input type="checkbox" name="yarn" id="madelinetosh" value="madelinetosh">
-                <label for="republic-of-wool">Republic of Wool</label>
-                <input type="checkbox" name="yarn" id="republic-of-wool" value="republic-of-wool">
-                <label for="none-of-them">None of these!</label>
-                <input type="checkbox" name="yarn" id="none-of-these" value="none-of-these">
+                
+                <legend>What yarn brands have you crafted with?</legend>
+                <div class="left">
+                    <label for="noro">Noro</label>
+                    <input type="checkbox" name="yarn" id="noro" value="noro">
+                    <label for="madelinetosh">Madelinetosh</label>
+                    <input type="checkbox" name="yarn" id="madelinetosh" value="madelinetosh">
+                    <label for="the-dye-project">The Dye Project</label>
+                    <input type="checkbox" name="yarn" id="madelinetosh" value="madelinetosh">
+                </div>
+                <div class="left">
+                    <label for="republic-of-wool">Republic of Wool</label>
+                    <input type="checkbox" name="yarn" id="republic-of-wool" value="republic-of-wool">
+                    <label for="Cascade">Cascade</label>
+                    <input type="checkbox" name="yarn" id="cascade" value="cascade">
+                    <label for="none-of-them">None of these!</label>
+                    <input type="checkbox" name="yarn" id="none-of-these" value="none-of-these">
+                </div>
             </fieldset>
         </section>
         <section>
@@ -82,9 +88,10 @@
         </form>
     </main>
     <footer>
-        <p><em>this imaginary yarn store was made by emily 2/4/19</em></p>
+        <p><a href="index.html">Home</a></p>
+        <p><em>this imaginary yarn store was made by emily</em></p>
     </footer>
 
-<script type="module" src="apply.js"></script>
+<script type="module" src="./src/apply.js"></script>
 </body>
 </html>

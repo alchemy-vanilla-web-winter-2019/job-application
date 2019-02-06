@@ -4,6 +4,10 @@ body {
     letter-spacing: .05em;
 }
 
+.left {
+    float:left;
+}
+
 .centered {
     text-align: center;
 }

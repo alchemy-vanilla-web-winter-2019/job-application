@@ -46,6 +46,11 @@ yarnForm.addEventListener('submit', function(event) {
         yarn: yarnNames
 
     };
-    console.log(applicant);
+    
+    window.location = 'thanks.html';
+
+    const serialize = JSON.stringify(applicant);
+    window.localStorage.setItem('applicant', serialize);
+
 });
 
