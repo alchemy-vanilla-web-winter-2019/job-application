@@ -23,6 +23,10 @@ guildApplication.addEventListener('submit', function(event) {
         lawfulness: guildApplication.lawfulness.value,
         
     };
-
+    const jsonObject = JSON.stringify(application);
+    window.localStorage.setItem('applicant', jsonObject);
+    
 });
+
+
 
