@@ -1,3 +1,13 @@
+const json = window.localStorage.getItem('allApplicants');
+
+let applicant = null;
+if(json) {
+    const allApplicants = JSON.parse(json);
+    applicant = allApplicants[allApplicants.length - 1];
+} //else {
+    //window.location = './';
+//}
+
 const name = document.getElementById('name');
 const loyalty = document.getElementById('loyalty');
 const origin = document.getElementById('origin');
@@ -5,12 +15,9 @@ const computing = document.getElementById('computing');
 const religion = document.getElementById('religion');
 const story = document.getElementById('story');
 
-const json = window.localStorage.getItem('applicant');
-const hydrateApplicant = JSON.parse(json);
-
-name.textContent = hydrateApplicant.name;
-loyalty.textContent = hydrateApplicant.loyalty;
-origin.textContent = hydrateApplicant.placeOfOrigin.join(', ');
-computing.textContent = hydrateApplicant.computingCompitence;
-religion.textContent = hydrateApplicant.religion.join(', ');
-story.textContent = hydrateApplicant.originStory;
+name.textContent = applicant.name;
+loyalty.textContent = applicant.loyalty;
+origin.textContent = applicant.placeOfOrigin.join(', ');
+computing.textContent = applicant.computingCompitence;
+religion.textContent = applicant.religion.join(', ');
+story.textContent = applicant.originStory;

@@ -28,7 +28,7 @@ form.addEventListener('submit', function(event) {
         }
     }
     
-    const ensignApplication = {
+    const applicant = {
         name: callSign,
         loyalty: loyalty,
         placeOfOrigin: [homeWorld, homeCity],
@@ -37,10 +37,18 @@ form.addEventListener('submit', function(event) {
         originStory: story.value
     };
 
-    const serialize = JSON.stringify(ensignApplication);
-    window.localStorage.setItem('applicant', serialize);
-    window.location = './thank-you.html';
+    let allApplicants = [];
+    const jsonString = window.localStorage.getItem('allApplicants');
+    if(jsonString) {
+        allApplicants = JSON.parse(jsonString);
+    }
 
+    allApplicants.push(applicant);
+    const serialize = JSON.stringify(allApplicants);
+    window.localStorage.setItem('allApplicants', serialize);
 
+    // window.location = './thank-you.html';
 });
+
+
 
