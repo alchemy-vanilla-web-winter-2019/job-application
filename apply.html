@@ -17,29 +17,23 @@
             <div> 
                 <fieldset>
                     <legend>Personal Information</legend>
-                    <label>
-                        <p>
-                            Name or Pseudonym: 
-                            <input type="text" id="input-name" name="name">
-                        </p>
+                    <label class="textfield">
+                        Name or Pseudonym: 
+                        <input type="text" id="input-name" name="name">   
                     </label>
-                    <label>
-                        <p>
-                            Years of Previous Experience:
-                            <input type ="text" id="input-experience" name="experience">
-                        </p>
+                    <label class="textfield">
+                        Years of Previous Experience:
+                        <input type ="text" id="input-experience" name="experience">
                     </label>
-                    <label>
-                            <p>
-                                Weapon of Choice:
-                                <input type ="text" id="input-weapon" name="weapon">
-                            </p>
-                        </label>
+                    <label class="textfield">
+                        Weapon of Choice:
+                        <input type ="text" id="input-weapon" name="weapon">
+                    </label>
                 </fieldset>
             </div>
             <div>
                 <h2>Crew Roles</h2>
-                <p>Select all that Apply</p>
+                <p class="instructions">Select all that apply:</p>
                 <label>
                     Peeper <input type="checkbox" name="roles" value="peeper">
                 </label>
@@ -61,6 +55,7 @@
             </div>
             <div>
                 <h2>Define Your Goodness Alignment</h2>
+                <p class="instructions">Select one:</p>
                 <div>
                     <label>
                         Evil <input type="radio" name="goodness" value="evil" required>
@@ -74,6 +69,7 @@
                 </div>
                 <div>
                     <h2>Define Your Lawfulness Alignment</h2>
+                    <p class="instructions">Select one:</p>
                     <label>
                         Chaotic <input type="radio" name="lawfulness" value="chaotic" required>
                     </label>

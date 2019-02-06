@@ -1,3 +1,16 @@
+header{
+    text-align: center;
+}
+
+h2{
+    margin-left: 5px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+label{
+    margin-left: 12px;
+}
+
 body{
     background: rgb(39, 37, 37);
     color:slategray;
@@ -5,8 +18,20 @@ body{
 
 a{
     color:rgb(114, 15, 11);
+    font-size: 20px;
 }
 
 button{
     margin-top: 15px;
+}
+
+.instructions {
+    font-size: 15px;
+    margin-left: 12px;
+    margin-bottom: 2px;
+}
+
+.textfield{
+    display: block;
+    margin-bottom: 8px;
 }

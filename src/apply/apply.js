@@ -25,7 +25,7 @@ guildApplication.addEventListener('submit', function(event) {
     };
     const jsonObject = JSON.stringify(application);
     window.localStorage.setItem('applicant', jsonObject);
-    
+    window.location = 'thanks.html';
 });
 
 
