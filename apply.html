@@ -9,12 +9,12 @@
 </head>
 <body>
     <header>
-        <h1>Food Tester Application</h1>
-        <a href="index.htm">Home</a>
+        <h1>Want to Taste Food for Money? Apply!</h1>
+        <a href="index.html">Home</a>
     </header>
     <main>
         <h2>Please fill out:</h2>
-        <form action="">
+        <form id="food-form">
             <p>
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name"> 
@@ -40,25 +40,32 @@
                 <input type="radio" name="allergies" id="no" value="no">No</input>
             </fieldset>
             <fieldset>
-                <legend>Choose All That Apply-Do you like to eat:</legend>
-                <input type="checkbox" name="food-types" id="chinese" value="chinese">
+                <legend>Choose All That Apply. Do you like to eat:</legend>
+                <input type="checkbox" name="foods" id="chinese" value="chinese">
                 <label for="chinese">Chinese</label>
-                <input type="checkbox" name="food-types" id="american" value="american">
+                
+                <input type="checkbox" name="foods" id="american" value="american">
                 <label for="american">American</label>
-                <input type="checkbox" name="food-types" id="indian" value="indian">
+                
+                <input type="checkbox" name="foods" id="indian" value="indian">
                 <label for="indian">Indian</label>
-                <input type="checkbox" name="food-types" id="thai" value="thai">
+                
+                <input type="checkbox" name="foods" id="thai" value="thai">
                 <label for="thai">Thai</label>
-                <input type="checkbox" name="food-types" id="italian" value="italian">
+                
+                <input type="checkbox" name="foods" id="italian" value="italian">
                 <label for="italian">Italian</label>
-                <input type="checkbox" name="food-types" id="peruvian" value="peruvian">
+                
+                <input type="checkbox" name="foods" id="peruvian" value="peruvian">
                 <label for="peruvian">Peruvian</label>
             </fieldset>
 
-            <button id="submit">Submit</button>
+            <button id="submit">Get Tastin!</button>
         </form>
     </main>
-    <footer></footer>
-<script type="module" src="./index.js"></script>
+    <footer>
+        
+    </footer>
+<script type="module" src="./src/index.js"></script>
 </body>
 </html>
