@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/apply.css">
+    <title>Application</title>
+</head>
+<body>
+    <header id="top">
+        <section id="logo">
+            <p id="logo">The Good Company&reg;</p>
+        </section>
+        <section id="nav">
+            <a href="index.html">Home</a>
+            <a href="apply.html">Apply</a>
+        </section> 
+    </header>
+    <main>
+        <section id="pre-submit">
+            <section id="intro">
+                <h1>You're just a few clicks away from a Good life.</h1>
+                <p>Here at The Good Company, we've helped millions of hard-working individuals find careers that best suit their talents and interests. Simply fill out the form below and we'll place you in a job that best suits your unique self.</p>
+            </section>  
+
+            <form id="application-form">
+                <section id="general-info">
+                    <h2>General Info</h2>
+                    <label>Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        autocomplete="off"
+                    >
+                    <label>Current City</label>
+                    <input
+                        type="text"
+                        name="city"
+                        id="city"
+                        autocomplete="off"
+                    >
+                </section>
+                <hr>
+
+                <section id="skills">
+                    <h2>Your Skills</h2>
+                    <p>How would you best describe your strongest skillset?</p>
+                    <p>
+                    <input
+                        type="radio"
+                        name="skills"
+                        id="computers"
+                        value="computers"
+                    >
+                    <label for="computers">Computers and techonology</label></p>
+                    <p>
+                    <input
+                        type="radio"
+                        name="skills"
+                        id="art"
+                        value="art"
+                    >
+                    <label for="art">Arts and the humanities</label></p>
+                    <p>
+                    <input
+                        type="radio"
+                        name="skills"
+                        id="music"
+                        value="music"
+                    >                    
+                    <label for="music">Music and performance</label>
+                    </p>
+                    <p>
+                    <input
+                        type="radio"
+                        name="skills"
+                        id="engineering"
+                        value="engineering"
+                    >
+                    <label for="engineering">Engineering and construction</label>
+                    </p>
+                    <p>
+                    <input
+                        type="radio"
+                        name="skills"
+                        id="cooking"
+                        value="cooking"
+                    >
+                    <label for="cooking">Domestic</label>
+                    </p>
+                </section>
+                <hr>
+
+
+                <section id="philosophy">
+                    <h2>Your Philosophy</h2>
+                    <p>How would you best describe your personal philosophy?</p>
+                    <p>
+                    <input
+                        type="radio"
+                        name="philosophy"
+                        id="logical"
+                        value="logical"
+                    >
+                    <label for="logical">Logic is the only truth</label>
+                    </p>
+                    <p>
+                    <input
+                        type="radio"
+                        name="philosophy"
+                        id="metaphysical"
+                        value="metaphysical"                
+                    >
+                    <label for="metaphysical">There is an unseen world that exists all around us.</label>
+                    </p>
+                    <p>
+                    <input
+                        type="radio"
+                        name="philosophy"
+                        id="fair"
+                        value="fair"                
+                    >
+                    <label for="fair">There are good points to glean from each side of an argument.</label>
+                    </p>
+                    <p>
+                    <input
+                        type="radio"
+                        name="philosophy"
+                        id="cultured"
+                        value="cultured"                
+                    >
+                    <label for="cultured">Beauty is the only thing that matters in this world.</label>
+                    </p>
+                </section>
+                <hr>
+
+
+                <section id="morality-area">
+                    <h2>Your Morality</h2>
+                    <p>On a scale of one to five, how likely are you to try to save a stranger's life if it meant risking your own?</p>
+                    <span>Not Likely At All</span>
+                    <input
+                        type="range"
+                        min="0"
+                        max="5"
+                        name="morality"
+                        id="morality"
+                    >
+                    <span>Very Likely</span><br />
+                    <p>Your morality score: <span id="morality-score">3</span></p>
+                </section>
+                <hr>
+
+                <section id="compensation">
+                    <h2>Compensation Requirements</h2>
+                    <label>How much do you think you deserve to be paid?</label>
+                    <select>
+                        <option name="salary" id="50">$50,000 - $75,000</option>
+                        <option name="salary" id="75">$75,000 - $100,000</option>
+                        <option name="salary" id="100">$100,000 - $125,000</option>
+                        <option name="salary" id="125">$125,000 - $150,000</option>
+                        <option name="salary" id="150">$150,000+</option>
+                    </select>
+                </section>
+                <button>Submit</button>
+            </form>
+        </section> 
+        
+        <section id="results">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; The Good Company 2019</p>
+    </footer>
+    <script type="module" src="../src/apply.js"></script>
+</body>
+</html>
