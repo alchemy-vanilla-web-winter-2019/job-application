@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    justify-content: flex-right;
+}
+#about-section {
+    border: 1px solid black;
+    padding: 10px;
+}
+#section-two {
+    border: 1px solid black;
+    padding: 10px;
+    /* display: flex; */
+    /* justify-content: flex-center; */
+    
+}
+#weekly-availability {
+    display: flex;
+    font-size: 20px;
+    font-style: italic;
+}
+#when-available {
+    font-size: 16px;
+}
+

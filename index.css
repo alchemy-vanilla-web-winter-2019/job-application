@@ -1,0 +1,9 @@
+header {
+    display: flex;
+    justify-content: flex-right;
+}
+
+#when-available {
+    border: 1px solid black;
+    padding: 10px;
+}
