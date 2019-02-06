@@ -1,13 +1,12 @@
 const json = window.localStorage.getItem('allApplicants');
 
-let allApplicants = null;
+let allApplicants = [];
+
 if(json) {
     allApplicants = JSON.parse(json);
-} else {
-    allApplicants = [];
 }
 
-const tbody = document.getElementById('allApplicants');
+const tbody = document.getElementById('tbody');
 
 for(let i = 0; i < allApplicants.length; i++) {
     const applicant = allApplicants[i];
@@ -17,18 +16,14 @@ for(let i = 0; i < allApplicants.length; i++) {
     const nameCell = document.createElement('td');
     nameCell.textContent = applicant.name;
     tr.appendChild(nameCell);
-
-    const placeOfOriginCell = document.createElement('td');
-    placeOfOriginCell.textContent = applicant.placeOfOrigin;
-    tr.appendChild(placeOfOriginCell);
+    
+    const realmCell = document.createElement('td');
+    realmCell.textContent = applicant.realm;
+    tr.appendChild(realmCell);
     
     const loyaltyCell = document.createElement('td');
     loyaltyCell.textContent = applicant.loyalty;
     tr.appendChild(loyaltyCell);
-
-
+    
     tbody.appendChild(tr);
 }
-
-
-

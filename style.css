@@ -1,4 +1,4 @@
-fieldset {
+/* fieldset {
     width: 600px;
     background-color: rgb(204, 168, 238);
     color: blue;
@@ -114,3 +114,10 @@ dd {
     text-align: center;
     margin-top: 60px;
 }
+
+#page-link {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+} */

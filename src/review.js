@@ -10,14 +10,14 @@ if(json) {
 
 const name = document.getElementById('name');
 const loyalty = document.getElementById('loyalty');
-const origin = document.getElementById('origin');
+const realm = document.getElementById('realm');
 const computing = document.getElementById('computing');
 const religion = document.getElementById('religion');
 const story = document.getElementById('story');
 
 name.textContent = applicant.name;
 loyalty.textContent = applicant.loyalty;
-origin.textContent = applicant.placeOfOrigin.join(', ');
+realm.textContent = applicant.realm.join(', ');
 computing.textContent = applicant.computingCompitence;
 religion.textContent = applicant.religion.join(', ');
 story.textContent = applicant.originStory;

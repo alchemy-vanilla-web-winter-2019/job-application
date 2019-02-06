@@ -31,23 +31,25 @@ form.addEventListener('submit', function(event) {
     const applicant = {
         name: callSign,
         loyalty: loyalty,
-        placeOfOrigin: [homeWorld, homeCity],
+        realm: [homeWorld, homeCity],
         computingCompitence: mathProwess.value,
         religion: followerOf,
         originStory: story.value
     };
 
+    
     let allApplicants = [];
     const jsonString = window.localStorage.getItem('allApplicants');
+
     if(jsonString) {
         allApplicants = JSON.parse(jsonString);
     }
-
     allApplicants.push(applicant);
+    
     const serialize = JSON.stringify(allApplicants);
     window.localStorage.setItem('allApplicants', serialize);
 
-    // window.location = './thank-you.html';
+    window.location = './thank-you.html';
 });
 
 
