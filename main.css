@@ -1,0 +1,12 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1516391368694-c8ab033121b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#popcorn-section {
+    background-color: white;
+    width: 250px;
+}
