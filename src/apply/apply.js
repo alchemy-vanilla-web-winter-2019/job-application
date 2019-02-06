@@ -16,6 +16,6 @@ applicationForm.addEventListener('submit', function(event) {
 
     const serialized = JSON.stringify(applicant);
     window.localStorage.setItem('applicant', serialized);
-    console.log(serialized);
+    window.location = 'thanks.html';
 
 });
