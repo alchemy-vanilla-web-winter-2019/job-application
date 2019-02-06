@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Info Here Knuckle-Heads!</title>
+    <link type="text/css" rel="stylesheet" href="main.css">
+</head>
+<body id="form-page">
+    <header>
+            <a href="index.html"><img src="./assets/nogoodnik.jpg" alt="splash"></a>
+    </header>
+    <main>
+        <form id="form">
+            <fieldset id="location">
+                <legend>Where you livin' these days?</legend>
+                <label>
+                    Full Name:<input type="text" name="name" placeholder="enter name">
+                    City:<input type="text" name="city" placeholder="enter city">
+                </label>
+               <select name="state">
+                    <option value="state">State</option>
+                    <option value="oregon">Oregon</option>
+                    <option value="california">California</option>
+                    <option value="washington">Washington</option>
+               </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Fave pranks</legend>
+                <label>
+                    <input type="radio" name="prank" value="banana">Banana Peel
+                </label>
+                <label>
+                    <input type="radio" name="prank" value="whoopie-cushion">Whoopie Cushion
+                </label>
+                <label>
+                    <input type="radio" name="prank" value="stink-bomb">Stink Bombs
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>The house is on fire, which instrument of terror do you save?</legend>
+                <label>
+                    Silly-String<input type="checkbox" name="weapon" value="silly-string">
+                </label>
+                <label>
+                    Hammer<input type="checkbox" name="weapon" value="hammer">
+                </label>
+                <label>
+                    Lukewarm Chicken Thigh<input type="checkbox" name="weapon" value="chicken">
+                </label>
+            </fieldset>
+
+            <fieldset id="slider">
+                <legend>How bad are you really?</legend>
+                <input type="range" id="badness" min="0" max="12">
+                <span id="badScale">6</span>
+            </fieldset>
+            
+            <button>Submit me ya filthy animal!</button>
+        </form>
+    </main>
+    <script src="./src/index.js"></script>
+</body>
+</html>
