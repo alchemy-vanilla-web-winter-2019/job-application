@@ -21,6 +21,7 @@ form.addEventListener('submit', function(event) {
     }
     const curliness = form.curliness.value;
     
+    // Creates object called applicant
     const applicant = {
         name: name,
         address: {
@@ -32,4 +33,23 @@ form.addEventListener('submit', function(event) {
         curliness: curliness
     };
     console.log(applicant);
+
+    // Converts applicant object into JSON string
+    const serialize = JSON.stringify(applicant);
+    
+    // localStorange can't store objects or arrays properly
+    // window.localStorage.Name = name;
+    // window.localStorage.address = JSON.stringify(applicant.address);
+    // window.localStorage.steak = steak;
+    // window.localStorage.salad = JSON.stringify(applicant.salad);
+    // window.localStorage.curliness = curliness;
+    
+    // Stores the value of serialize under the key of applicant in localStorage
+    window.localStorage.setItem('applicant', serialize);
+
+    // This does the same thing
+    // window.localStorage.applicant = serialize;
+
+    // Changes page 
+    window.location = 'thanks.html';
 });
