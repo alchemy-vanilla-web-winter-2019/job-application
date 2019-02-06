@@ -10,8 +10,9 @@ const emailNode = document.getElementById('email');
 nameNode.textContent = applicant.name;
 statusNode.textContent = applicant.status;
 employmentNode.textContent = applicant.employment;
-//habitListNode.textContent = applicant.habits;
 salaryNode.textContent = applicant.salary;
+emailNode.textContent = applicant.email;
+
 if(applicant.habitList.length === 0) {
     habitListNode.textContent = 'none specified';
 }
@@ -22,10 +23,10 @@ else {
 
 }
 
-// if(employmentNode.value = 'employed') {
-//     salaryNode.classList.add('hidden-2');  
-// }
-// else {
-//     salaryNode.classList.remove('hidden-2');
-//     salaryNode.textContent = applicant.salary;
-// }
+if(applicant.employment.textContent === 'employed') {
+    salaryNode.textContent = applicant.salary;
+    salaryNode.textContent.remove('$0');
+}
+else {
+    salaryNode.textContent = '$0';
+}
