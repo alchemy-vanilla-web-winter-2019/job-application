@@ -15,4 +15,6 @@ clothesNode.textContent = applicantParsed.clothes;
 skillsNode.textContent = applicantParsed.skills.join(', ');
 snuckNode.textContent = applicantParsed.snuck;
 
-snuckTitleNode.innerHTML = `Last time ${applicantParsed.name} snuck up on someone`;
+const uppercaseFirstLetter = applicantParsed.name.charAt(0).toUpperCase();
+const capitalizedName = uppercaseFirstLetter + applicantParsed.name.slice(1);
+snuckTitleNode.innerHTML = `Last time ${capitalizedName} snuck up on someone:`;
