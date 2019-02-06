@@ -24,11 +24,11 @@ form.addEventListener('submit', function(event) {
     for(let i = 0; i < religion.length; i++) {
         const choosenReligion = religion[i];
         if(choosenReligion.checked) {
-            followerOf[i] = choosenReligion.value;
+            followerOf.push(choosenReligion.value);
         }
     }
     
-    const ensignApplication = {
+    const applicant = {
         name: callSign,
         loyalty: loyalty,
         placeOfOrigin: [homeWorld, homeCity],
@@ -36,6 +36,19 @@ form.addEventListener('submit', function(event) {
         religion: followerOf,
         originStory: story.value
     };
-    console.log(ensignApplication);
+
+    let allApplicants = [];
+    const jsonString = window.localStorage.getItem('allApplicants');
+    if(jsonString) {
+        allApplicants = JSON.parse(jsonString);
+    }
+
+    allApplicants.push(applicant);
+    const serialize = JSON.stringify(allApplicants);
+    window.localStorage.setItem('allApplicants', serialize);
+
+    // window.location = './thank-you.html';
 });
+
+
 

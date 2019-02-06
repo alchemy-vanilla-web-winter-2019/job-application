@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Apply for Dweebhood</title>
 </head>
-<body>
+<body id="application-page">
     
     <header>
         <h1>Apply for Dweebhood</h1>
@@ -29,7 +29,7 @@
             </fieldset>
 
             <fieldset>
-                 <legend>Hail from where, do you?</legend>
+                <legend>Hail from where, do you?</legend>
 
                 Homeworld <input type="text" name="homeWorld" placeholder="Q'onoS">
                 City <input type="text" name="homeCity" placeholder="Cloud City">
@@ -66,8 +66,8 @@
                 <legend>Between 0 and Sheldon Cooper, how well can you math?</legend>
                 
                 <label>
-                    <input type="range" name="code-scale" id="math-prowess" min="0" max="10">
-                    <span id="how-well-do-you-code">5</span>
+                    <input type="range" name="code-scale" id="math-prowess" min="0" max="42">
+                    <span id="how-well-do-you-code">21</span>
                 </label>
 
             </fieldset>
@@ -97,17 +97,14 @@
                     Star Wars<input type="checkbox" name="religions" value="star-wars">
                 </label>
             </fieldset>
-
-    
-            
             
             <button id="Apply">Apply</button>
 
         </form>
 
     </main>
-                
 
     <script src="./src/main.js"></script>
 </body>
 </html>
+

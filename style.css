@@ -29,17 +29,16 @@ form {
 }
 
 #splash-dweeb-image {
-    height: 200px;
+    height: 250px;
     display: flex;
     justify-content: center;
 }
 
 #apply-link {
-    font-size: 30px;
+    font-size: 60px;
     text-align: center;
     font-weight: bold;
     background: white;
-
 }
 
 h1 {
@@ -49,10 +48,24 @@ h1 {
     font-size: 70px;
 }
 
-body {
+#splash-page {
     background-image: url("./assets/keep-calm-nerds.jpg");
     background-size: 25%;
-    
+}
+
+#thank-you-page {
+    background-image: url("./assets/terminator.jpg");
+    background-size: 25%;
+}
+
+#application-page {
+    background-image: url("./assets/keep-calm-nerds.jpg");
+    background-size: 25%;
+}
+
+#review-page {
+    background-image: url("./assets/keep-calm-nerds.jpg");
+    background-size: 25%;
 }
 
 input {
@@ -63,4 +76,41 @@ button {
     padding: 20px;
     margin-top: 10px;
     font-size: 30px;
+}
+
+#review-my-application {
+    top: 160px;
+    font-size: 60px;
+    width: 450px;
+    background: red;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 150px;    
+}
+
+dl {
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);    
+    width: 1000px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+dt {
+  position: relative;
+  font-size: 40px;  
+}
+
+dd {
+    position: relative;
+    left: 325px;;
+    font-size: 35px;
+    text-transform: capitalize;
+}
+
+#reapply {
+    font-size: 60px;
+    text-align: center;
+    margin-top: 60px;
 }
