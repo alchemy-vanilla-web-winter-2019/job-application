@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     padding: 0px;
     margin: 0px;
-    background: #92CDED;
+    background: #F7AEF8;
 
 }
 
@@ -11,7 +11,8 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    background: #A9FFF7;
+    background: white;
+    border-bottom: 1px solid lightgray;
     width: 100%;
 }
 
@@ -21,7 +22,7 @@ header {
     padding-left: 15px;
     align-items: center;
     font-family: 'Mukta', sans-serif;
-    color: #274700;
+    color: #92CDED;
 
 }
 
@@ -37,12 +38,12 @@ header a {
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Mukta', sans-serif;
-    color: #274700;
+    color: white;
 
 }
 
 header a:hover {
-    background: #e2edef;
+    background: #92CDED;
 }
 
 
@@ -60,8 +61,6 @@ h1 {
 main {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    border-bottom: 3px solid #feef03;
     font-family: 'Mukta', sans-serif;
     font-size: 18px;
     height: 600px;
@@ -71,28 +70,31 @@ main {
 #intro {
     width: 45%;
     margin: 25px 50px 25px 100px;
-    
 }
 
-#apply-button {
-    border: 1px solid #92CDED;
-    padding: 10px 25px;
+#intro a {
+    display: inline-block;
+    padding: 20px 35px;
     background: #F7AEF8;
     margin-top: 25px;
-}
-
-#apply-button a {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
     font-size: 22px;
 }
 
+#intro a:hover {
+    background: #92CDED;
+}
+
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #92CDED;
+    font-family: 'Mukta', sans-serif;
+    color: white;
+    background: #F7AEF8;
     height: 100%;
+    padding-top: 25px;
     padding-bottom: 100px;
 }
