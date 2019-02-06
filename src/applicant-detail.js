@@ -7,6 +7,7 @@ const experience = document.getElementById('experience');
 const certified = document.getElementById('certified');
 const type = document.getElementById('type');
 const message = document.getElementById('message');
+const clear = document.getElementById('clear');
 
 name.textContent = applicant.name;
 city.textContent = applicant.city;
@@ -34,3 +35,11 @@ else {
 
 const msg = 'Thank you for applying, ' + applicant.name + '. If we are interested, you will be hearing from the Human Resources Department within 3 business days.';
 message.textContent = msg;
+
+clear.addEventListener('click', function() {
+    const result = confirm('This will clear your application information. Are you sure you want to proceed?');
+    if(result) {
+        window.localStorage.setItem('applicant', '');
+        window.location.reload();
+    }
+});
