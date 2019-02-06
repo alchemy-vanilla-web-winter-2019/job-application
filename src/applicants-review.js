@@ -18,4 +18,11 @@ for(let index = 0; index < applicants.length; index++) {
     const firstName = document.createElement('td');
     const lastName = document.createElement('td');
 
+    firstName.textContent = applicant.firstName;
+    lastName.textContent = applicant.lastName;
+
+    row.appendChild(firstName);
+    row.appendChild(lastName);
+
+    applicantsNode.appendChild(row);
 }

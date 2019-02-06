@@ -11,7 +11,7 @@ const lengthNode = document.querySelectorAll('.length');
 
 let applicants = [];
 
-const existingApplicantJSON = window.localStorage('applicants');
+const existingApplicantJSON = window.localStorage.getItem('applicants');
 if(existingApplicantJSON) {
     applicants = JSON.parse(existingApplicantJSON);
 }
