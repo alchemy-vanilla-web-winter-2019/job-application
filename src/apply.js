@@ -3,8 +3,9 @@ const nameInputNode = document.getElementById('name-input');
 const digitsInputNode = document.getElementById('digits-input');
 const emailInputNode = document.getElementById('email-input');
 const payInputNode = document.getElementById('pay');
-const yesNoInputNode =  document.getElementById('yes-no');
-
+const yesInputNode =  document.getElementById('yes');
+const noInputNode =  document.getElementById('no');
+console.log('200k', payInputNode);
 appFormNode.addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -22,8 +23,9 @@ appFormNode.addEventListener('submit', function(event) {
         digits: digitsInputNode.value,
         email: emailInputNode.value,
         talkboss: checkBoxesArray,
-        pay: payInputNode,
-        yesno: yesNoInputNode.value
+        pay: payInputNode.value,
+        yes: yesInputNode.value,
+        no: noInputNode.value
 
     };
     console.log('I did it', formSubmittal);
