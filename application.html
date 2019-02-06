@@ -9,7 +9,6 @@
 </head>
 <body>
     <header>
-        <a href="index.html">Home</a>
         <h1>Job Application</h1>
     </header>
     <main>
@@ -37,9 +36,10 @@
                     <label for="popcorn">How much do you like popcorn?</label>
                 </p>
                 <p>
-                Hate it.
+                Hate it. (0)
                 <input type="range" name="popcorn" id="popcorn" min="0" max="10">
-                Love it.
+                Love it. (10)
+                <br>
                 <span id="popcorn-span"></span>
                 </p>
             </section>
@@ -65,11 +65,15 @@
                 </fieldset>
 
             <section>
+                <br>
                 <button id="submit">APPLY</button>
             </section>
         </form>
     </main>
-    <footer></footer>
+    <br>
+    <footer>
+        <a href="index.html">Home</a>
+    </footer>
     <script type="module" src="/src/index.js"></script>
 </body>
 </html>
