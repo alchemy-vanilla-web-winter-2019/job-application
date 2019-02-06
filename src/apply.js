@@ -1,6 +1,13 @@
-const applicantJSON = window.localStorage.getItem('applicant');
+let applications = [];
 
-console.log(applicantJSON);
+const applicantJSON = window.localStorage.getItem('applicant');
+if(applicantJSON) {
+    applications = [];
+}
+
+applications = JSON.parse(applicantJSON);
+
+console.log(applications);
 
 const applicationFormNode = document.getElementById('application-form');
 const nameNode = document.getElementById('name');
@@ -53,15 +60,20 @@ applicationFormNode.addEventListener('submit', function() {
         salary: salaryRequirement
     };
 
-    const applicantJSON = JSON.stringify(applicant);
+    // applications.push(applicant);
+
+    const applicantJSON = JSON.stringify(applications);
 
     window.localStorage.setItem('applicant', applicantJSON);
     
-    if(applicant.morality >= 3) {
-        document.location = '/pages/application-denied.html';
-    }
+    // if(applicant.morality >= 3) {
+    //     document.location = '/pages/application-denied.html';
+    // }
 
-    else {
-        document.location = '/pages/application-review.html';
-    }
+    // else {
+    //     document.location = '/pages/application-review.html';
+    // }
+
+    console.log(applications, applicantJSON);
 });
+
