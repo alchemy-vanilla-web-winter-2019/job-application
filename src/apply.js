@@ -25,11 +25,7 @@ appFormNode.addEventListener('submit', function(event) {
     };
     console.log('I did it', formSubmittal);
 
-    //takes object(applicant) - strings it to JSON
-    
-    const setObject = JSON.stringify('applicant')
-    //takes that string which is now represented by serialize, then stores it/sets it local to pull later
+    const setObject = JSON.stringify(formSubmittal);
     window.localStorage.setItem('applicant', setObject);
-    //gives us a new page/window which is thanks.html when submit is clicked. 
     window.location = 'thanks.html';
 });
