@@ -21,6 +21,12 @@ main {
     color: white;
 }
 
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: rgba(3, 3, 39, 0.726);
+}
+
 form {
     border: 2px solid white;
 }
