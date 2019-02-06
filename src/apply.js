@@ -65,15 +65,7 @@ applicationFormNode.addEventListener('submit', function() {
     const newApplicantJSON = JSON.stringify(applications);
 
     window.localStorage.setItem('applicant', newApplicantJSON);
-    
-    if(applicant.morality >= 3) {
-        document.location = '/pages/application-denied.html';
-    }
 
-    else {
-        document.location = '/pages/application-review.html';
-    }
-
-    console.log(applications, newApplicantJSON);
+    document.location = '/pages/application-review.html';
 });
 
