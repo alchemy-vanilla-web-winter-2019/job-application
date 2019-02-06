@@ -1,0 +1,38 @@
+.hidden {
+    color: white;
+}
+
+h1, h2 {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center; 
+    width: 550px   
+
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+    
+}
+
+button {
+    background: black;
+    color: white;
+    padding: 10px
+    
+}
+
+a {
+    font-family: 'Courier New', Courier, monospace;
+    color: white
+}
+
+
+
+
