@@ -75,8 +75,22 @@ main {
 
 #application-form {
     width: 70%;
-    margin: 0px auto;
+    margin: 30px auto;
     padding: 10px;
+    font-family: 'Lato', sans-serif;
+    color: white;
+
+}
+
+#application-form label, p {
+    padding: 0px 5px 0px 25px;
+
+}
+
+h2 {
+    text-transform: uppercase;
+    color: white;
+
 }
 
 
