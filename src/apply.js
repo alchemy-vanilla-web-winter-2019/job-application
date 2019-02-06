@@ -1,4 +1,12 @@
 const faireApplication = document.getElementById('faire-application');
+const loyaltySlider = document.getElementById('loyalty-slider');
+const loyaltyDisplay = document.getElementById('loyalty-display');
+
+loyaltyDisplay.textContent = loyaltySlider.value;
+
+loyaltySlider.addEventListener('input', function() {
+    loyaltyDisplay.textContent = loyaltySlider.value;
+});
 
 faireApplication.addEventListener('submit', function(event) {
     event.preventDefault();
