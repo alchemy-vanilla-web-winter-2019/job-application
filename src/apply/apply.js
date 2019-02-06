@@ -29,7 +29,9 @@ applicationFormNode.addEventListener('submit', function(event) {
         skills: skillsArray,
         snuck: applicationFormNode.snuck.value
     };
-    console.log('New App', newApplication);
 
+    const serialized = JSON.stringify(newApplication);
+    window.localStorage.setItem('newApplication', serialized);
+    
     window.location = './thank-you.html';
 });
