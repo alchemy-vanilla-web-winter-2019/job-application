@@ -1,6 +1,6 @@
 const name = document.getElementById('name');
 const ssn = document.getElementById('ssn');
-const read = document.getElementById('read');
+const read = document.getElementById('read-answer');
 const shorts = document.getElementById('shorts');
 const favoriteOptions = document.getElementById('favorite-options');
 const hateShortsAmmount = document.getElementById('hate-shorts');
