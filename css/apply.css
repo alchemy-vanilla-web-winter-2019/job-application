@@ -62,9 +62,11 @@ main {
 
 #intro {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 25px 50px;
+    margin: 15px 50px 60px 50px;
+    text-align: center;
 }
 
 #application-form {
@@ -91,9 +93,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #92CDED;
+    font-family: 'Mukta', sans-serif;
+    color: white;
+    background: #fed3ff;
     height: 100%;
-    padding-bottom: 500px;
+    padding-top: 25px;
+    padding-bottom: 100px;
 }
 
 #skills {
