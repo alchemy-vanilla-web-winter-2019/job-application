@@ -12,7 +12,6 @@ let morality = '3';
 moralityNode.addEventListener('change', function() {
     morality = moralityNode.value;
     moralityScoreNode.innerHTML = morality;
-    console.log(morality);
 });
 
 applicationFormNode.addEventListener('submit', function() {
@@ -49,22 +48,6 @@ applicationFormNode.addEventListener('submit', function() {
         morality: morality,
         salary: salaryRequirement
     };
-
-    if(applicant.skill === 'computers') {
-        jobTitle = 'Junior Data Entry Clerk';
-    }
-    else if(applicant.skill === 'art') {
-        jobTitle = 'Apprentice Business Card Designer';
-    }
-    else if(applicant.skill === 'music') {
-        jobTitle = 'Corporate Podcast Sound Engineer Intern';
-    }
-    else if(applicant.skill === 'engineering') {
-        jobTitle = 'Support Laborer to the Regional General Contractor';
-    }
-    else if(applicant.skill === 'cooking') {
-        jobTitle = 'Associate Cafeteria Assistant';
-    }
 
     const applicantJSON = JSON.stringify(applicant);
 
