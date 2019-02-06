@@ -1,7 +1,6 @@
 header {
     display: flex run-in;
     justify-content: center;
-    margin-bottom: 10px;
 }
 
 nav {
@@ -29,6 +28,10 @@ ul {
 .nav:hover {
     background: rgb(55, 55, 238);
     font-weight: bold;
+}
+
+a:visited {
+    color: black;
 }
 
 footer {

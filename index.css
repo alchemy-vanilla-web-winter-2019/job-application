@@ -31,6 +31,10 @@ ul {
     font-weight: bold;
 }
 
+a:visited {
+    color: black;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -49,10 +53,6 @@ main {
 #apply:hover {
     background: black;
     color: white;
-}
-
-a:visited {
-    color: black;
 }
 
 footer {

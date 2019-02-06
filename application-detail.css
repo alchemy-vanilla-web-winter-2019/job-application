@@ -1,9 +1,8 @@
 header {
-    display: flex;
+    display: flex run-in;
     justify-content: center;
-    margin-bottom: 10px;
-    font-style: italic;
 }
+
 nav {
     border: 1px solid black;
     background: yellow;
@@ -29,6 +28,10 @@ ul {
 .nav:hover {
     background: rgb(55, 55, 238);
     font-weight: bold;
+}
+
+a:visited {
+    color: black;
 }
 
 section {
