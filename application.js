@@ -16,12 +16,12 @@ addEventListener('submit', function(){
     const availability = form.elements.availability.value;
 
     const pizza = form.elements.pizza;
-    const pizzaPreference = []
+    const pizzaPreference = [];
 
     for(let i = 0; i < pizza.length; i++){
         const choices = pizza[i];
         if(choices.checked){
-            pizzaPreference[i] = choices.value;
+            pizzaPreference.push(choices.value);
         }
     }
     
@@ -35,6 +35,7 @@ addEventListener('submit', function(){
 
     };
     
-    console.log(appSubmission);
-
+    const serialize = JSON.stringify(appSubmission);
+    window.localStorage.setItem('appSubmission', serialize);
+    window.open('./app-review.html');
 });

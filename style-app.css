@@ -2,6 +2,10 @@ dd{
     text-transform: capitalize;
 }
 
+dt{
+    margin-bottom:3px;
+}
+
 body{
     background-color: purple;
 }
