@@ -39,7 +39,7 @@ yarnForm.addEventListener('submit', function(event) {
     }
 
     const applicant = {
-        name: firstName.value + lastName.value,
+        name: firstName.value + ' ' + lastName.value,
         position: jobPosition.value,
         skillLevel: knittingSkills.value,
         allergy: allergyAnswer,

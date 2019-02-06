@@ -56,6 +56,17 @@ button {
 
   }
 
+  dt {
+    padding:10px;
+    background-color:#4286f4;
+    color:white;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
 footer {
       margin-top: 40px;
       text-align: center;
