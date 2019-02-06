@@ -10,6 +10,10 @@ const bowieNode = document.getElementById('bowie');
 // const selfDescription = document.getElementById('self-description');
 
 
+
+
+
+
 yesEscapeNode.addEventListener('change', function() {
     if(yesEscapeNode.checked) {
         const hidden = document.querySelectorAll('.escape-reason');
@@ -53,23 +57,19 @@ noEscapeNode.addEventListener('change', function() {
 
 
 
-
 userInputNode.addEventListener('submit', function(event) {
     event.preventDefault();
+
+    const escapeReason = document.getElementsByName('escape-reason'); 
+    const escapeArray = [];
     
-// experiment with this code using value from check boxes insted of select
-
-    // const description = document.getElementById('self-description[]');
-    // const descriptionSelect = [];
-
-
-
-    // for(let index = 0; index < description.length; index++) {
-    //     if(description[index].checked) {
-    //         descriptionSelect.push(description[index].value);
-    //     }
-    // }
-    
+    for(let index = 0; index < escapeReason.length; index++) {
+        if(escapeReason[index].checked) {
+            escapeArray.push(escapeReason[index].value);
+        }
+    }
+    // console.log(escapeArray);
+     
 
 
     
@@ -77,6 +77,7 @@ userInputNode.addEventListener('submit', function(event) {
         name: nameNode.value,
         city: cityNode.value,
         phone: phoneNumberNode.value,
+        realityCheck: escapeArray,
         // describeSelf: selfDescription.value,
         
     
@@ -84,7 +85,7 @@ userInputNode.addEventListener('submit', function(event) {
     };
    
     const serialize = JSON.stringify(applicant); 
-    console.log(serialize);
+    console.log(applicant);
 
     window.localStorage.setItem('lectric-eye', serialize);
     window.location = './details-applicant.html';
