@@ -10,7 +10,6 @@ const emailNode = document.getElementById('email');
 nameNode.textContent = applicant.name;
 statusNode.textContent = applicant.status;
 employmentNode.textContent = applicant.employment;
-//salaryNode.textContent = applicant.salary;
 emailNode.textContent = applicant.email;
 
 if(applicant.habitList.length === 0) {
