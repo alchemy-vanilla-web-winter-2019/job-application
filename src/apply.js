@@ -1,6 +1,6 @@
 const formNode = document.getElementById('main-form');
 const nameNode = document.getElementById('name');
-const phoneNode = document.getElementById('phone')
+const phoneNode = document.getElementById('phone');
 const comfortNode = document.getElementById('comfort');
 const comfortFieldNode = document.getElementById('comfort-field');
 const burialNode = document.getElementById('burial');
@@ -36,7 +36,6 @@ formNode.addEventListener('submit', function(event) {
         burial: burialNode.value
     };
     const serializeApplication = JSON.stringify(applicant);
-    console.log(serializeApplication);
     window.localStorage.setItem('job-applicant', serializeApplication);
     window.location = 'applicant-details.html';
 });

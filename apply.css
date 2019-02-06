@@ -2,7 +2,7 @@ header {
     border: 4px solid white;
     padding: 3px;
     margin: 3px;
-    background-color: wheat
+    background-color: wheat;
 }
 #contact-info, #background-info, button {
     border: 4px solid white;
@@ -18,11 +18,11 @@ html {
     background-color: lightblue;
 }
 h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
 }
 h2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 section {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
