@@ -16,7 +16,7 @@ if(applicant.realityCheck.length === 0) {
     escapeReason.textContent = 'none';
 }
 
-console.log(escapeReason);
+// giconsole.log(escapeReason);
 
 // else {
 //     for(let index = 0; index < applicant.escapeArray.length - 1; index++) {escapeReason.textContent += applicant.realityCheck[index] + ', ';
