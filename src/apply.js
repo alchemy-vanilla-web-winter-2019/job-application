@@ -1,13 +1,6 @@
-let applications = [];
 
-const applicantJSON = window.localStorage.getItem('applicant');
-if(applicantJSON) {
-    applications = [];
-}
 
-applications = JSON.parse(applicantJSON);
-
-console.log(applications);
+// console.log(applications);
 
 const applicationFormNode = document.getElementById('application-form');
 const nameNode = document.getElementById('name');
@@ -27,6 +20,13 @@ moralityNode.addEventListener('change', function() {
 
 applicationFormNode.addEventListener('submit', function() {
     event.preventDefault();
+
+    let applications = [];
+
+    const applicantJSON = window.localStorage.getItem('applicant');
+    if(applicantJSON) {
+        applications = JSON.parse(applicantJSON);
+    }
 
     const skills = document.getElementsByName('skills');
     const philosophy = document.getElementsByName('philosophy');
@@ -60,11 +60,11 @@ applicationFormNode.addEventListener('submit', function() {
         salary: salaryRequirement
     };
 
-    // applications.push(applicant);
+    applications.push(applicant);
 
-    const applicantJSON = JSON.stringify(applications);
+    const newApplicantJSON = JSON.stringify(applications);
 
-    window.localStorage.setItem('applicant', applicantJSON);
+    window.localStorage.setItem('applicant', newApplicantJSON);
     
     // if(applicant.morality >= 3) {
     //     document.location = '/pages/application-denied.html';
@@ -74,6 +74,6 @@ applicationFormNode.addEventListener('submit', function() {
     //     document.location = '/pages/application-review.html';
     // }
 
-    console.log(applications, applicantJSON);
+    console.log(applications, newApplicantJSON);
 });
 
