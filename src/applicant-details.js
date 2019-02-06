@@ -13,9 +13,16 @@ const genreNode = document.getElementById('genre');
 firstNameNode.textContent = applicant.firstName;
 lastNameNode.textContent = applicant.lastName;
 zipCodeNode.textContent = applicant.zipCode;
-emailNode.textContent = applicant.email;
 lengthTimeNode.textContent = applicant.lengthTime;
+emailNode.textContent = applicant.email;
 hoursNode.textContent = applicant.hours;
+
+// if(lengthTimeNode.value === undefined) {
+//     lengthTimeNode.textContent = 'not applicable';
+// }
+// else {
+//     lengthTimeNode.textContent = applicant.lengthTime;
+// }
 
 if(applicant.genres.length === 0) {
     genreNode.textContent = 'none';
