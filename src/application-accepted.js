@@ -4,8 +4,9 @@ const skillNode = document.getElementById('skill');
 const jobTitleNode = document.getElementById('job-title');
 const cityNode = document.getElementById('city');
 const salaryNode = document.getElementById('salary');
-const applicant = window.localStorage.getItem('applicant');
-const newApplicant = JSON.parse(applicant);
+const applicants = window.localStorage.getItem('applicant');
+const newApplicants = JSON.parse(applicants);
+const newApplicant = newApplicants[newApplicants.length - 1];
 
 let jobTitle = '';
 
