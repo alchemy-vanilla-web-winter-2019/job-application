@@ -1,3 +1,7 @@
+const applicantJSON = window.localStorage.getItem('applicant');
+
+console.log(applicantJSON);
+
 const applicationFormNode = document.getElementById('application-form');
 const nameNode = document.getElementById('name');
 const cityNode = document.getElementById('city');
