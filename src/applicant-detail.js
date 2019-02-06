@@ -1,5 +1,14 @@
-const json = window.localStorage.getItem('applicant');
-const applicant = JSON.parse(json);
+const json = window.localStorage.getItem('applicants');
+let applicants = [];
+
+if(json) {
+    applicants = JSON.parse(json);
+}
+else {
+    window.location = './index.html';
+}
+
+const applicant = applicants[applicants.length - 1];
 
 const name = document.getElementById('name');
 const city = document.getElementById('city');
@@ -36,10 +45,10 @@ else {
 const msg = 'Thank you for applying, ' + applicant.name + '. If we are interested, you will be hearing from the Human Resources Department within 3 business days.';
 message.textContent = msg;
 
-clear.addEventListener('click', function() {
-    const result = confirm('This will clear your application information. Are you sure you want to proceed?');
-    if(result) {
-        window.localStorage.setItem('applicant', '');
-        window.location.reload();
-    }
-});
+// clear.addEventListener('click', function() {
+//     const result = confirm('This will clear your application information. Are you sure you want to proceed?');
+//     if(result) {
+//         window.localStorage.setItem('applicant', '');
+//         window.location.reload();
+//     }
+// });
