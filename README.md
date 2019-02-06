@@ -15,3 +15,36 @@ Let's apply for a job somewhere wacky! Your choice. If it's hard to think of som
 * You only need to use simple input elements; radio buttons and text boxes, for example.
 
 * You'll log successful user applications to the console.
+
+
+
+#notes
+
+const element = document.getElementById('id');
+const element = document.getElementById('id');
+const element1 = document.getElementById('id');
+const element1 = document.getElementById('id');
+const element1 = document.getElementById('id');
+const element1 = document.getElementById('id');
+const element1 = document.getElementById('id');
+const element1 = document.getElementById('id');
+
+form,addEventListener{submt} etc etc
+        const array = []
+
+        if(checkbox,checked) {
+            choices .push (id)
+        }
+        if(checkbox,checked) {
+            choices .push (id)
+        }
+             or       if(checkbox,checked) {
+                        choices .push (choice.value)
+
+
+
+                        or add class = choices
+
+                        using css selector to get nodes
+                    }
+
