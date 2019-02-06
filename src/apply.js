@@ -18,6 +18,8 @@ faireApplication.addEventListener('submit', function(event) {
         talents: talentNames
     };
 
-    console.log(application);
+    const serialized = JSON.stringify(application);
+    window.localStorage.setItem('application', serialized);
+    window.location = 'thanks.html';
 
 });
