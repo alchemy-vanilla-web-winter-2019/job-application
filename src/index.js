@@ -34,8 +34,8 @@ jobApp.addEventListener('submit', function(event) {
         name: appName.value,
         position: jobPosition.value,
         popcorn: popcorn.value,
-        romCom: romComClick.value,
-        filmNames: filmNames.value
+        romCom: romComClick,
+        films: filmNames
     };
     
     window.location = 'thanks.html';
