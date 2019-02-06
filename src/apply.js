@@ -15,7 +15,8 @@ faireApplication.addEventListener('submit', function(event) {
         name: faireApplication.name.value,
         quest: faireApplication.quest.value,
         color: faireApplication.color.value,
-        talents: talentNames
+        talents: talentNames,
+        loyalty: faireApplication.loyalty.value
     };
 
     const serialized = JSON.stringify(application);
