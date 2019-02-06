@@ -22,9 +22,9 @@ else {
 
 }
 
-if(employmentNode.value === undefined) {
-    salaryNode.textContent = 'broke';
+if(employmentNode.textContent === 'employed') {
+    salaryNode.textContent = applicant.salary;
 }
 else {
-    salaryNode.textContent = applicant.salary;
+    salaryNode.textContent = 'broke';
 }
