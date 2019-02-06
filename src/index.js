@@ -9,9 +9,7 @@ const popcornSpan = document.getElementById('popcorn-span');
 popcorn.addEventListener('change', function() {
     event.preventDefault();
     popcornSpan.textContent = popcorn.value;
-
 });
-
 
 jobApp.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -31,6 +29,19 @@ jobApp.addEventListener('submit', function(event) {
             filmNames[index] = filmName.value;
         }
     }
+
+    const applicant = {
+        name: appName.value,
+        position: jobPosition.value,
+        popcorn: popcorn.value,
+        romCom: romComClick.value,
+        filmNames: filmNames.value
+    };
+    
+    window.location = 'thanks.html';
+
+    const serialize = JSON.stringify(applicant);
+    window.localStorage.setItem('applicant', serialize);
 });
 
 
