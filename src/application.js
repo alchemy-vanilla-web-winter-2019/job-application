@@ -27,7 +27,7 @@ submit.addEventListener('submit', function() {
         }
     }
 
-    const submittedApp = {
+    const applicant = {
         name: name,
         ssn: ssn,
         read: read,
@@ -36,8 +36,16 @@ submit.addEventListener('submit', function() {
         hateShortsAmmount: slider.value
     };
 
-    const serialize = JSON.stringify(submittedApp);
-    window.localStorage.setItem('applicant', serialize);
+    let allApplicants = [];
+    const jsonString = window.localStorage.getItem('allApplicants');
 
-    window.location = 'applicant-detail.html';
+    if(jsonString) {
+        allApplicants = JSON.parse(jsonString);
+    }
+
+    allApplicants.push(applicant);
+    const serialize = JSON.stringify(allApplicants);
+    window.localStorage.setItem('allApplicants', serialize);
+
+    // window.location = 'applicant-detail.html';
 });
