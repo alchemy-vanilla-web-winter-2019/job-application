@@ -7,7 +7,7 @@ const noEscapeNode = document.getElementById('no-escape');
 const boredomNode = document.getElementById('boredom');
 const delusionalNode = document.getElementById('delusional');
 const bowieNode = document.getElementById('bowie');
-const selfDescription = document.getElementById('self-description');
+
 
 
 yesEscapeNode.addEventListener('change', function() {
@@ -18,10 +18,7 @@ yesEscapeNode.addEventListener('change', function() {
         }
         boredomNode.disabled = false;
         delusionalNode.disabled = false;
-        bowieNode.disabled = false;
-        
-        
-        
+        bowieNode.disabled = false;     
         
     }
 });
@@ -38,11 +35,7 @@ noEscapeNode.addEventListener('change', function() {
 
         boredomNode.disabled = true;
         delusionalNode.disabled = true;
-        bowieNode.disabled = true;
-
-        
-        
-        
+        bowieNode.disabled = true;        
         
         
     }
@@ -50,38 +43,16 @@ noEscapeNode.addEventListener('change', function() {
 
 
 
-
-
-
-
 userInputNode.addEventListener('submit', function(event) {
     event.preventDefault();
-    
-// experiment with this code using value from check boxes insted of select
-
-    // const description = document.getElementById('self-description[]');
-    // const descriptionSelect = [];
-
-
-
-    // for(let index = 0; index < description.length; index++) {
-    //     if(description[index].checked) {
-    //         descriptionSelect.push(description[index].value);
-    //     }
-    // }
-    
-
-
-    
+       
     const applicant = {
         name: nameNode.value,
         city: cityNode.value,
         phone: phoneNumberNode.value,
-        // describeSelf: selfDescription.value,
-        
-    
-        
-        
+       
+                      
     };
-    console.log(applicant);
+    return applicant;
+    
 });
