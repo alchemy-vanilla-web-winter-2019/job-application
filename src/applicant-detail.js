@@ -13,4 +13,5 @@ ssn.textContent = hydrated.ssn;
 read.textContent = hydrated.read;
 shorts.textContent = hydrated.shorts;
 favoriteOptions.textContent = hydrated.favoriteOptions.join(', ');
+
 hateShortsAmmount.textContent = hydrated.hateShortsAmmount;
