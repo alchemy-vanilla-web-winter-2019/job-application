@@ -85,7 +85,7 @@ userInputNode.addEventListener('submit', function(event) {
     };
    
     const serialize = JSON.stringify(applicant); 
-    console.log(applicant);
+    // console.log(applicant);
 
     window.localStorage.setItem('lectric-eye', serialize);
     window.location = './details-applicant.html';
