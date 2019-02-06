@@ -1,11 +1,17 @@
 const applicantJSON = window.localStorage.getItem('applicant');
-const applicant = JSON.parse(applicantJSON);
+const applicants = JSON.parse(applicantJSON);
 const nameNode = document.getElementById('name');
 const statusNode = document.getElementById('status');
 const employmentNode = document.getElementById('employment');
 const salaryNode = document.getElementById('salary');
 const habitListNode = document.getElementById('habits');
 const emailNode = document.getElementById('email');
+
+if(!applicantJSON) {
+    window.location = '../index.html';
+}
+
+const applicant = applicants[applicants.length -1];
 
 nameNode.textContent = applicant.name;
 statusNode.textContent = applicant.status;

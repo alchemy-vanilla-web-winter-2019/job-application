@@ -62,5 +62,5 @@ formNode.addEventListener('submit', function(event) {
 
     window.localStorage.setItem('applicant', jsonApplicant);
 
-    window.location = './applicant-details.html';
+    window.location = './application-details.html';
 });
