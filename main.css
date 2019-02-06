@@ -1,0 +1,34 @@
+#pink-background {
+    background: pink;
+}
+
+#first-page {
+    background: lightgoldenrodyellow;
+}
+
+#form-page {
+    background: lightcyan;
+}
+
+#thanks-page {
+    background: lightcoral;
+}
+
+img {
+    height: 250px;
+}
+
+dt {
+    display: inline-block;
+    margin-left: 40px;
+    padding: 10px;
+    background: lightblue;
+}
+
+#state {
+    text-transform: capitalize;
+}
+
+button {
+    background: lightgoldenrodyellow;
+}
