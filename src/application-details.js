@@ -10,7 +10,7 @@ const emailNode = document.getElementById('email');
 nameNode.textContent = applicant.name;
 statusNode.textContent = applicant.status;
 employmentNode.textContent = applicant.employment;
-salaryNode.textContent = applicant.salary;
+//salaryNode.textContent = applicant.salary;
 emailNode.textContent = applicant.email;
 
 if(applicant.habitList.length === 0) {
@@ -23,10 +23,9 @@ else {
 
 }
 
-if(applicant.employment.textContent === 'employed') {
-    salaryNode.textContent = applicant.salary;
-    salaryNode.textContent.remove('$0');
+if(employmentNode.value === undefined) {
+    salaryNode.textContent = 'broke';
 }
 else {
-    salaryNode.textContent = '$0';
+    salaryNode.textContent = applicant.salary;
 }
