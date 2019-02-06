@@ -70,7 +70,7 @@ main {
 }
 
 #form-area {
-    background: #F7AEF8;
+    background: #92CDED;
 }
 
 #application-form {
@@ -141,20 +141,27 @@ footer {
     flex-direction: column;
 }
 
+#submit-button {
+    padding-top: 20px;
+    text-align: center;
+}
+
 button {
-    border: 1px solid #92CDED;
-    padding: 10px 15px;
+    display: inline-block;
+    padding: 20px 35px;
     background: #F7AEF8;
+    margin-top: 25px;
     text-decoration: none;
     text-transform: uppercase;
-    color: #white;
-    margin: 35px;
-    font-size: 18px;
+    color: white;
+    font-size: 22px;
 }
 
 hr {
     border: none;
     background: white;
     height: 3px;
-    margin: 35px 5px 35px 5px;
+    margin: 35px 0px;
 }
+
+
