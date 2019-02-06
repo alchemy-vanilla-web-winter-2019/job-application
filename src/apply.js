@@ -3,22 +3,16 @@ const nameNode = document.getElementById('name');
 const cityNode = document.getElementById('city');
 const moralityNode = document.getElementById('morality');
 const moralityScoreNode = document.getElementById('morality-score');
-const preSumbitNode = document.getElementById('pre-submit');
-const resultsNode = document.getElementById('results');
-
-resultsNode.style.display = 'none';
 
 let strongestSkill = '';
 let mainPhilosophy = '';
 let salaryRequirement = '';
 let morality = '3';
 
-let jobTitle = '';
-
-
 moralityNode.addEventListener('change', function() {
     morality = moralityNode.value;
     moralityScoreNode.innerHTML = morality;
+    console.log(morality);
 });
 
 applicationFormNode.addEventListener('submit', function() {
@@ -75,9 +69,6 @@ applicationFormNode.addEventListener('submit', function() {
     const applicantJSON = JSON.stringify(applicant);
 
     window.localStorage.setItem('applicant', applicantJSON);
-
-    console.log(applicantJSON);
-
     
     if(applicant.morality >= 3) {
         document.location = '/pages/application-denied.html';
