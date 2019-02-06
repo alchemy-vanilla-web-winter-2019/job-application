@@ -54,6 +54,5 @@ formNode.addEventListener('submit', function(event) {
         professional: isCertified,
         cuddles: cuddleTypes
     };
-
-    console.log(applicant);
+    return applicant;
 });
