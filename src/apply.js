@@ -7,13 +7,15 @@ const genderNode = document.getElementById('gender');
 applicationForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const submitForm = {
+    const applicant = {
         name: nameNode.value,
         email: emailNode.value,
         phone: phoneNode.value,
         gender: genderNode.value
     };
 
-    // eslint-disable-next-line no-console
-    console.log('hi', submitForm);
+    const serialized = JSON.stringify(applicant);
+    window.localStorage.setItem('applicant', serialized);
+    console.log(serialized);
+
 });
