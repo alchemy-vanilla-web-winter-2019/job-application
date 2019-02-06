@@ -11,9 +11,8 @@ const genreNode = document.getElementById('genre');
 if(!applicantJSON) {
     window.location = './index.html';
 }
+
 const applicant = applicants[applicants.length - 1];
-firstNameNode.textContent = applicant.firstName;
-lastNameNode.textContent = applicant.lastName;
 
 firstNameNode.textContent = applicant.firstName;
 lastNameNode.textContent = applicant.lastName;
