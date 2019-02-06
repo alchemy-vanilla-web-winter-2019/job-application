@@ -27,7 +27,9 @@ spaceForm.addEventListener('submit', function(event) {
         claustrophobic: claustrophobic.value,
         spacegear: chosenGear
     };
-    console.log(userData);
+    window.location = 'thanks.html';
+    const serialize = JSON.stringify(userData);
+    window.localStorage.setItem('user data', serialize);
 });
 
 

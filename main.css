@@ -12,3 +12,7 @@ body {
 button {
   margin: 15px;
 }
+
+.left {
+  text-align: left;
+}
