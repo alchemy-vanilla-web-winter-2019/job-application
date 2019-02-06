@@ -1,3 +1,13 @@
 body {
     background-color: goldenrod;
 }
+
+img {
+    width: 100vh;
+    
+}
+
+footer {
+    text-align: center;
+}
+

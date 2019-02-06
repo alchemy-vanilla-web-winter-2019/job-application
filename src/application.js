@@ -5,7 +5,6 @@ const combatNodeList = document.getElementsByName('combat');
 const joinReason = document.getElementById('join-reason');
 
 
-
 application.addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -19,19 +18,14 @@ application.addEventListener('submit', function(event) {
         joinReason: joinReason.value
     };
 
-
     for(let i = 0; i < combatNodeList.length; i++) {
         const style = combatNodeList[i];
         if(style.checked) {
             combatStyles.push(style.value);
         }
-        console.log('combatStyles array', combatStyles);
     }
-    console.log('applicant', applicant);
 
-    //get the object into a variable
     const serialized = JSON.stringify(applicant);
-    // set the object into local storage ('keyname', value)
     window.localStorage.setItem('applicant', serialized);
     window.location = 'thanks.html';
 });
