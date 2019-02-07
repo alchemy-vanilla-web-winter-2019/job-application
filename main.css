@@ -67,6 +67,22 @@ button {
     margin-top: 10px;
   }
 
+  table {
+      border-collapse: collapse;
+      text-align: center;
+  }
+  
+  thead {
+      background-color:#4286f4;
+  }
+  
+  table, td {
+      border-bottom: 1px solid #4286f4;
+      padding: 15px;
+      
+      
+  }
+
 footer {
       margin-top: 40px;
       text-align: center;

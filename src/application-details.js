@@ -4,12 +4,22 @@ const knitExperience = document.getElementById('knitting-experience');
 const woolAllergy = document.getElementById('allergy');
 const yarnsUsed = document.getElementById('yarn-brands');
 
-const json = window.localStorage.getItem('applicant');
+const jsonString = window.localStorage.getItem('applicants');
 
-const fullApplicant = JSON.parse(json);
+let applicant = [];
+if(jsonString) {
+    const applicants = JSON.parse(jsonString);
+    applicant = applicants[applicants.length - 1];
+}
 
-applicantName.textContent = fullApplicant.name;
-position.textContent = fullApplicant.position;
-knitExperience.textContent = fullApplicant.skillLevel;
-woolAllergy.textContent = fullApplicant.allergy.join(' ');
-yarnsUsed.textContent = fullApplicant.yarn.join(' ');
+else {
+    window.location = '/';
+}
+
+
+
+applicantName.textContent = applicant.name;
+position.textContent = applicant.position;
+knitExperience.textContent = applicant.skillLevel;
+woolAllergy.textContent = applicant.allergy.join(' ');
+yarnsUsed.textContent = applicant.yarn.join(' ');
