@@ -20,7 +20,7 @@
             </p>
         </section>
         <section>
-            <p>
+            <p class="bosser">
                 Become a Bosser Arounder: <br><br>
                 <a id="fill-form">Fill out the Form !</a>
                 <br>
@@ -35,17 +35,17 @@
                         </legend>
                         <label>
                             Name: <br>
-                            <input id="name-input" type="text">
+                            <input id="name-input" type="text" name="appname" required>
                         </label>
                             <br>
                         <label>
                             Digits: <br>
-                            <input id="digits-input" type="tel">
+                            <input id="digits-input" type="tel" name="digits">
                         </label>
                             <br>
                         <label>
                             Email: <br>
-                            <input id="email-input" type="email">
+                            <input id="email-input" type="email" name="email">
                         </label>
                     </fieldset>
                 </p>
@@ -59,34 +59,22 @@
                                 Select All That Apply
                                 <br><br>
                                 <label>
-                                    Demanding
-                                    <input type="checkbox" name="checkboxes" value="demanding">
-                                    Impatient
-                                    <input type="checkbox" name="checkboxes" value="impatient">
-                                    Being in Control
-                                    <input type="checkbox" name="checkboxes" value="incontrol">
+                                    <input type="checkbox" name="checkboxes" value="Demanding">Demanding
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="checkboxes" value="Impatient">Impatient
+                                </label>
+                                    <input type="checkbox" name="checkboxes" value="InControl">Being in Control
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     Desired Salary: <br>
-                                    <select name="pay" id="pay">
+                                    <select name="pay" id="pay" required>
                                         <option value="100k">$80,000 - $100,00</option>
                                         <option value="200k">$100,000 - $200,000</option>
                                         <option value="750k">$200,00 - $750,000</option>
                                     </select>
-                                </label>
-                            </p>
-                            <p>
-                                <label>
-                                    Get Rich or Die Tryin' ?
-                                    <p>Yes !
-                                    <input id="yes" type="radio" name="die-trying" value="yes" checked="checked"> 
-                                    </p>
-                                    <p>
-                                    No :(
-                                    <input id="no" type="radio" name="die-trying" value="no" checked="checked">
-                                    </p>
                                 </label>
                             </p>
                         </label>
