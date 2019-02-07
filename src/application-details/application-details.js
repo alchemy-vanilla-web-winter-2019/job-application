@@ -22,6 +22,7 @@ for(let i = 0; i < applicationList.length; i++) {
 review.children.inputName.textContent = selected.name;
 review.children.inputExperience.textContent = selected.experience;
 review.children.inputWeapon.textContent = selected.weapon;
+review.children.inputFirstTheft.textContent = selected.firsttheft;
 review.children.inputRoles.textContent = selected.roles.join(', ');
 review.children.inputGoodness.textContent = selected.goodness;
 review.children.inputLawfulness.textContent = selected.lawfulness;

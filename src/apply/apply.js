@@ -16,6 +16,7 @@ guildApplication.addEventListener('submit', function(event) {
         name: guildApplication.name.value,
         experience: guildApplication.experience.value,
         weapon: guildApplication.weapon.value,
+        firsttheft: guildApplication.firsttheft.value,
         roles: inputRoles,
         lawfulness: guildApplication.lawfulness.value,
         goodness: guildApplication.goodness.value,
