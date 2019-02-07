@@ -108,3 +108,5 @@ tallyRow.appendChild(quietCell);
 tallyRow.appendChild(chattyCell);
 
 cuddleTally.appendChild(tallyRow);
+
+window.localStorage.setItem('last-visited', 'applicant-list');
