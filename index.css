@@ -1,8 +1,13 @@
+body {
+    background-color: rgba(80, 137, 145, 1);
+    color: rgba(241, 232, 184, 1);
+}
 a {
-    border: 1px solid cornflowerblue;
+    border: 5px solid rgba(23, 42, 58, 1);
     border-radius: 5px;
     padding: 5px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(241, 232, 184, 1);
 }
 
 h1 {
