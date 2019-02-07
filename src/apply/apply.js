@@ -27,6 +27,7 @@ applicationFormNode.addEventListener('submit', function(event) {
 
     const newApplication = {
         name: applicationFormNode.name.value,
+        duplicate: 0,
         assassination: applicationFormNode.assassination.value,
         clothes: applicationFormNode.clothes.value,
         skills: skillsArray,
@@ -37,6 +38,12 @@ applicationFormNode.addEventListener('submit', function(event) {
     const newApplicationsString = window.localStorage.getItem('newApplications');
     if(newApplicationsString) {
         newApplications = JSON.parse(newApplicationsString);
+    }
+    
+    for(let i = 0; i < newApplications.length; i++) {
+        if(newApplications[i].name === newApplication.name) {
+            newApplication.duplicate++;
+        }
     }
     newApplications.push(newApplication);
 

@@ -17,7 +17,7 @@ applicantsTable.appendChild(applicantsBody);
 
 if(newApplications[0].none !== true) {
     const applicationKeys = Object.keys(newApplications[0]);
-    const tableHeadings = [applicationKeys[0], applicationKeys[2], applicationKeys[3]];
+    const tableHeadings = [applicationKeys[0], applicationKeys[3], applicationKeys[4]];
     const headingRow = document.createElement('tr');
     applicantsHeader.appendChild(headingRow);
     for(let i = 0; i < tableHeadings.length; i++) {
@@ -39,8 +39,10 @@ if(newApplications[0].none !== true) {
         for(let j = 0; j < numberOfColumns.length; j++) {
             const newTD = document.createElement('td');
             if(j === 0) {
-                const nameAnchor = document.createElement('a');
+                const nameAnchor = document.createElement('a');                       
                 nameAnchor.href = 'applicant-detail.html?name=' + encodeURIComponent(headerArray[j]);
+                const duplicateSearchString = encodeURIComponent(headerArray[j]) + encodeURIComponent(newApplications[i].duplicate);
+                nameAnchor.href = 'applicant-detail.html?name=' + duplicateSearchString;            
                 nameAnchor.textContent = headerArray[j];
                 nameAnchor.classList.add('link');
                 newTD.appendChild(nameAnchor);
