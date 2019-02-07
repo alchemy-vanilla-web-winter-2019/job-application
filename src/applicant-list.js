@@ -12,6 +12,16 @@ for(let i = 0; i < hydratedApps.length; i++) {
     const combatTD = document.createElement('td');
     const joinReasonTD = document.createElement('td');
 
+//set stage for building the nameCell that holds a link
+    const applicant = hydratedApps[i];    
+    const tr = document.createElement('tr');
+    const nameCell = document.createElement('td');
+    const a = document.createElement('a');
+
+    a.href = 'wannabe-detail.html?name=' + decodeURIComponent('name');
+    a.textContent = applicant.name;
+
+
     nameTD.textContent = hydratedApps[i].name;
     aliasTD.textContent = hydratedApps[i].alias;
     professionTD.textContent = hydratedApps[i].profession;
