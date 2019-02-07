@@ -27,8 +27,8 @@ form.addEventListener('submit', function() {
             skillPreferences.push(choices.value);
         }
     }
-
-    const appSubmission = {
+    
+    const applicant = {
         firstName:firstName,
         lastName:lastName,
         phone: phone,
@@ -42,8 +42,15 @@ form.addEventListener('submit', function() {
 
     };
     
-    const serialize = JSON.stringify(appSubmission); 
-    window.localStorage.setItem('appSubmission', serialize); 
-    window.open('./src/application-detail/application-detail.html');
+    let allApplicants = [];
+    const jsonString = window.localStorage.getItem('allApplicants');
+    if(jsonString) {
+        allApplicants = JSON.parse(jsonString);
+    }
+
+    allApplicants.push(applicant);
+    const serialize = JSON.stringify(applicant); 
+    window.localStorage.setItem('allApplicants', serialize); 
+    // window.location = 'thank-you.html';
 });
 
