@@ -1,6 +1,27 @@
 header {
-    color: rgba(0, 67, 70, 1);
+    color: rgba(96, 99, 158, 1);
+    font-family: 'Playfair Display', serif;
 }
-table, tr, th {
-    border: 2px solid rgba(0, 67, 70, 1);
+table, tr, th, td {
+    border: 2px solid rgba(96, 99, 158, 1);
+    color: rgba(96, 99, 158, 1);
+}
+
+body {
+    background-color: rgba(184, 252, 238, 1);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+a {
+    border: 3px solid rgba(168, 190, 247, 1);
+    padding: 5px;
+    border-radius: 3px;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+th {
+    font-family: 'Playfair Display', serif;
 }

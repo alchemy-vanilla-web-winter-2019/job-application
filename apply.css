@@ -1,18 +1,20 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color:  rgba(241, 232, 184, 1);
-    color:rgba(23, 42, 58, 1);
+    background-color:  rgba(233, 203, 237, 1);
+    color:rgba(96, 99, 158, 1);
 }
 
 h1 {
     display: flex;
     justify-content: center;
-    color: rgba(0, 67, 70, 1);
+    color: rgba(96, 99, 158, 1);
+    font-family: 'Playfair Display', serif;
 }
 
 h2 {
     display: flex;
-    color: rgba(0, 67, 70, 1);
+    color: rgba(96, 99, 158, 1);
+    font-family: 'Playfair Display', serif;
 }
 
 .touch {
@@ -21,39 +23,43 @@ h2 {
 }
 
 #section-one {
-    border: 4px solid rgba(80, 137, 145, 1);
+    border: 4px solid rgba(184, 252, 238, 1);
     padding: 10px;
 }
 
 #income {
-    border: 4px solid rgba(80, 137, 145, 1);
+    border: 4px solid rgba(184, 252, 238, 1);
     padding: 10px;
     margin-top: 10px;
 }
 
 #lifestyle {
-    border: 4px solid rgba(80, 137, 145, 1);
+    border: 4px solid rgba(184, 252, 238, 1);
     padding: 10px;
     margin-top: 10px;
 }
 
 button {
-    background-color: rgba(0, 121, 145, 1);
+    background-color: rgba(184, 252, 238, 1);
     padding: 10px;
     margin-top: 10px;
-    color: rgba(241, 232, 184, 1);
+    color: rgba(96, 99, 158, 1);
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
 }
 
 .hidden {
-    background-color: rgba(0, 121, 145, 1);
+    background-color: darkgrey;
 }
 
 a {
-    border: 5px solid rgba(23, 42, 58, 1);
+    border: 5px solid rgba(184, 252, 238, 1);
     border-radius: 5px;
     padding: 5px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgba(80, 137, 145, 1);
+    font-family: 'Playfair Display', serif;
+    color: rgba(96, 99, 158, 1);
+    font-size: 20px;
+    margin-top: 40px;
 }
 
 
