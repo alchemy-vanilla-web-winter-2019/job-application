@@ -1,16 +1,10 @@
-//get the table
 const tableList = document.getElementById('table-list');
-//get the data
+
 const jsonApplications = window.localStorage.getItem('applications');
 
-//parse the data
 const hydratedApps = JSON.parse(jsonApplications);
 
-console.log('hydratedApps', hydratedApps);
-
-//loop through array to append data to dom
 for(let i = 0; i < hydratedApps.length; i++) {
-    //start with the row
     const newRow = document.createElement('tr');
     const nameTD = document.createElement('td');
     const aliasTD = document.createElement('td');

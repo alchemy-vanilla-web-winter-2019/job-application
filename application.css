@@ -45,10 +45,6 @@ input[type=radio] {
     display: inline block;
 }
 
-input[type=checkbox] {
-
-}
-
 select {
     width: 75%;
     padding: 10px 10px;

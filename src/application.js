@@ -4,8 +4,6 @@ const alias = document.getElementById('alias');
 const combatNodeList = document.getElementsByName('combat');
 const joinReason = document.getElementById('join-reason');
 
-
-
 application.addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -25,26 +23,17 @@ application.addEventListener('submit', function(event) {
             combatStyles.push(style.value);
         }
     }
-    //get the data
+
     let applications = [];
     const jsonApplications = window.localStorage.getItem('applications');
-    
-    
-    //gather the data 
+
     if(jsonApplications) {
         applications = JSON.parse(jsonApplications);
     }
     applications.push(applicant);
 
-    console.log('applications', applications);
-
     const serialized = JSON.stringify(applications);
     window.localStorage.setItem('applications', serialized);
-
-
-
-    // const serialized = JSON.stringify(applicant);
-    // window.localStorage.setItem('applicant', serialized);
 
     window.location = 'thanks.html';
 });

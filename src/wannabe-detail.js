@@ -9,7 +9,6 @@ const jsonObject = window.localStorage.getItem('applications');
 const hydratedWannabe = JSON.parse(jsonObject);
 
 const index = hydratedWannabe.length - 1;
-console.log(hydratedWannabe);
 
 heroName.textContent = hydratedWannabe[index].name;
 heroAlias.textContent = hydratedWannabe[index].alias;
