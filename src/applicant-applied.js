@@ -1,14 +1,25 @@
 const json = window.localStorage.getItem('applicants');
 // double check that this isn't applicant
 let applicant = null;
+let allApplicants = [];
 
 if(json) {
-    const allApplicants = JSON.parse(json);
-    applicant = allApplicants[allApplicants.length - 1];
+    allApplicants = JSON.parse(json);
 } else {
     window.location = '/';
 }
 
+const searchParams = new URLSearchParams(window.location.search);
+const nameToFind = searchParams.get('name');
+
+for(let i = 0; i < allApplicants.length; i++) {
+    const nameSelect = allApplicants[i];
+
+    if(nameSelect.name === nameToFind) {
+        applicant = nameSelect;
+        break;
+    }
+}
 
 const name = document.getElementById('name');
 const city = document.getElementById('city');

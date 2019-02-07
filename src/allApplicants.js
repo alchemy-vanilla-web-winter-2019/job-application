@@ -15,7 +15,10 @@ for(let i = 0; i < applicant.length; i++){
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
-    nameCell.textContent = applicantSelect.name;
+    const a = document.createElement('a');
+    a.href = 'applied.html?name=' + encodeURIComponent(applicantSelect.name);
+    a.textContent = applicantSelect.name;
+    nameCell.appendChild(a);
     tr.appendChild(nameCell);
 
     const cityCell = document.createElement('td');
