@@ -49,3 +49,4 @@ formNode.addEventListener('submit', function(event) {
     window.localStorage.setItem('job-applicant', serializeApplication);
     window.location = 'applicant-details.html';
 });
+
