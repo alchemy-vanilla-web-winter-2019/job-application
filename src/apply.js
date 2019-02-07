@@ -21,14 +21,20 @@ appFormNode.addEventListener('submit', function(event) {
         email: emailInputNode.value,
         talkboss: checkBoxesArray,
         pay: payInputNode.value,
-      //whatever: appFormNode.("whatever name="from apply.html").value
-      //whatever: appFormNode.name.value  -->
-      //faster way so you don't need getElementById like lines 2-5
+      //whatever: appFormNode.("whatever the [name="from apply.html"]).value
+      //whatever: appFormNode.digits.value  -->
+      //faster way so you don't need to getElementById like lines 2-5
 
     };
     console.log('I did it', formSubmittal);
 
-    const setObject = JSON.stringify(formSubmittal);
-    window.localStorage.setItem('applicant', setObject);
+    let applications = [];
+    const jsonArray = window.localStorage.getItem('applications', serializedArray);
+    if(jsonArray) {
+        applications = JSON.parse(jsonArray); 
+    }
+    applications.push(formSubmittal);
+    const serializedArray = JSON.stringify(applications);
+
     window.location = 'thanks.html';
 });
