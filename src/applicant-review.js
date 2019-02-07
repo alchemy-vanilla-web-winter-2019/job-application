@@ -16,7 +16,7 @@ for(let i = 0; i < allApplicants.length; i++) {
     // render cells
     const nameCell = document.createElement('td');
     const a = document.createElement('a');
-    a.href = 'applicant-detail.html?name=' + encodeURIComponent(applicant.name);
+    a.href = 'applicant-detail.html?ssn=' + encodeURIComponent(applicant.ssn);
     a.textContent = applicant.name;
     nameCell.appendChild(a);
     tr.appendChild(nameCell);

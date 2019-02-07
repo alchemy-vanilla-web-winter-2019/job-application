@@ -1,25 +1,13 @@
 const json = window.localStorage.getItem('allApplicants');
-let allApplicants = [];
 
 let hydrated = [];
 if(json) {
-    allApplicants = JSON.parse(json);
+    const allApplicants = JSON.parse(json);
+    hydrated = allApplicants[allApplicants.length - 1];
 } else {
     window.location = '/';
 }
 
-const searchParams = new URLSearchParams(window.location.search);
-const valueToFind = searchParams.get('ssn');
-
-// create for loop to find info for selected element then update text content
-for(let i = 0; i < allApplicants.length; i++) {
-    const currentApplicant = allApplicants[i];
-
-    if(currentApplicant.ssn === valueToFind) {
-        hydrated = currentApplicant;
-        break;
-    }
-}
 
 const name = document.getElementById('name');
 const ssn = document.getElementById('ssn');
@@ -33,4 +21,5 @@ ssn.textContent = hydrated.ssn;
 read.textContent = hydrated.read;
 shorts.textContent = hydrated.shorts;
 favoriteOptions.textContent = hydrated.favoriteOptions.join(', ');
+
 hateShortsAmmount.textContent = hydrated.hateShortsAmmount;
