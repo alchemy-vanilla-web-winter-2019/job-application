@@ -29,12 +29,12 @@ appFormNode.addEventListener('submit', function(event) {
     console.log('I did it', formSubmittal);
 
     let applications = [];
-    const jsonArray = window.localStorage.getItem('applications', serializedArray);
+    const jsonArray = window.localStorage.getItem('dope');
     if(jsonArray) {
         applications = JSON.parse(jsonArray); 
     }
     applications.push(formSubmittal);
     const serializedArray = JSON.stringify(applications);
-
+    localStorage.setItem('dope', serializedArray);
     window.location = 'thanks.html';
 });
