@@ -29,6 +29,7 @@ th {
     background-color: navy;
     text-decoration: underline;
     text-transform: capitalize;
+    text-align: left;
     width: 200px;
     padding: 5px;
     border-bottom: 1px solid white;
