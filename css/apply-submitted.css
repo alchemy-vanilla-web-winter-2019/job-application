@@ -58,6 +58,7 @@ main {
     background: white;
     font-family: 'Mukta', sans-serif;
     font-size: 18px;
+    align-items: center;
 }
 
 #intro {
@@ -69,92 +70,58 @@ main {
     text-align: center;
 }
 
-#form-area {
-    background: #92CDED;
-}
 
-#application-form {
-    width: 70%;
-    margin: 30px auto;
+#application-review {
+    margin: 0px auto;
     padding: 10px;
     font-family: 'Lato', sans-serif;
-    color: white;
-
-}
-
-#application-form label, p {
-    padding: 0px 5px 0px 25px;
-
-}
-
-h2 {
-    text-transform: uppercase;
-    color: white;
-
-}
-
-#morality-score-section {
-    display: inline-block;
-    margin: 10px 25px;
-    padding: 15px 25px;
-    border: 1px solid white;
-}
-
-#morality-score {
-    margin-left: 3px;
-    text-decoration: underline;
-    font-weight: bold;
-
-}
-
-
-#apply-button {
-    display: flex;
     border: 1px solid #92CDED;
+    padding: 15px 25px;
+}
+
+dl {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 300px;      /* set the container width*/
+    overflow: visible;
+  }
+  dl dt {
+    flex: 0 0 50%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-decoration: underline;
+    color: #F7AEF8;
+  }
+  dl dd {
+    flex:0 0 50%;
+    margin-left: auto;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  #look-good {
+      margin: 15px auto;
+  }
+
+#buttons {
+    margin: 5px auto 45px auto;
+}
+
+#buttons a {
     padding: 10px 15px;
-    background: #C7EBF0;
+    background: #F7AEF8;
     text-decoration: none;
     text-transform: uppercase;
-    color: #F7AEF8;
+    color: white;
     margin: 15px;
-}
-
-#skills {
-    display: flex;
-    flex-direction: column;
-}
-
-#philosophy {
-    display: flex;
-    flex-direction: column;
-}
-
-#submit-button {
-    padding-top: 20px;
     text-align: center;
 }
 
-button {
-    display: inline-block;
-    padding: 20px 35px;
-    background: #F7AEF8;
-    margin-top: 25px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-size: 22px;
-    border: none;
-}
-
-button:hover {
-    background: #fed3ff;
-}
-
-hr {
-    border: none;
-    background: white;
-    height: 3px;
-    margin: 35px 0px;
+#buttons a:hover {
+    background: #92CDED;
+ 
 }
 
 footer {
@@ -167,4 +134,32 @@ footer {
     height: 100%;
     padding-top: 25px;
     padding-bottom: 100px;
+}
+
+#accepted {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 50px 60px 50px;
+    text-align: center;
+    width: 75%
+}
+
+h2, h3 {
+    color: #F7AEF8;
+}
+
+#accept-job {
+    padding: 10px 15px;
+    background: #F7AEF8;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    margin: 15px;
+    text-align: center;
+}
+
+#accept-job:hover {
+    background: #92CDED;
 }
