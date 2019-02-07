@@ -9,6 +9,7 @@ const formValue = [
     applicantArray[lastApp].burial
 ];
 
+
 for(let index = 0; index < 4; index++) {
     const form = document.getElementsByTagName('dd');
     form[index].textContent = formValue[index];
@@ -17,3 +18,4 @@ for(let index = 0; index < 4; index++) {
 buttonNode.addEventListener('click', function() {
     window.location = './index.html';
 });
+

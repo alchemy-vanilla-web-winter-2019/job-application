@@ -10,17 +10,22 @@ if(applicantData) {
 
 for(let i = 0; i < applicantArray.length; i++) {
     const applicants = applicantArray[i];
-    
-    const newRow = document.createElement('tr');
 
+    const newRow = document.createElement('tr');
+    
     const nameEntry = document.createElement('td');
-    nameEntry.textContent = applicants.name;
     newRow.appendChild(nameEntry);
+
+    const link = document.createElement('a');
+    link.href = 'applicant-details.html?name=' + encodeURIComponent(applicants.name);
+    link.textContent = applicants.name
+    link.target = '_blank';
+    nameEntry.appendChild(link);
     
     const seperatorEntry = document.createElement('td');
     seperatorEntry.textContent = '|';
     newRow.appendChild(seperatorEntry);
-
+    
     const phoneEntry = document.createElement('td');
     phoneEntry.textContent = applicants.phone;
     newRow.appendChild(phoneEntry);
