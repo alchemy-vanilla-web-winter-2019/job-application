@@ -12,12 +12,15 @@ for(let i = 0; i < applicationsArray.length; i++) {
     const weaponTD = document.createElement('td');
     const rolesTD = document.createElement('td');
     const lawfulnessTD = document.createElement('td');
+    const nameAnchor = document.createElement('a');
 
-    nameTD.textContent = applicationsArray[i].name;
+    nameAnchor.href = 'application-details.html?name=' + encodeURIComponent(applicationsArray[i].name);
+    nameAnchor.textContent = applicationsArray[i].name;
     weaponTD.textContent = applicationsArray[i].weapon;
     rolesTD.textContent = applicationsArray[i].roles.join(', ');
     lawfulnessTD.textContent = applicationsArray[i].lawfulness;
 
+    nameTD.appendChild(nameAnchor);
     newRow.appendChild(nameTD);
     newRow.appendChild(weaponTD);
     newRow.appendChild(rolesTD);
