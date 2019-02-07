@@ -21,6 +21,7 @@ for(let i = 0; i < applicants.length; i++) {
     const favoriteNumber = document.createElement('td');
     favoriteNumber.classList.add('num');
 
+
     name.textContent = applicant.name;
     city.textContent = applicant.city;
     favoriteNumber.textContent = applicant.faveNumber;
