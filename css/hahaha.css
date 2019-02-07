@@ -1,0 +1,13 @@
+body {
+    background-image: url('../assets/laugh.gif');
+    text-align: center;
+}
+
+h1 {
+    font-size: 72px;
+    color: white;
+    margin: 200px auto;
+    font-family: 'Mukta', sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
