@@ -4,15 +4,38 @@ const heroProfession = document.getElementById('hero-profession');
 const heroCombat = document.getElementById('hero-combat');
 const heroReason = document.getElementById('hero-reason');
 
-const jsonObject = window.localStorage.getItem('applications');
-const hydratedWannabe = JSON.parse(jsonObject); //would remove this item
+// const hydratedWannabe = JSON.parse(jsonObject); //would remove this item
 
-const index = hydratedWannabe.length - 1;  //get rid of this line!
+// console.log('hydratedWannabe', hydratedWannabe);
 
-heroName.textContent = hydratedWannabe[index].name;
-heroAlias.textContent = hydratedWannabe[index].alias;
-heroProfession.textContent = hydratedWannabe[index].profession;
-heroCombat.textContent = hydratedWannabe[index].combat;
-heroReason.textContent = hydratedWannabe[index].joinReason;
+let applicants = [];
+const jsonWannabe = window.localStorage.getItem('applications');
+
+if(jsonWannabe) {
+    applicants = JSON.parse(jsonWannabe);  //entire array is here
+} else {
+    window.location = '/';
+}
+
+// console.log('applicants', applicants);
+const searchParam = new URLSearchParams(window.location.search);
+const nameToFind = searchParam.get('name');
+// console.log('nameToFind', nameToFind);
+
+let applicant = null; 
+
+for(let i = 0; i < applicants.length; i++) {
+    if(nameToFind === applicants[i].name) {
+        applicant = applicants[i];
+        break;
+    }
+}
+console.log('applicant', applicant);
+
+heroName.textContent = applicant.name;
+heroAlias.textContent = applicant.alias;
+heroProfession.textContent = applicant.profession;
+heroCombat.textContent = applicant.combat;
+heroReason.textContent = applicant.joinReason;
 
 

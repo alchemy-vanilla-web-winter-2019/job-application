@@ -16,7 +16,7 @@ for(let i = 0; i < hydratedApps.length; i++) {
     const nameCell = document.createElement('td');
     const a = document.createElement('a');
 
-    a.href = 'wannabe-detail.html?name=' + decodeURIComponent('name');
+    a.href = 'wannabe-detail.html?name=' + decodeURIComponent(hydratedApps[i].name);
     a.textContent = hydratedApps[i].name;
     
     nameTD.textContent = hydratedApps[i].name;
