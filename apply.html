@@ -15,16 +15,15 @@
             <section id="about-section">
                 <p>
                     <h2>Tell Us About Yourself...</h2>
-                        <label for="name" required>Your name:</label>
+                        <label for="name">Your name:</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
-                            autocomplete="off"
+                            autocomplete="on"
                             minlength="0"
                             required
                             maxlength="30"
-                            autocomplete="off"
                         >
                 </p>
                 <br />
@@ -35,13 +34,13 @@
                         name="location"
                         id="location"
                         minlength="2"
-                        autocomplete="off"
+                        autocomplete="on"
                     >
                 </p>
                 
             </section>
             <br />
-            <section id="section-two">
+            <section id="codingExperience">
                 <h2>A few more questions...</h2>
                 <section>
                 <p>
@@ -61,7 +60,7 @@
             </section>
             <section>
                    <label for="days-available">What days are you available?</label>
-                   <select id="days-available" name="days-available" required>
+                   <select id="days-available" name="days-available">
                        <option value = "" disable selected>Choose days:</option>
                        <option value = "weekdays" >Weekdays</option>
                        <option value = "weekends">Weekends</option>
@@ -75,36 +74,41 @@
                                 type="checkbox"
                                 id="monday"
                                 value="monday"
+                                name="weekday"
                            >
                            <label for="tuesday">Tuesday</label>
                            <input
                                 type="checkbox"
                                 id="tuesday"
                                 value="tuesday"
+                                name="weekday"
                            >
                            <label for="wednesday">Wednesday</label>
                            <input
                                 type="checkbox"
                                 id="wednesday"
                                 value="wednesday"
+                                name="weekday"
                            >
                            <label for="thursday">Thursday</label>
                            <input
                                 type="checkbox"
                                 id="thursday"
                                 value="thursday"
+                                name="weekday"
                            >
                            <label for="friday">Friday</label>
                            <input
                                 type="checkbox"
                                 id="friday"
                                 value="friday"
+                                name="weekday"
                            >
                        </p>                                      
                    </section>
             </section>
             <section id="weekend-availability" hidden>
-                <h2>Weekends only?</h2>
+                <h2>Weekends?</h2>
                 <p>
                     <label for="yes-weekend">Yes:</label>
                     <input 
@@ -121,19 +125,27 @@
                         name="weekend-availability"
                     >
                 </p>
-                <label for="weekend-day-available">What weekend days are you available?</label>
-            <select id="weekend-day-available" name="weekend-day-available">
-                    <option value = "" disable selected>Choose days:</option>
-                    <option value = "saturday" >Saturday</option>
-                    <option value = "sunday">Sunday</option>
-                    <option value = "both">Both</option>
-                </select>
+                <h2>what days?</h2>
+            <label for="saturday">Saturday</label>
+                <input
+                    type="checkbox"
+                    value="saturday"
+                    id="saturday"
+                    name="saturday"
+                >
+            <label for="sunday">Sunday</label>
+                <input
+                    type="checkbox"
+                    value="sunday"
+                    id="sunday"
+                    name="sunday"
+                > 
             </section>
             <section id="time-availability" hidden>
                 <h3>Okay sweet, what time are you available?</h3>
                     <br/>
                     <label for="how-long">When are you available?</label>
-                     <select required>
+                     <select id="how-long" required>
                         <option value = "" disabled selected>Choose a time:</option>
                         <option value = "morning">8:00AM to NOON</option>
                         <option value = "afternoon">NOON to 4:00PM</option>
@@ -141,7 +153,7 @@
                      </select>  
             </section>
             <section>
-                <button type="submit">Submit Application Now!</button>
+                <button type="submit" href="apply.html" >Submit Application Now!</button>
             </section>
         </form>
     </main>

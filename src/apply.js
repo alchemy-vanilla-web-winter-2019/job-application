@@ -7,9 +7,15 @@ const weekendDayAvailabilityNode = document.getElementById('weekend-availability
 const timeAvailabilityNode = document.getElementById('time-availability');
 const strengthRangeNode = document.getElementById('coding-strength');
 const strengthNumberNode = document.getElementById('strength-number');
-// const yesWeekendsNode = document.getElementById('yes-weekend');
-// const noWeekendsNode = document.getElementById('no-weekend');
-// const sectionTwoNode = document.getElementById('section-two');
+const yesWeekendsOnlyNode = document.getElementById('yes-weekend');
+const mondayNode = document.getElementById('monday');
+const tuesdayNode = document.getElementById('tuesday');
+const wednesdayNode = document.getElementById('wednesday');
+const thursdayNode = document.getElementById('thursday');
+const fridayNode = document.getElementById('friday');
+const saturdayNode = document.getElementById('saturday');
+const sundayNode = document.getElementById('sunday');
+const howLongNode = document.getElementById('how-long');
 
 
 strengthRangeNode.addEventListener('change', function() {
@@ -43,8 +49,18 @@ formNode.addEventListener('submit', function(event) {
         name: nameNode.value,
         location: locationNode.value,
         strength: strengthRangeNode.value,
-        weekendAvailability: weekendDayAvailabilityNode.value,
-        weekdayAvailability:  weekdayAvailabilityNode.value
+        weekendsOnly: yesWeekendsOnlyNode.checked,
+        daysAvailable: daysAvailableNode.value,
+        days: {
+            monday: mondayNode.checked,
+            tuesday: tuesdayNode.checked,
+            wednesday: wednesdayNode.checked,
+            thursday: thursdayNode.checked,
+            friday: fridayNode.checked,
+            saturday: saturdayNode.checked,
+            sunday: sundayNode.checked,
+        },
+        timeAvailable: howLongNode.value,
     };
     console.log(applicant);
 });
