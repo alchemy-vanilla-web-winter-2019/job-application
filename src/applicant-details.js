@@ -3,38 +3,43 @@ const applicantArray = JSON.parse(getPackage);
 const detailsNode = document.getElementById('return-form');
 const buttonNode = document.getElementById('return-home');
 
+const searchParams = new URLSearchParams(window.location.search);
+const appName = searchParams.get('name');
+let applicant = null;
+
+for(let index = 0; index < applicantArray.length; index++) {
+    if(applicantArray[index].name === appName){
+        applicant = applicantArray[index];
+    }
+}
+
 const build = [
     {
         item: 'Name:',
-        value: applicant[index].name
+        value: applicant.name
     },
     {
         item: 'Phone Number:',
-        value: applicant[index].phone
+        value: applicant.phone
     },
     {
-        item: 'Level of Comfort with Immolation', 
-        value: applicant[index].comfort
+        item: 'Level of Comfort with Immolation:', 
+        value: applicant.comfort
     },
     {
-        item: 'Preferred Burial Place',
+        item: 'Preferred Burial Location:',
         value: applicant.burial
     }
 ];
 
-for(let index = 0; index < 4; index++) {
+for(let index = 0; index < build.length; index++) {
     const td = document.createElement('td');
-    const applicant = applicantArray[index];
-    td.id = build[index].value; 
+    td.textContent = build[index].item;
+    const dd = document.createElement('dd');
+    dd.textContent = build[index].value;
     detailsNode.appendChild(td);
-
-    const ddName = createElement(dd);
-    dd.textContent= applicant[index].name;
-
+    detailsNode.appendChild(dd);
 }    
-
-
-
 
 buttonNode.addEventListener('click', function() {
     window.location = './index.html';

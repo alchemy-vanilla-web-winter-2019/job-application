@@ -46,6 +46,6 @@ formNode.addEventListener('submit', function(event) {
     }
     const serializeApplication = JSON.stringify(applicationsSubmitted);
     window.localStorage.setItem('job-applicant', serializeApplication);
-    window.location = 'applicant-details.html';
+    window.location = 'applicant-details.html?name=' + encodeURIComponent(applicant.name);
 });
 
