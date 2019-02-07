@@ -21,8 +21,8 @@ form.addEventListener('submit', function(event){
     for(let i = 0; i < weaponAll.length; i++) {
         const weaponPref = weaponAll[i];
         if(weaponPref.checked) {
-            weaponSelect[i] = weaponPref.value;
-            // weaponPref.push(weaponAll.value)
+            // weaponSelect[i] = weaponPref.value;
+            weaponSelect.push(weaponPref.value);
         }
     }
 
@@ -36,8 +36,16 @@ form.addEventListener('submit', function(event){
     };
     // console.log(applicant);
 
-    const serialize = JSON.stringify(applicant);
-    window.localStorage.setItem('applicant', serialize);
-    window.location = 'hello.html';
+    let applicants = [];
+    const jsonString = window.localStorage.getItem('applicants');
 
+    if(jsonString) {
+        applicants = JSON.parse(jsonString);
+    }
+
+    applicants.push(applicant);
+    const serialize = JSON.stringify(applicants);
+    window.localStorage.setItem('applicants', serialize);
+    window.location = 'hello.html';
+    
 });
