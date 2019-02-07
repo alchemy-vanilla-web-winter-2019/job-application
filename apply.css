@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+section {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 10px;
+}
+
+#about-section {
+    background: lightcoral;
+}
+
+#experience-section {
+    background: lightblue;
+}
+
+#types-section {
+    background: lightgreen;
+}
+
+button {
+    font-size: 15px;
+    background: yellow;
+    margin-top: 10px;
+}
+
+.hidden {
+    color: gray;
+}
