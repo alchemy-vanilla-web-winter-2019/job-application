@@ -20,12 +20,19 @@ submit.addEventListener('submit', function() {
     const allOptions = submit.elements.options;
     const chosenOptions = [];
 
+
+    
+    
+    
     for(let i = 0; i < allOptions.length; i++) {
         const selected = allOptions[i];
         if(selected.checked) {
             chosenOptions.push(selected.value);
         }
     }
+    
+    let timestamp = Date.now();
+    console.log(timestamp);
 
     const applicant = {
         name: name,
@@ -33,7 +40,8 @@ submit.addEventListener('submit', function() {
         read: read,
         shorts: shorts,
         favoriteOptions: chosenOptions,
-        hateShortsAmmount: slider.value
+        hateShortsAmmount: slider.value,
+        timestamped: timestamp
     };
 
     let allApplicants = [];
@@ -48,4 +56,6 @@ submit.addEventListener('submit', function() {
     window.localStorage.setItem('allApplicants', serialize);
 
     window.location = 'thanks.html';
+
+
 });

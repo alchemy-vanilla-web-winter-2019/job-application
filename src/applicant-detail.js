@@ -9,13 +9,13 @@ if(json) {
 }
 
 const searchParams = new URLSearchParams(window.location.search);
-const valueToFind = searchParams.get('ssn');
+const valueToFind = searchParams.get('timestamped');
 
 // create for loop to find info for selected element then update text content
 for(let i = 0; i < allApplicants.length; i++) {
     const currentApplicant = allApplicants[i];
 
-    if(currentApplicant.ssn === valueToFind) {
+    if(currentApplicant.timestamped == valueToFind) {
         hydrated = currentApplicant;
         break;
     }
