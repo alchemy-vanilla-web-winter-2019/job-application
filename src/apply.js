@@ -27,7 +27,6 @@ comfortNode.addEventListener('change', function(){
     comfortFieldNode.textContent = messageSelector;
 });
 let applicationsSubmitted = [];
-
 formNode.addEventListener('submit', function(event) {
     event.preventDefault();
     const applicant = {
