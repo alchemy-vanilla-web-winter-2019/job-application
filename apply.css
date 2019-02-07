@@ -1,6 +1,7 @@
 header {
     display: flex;
     justify-content: flex-right;
+    font-family: font-family: 'Staatliches', cursive;
 }
 #about-section {
     border: 1px solid black;

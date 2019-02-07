@@ -17,10 +17,13 @@ const saturdayNode = document.getElementById('saturday');
 const sundayNode = document.getElementById('sunday');
 const howLongNode = document.getElementById('how-long');
 
+console.log(document.getElementById('coding-strength'));
 
 strengthRangeNode.addEventListener('change', function() {
     strengthNumberNode.textContent = strengthRangeNode.value;
 }); 
+
+
 
 daysAvailableNode.addEventListener('change', function() {
     if(daysAvailableNode.value === 'weekdays') {
@@ -42,28 +45,27 @@ daysAvailableNode.addEventListener('change', function() {
     }
 });
 
+
 formNode.addEventListener('submit', function(event) {
     event.preventDefault();
-
+    const name = formNode.elements.name.value;
+    
     const applicant = {
-        name: nameNode.value,
+        name: name,
         location: locationNode.value,
         strength: strengthRangeNode.value,
-        weekendsOnly: yesWeekendsOnlyNode.checked,
-        daysAvailable: daysAvailableNode.value,
-        days: {
-            monday: mondayNode.checked,
-            tuesday: tuesdayNode.checked,
-            wednesday: wednesdayNode.checked,
-            thursday: thursdayNode.checked,
-            friday: fridayNode.checked,
-            saturday: saturdayNode.checked,
-            sunday: sundayNode.checked,
-        },
         timeAvailable: howLongNode.value,
     };
+    let applicants = [];
+    const jsonString = window.localStorage.getItem('applicants');
+    if(jsonString) {
+        applicants = JSON.parse(jsonString);
+    }
+    applicants.push(applicant);
+
     console.log(applicant);
+
     const serializedApplicant = JSON.stringify(applicant);
     window.localStorage.setItem('applicantOne', serializedApplicant);
+    window.location = '/applicant-detail.html';
 });
-
