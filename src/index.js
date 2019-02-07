@@ -44,12 +44,12 @@ jobApp.addEventListener('submit', function(event) {
         applicants = JSON.parse(jsonString);
     }
 
-    applicants.push('applicant');
-
-    // window.location = 'thanks.html';
+    applicants.push(applicant);
 
     const serialize = JSON.stringify(applicants);
     window.localStorage.setItem('applicant', serialize);
+    
+    window.location = 'thanks.html';
 });
 
 
