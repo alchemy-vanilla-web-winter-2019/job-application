@@ -58,4 +58,5 @@ formNode.addEventListener('submit', function(event) {
     const applicantJSON = JSON.stringify(applicant);
     window.localStorage.setItem('applicant', applicantJSON);
     window.location = './application-detail.html';
+
 });
