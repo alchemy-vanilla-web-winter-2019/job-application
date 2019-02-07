@@ -14,11 +14,10 @@ const chosenGear = [];
 
 spaceForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    console.log(userName.value);
     for(let index = 0; index < spaceForm.spacegear.length; index++) {
         const gear = spaceForm.spacegear[index];
         if(gear.checked) {
-            chosenGear[index] = gear.value;
+            chosenGear.push(gear.value);
         }
     }
     const applicant = {
