@@ -1,4 +1,4 @@
-const applicantJSON = window.localStorage.getItem('applicant');
+const applicantJSON = window.localStorage.getItem('applicants');
 const applicants = JSON.parse(applicantJSON);
 const nameNode = document.getElementById('name');
 const statusNode = document.getElementById('status');
@@ -7,11 +7,12 @@ const salaryNode = document.getElementById('salary');
 const habitListNode = document.getElementById('habits');
 const emailNode = document.getElementById('email');
 
-if(!applicantJSON) {
-    window.location = '../index.html';
-}
+console.log(applicantJSON);
+// //if(!applicantJSON) {
+//     window.location = '../index.html';
+// }
 
-const applicant = applicants[applicants.length -1];
+const applicant = applicants[applicants.length - 1];
 
 nameNode.textContent = applicant.name;
 statusNode.textContent = applicant.status;
