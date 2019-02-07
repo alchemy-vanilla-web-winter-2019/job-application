@@ -1,3 +1,21 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+header {
+    text-align: center;
+}
 label {
     margin: 10px;
+}
+thead {
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+}
+tbody {
+    background-color: lightblue;
+}
+td {
+    text-align: center;
+    padding: 12px;
 }
