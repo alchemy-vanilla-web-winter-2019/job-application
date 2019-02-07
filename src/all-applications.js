@@ -8,7 +8,6 @@ const applicants = JSON.parse(applicantJSON);
 const applicantsNode = document.getElementById('applicants');
 
 for(let index = 0; index < applicants.length; index++) {
-    console.log('hey');
     const applicant = applicants[index];
 
     const row = document.createElement('tr');
@@ -18,6 +17,17 @@ for(let index = 0; index < applicants.length; index++) {
     const philosophy = document.createElement('td');
     const morality = document.createElement('td');
     const salary = document.createElement('td');
+    //create link element
+    const link = document.createElement('a');
+    link.target = 'blank';
+    link.href = 'application-review.html?name=' + encodeURIComponent(applicant.name);
+
+    //append link element to name
+    
+
+
+    console.log(link);
+    console.log(name);
 
     name.textContent = applicant.name;
     city.textContent = applicant.city;
@@ -25,8 +35,9 @@ for(let index = 0; index < applicants.length; index++) {
     philosophy.textContent = applicant.philosophy;
     morality.textContent = applicant.morality;
     salary.textContent = applicant.salary;
-    
-    row.appendChild(name);
+    link.appendChild(name);
+
+    row.appendChild(link);
     row.appendChild(city);
     row.appendChild(skill);
     row.appendChild(philosophy);
