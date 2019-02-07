@@ -30,8 +30,15 @@ applicationFormNode.addEventListener('submit', function(event) {
         snuck: applicationFormNode.snuck.value
     };
 
-    const serialized = JSON.stringify(newApplication);
-    window.localStorage.setItem('newApplication', serialized);
+    let newApplications = [];
+    const newApplicationsString = window.localStorage.getItem('newApplications');
+    if(newApplicationsString) {
+        newApplications = JSON.parse(newApplicationsString);
+    }
+    newApplications.push(newApplication);
+
+    const serializedArray = JSON.stringify(newApplications);
+    window.localStorage.setItem('newApplications', serializedArray);
     
     window.location = './thank-you.html';
 });
