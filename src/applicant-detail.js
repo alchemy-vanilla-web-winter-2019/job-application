@@ -11,11 +11,12 @@ else {
 let applicant = null;
 
 const urlParams = new URLSearchParams(window.location.search);
-const appName = urlParams.get('name');
+let appId = urlParams.get('id');
+appId = Number(appId);
 
 for(let i = 0; i < applicants.length; i++) {
     const currApplicant = applicants[i];
-    if(currApplicant.name === appName) {
+    if(currApplicant.id === appId) {
         applicant = currApplicant;
         break;
     }
@@ -23,7 +24,6 @@ for(let i = 0; i < applicants.length; i++) {
 if(applicant === null) {
     window.location = './index.html';
 }
-
 
 const name = document.getElementById('name');
 const city = document.getElementById('city');

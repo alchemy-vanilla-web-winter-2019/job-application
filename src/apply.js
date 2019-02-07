@@ -60,11 +60,13 @@ formNode.addEventListener('submit', function(event) {
         experience: yearsExperience.value, 
         professional: isCertified,
         cuddles: cuddleTypes,
-        faveNumber: numberNode.value
+        faveNumber: numberNode.value,
+        id: applicants.length
     };
 
     applicants.push(applicant);
     const applicantsJSON = JSON.stringify(applicants);
     window.localStorage.setItem('applicants', applicantsJSON);
-    window.location = './application-detail.html?name=' + encodeURIComponent(applicant.name);
+    window.location = './application-detail.html?id=' + encodeURIComponent(applicant.id);
 });
+

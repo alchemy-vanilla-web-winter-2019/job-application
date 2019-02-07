@@ -21,7 +21,7 @@ for(let i = 0; i < applicants.length; i++) {
     const favoriteNumber = document.createElement('td');
     favoriteNumber.classList.add('num');
     const link = document.createElement('a');
-    link.href = 'application-detail.html?name=' + encodeURIComponent(applicant.name);
+    link.href = 'application-detail.html?id=' + encodeURIComponent(applicant.id);
     link.textContent = applicant.name;
 
 
@@ -63,7 +63,7 @@ for(let i = 0; i < applicants.length; i++) {
             fire++;
         }
     }
-    
+
     name.appendChild(link);
     tr.appendChild(name);
     tr.appendChild(city);
