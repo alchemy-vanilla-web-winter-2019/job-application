@@ -9,13 +9,12 @@ if(jsonString) {
 
 const tbody = document.getElementById('movie-applicants');
 
-for(let index=0; index<applicants.length; index++) {
+for(let index = 0; index < applicants.length; index++) {
     const movieApplicant = applicants[index];
     
     const tr = document.createElement('tr');
     tbody.appendChild(tr);
 
-    //name. position, popcorn, romcom, movie types
 
     const tdName = document.createElement('td');
     tdName.textContent = movieApplicant.name;
