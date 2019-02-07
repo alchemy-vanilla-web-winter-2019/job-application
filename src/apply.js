@@ -37,11 +37,14 @@ formNode.addEventListener('submit', function(event) {
         burial: burialNode.value
     };
     const jsonString = window.localStorage.getItem('job-applicant');
-    if(jsonString) {
-        applicationsSubmitted = jsonString;
+    const checkArray = JSON.parse(jsonString);
+    if(!checkArray) {
+        applicationsSubmitted.push(applicant);
     }
-    console.log(applicationsSubmitted);
-    applicationsSubmitted.push(applicant);
+    else {
+        applicationsSubmitted = checkArray;
+        applicationsSubmitted.push(applicant);
+    }
     const serializeApplication = JSON.stringify(applicationsSubmitted);
     window.localStorage.setItem('job-applicant', serializeApplication);
     window.location = 'applicant-details.html';
