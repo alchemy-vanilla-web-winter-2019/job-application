@@ -8,7 +8,22 @@ else {
     window.location = './index.html';
 }
 
-const applicant = applicants[applicants.length - 1];
+let applicant = null;
+
+const urlParams = new URLSearchParams(window.location.search);
+const appName = urlParams.get('name');
+
+for(let i = 0; i < applicants.length; i++) {
+    const currApplicant = applicants[i];
+    if(currApplicant.name === appName) {
+        applicant = currApplicant;
+        break;
+    }
+}
+if(applicant === null) {
+    window.location = './index.html';
+}
+
 
 const name = document.getElementById('name');
 const city = document.getElementById('city');
