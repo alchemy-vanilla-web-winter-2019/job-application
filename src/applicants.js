@@ -18,8 +18,7 @@ for(let i = 0; i < applicantArray.length; i++) {
 
     const link = document.createElement('a');
     link.href = 'applicant-details.html?name=' + encodeURIComponent(applicants.name);
-    link.textContent = applicants.name
-    link.target = '_blank';
+    link.textContent = applicants.name;
     nameEntry.appendChild(link);
     
     const seperatorEntry = document.createElement('td');

@@ -13,41 +13,47 @@
         <form id="main-form">
             <section id="contact-info">
                     <h2>Contact Information</h2>
-                    <p>
-                        <label for="name">Full Name:</label>
-                        <input 
-                            type="text"
-                            placeholder="Thích Quang Duc"
-                            name="name"
-                            id="name"
-                            min="1"
-                            autocomplete="off"
-                            required
-                        >
-                    </p>
-                    <p>
-                        <label for="phone">Phone Number:</label>
-                        <input
-                            type="text"
-                            name="phone"
-                            id="phone"
-                            min="14"
-                            max="14"
-                            placeholder="503-555-5555"
-                            autocomplete="off"
-                            required
-                        >
-                    </p>
+                    <table>
+                        <tr><td><label for="name">Full Name:</label></td>
+                            <td>
+                                <input 
+                                    type="text"
+                                    placeholder="Thích Quang Duc"
+                                    name="name"
+                                    id="name"
+                                    min="1"
+                                    autocomplete="off"
+                                    required
+                                >
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td><label for="phone">Phone Number:</label></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    id="phone"
+                                    min="14"
+                                    max="14"
+                                    placeholder="503-555-5555"
+                                    autocomplete="off"
+                                    required
+                                >
+                            </td>
+                        </tr>
+                    </table>
             </section>
             <section id="radio-checkbox">
                 <h2>Something</h2>
-                <p>Do you "something?</p>
+                <p>Do you like to set things on fire?</p>
                 <label for="yes">Yes</label>
                 <input
                     type="radio"
                     value="yes"
                     id="yes"
                     name="TBD"
+                    checked
                 >
                 <label for="yes">No</label>
                 <input
@@ -56,7 +62,8 @@
                     id="no"
                     name="TBD"
                 >
-                <p>If so "blank"</p>
+                <p>If so, what are some things you like about burning stuff? <br>
+                (check all that apply)</p>
                 
 
             <section id="comfort-level">
