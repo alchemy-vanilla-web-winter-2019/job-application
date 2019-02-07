@@ -36,10 +36,18 @@ jobApp.addEventListener('submit', function(event) {
         romCom: romComClick,
         films: filmNames
     };
-    
-    window.location = "thanks.html";
 
-    const serialize = JSON.stringify(applicant);
+    let applicants = [];
+    const jsonString = window.localStorage.getItem('applicant');
+    if(jsonString) {
+        applicants = JSON.parse(jsonString);
+    }
+    
+    applicants.push('applicant');
+
+    //window.location = "thanks.html";
+
+    const serialize = JSON.stringify(applicants);
     window.localStorage.setItem('applicant', serialize);
 
 
