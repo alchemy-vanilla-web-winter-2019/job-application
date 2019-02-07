@@ -11,7 +11,10 @@ for(let index = 0; index < applicants.length; index++) {
 
     const tdName = document.createElement('td');
     tr.appendChild(tdName);
-    tdName.textContent = applicant.name;
+    const link = document.createElement('a');
+    tdName.appendChild(link);
+    link.textContent = applicant.name;
+    link.href = 'applicant-detail.html?name=' + encodeURIComponent(applicant.name);
 
     const tdSpaceship = document.createElement('td');
     tr.appendChild(tdSpaceship);
