@@ -6,34 +6,35 @@ const buttonNode = document.getElementById('return-home');
 const build = [
     {
         item: 'Name:',
-        value: 'name'
+        value: applicant[index].name
     },
     {
         item: 'Phone Number:',
-        value: 'phone'
+        value: applicant[index].phone
     },
     {
         item: 'Level of Comfort with Immolation', 
-        value: 'comfort'
+        value: applicant[index].comfort
     },
     {
         item: 'Preferred Burial Place',
-        value: 'burial'
+        value: applicant.burial
     }
- 
-   
 ];
 
-for(let index = 0; index < build.length; index++) {
-    const applicant = applicantArray[index];
-    const applicant
+for(let index = 0; index < 4; index++) {
     const td = document.createElement('td');
-    const dd = document.createElement('dd');
-    td.textContent = build[index];
-    dd.textContent = applicant[1]
-    console.log('td', td);
-    console.log('dd', dd);
-}
+    const applicant = applicantArray[index];
+    td.id = build[index].value; 
+    detailsNode.appendChild(td);
+
+    const ddName = createElement(dd);
+    dd.textContent= applicant[index].name;
+
+}    
+
+
+
 
 buttonNode.addEventListener('click', function() {
     window.location = './index.html';
