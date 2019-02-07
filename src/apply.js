@@ -1,9 +1,38 @@
 const formNode = document.getElementById('main-form');
 const nameNode = document.getElementById('name');
 const phoneNode = document.getElementById('phone');
+const yesNode = document.getElementById('yes');
+const noNode = document.getElementById('no');
+const isPyromaniac = null;
+const checkboxNode = document.getElementById('checkboxes');
+const radioFormNode = document.getElementById('radio-form');
 const comfortNode = document.getElementById('comfort');
 const comfortFieldNode = document.getElementById('comfort-field');
 const burialNode = document.getElementById('burial');
+const checkboxes = document.getElementsByClassName('checkbox');
+
+yesNode.addEventListener('change', function() {
+    let hiddenNodeList = checkboxNode.querySelectorAll('.hidden.checklabel');
+    for(let i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].disabled = false;
+    }
+    for(let j = 0; j < hiddenNodeList.length; j++) {
+        hiddenNodeList[j].classList.remove('hidden');
+    }
+});
+noNode.addEventListener('change', function() {
+    let hiddenNodeList = checkboxNode.querySelectorAll('.checklabel');
+    console.log(hiddenNodeList);
+    for(let index = 0; index < checkboxes.length; index++) {
+        checkboxes[index].disabled = true;
+    }
+    for(let j = 0; j < hiddenNodeList.length; j++) {
+        hiddenNodeList[j].classList.add('hidden');
+    }
+});
+
+
+
 comfortNode.addEventListener('change', function(){
     let messageSelector;
     let select = comfortNode.value;
@@ -33,7 +62,9 @@ formNode.addEventListener('submit', function(event) {
         name: nameNode.value,
         phone: phoneNode.value,
         comfort: comfortNode.value,
-        burial: burialNode.value
+        burial: burialNode.value,
+        pyromaniac: isPyromaniac.value,
+        burnPreference: ''
     };
     const jsonString = window.localStorage.getItem('job-applicant');
     const checkArray = JSON.parse(jsonString);

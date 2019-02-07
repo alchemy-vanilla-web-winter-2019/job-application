@@ -47,24 +47,35 @@
             <section id="radio-checkbox">
                 <h2>Something</h2>
                 <p>Do you like to set things on fire?</p>
-                <label for="yes">Yes</label>
-                <input
-                    type="radio"
-                    value="yes"
-                    id="yes"
-                    name="TBD"
-                    checked
-                >
-                <label for="yes">No</label>
-                <input
-                    type="radio"
-                    value="no"
-                    id="no"
-                    name="TBD"
-                >
-                <p>If so, what are some things you like about burning stuff? <br>
+                <p id="radio-form">
+                    <label for="yes">Yes</label>
+                    <input
+                        type="radio"
+                        value="yes"
+                        id="yes"
+                        name="TBD"   
+                    >
+                    <label for="yes">No</label>
+                    <input
+                        type="radio"
+                        value="no"
+                        id="no"
+                        name="TBD"
+                        checked
+                    >
+                </p>
+                <p>If so, what are your favorite thing to burn?<br>
                 (check all that apply)</p>
-                
+                <p id="checkboxes">
+                    <input type="checkbox" id="excrement" name="excrement" value="excrement" class="checkbox" disabled>
+                    <label for="excrement" class="hidden checklabel">Human Excrement</label>
+                    <input type="checkbox" id="socks" name="socks" value="socks" class="checkbox" disabled>
+                    <label for="socks" class="hidden checklabel">Used Socks</label>
+                    <input type="checkbox" id="hair" name="hair" value="hair" class="hidden checkbox" class="checkbox" disabled>
+                    <label for="hair" class="hidden checklabel">Hair</label>
+                    <input type="checkbox" id="self" name="self" value="self" class="checkbox" disabled>
+                    <label for="self" class="hidden checklabel">Your Entire Body</label>
+                </p>
 
             <section id="comfort-level">
                 <h2>Background Information</h2>
