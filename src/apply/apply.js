@@ -23,8 +23,15 @@ guildApplication.addEventListener('submit', function(event) {
         lawfulness: guildApplication.lawfulness.value,
         
     };
-    const jsonObject = JSON.stringify(application);
-    window.localStorage.setItem('applicant', jsonObject);
+    const jsonArrayString = window.localStorage.getItem('applications');
+    let applications = [];
+    if(jsonArrayString) {
+        applications = JSON.parse(jsonArrayString);
+    }
+    applications.push(application);
+    const serialized = JSON.stringify(applications);
+    window.localStorage.setItem('applications', serialized);
+
     window.location = 'thanks.html';
 });
 
