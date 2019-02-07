@@ -1,0 +1,54 @@
+body {
+    background-color: goldenrod;
+}
+
+footer {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    margin-top: 15px;
+    width: 100%;
+    background-color: rgb(69, 69, 192);
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+}
+
+fieldset {
+    margin: auto;
+    margin-top: 15px;
+    width: 450px;
+}
+
+input[type=text] {
+    display: block;
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: rgb(171, 171, 223);
+}
+
+input[type=radio] {
+    display: inline block;
+}
+
+select {
+    width: 75%;
+    padding: 10px 10px;
+    /* border: none; */
+    border-radius: 5px;
+    background-color: rgb(171, 171, 223);
+}

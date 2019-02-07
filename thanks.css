@@ -1,0 +1,12 @@
+body {
+    background-color: goldenrod;
+}
+
+footer {
+    text-align: center;
+}
+
+#next-step {
+    border: 3px dotted green;
+    text-align: center;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./application.css">
+    <title>COW Application</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">Return to Main Page</a>
+        <h1>General COW Application</h1>
+    </header>
+    <main>
+        <h2>Fill out to the best of your ability</h2>
+        <h3>non-literate applicants may request a scribe's assistance</h3>
+
+        <form id="application">
+            <section id="stats">
+                <fieldset>
+                    <legend>Basic Stats</legend>
+                    
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="hero-name">
+
+                    <label for="alias">Alias:</label>
+                    <input type="text" name="alias" id="alias">
+                </fieldset>
+            </section>
+            <section>
+                <fieldset>
+                    <legend>Profession (pick one only)</legend>
+                
+                    <input type="radio" name="profession" id="warrior" value="warrior">
+                    <label for="warrior">Warrior</label>
+
+                    <input type="radio" name="profession" id="sneaky-pete" value="sneaky-pete">
+                    <label for="sneaky-pete">Sneaky Pete</label>
+
+                    <input type="radio" name="profession" id="wizard" value="wizard">
+                    <label for="wizard">Wizard</label>
+
+                    <input type="radio" name="profession" id="cleric" value="cleric">
+                    <label for="cleric">Cleric</label>
+
+                    <input type="radio" name="profession" id="bard" value="bard">
+                    <label for="bard">Bard</label>
+                </fieldset>
+            </section>
+            <section>
+                <fieldset>
+                    <legend>Preferred Combat Style</legend>
+                    <div>
+                        <input type="checkbox" name="combat" id="one-handed-weapon" value="one-handed-weapon">
+                        <label for="one-handed-weapon">One-handed Weapon</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="combat" id="dual-daggers" value="dual-daggers">
+                        <label for="dual-daggers">Dual daggers</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="combat" id="magic" value="magic">
+                        <label for="magic">Spell Slinging</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="combat" id="missles" value="missles">
+                        <label for="missles">Missles</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="combat" id="backstab" value="backstab">
+                        <label for="backstab">Backstab!</label>
+                    </div>
+                </fieldset>
+            </section>
+            <section>
+                <fieldset>
+                    <legend>Reason for Applying to COW</legend>
+                    <label for="join-reason">Why do you want to join the Company of the Wolf?</label>
+                    <select name="" id="join-reason">
+                        <option value="">--Pick a Reason--</option>
+                        <option value="fame">Fame</option>
+                        <option value="glory">Glory</option>
+                        <option value="riches">Riches</option>
+                        <option value="revenge">Revenge</option>
+                        <option value="compulsion">Compulsion</option>
+                        <option value="boredom">Boredom</option>
+                        <option value="religious-fervor">Religious Fervor</option>
+                    </select>
+                </fieldset>
+            </section>
+
+            <button>Turn It In</button>
+        
+        </form>
+    </main>
+    <footer>
+        <p>a C.O.W. endeavor</p>
+    </footer>
+    <script type="module" src="src/application.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+body {
+    background-color: goldenrod;
+}
+
+footer {
+    text-align: center;
+}
+
+dt {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+dd {
+    font-size: 14px;
+    text-align: center;
+    margin-inline-start: 0px;
+    padding: 5px;
+}
+
+.results {
+    border: 3px solid purple;
+    width: 50vh;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+}
