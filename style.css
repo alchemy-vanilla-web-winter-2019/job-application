@@ -4,7 +4,6 @@ table {
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
-    /* border: 2px solid #999; */
     line-height: 1em;
     margin-top: 20px; 
     margin-bottom: 20px;
@@ -12,6 +11,8 @@ table {
 
 th, td {
     padding: 10px;
+    line-height: 1.5em;
+    text-transform: capitalize;
 }
 
 #table {
@@ -19,10 +20,13 @@ th, td {
 }
 
 thead {
-    text-transform: uppercase;
     font-weight: 600;
     background: #999;
     color: #fff;
+}
+
+.table-head {
+    text-transform: uppercase;
 }
 
 tbody tr:nth-child(even) {
@@ -59,14 +63,18 @@ body {
 main {
     position: relative;
     top: 100px;
+    margin-bottom: 90px;
     /* background: #f1ede6 */
 }
 
 footer {
     padding: 10px;
     text-align: center;
-    position: relative;
-    top: 90px;
+    position: fixed;
+    bottom: 0px;
+    /* height: 60px; */
+    width: 100%;
+    /* top: 90px; */
     background: #000;
     color: #fff;
 }
@@ -290,7 +298,7 @@ input:checked {
 
 #slider-value {
     font-weight: 600;
-    margin-left: 10px;
+    display: block;
     position: relative;
     top: 3px;
     color: #999;

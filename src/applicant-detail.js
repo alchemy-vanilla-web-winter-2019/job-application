@@ -1,13 +1,24 @@
 const json = window.localStorage.getItem('allApplicants');
+let allApplicants = [];
 
-// const hydrated = JSON.parse(json);
-
-let hydrated = null;
+let hydrated = [];
 if(json) {
-    const allApplicants = JSON.parse(json);
-    hydrated = allApplicants[allApplicants.length - 1];
+    allApplicants = JSON.parse(json);
 } else {
     window.location = '/';
+}
+
+const searchParams = new URLSearchParams(window.location.search);
+const valueToFind = searchParams.get('name');
+
+// create for loop to find info for selected element then update text content
+for(let i = 0; i < allApplicants.length; i++) {
+    const currentApplicant = allApplicants[i];
+
+    if(currentApplicant.name === valueToFind) {
+        hydrated = currentApplicant;
+        break;
+    }
 }
 
 const name = document.getElementById('name');
