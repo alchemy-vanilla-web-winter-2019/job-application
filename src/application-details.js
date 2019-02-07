@@ -7,10 +7,6 @@ const salaryNode = document.getElementById('salary');
 const habitListNode = document.getElementById('habits');
 const emailNode = document.getElementById('email');
 
-console.log(applicantJSON);
-// //if(!applicantJSON) {
-//     window.location = '../index.html';
-// }
 
 const applicant = applicants[applicants.length - 1];
 

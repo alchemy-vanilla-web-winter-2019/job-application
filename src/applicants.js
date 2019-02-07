@@ -6,8 +6,6 @@ if(applicantJSON) {
     applicants = JSON.parse(applicantJSON);
 }
 
-//console.log(applicants);
-
 if(!applicantJSON) {
     window.location = '../index.html';
 }
@@ -23,7 +21,6 @@ for(let index = 0; index < applicants.length; index++) {
     const emailCell = document.createElement('td');
     emailCell.textContent = applicant.email;
     tr.appendChild(emailCell);
-
-    console.log(tbody.textContent);
+    
     tbody.appendChild(tr);
 }
