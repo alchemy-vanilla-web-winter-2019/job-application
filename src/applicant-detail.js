@@ -65,3 +65,7 @@ if(lastVisited === 'application') {
     const msg = 'Thank you for applying, ' + applicant.name + '. If we are interested, you will be hearing from the Human Resources Department within 3 business days.';
     message.textContent = msg;
 }
+else {
+    const msg = 'Application pending review';
+    message.textContent = msg;
+}
