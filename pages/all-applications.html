@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/all-applications.css">
     <title>All Applications</title>
 </head>
 <body>
     <header>
-        <h1>View All Applications</h1>
+        <section id="logo">
+            <p id="logo">The Good Company&reg;</p>
+        </section>
+        <section id="nav">
+            <a href="/index.html">Home</a>
+            <a href="/pages/apply.html">Apply</a>
+            <a href="../pages/all-applications.html">View All Applications</a>
+        </section> 
     </header>
-
     <main>
+        <h1>All Applications Submitted</h1>
         <table>
             <thead>
                 <tr>
@@ -20,16 +28,15 @@
                     <th>Skill</th>
                     <th>Life Philosophy</th>
                     <th>Morality</th>
-                    <th>Salary</th>
+                    <th>Desired Salary</th>
                 </tr>
             </thead>
             <tbody id="applicants">
             </tbody>
         </table>
     </main>
-    
     <footer>
-
+        <p>&copy; The Good Company 2019</p>
     </footer>
     <script type="module" src="../src/all-applications.js"></script>
 </body>
