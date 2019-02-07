@@ -14,7 +14,7 @@ for(let i = 0; i < applicationsArray.length; i++) {
     const lawfulnessTD = document.createElement('td');
     const nameAnchor = document.createElement('a');
 
-    nameAnchor.href = 'application-details.html?name=' + encodeURIComponent(applicationsArray[i].name);
+    nameAnchor.href = 'application-details.html?identifier=' + encodeURIComponent(applicationsArray[i].identifier);
     nameAnchor.textContent = applicationsArray[i].name;
     weaponTD.textContent = applicationsArray[i].weapon;
     rolesTD.textContent = applicationsArray[i].roles.join(', ');

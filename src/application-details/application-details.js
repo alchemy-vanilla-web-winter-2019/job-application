@@ -7,11 +7,13 @@ if(jsonObject) {
 }
 
 const searchParamList = new URLSearchParams(window.location.search);
-const nameToFind = searchParamList.get('name');
+const identifierToFind = parseInt(searchParamList.get('identifier'));
+console.log(identifierToFind);
 
 let selected = {};
 for(let i = 0; i < applicationList.length; i++) {
-    if(applicationList[i].name === nameToFind) {
+    console.log(applicationList[i].identifier);
+    if(applicationList[i].identifier === identifierToFind) {
         selected = applicationList[i];
         break;
     }

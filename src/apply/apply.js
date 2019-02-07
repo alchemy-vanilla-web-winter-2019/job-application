@@ -6,6 +6,7 @@ const guildApplication = document.getElementById('guild-application');
 
 guildApplication.addEventListener('submit', function(event) {
     event.preventDefault();
+    const identifier = Date.now();
     const inputRoles = [];
 
     for(let i = 0; i < guildApplication.roles.length; i++) {
@@ -19,8 +20,9 @@ guildApplication.addEventListener('submit', function(event) {
         experience: guildApplication.experience.value,
         weapon: guildApplication.weapon.value,
         roles: inputRoles,
-        goodness: guildApplication.goodness.value,
         lawfulness: guildApplication.lawfulness.value,
+        goodness: guildApplication.goodness.value,
+        identifier: identifier
         
     };
     const jsonArrayString = window.localStorage.getItem('applications');
