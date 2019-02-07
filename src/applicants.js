@@ -23,6 +23,26 @@ for(let i = 0; i < applicants.length; i++) {
     const link = document.createElement('a');
     link.href = 'application-detail.html?id=' + encodeURIComponent(applicant.id);
     link.textContent = applicant.name;
+    const deleteCell = document.createElement('td');
+    const deleteButton = document.createElement('button');
+
+    deleteButton.textContent = 'X';
+    deleteButton.value = applicant.id;
+
+    deleteButton.addEventListener('click', function() {
+        let removeIdx = null;
+        for(let i = 0; i < applicants.length; i++) {
+            const currApplicant = applicants[i];
+            if(Number(currApplicant.id) === Number(deleteButton.value)) {
+                removeIdx = i;
+                break;
+            }
+        }
+        applicants.splice(removeIdx, 1);
+        const applicantsJSON = JSON.stringify(applicants);
+        window.localStorage.setItem('applicants', applicantsJSON);
+        window.location = 'applicants.html';
+    });
 
 
     city.textContent = applicant.city;
@@ -69,6 +89,8 @@ for(let i = 0; i < applicants.length; i++) {
     tr.appendChild(city);
     tr.appendChild(cuddleTypes);
     tr.appendChild(favoriteNumber);
+    deleteCell.appendChild(deleteButton);
+    tr.appendChild(deleteCell);
     tbody.appendChild(tr);
 }
 

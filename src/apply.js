@@ -15,6 +15,8 @@ if(jsonApplicants) {
     applicants = JSON.parse(jsonApplicants);
 }
 
+const len = applicants.length;
+
 
 yesExperience.addEventListener('change', function() {
     if(yesExperience.checked) {
@@ -54,6 +56,11 @@ formNode.addEventListener('submit', function(event) {
         }
     }
 
+    let previousId = 0;
+    if(len > 0) {
+        previousId = applicants[len - 1].id;
+    }
+    
     const applicant = {
         name: nameNode.value,
         city: cityNode.value,
@@ -61,7 +68,7 @@ formNode.addEventListener('submit', function(event) {
         professional: isCertified,
         cuddles: cuddleTypes,
         faveNumber: numberNode.value,
-        id: applicants.length
+        id: previousId + 1
     };
 
     applicants.push(applicant);

@@ -61,12 +61,7 @@ else {
 
 const lastVisited = window.localStorage.getItem('last-visited');
 
-console.log('last visited: ', lastVisited);
-
 if(lastVisited === 'application') {
     const msg = 'Thank you for applying, ' + applicant.name + '. If we are interested, you will be hearing from the Human Resources Department within 3 business days.';
     message.textContent = msg;
-}
-else {
-    console.log('no thank you message');
 }

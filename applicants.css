@@ -70,3 +70,10 @@ th {
     padding: 3px;
     border: 1px solid gray;
 }
+
+button {
+    background: red;
+    font-weight: bold;
+    display: block;
+    margin: auto;
+}
