@@ -1,7 +1,7 @@
 const applicants = window.localStorage.getItem('applicant');
 const newApplicants = JSON.parse(applicants);
 
-const newApplicant = newApplicants[newApplicants.length - 1];
+let newApplicant = [];
 
 const nameNode = document.getElementById('name');
 const philosophyNode = document.getElementById('philosophy');
@@ -9,6 +9,21 @@ const skillNode = document.getElementById('skill');
 const moralityNode = document.getElementById('morality');
 const cityNode = document.getElementById('city');
 const salaryNode = document.getElementById('salary');
+
+console.log(applicants);
+
+const searchParams = new URLSearchParams(window.location.search);
+const name = searchParams.get('name');
+
+for(let index = 0; index < newApplicants.length; index++) {
+    const currentApplicant = newApplicants[index];
+    if(currentApplicant.name === name) {
+        newApplicant = currentApplicant;
+    }
+}
+
+console.log(name);
+
 
 nameNode.textContent = newApplicant.name;
 philosophyNode.textContent = newApplicant.philosophy;

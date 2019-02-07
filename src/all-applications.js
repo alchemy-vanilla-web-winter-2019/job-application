@@ -17,17 +17,9 @@ for(let index = 0; index < applicants.length; index++) {
     const philosophy = document.createElement('td');
     const morality = document.createElement('td');
     const salary = document.createElement('td');
-    //create link element
     const link = document.createElement('a');
     link.target = 'blank';
     link.href = 'application-review.html?name=' + encodeURIComponent(applicant.name);
-
-    //append link element to name
-    
-
-
-    console.log(link);
-    console.log(name);
 
     name.textContent = applicant.name;
     city.textContent = applicant.city;
@@ -35,8 +27,8 @@ for(let index = 0; index < applicants.length; index++) {
     philosophy.textContent = applicant.philosophy;
     morality.textContent = applicant.morality;
     salary.textContent = applicant.salary;
+    
     link.appendChild(name);
-
     row.appendChild(link);
     row.appendChild(city);
     row.appendChild(skill);
