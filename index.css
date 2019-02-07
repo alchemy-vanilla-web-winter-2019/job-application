@@ -5,6 +5,7 @@
 header {
     display: flex;
     justify-content: flex-right;
+    text-align: center;
 }
 
 #when-available {

@@ -20,7 +20,7 @@ const howLongNode = document.getElementById('how-long');
 
 strengthRangeNode.addEventListener('change', function() {
     strengthNumberNode.textContent = strengthRangeNode.value;
-});
+}); 
 
 daysAvailableNode.addEventListener('change', function() {
     if(daysAvailableNode.value === 'weekdays') {
@@ -66,3 +66,4 @@ formNode.addEventListener('submit', function(event) {
     const serializedApplicant = JSON.stringify(applicant);
     window.localStorage.setItem('applicantOne', serializedApplicant);
 });
+
