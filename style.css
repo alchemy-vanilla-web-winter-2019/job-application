@@ -1,3 +1,45 @@
+/* table testing */
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #999;
+    line-height: 1em;
+    margin-top: 20px; 
+}
+
+th, td {
+    padding: 10px;
+}
+
+#table {
+    width: 80%;
+}
+
+thead {
+    text-transform: uppercase;
+    font-weight: 600;
+    background: #999;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background: #fff;
+
+}
+
+tbody tr:nth-child(odd) {
+    background: #f1ede6;
+}
+
+
+
+  /* end table testing */
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +78,7 @@ h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     font-size: 3em;
-    line-height: 40px;
+    line-height: 50px;
     padding-bottom: 10px;
     text-align: center;
 }
