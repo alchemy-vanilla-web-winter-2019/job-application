@@ -11,6 +11,7 @@ h2 {
     background-color: #B4121D;
     color: white;
     border: 3px solid black;
+    text-transform: uppercase;
 }
 
 button {
