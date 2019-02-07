@@ -8,11 +8,10 @@ if(jsonObject) {
 
 const searchParamList = new URLSearchParams(window.location.search);
 const identifierToFind = parseInt(searchParamList.get('identifier'));
-console.log(identifierToFind);
+
 
 let selected = {};
 for(let i = 0; i < applicationList.length; i++) {
-    console.log(applicationList[i].identifier);
     if(applicationList[i].identifier === identifierToFind) {
         selected = applicationList[i];
         break;
