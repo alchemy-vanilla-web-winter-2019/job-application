@@ -15,12 +15,39 @@
     </header>
 
     <main>
-        <h2>Thank you!</h2>
-        <p><a href="index.html">Return Home</a></p>
-        <p><a href="applicant-detail.html">View Your Details</a></p>
+        <section id="thanks">
+            <h2>Thank you for your response!</h2>
+            <p>Please review your application below.</p>
+        </section>
+
+        <section>
+                <dl>
+                    <dt>Name:</dt>
+                    <dd id="name"></dd>
+                    
+                    <dt>Social Security Number:</dt>
+                    <dd id="ssn"></dd>
+                    
+                    <dt>Literacy:</dt>
+                    <dd id="read-answer"></dd>
+                    
+                    <dt>Belief in shorts:</dt>
+                    <dd id="shorts"></dd>
+                    
+                    <dt>Favorite options:</dt>
+                    <dd id="favorite-options"></dd>
+                    
+                    <dt>Distrust for shorts <em>(0-10)</em>:</dt>
+                    <dd id="hate-shorts"></dd>
+                </dl>
+            </section>
+
+            <section>
+                    <a href="apply.html">Re-Apply</a>  &ThickSpace; | &ThickSpace; <a href="applicant-review.html">All Apllicants</a>
+            </section>
+
     </main>
     
-    <footer>
-    </footer>
+    <script type="module" src="./src/applicant-detail.js"></script>
 </body>
 </html>
