@@ -19,7 +19,7 @@
                     <p>
                         <label>                        
                             Name:
-                            <input id="name-input" type="text" name="name">
+                            <input id="name-input" type="text" name="name" required>
                         </label>
                     </p>
                 </div>
@@ -28,7 +28,7 @@
                         <label>                        
                             Have you ever assassinated someone?
                             <div class="assassination-radios">                                
-                                Yes <input type="radio" name="assassination" value="yes">
+                                Yes <input type="radio" name="assassination" value="yes" required>
                                 No <input type="radio" name="assassination" value="no">                            
                             </div>                                                            
                         </label>
@@ -38,7 +38,7 @@
                     <p>
                         <label>                            
                             What color are your clothes?
-                            <select name="clothes">
+                            <select name="clothes" required>
                                 <option value="white">White</option>
                                 <option value="blue">Blue</option>
                                 <option value="red">Red</option>
@@ -77,7 +77,7 @@
                         <label>
                             Tell us about the last time you snuck up on someone:
                             <p>                                
-                                <textarea id="snuck-text" name="snuck" cols="40" rows="10" placeholder="Enter your story here..."></textarea>
+                                <textarea id="snuck-text" name="snuck" cols="40" rows="10" placeholder="Enter your story here..." required></textarea>
                             </p>
                         </label>
                         <span id="snuck-count">

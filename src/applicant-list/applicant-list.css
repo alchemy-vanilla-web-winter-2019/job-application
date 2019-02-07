@@ -28,6 +28,7 @@ table {
 th {
     background-color: navy;
     text-decoration: underline;
+    text-transform: capitalize;
     width: 200px;
     padding: 5px;
     border-bottom: 1px solid white;

@@ -19,7 +19,10 @@ applicationFormNode.addEventListener('submit', function(event) {
     for(let i = 0; i < applicationFormNode.skills.length; i++) {
         if(applicationFormNode.skills[i].checked) {
             skillsArray.push(applicationFormNode.skills[i].value);
-        }   
+        }
+    }
+    if(!skillsArray[0]) {
+        skillsArray[0] = 'none';
     }
 
     const newApplication = {
