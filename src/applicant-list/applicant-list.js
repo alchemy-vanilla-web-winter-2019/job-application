@@ -1,19 +1,24 @@
 const newApplicationsStringArray = window.localStorage.getItem('newApplications');
 const newApplications = JSON.parse(newApplicationsStringArray);
 
-const applicantsHeader = document.getElementById('applicants-header');
+const tableSection = document.getElementById('table-section');
+const applicantsTable = document.createElement('table');
+const applicantsHeader = document.createElement('thead');
+const applicantsBody = document.createElement('tbody');
+tableSection.appendChild(applicantsTable);
+applicantsTable.appendChild(applicantsHeader);
+applicantsTable.appendChild(applicantsBody);
+
 const applicationKeys = Object.keys(newApplications[0]);
 const tableHeadings = [applicationKeys[0], applicationKeys[2], applicationKeys[3]];
 const headingRow = document.createElement('tr');
 applicantsHeader.appendChild(headingRow);
-
 for(let i = 0; i < tableHeadings.length; i++) {
     const heading = document.createElement('th');
     heading.textContent = tableHeadings[i];
     headingRow.appendChild(heading);
 }
 
-const applicantsTable = document.getElementById('applicants-table');
 const numberOfColumns = document.getElementsByTagName('th');
 
 for(let i = 0; i < newApplications.length; i++) {
@@ -30,5 +35,5 @@ for(let i = 0; i < newApplications.length; i++) {
         
         newApplicantRow.appendChild(newTD);
     }
-    applicantsTable.appendChild(newApplicantRow);
+    applicantsBody.appendChild(newApplicantRow);
 }
