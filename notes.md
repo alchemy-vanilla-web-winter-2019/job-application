@@ -39,3 +39,33 @@ const element1 = document.getElementById('id');
 const element1 = document.getElementById('id');
 
 form,addEventListener{ SVGUnit}
+
+#notes from marty arrays 2/6/2019
+
+const element = document.getElementById('id');
+const element = document.getElementById('id');
+const element1 = document.getElementById('id');
+const element1 = document.getElementById('id');
+const element1 = document.getElementById('id');
+const element1 = document.getElementById('id');
+const element1 = document.getElementById('id');
+const element1 = document.getElementById('id');
+
+form,addEventListener{submt} etc etc
+        const array = []
+
+        if(checkbox,checked) {
+            choices .push (id)
+        }
+        if(checkbox,checked) {
+            choices .push (id)
+        }
+             or       if(checkbox,checked) {
+                        choices .push (choice.value)
+
+
+
+                        or add class = choices
+
+                        using css selector to get nodes
+                    }
