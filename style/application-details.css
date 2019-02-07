@@ -1,3 +1,7 @@
+html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
 header{
     text-align: center;
     border: 2px solid rgb(163, 15, 15);

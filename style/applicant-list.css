@@ -1,3 +1,7 @@
+html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
 header{
     text-align: center;
     border: 2px solid rgb(163, 15, 15);
@@ -13,4 +17,30 @@ body{
 a{
     color:rgb(114, 15, 11);
     font-size: 20px;
+}
+table{
+    margin: auto;
+    text-align: center;
+}
+
+thead{
+    text-align: center;
+    font-size: 20px;
+}
+th{
+    letter-spacing: 2px;
+}
+
+thead th:nth-child(1) {
+    width: 15%;
+}
+thead th:nth-child(2) {
+    width: 25%;
+}
+thead th:nth-child(3) {
+    width: 40%;
+
+}
+thead th:nth-child(4) {
+    width: 20%;
 }
