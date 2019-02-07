@@ -21,15 +21,25 @@ spaceForm.addEventListener('submit', function(event) {
             chosenGear[index] = gear.value;
         }
     }
-    const userData = {
+    const applicant = {
         name: userName.value,
         spaceship: spaceship.value, 
         claustrophobic: claustrophobic.value,
         spacegear: chosenGear
     };
+
+    let applicants = [];
+    let jsonString = window.localStorage.getItem('applicants');
+    if(jsonString) {
+        applicants = JSON.parse(jsonString);
+    }
+
+    applicants.push(applicant);
+
+
+    const serialize = JSON.stringify(applicants);
+    window.localStorage.setItem('applicants', serialize);
     window.location = 'thanks.html';
-    const serialize = JSON.stringify(userData);
-    window.localStorage.setItem('user data', serialize);
 });
 
 
