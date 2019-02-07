@@ -6,12 +6,23 @@ const loyaltyEl = document.getElementById('loyalty');
 
 
 
-const jsonObject = window.localStorage.getItem('application');
-const hydratedJson = JSON.parse(jsonObject);
-console.log(hydratedJson);
+const jsonObject = window.localStorage.getItem('applicants');
+const applicants = JSON.parse(jsonObject);
+console.log(applicants);
 
-nameEl.textContent = hydratedJson.name;
-questEl.textContent = hydratedJson.quest;
-colorEl.textContent = hydratedJson.color;
-talentsEl.textContent = hydratedJson.talents.join(', ');
-loyaltyEl.textContent = hydratedJson.loyalty;
+const searchParam = new URLSearchParams(window.location.search);
+const nameToFind = searchParam.get('name');
+
+let applicant = {};
+for(let i = 0; i < applicants.length; i++) {
+    if (nameToFind === applicants[i].name) {
+        applicant = applicants[i];
+        break;
+    }
+}
+
+nameEl.textContent = applicant.name;
+questEl.textContent = applicant.quest;
+colorEl.textContent = applicant.color;
+talentsEl.textContent = applicant.talents.join(', ');
+loyaltyEl.textContent = applicant.loyalty;
