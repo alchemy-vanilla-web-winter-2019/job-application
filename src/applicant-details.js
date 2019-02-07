@@ -4,13 +4,27 @@ const email = document.getElementById('email');
 const bossLevels = document.getElementById('boss-levels');
 const pay = document.getElementById('pay');
 
-const jsonObject = window.localStorage.getItem('applicant');
-const hydrateOjectApplicant = JSON.parse(jsonObject);
+const jsonObject = window.localStorage.getItem('dope');
+const applicants = JSON.parse(jsonObject);
 
-console.log('it worked', hydrateOjectApplicant);
+console.log('it worked', applicants);
 
-appName.textContent = hydrateOjectApplicant.name;
-digits.textContent = hydrateOjectApplicant.digits;
-email.textContent = hydrateOjectApplicant.email;
-bossLevels.textContent = hydrateOjectApplicant.talkboss.join(', ');
-pay.textContent = hydrateOjectApplicant.pay;
+const searchParam = new URLSearchParams(window.location.search);//today
+const nameToFind = searchParam.get('name');//today
+
+let applicant = null; //today, line 15-22
+if(nameToFind) {
+    for(let i = 0; i < applicants.length; i++) {
+        if(applicants[i].name === nameToFind) {
+            applicant = applicants[i];
+            break;
+        }
+    }
+
+}
+
+appName.textContent = applicant.name;
+digits.textContent = applicant.digits;
+email.textContent = applicant.email;
+bossLevels.textContent = applicant.talkboss.join(', ');
+pay.textContent = applicant.pay;

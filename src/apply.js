@@ -15,22 +15,26 @@ appFormNode.addEventListener('submit', function(event) {
         }   
     } console.log('checkbox success', checkBoxesArray);
 
+    //object is formSubmittal
     let formSubmittal = {
         name: nameInputNode.value,
         digits: digitsInputNode.value,
         email: emailInputNode.value,
         talkboss: checkBoxesArray,
         pay: payInputNode.value,
-      //whatever: appFormNode.("whatever the [name="from apply.html"]).value
-      //whatever: appFormNode.digits.value  -->
+      //whatever key: appFormNode.("whatever the [name="from apply.html"]).value
+      //digits: appFormNode.digits.value  -->
       //faster way so you don't need to getElementById like lines 2-5
     };
     console.log('Form Submit sucess', formSubmittal);
 
-    let applications = [];
     const jsonArray = window.localStorage.getItem('dope');
+    let applications = [];
     if(jsonArray) {
         applications = JSON.parse(jsonArray); 
+    }
+    else {
+        applications = [];
     }
     applications.push(formSubmittal);
     const serializedArray = JSON.stringify(applications);
