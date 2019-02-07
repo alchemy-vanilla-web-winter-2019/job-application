@@ -26,15 +26,20 @@ form.addEventListener('submit', function(event){
         }
     }
 
+    // use to somehow grab users by when theyve submitted their application
+    let timeStamp = Date.now(); 
+
+
     const applicant = {
         name: name,
         city: city,
         state: state,
         prank: prank,
         weapon: weaponSelect,
-        slider: slider.value
+        slider: slider.value,
+        timeStamp: timeStamp
     };
-    // console.log(applicant);
+    console.log(applicant);
 
     let applicants = [];
     const jsonString = window.localStorage.getItem('applicants');

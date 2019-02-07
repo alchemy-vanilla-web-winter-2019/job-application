@@ -10,12 +10,12 @@ if(json) {
 }
 
 const searchParams = new URLSearchParams(window.location.search);
-const nameToFind = searchParams.get('name');
+const nameToFind = searchParams.get('timeStamp');
 
 for(let i = 0; i < allApplicants.length; i++) {
     const nameSelect = allApplicants[i];
 
-    if(nameSelect.name === nameToFind) {
+    if(nameSelect.timeStamp == nameToFind) {
         applicant = nameSelect;
         break;
     }

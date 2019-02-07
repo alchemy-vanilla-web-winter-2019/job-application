@@ -16,7 +16,7 @@ for(let i = 0; i < applicant.length; i++){
 
     const nameCell = document.createElement('td');
     const a = document.createElement('a');
-    a.href = 'applied.html?name=' + encodeURIComponent(applicantSelect.name);
+    a.href = 'applied.html?timeStamp=' + encodeURIComponent(applicantSelect.timeStamp);
     a.textContent = applicantSelect.name;
     nameCell.appendChild(a);
     tr.appendChild(nameCell);
