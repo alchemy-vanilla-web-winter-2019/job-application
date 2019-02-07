@@ -23,7 +23,6 @@ li {
     text-decoration: none;
 }
 
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -39,37 +38,35 @@ a:visited {
     color: black;
 }
 
-footer {
-    margin-top: 60px;
-    padding: 20px;
-    background: black;
-    color: white;
-}
-
 section {
     border: 1px solid black;
     margin: 5px;
     padding: 10px;
 }
 
-#about-section {
-    background: lightcoral;
-}
-
-#experience-section {
+#heading {
     background: lightblue;
 }
 
-#types-section {
+#details {
+    background: lightcoral;
+}
+
+#msg {
     background: lightgreen;
 }
 
-button {
-    font-size: 15px;
-    background: yellow;
-    margin-top: 10px;
+footer {
+    margin-top: 5px;
+    padding: 20px;
+    background: black;
+    color: white;
 }
 
-.hidden {
-    color: gray;
+dt {
+    font-weight: bold;
+}
+
+button {
+    background: lightyellow;
 }

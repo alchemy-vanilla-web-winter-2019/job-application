@@ -1,28 +1,66 @@
+body {
+    max-width: 800px;
+    margin: auto;
+}
+
 header {
-    display: flex;
+    display: flex run-in;
     justify-content: center;
-    margin-bottom: 60px;
+    background: lightcoral;
+}
+
+nav {
+    border: 1px solid black;
+    background: yellow;
+    padding: 5px;
+}
+
+li {
+    display: inline;
+}
+
+.nav {
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+                    
+.nav:hover {
+    background: rgb(55, 55, 238);
+    font-weight: bold;
+}
+
+a:visited {
+    color: black;
 }
 
 main {
     display: flex;
     justify-content: center;
+    background: lightblue;
+    padding: 60px;
 }
 
-a {
+#apply {
     text-decoration: none;
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
+    background: lightgreen;
 }
 
-a:hover {
+#apply:hover {
     background: black;
     color: white;
 }
 
 footer {
-    margin-top: 60px;
     padding: 20px;
     background: black;
     color: white;

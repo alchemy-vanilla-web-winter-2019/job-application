@@ -46,7 +46,7 @@ formNode.addEventListener('submit', function(event) {
             cuddleTypes.push(cuddleTypesNode[i].value);
         }
     }
-    
+
     const applicant = {
         name: nameNode.value,
         city: cityNode.value,
@@ -54,5 +54,9 @@ formNode.addEventListener('submit', function(event) {
         professional: isCertified,
         cuddles: cuddleTypes
     };
-    return applicant;
+
+    const applicantJSON = JSON.stringify(applicant);
+    window.localStorage.setItem('applicant', applicantJSON);
+    window.location = './application-detail.html';
+
 });

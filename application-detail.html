@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Application Submitted</title>
+    <link rel="stylesheet" href="application-detail.css">
+</head>
+<body>
+    <header>
+        <h1>Application Submitted</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html" class="nav">Home</a></li>
+                <li><a href="./apply.html" class="nav">Apply</a></li>
+                <li><a href="./application-detail.html" class="nav">Review Your Application</a></li>
+            </ul>
+        </nav>   
+    </header>
+
+    <main>
+        <section id="heading">
+            <h2>Your Application Details</h2>
+        </section>
+        <section id="details">
+            <dl>
+                <dt>Your Name:</dt>
+                <dd id="name"></dd>
+                <dt>City:</dt>
+                <dd id="city"></dd>
+                <dt>Experience:</dt>
+                <dd id="experience"></dd>
+                <dt>Certified Professional Cuddler:</dt>
+                <dd id="certified"></dd>
+                <dt>Types of Cuddles Offered:</dt>
+                <dd id="type"></dd>
+            </dl>
+        </section>
+        <section id="msg">
+            <br>
+            <p id="message"></p>
+            <br>
+        </section>
+        <section>
+            <button id="clear">Clear Application</button>
+        </section>
+    </main>
+
+    <footer>
+            <p>&copy; Bonnie McNeil</p>
+    </footer> 
+    
+    <script type="module" src="./src/applicant-detail.js"></script>
+</body>
+</html>
