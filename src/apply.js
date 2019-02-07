@@ -13,7 +13,7 @@ appFormNode.addEventListener('submit', function(event) {
         if(appFormNode.checkboxes[i].checked) {
             checkBoxesArray.push(appFormNode.checkboxes[i].value);
         }   
-    } //console.log('success', checkBoxesArray);
+    } console.log('checkbox success', checkBoxesArray);
 
     let formSubmittal = {
         name: nameInputNode.value,
@@ -24,9 +24,8 @@ appFormNode.addEventListener('submit', function(event) {
       //whatever: appFormNode.("whatever the [name="from apply.html"]).value
       //whatever: appFormNode.digits.value  -->
       //faster way so you don't need to getElementById like lines 2-5
-
     };
-    console.log('I did it', formSubmittal);
+    console.log('Form Submit sucess', formSubmittal);
 
     let applications = [];
     const jsonArray = window.localStorage.getItem('dope');
