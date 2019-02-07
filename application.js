@@ -34,8 +34,17 @@ addEventListener('submit', function(){
         pizza: pizzaPreference
 
     };
+
+    let allApplicants = [];
+
+    const jsonString = window.localStorage.getItem('allApplicants');
+    if(jsonString){
+        allApplicants = JSON.parse(jsonString);
+    }
     
-    const serialize = JSON.stringify(appSubmission);
-    window.localStorage.setItem('appSubmission', serialize);
+    allApplicants.push(appSubmission);
+    
+    const serialize = JSON.stringify(allApplicants);
+    window.localStorage.setItem('allApplicants', serialize);
     window.open('./app-review.html');
 });
