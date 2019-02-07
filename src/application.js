@@ -25,24 +25,11 @@ application.addEventListener('submit', function(event) {
         }
     }
 
-    let applicants = [];
-    
-    const jsonArrayString = window.localStorage.getItem('applicants');
+   
+    const serialized = JSON.stringify(applicant);
+    window.localStorage.setItem('applicant', serialized);
 
-    if(jsonArrayString) {
-        applicants = JSON.parse(jsonArrayString);
-    }
 
-    applicants.push(applicant);
-
-    
-    const serializedParty = JSON.stringify(applicants);
-    window.localStorage.setItem('party', serializedParty);
-    
-    console.log('party', serializedParty);
-
-    // const serialized = JSON.stringify(applicant);
-    // window.localStorage.setItem('applicant', serialized);
     window.location = 'thanks.html';
 });
 
