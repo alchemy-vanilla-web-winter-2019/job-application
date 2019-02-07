@@ -1,5 +1,6 @@
-const applicantJSON = window.localStorage.getItem('lectric-eye');
+const applicantJSON = window.localStorage.getItem('applicants');
 const applicant = JSON.parse(applicantJSON);
+
 
 const nameNode = document.getElementById('name');
 const cityNode = document.getElementById('city');
@@ -12,11 +13,11 @@ cityNode.textContent = applicant.city;
 phoneNumberNode.textContent = applicant.phone;
 escapeReason.textContent = applicant.escapeArray;
 
-if(applicant.realityCheck.length === 0) {
-    escapeReason.textContent = 'none';
-}
+// if(applicant.realityCheck.length === 0) {
+//     escapeReason.textContent = 'none';
+// }
 
-// giconsole.log(escapeReason);
+
 
 // else {
 //     for(let index = 0; index < applicant.escapeArray.length - 1; index++) {escapeReason.textContent += applicant.realityCheck[index] + ', ';

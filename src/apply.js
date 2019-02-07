@@ -9,8 +9,13 @@ const delusionalNode = document.getElementById('delusional');
 const bowieNode = document.getElementById('bowie');
 // const selfDescription = document.getElementById('self-description');
 
+let allApplicants = [];
 
-
+const allApplicantsJSON = window.localStorage.getItem('applicants');
+if(allApplicantsJSON) {
+    allApplicants = JSON.parse(allApplicantsJSON);
+    // console.log(allApplicantsJSON);
+}
 
 
 
@@ -43,19 +48,9 @@ noEscapeNode.addEventListener('change', function() {
         boredomNode.disabled = true;
         delusionalNode.disabled = true;
         bowieNode.disabled = true;
-
-        
-        
-        
-        
         
     }
 });
-
-
-
-
-
 
 userInputNode.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -70,23 +65,18 @@ userInputNode.addEventListener('submit', function(event) {
     }
     // console.log(escapeArray);
      
-
-
-    
     const applicant = {
         name: nameNode.value,
         city: cityNode.value,
         phone: phoneNumberNode.value,
         realityCheck: escapeArray,
         // describeSelf: selfDescription.value,
-        
-    
-        
+            
     };
-   
-    const serialize = JSON.stringify(applicant); 
-    // console.log(applicant);
 
-    window.localStorage.setItem('lectric-eye', serialize);
+    allApplicants.push(applicant);
+   
+    const applicantsJSON = JSON.stringify(allApplicants); 
+    window.localStorage.setItem('applicants', applicantsJSON);
     window.location = './details-applicant.html';
 });
