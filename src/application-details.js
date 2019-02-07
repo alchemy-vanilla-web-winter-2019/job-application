@@ -20,7 +20,7 @@ for(let i = 0; i < applicants.length; i++) {
         break;
     }
 }
-
+idEl.textContent = applicant.id;
 nameEl.textContent = applicant.name;
 questEl.textContent = applicant.quest;
 colorEl.textContent = applicant.color;
