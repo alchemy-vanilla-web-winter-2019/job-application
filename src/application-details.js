@@ -1,3 +1,4 @@
+const idEl = document.getElementById('id');
 const nameEl = document.getElementById('name');
 const questEl = document.getElementById('quest');
 const colorEl = document.getElementById('color');
@@ -8,14 +9,13 @@ const loyaltyEl = document.getElementById('loyalty');
 
 const jsonObject = window.localStorage.getItem('applicants');
 const applicants = JSON.parse(jsonObject);
-console.log(applicants);
 
-const searchParam = new URLSearchParams(window.location.search);
-const nameToFind = searchParam.get('name');
+const searchParams = new URLSearchParams(window.location.search);
+const idToFind = searchParams.get('id').toString();
 
 let applicant = {};
 for(let i = 0; i < applicants.length; i++) {
-    if (nameToFind === applicants[i].name) {
+    if(idToFind === applicants[i].id) {
         applicant = applicants[i];
         break;
     }

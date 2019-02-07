@@ -6,7 +6,7 @@ if(jsonArray) {
     applicants = JSON.parse(jsonArray);
 }
 
-const keys = ['name', 'quest', 'color', 'talents', 'loyalty'];
+const keys = ['id', 'name', 'quest', 'color', 'talents', 'loyalty'];
 
 for(let i = 0; i < applicants.length; i++) {
     const newRow = document.createElement('tr');
@@ -16,10 +16,10 @@ for(let i = 0; i < applicants.length; i++) {
         const newCell = document.createElement('td');
         const key = keys[j];
         const value = applicants[i][key];
-        if (key === 'name') {
+        console.log(key, value);
+        if(key === 'id') {
             const newAnchor = document.createElement('a');
-            // newAnchor.href = 'index.html';
-            newAnchor.href = 'application-details.html?name=' + encodeURIComponent(value);
+            newAnchor.href = 'application-details.html?id=' + encodeURIComponent(value);
             newAnchor.textContent = value;
             newCell.appendChild(newAnchor);
         }

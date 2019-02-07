@@ -18,8 +18,16 @@ faireApplication.addEventListener('submit', function(event) {
             talentNames.push(name.value);
         }
     }
+    
+    let applicants = [];
+
+    const jsonArray = window.localStorage.getItem('applicants');
+    if(jsonArray) {
+        applicants = JSON.parse(jsonArray);
+    }
 
     const applicant = {
+        id : applicants.length.toString(),
         name: faireApplication.name.value,
         quest: faireApplication.quest.value,
         color: faireApplication.color.value,
@@ -27,12 +35,6 @@ faireApplication.addEventListener('submit', function(event) {
         loyalty: faireApplication.loyalty.value
     };
 
-    let applicants = [];
-
-    const jsonArray = window.localStorage.getItem('applicants');
-    if(jsonArray) {
-        applicants = JSON.parse(jsonArray);
-    }
     applicants.push(applicant);
 
     const serialized = JSON.stringify(applicants);
