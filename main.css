@@ -1,6 +1,11 @@
 body {
-    background-color: antiquewhite;
-    color: navy;
+    background-color: rgb(255, 232, 190);
+    color: black;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#theater {
+    width: 500px;
+    border-radius: 25px;
 }
