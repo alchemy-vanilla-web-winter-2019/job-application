@@ -1,3 +1,15 @@
 body {
     background-color: goldenrod;
 }
+
+h1 {
+    text-align: center;
+}
+
+.results {
+    border: 3px solid purple;
+    width: 50vh;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+}

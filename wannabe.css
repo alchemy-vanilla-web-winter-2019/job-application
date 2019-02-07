@@ -18,7 +18,7 @@ dd {
     padding: 5px;
 }
 
-#results {
+.results {
     border: 3px solid purple;
     width: 50vh;
     margin: auto;

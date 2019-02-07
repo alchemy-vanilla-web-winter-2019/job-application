@@ -4,12 +4,15 @@ const heroProfession = document.getElementById('hero-profession');
 const heroCombat = document.getElementById('hero-combat');
 const heroReason = document.getElementById('hero-reason');
 
-const jsonObject = window.localStorage.getItem('applicant');
+const jsonObject = window.localStorage.getItem('applications');
 
 const hydratedWannabe = JSON.parse(jsonObject);
 
-heroName.textContent = hydratedWannabe.name;
-heroAlias.textContent = hydratedWannabe.alias;
-heroProfession.textContent = hydratedWannabe.profession;
-heroCombat.textContent = hydratedWannabe.combat.join(', ');
-heroReason.textContent = hydratedWannabe.joinReason;
+const index = hydratedWannabe.length - 1;
+console.log(hydratedWannabe);
+
+heroName.textContent = hydratedWannabe[index].name;
+heroAlias.textContent = hydratedWannabe[index].alias;
+heroProfession.textContent = hydratedWannabe[index].profession;
+heroCombat.textContent = hydratedWannabe[index].combat;
+heroReason.textContent = hydratedWannabe[index].joinReason;
