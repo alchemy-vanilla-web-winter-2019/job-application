@@ -4,11 +4,11 @@ body {
     letter-spacing: .05em;
 }
 
-.left {
-    float:left;
+.centered {
+    text-align: center;
 }
 
-.centered {
+header {
     text-align: center;
 }
 
@@ -70,7 +70,10 @@ button {
   table {
       border-collapse: collapse;
       text-align: center;
+      margin-right: auto;
+      margin-left: auto;
   }
+
   
   thead {
       background-color:#4286f4;
