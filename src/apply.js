@@ -66,6 +66,8 @@ applicationFormNode.addEventListener('submit', function() {
 
     window.localStorage.setItem('applicant', newApplicantJSON);
 
-    document.location = '/pages/application-review.html';
+    const urlSlug = '/pages/application-review.html?name=' + applicant.name;
+
+    document.location = urlSlug;
 });
 
