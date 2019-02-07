@@ -10,7 +10,6 @@ else {
     window.location = './index.html';
 }
 
-console.log(applicants);
 
 for(let i = 0; i < applicants.length; i++) {
     const applicant = applicants[i];
@@ -20,6 +19,7 @@ for(let i = 0; i < applicants.length; i++) {
     const city = document.createElement('td');
     const cuddleTypes = document.createElement('td');
     const favoriteNumber = document.createElement('td');
+    favoriteNumber.classList.add('num');
 
     name.textContent = applicant.name;
     city.textContent = applicant.city;
@@ -67,7 +67,23 @@ for(let i = 0; i < applicants.length; i++) {
     tbody.appendChild(tr);
 }
 
+let favoriteSum = 0;
 //create row to display sum of favorite numbers
+const numCells = document.querySelectorAll('.num');
+for(let i = 0; i < numCells.length; i++) {
+    const number = Number(numCells[i].textContent);
+    favoriteSum += number;
+}
+
+const sumRow = document.createElement('tr');
+const sumLabel = document.createElement('th');
+sumLabel.textContent = 'Favorite Number sum';
+sumLabel.colSpan = 3;
+const sum = document.createElement('td');
+sum.textContent = favoriteSum;
+sumRow.appendChild(sumLabel);
+sumRow.appendChild(sum);
+tbody.appendChild(sumRow);
 
 const cuddleTally = document.getElementById('tally-styles');
 const tallyRow = document.createElement('tr');
