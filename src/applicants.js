@@ -1,16 +1,16 @@
 let allApplicants = [];
 
 const jsonString = window.localStorage.getItem('applicants');
-const allApplicantsNode = document.getElementById('applicants');
 
 if(jsonString) {
-    allApplicants = JSON.parse(jsonString);
-   
+    allApplicants = JSON.parse(jsonString);  
 }
 
 else {
     window.location = './index.html';
 }
+
+const allApplicantsNode = document.getElementById('applicants');
 
 for(let index = 0; index < allApplicants.length; index++) {
     const applicant = allApplicants[index];
@@ -19,11 +19,14 @@ for(let index = 0; index < allApplicants.length; index++) {
     const nameCell = document.createElement('td');
     const cityCell = document.createElement('td');
     const phoneCell = document.createElement('td');
-console.log(phoneCell);
+
     nameCell.textContent = applicant.name;
     phoneCell.textContent = applicant.phone;
     cityCell.textContent = applicant.city;
+
     row.appendChild(nameCell);
+    row.appendChild(cityCell);
+    row.appendChild(phoneCell);
 
     allApplicantsNode.appendChild(row);
 }
