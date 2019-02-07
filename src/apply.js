@@ -1,7 +1,3 @@
-
-
-// console.log(applications);
-
 const applicationFormNode = document.getElementById('application-form');
 const nameNode = document.getElementById('name');
 const cityNode = document.getElementById('city');

@@ -13,9 +13,7 @@ const salaryNode = document.getElementById('salary');
 const searchParams = new URLSearchParams(window.location.search);
 const searchName = searchParams.get('name');
 
-console.log(searchName);
 for(let index = 0; index < applicantArray.length; index++) {
-    console.log(applicantArray[index]);
     if(applicantArray[index].name === searchName) {
         currentApplicant = applicantArray[index];
     }

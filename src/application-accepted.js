@@ -11,8 +11,6 @@ const newApplicant = newApplicants[newApplicants.length - 1];
 
 let jobTitle = '';
 
-console.log(newApplicant.skill);
-
 const min = 3000;
 const max = 5000;
 const marketRate = Math.floor(Math.random() * (+max - +min) + min);

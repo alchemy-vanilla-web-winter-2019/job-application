@@ -10,8 +10,6 @@ const moralityNode = document.getElementById('morality');
 const cityNode = document.getElementById('city');
 const salaryNode = document.getElementById('salary');
 
-console.log(applicants);
-
 const searchParams = new URLSearchParams(window.location.search);
 const name = searchParams.get('name');
 
@@ -21,9 +19,6 @@ for(let index = 0; index < newApplicants.length; index++) {
         newApplicant = currentApplicant;
     }
 }
-
-console.log(name);
-
 
 nameNode.textContent = newApplicant.name;
 philosophyNode.textContent = newApplicant.philosophy;
