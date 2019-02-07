@@ -4,6 +4,15 @@ body {
     letter-spacing: .05em;
 }
 
+a {
+    color: #42cef4;  
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .centered {
     text-align: center;
 }

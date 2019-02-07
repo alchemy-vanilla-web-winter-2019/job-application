@@ -6,17 +6,35 @@ const yarnsUsed = document.getElementById('yarn-brands');
 
 const jsonString = window.localStorage.getItem('applicants');
 
-let applicant = [];
+let applicant = null;
+let applicants = [];
 if(jsonString) {
-    const applicants = JSON.parse(jsonString);
-    applicant = applicants[applicants.length - 1];
+    applicants = JSON.parse(jsonString);
+    
 }
 
 else {
     window.location = '/';
 }
 
+const searchParam = new URLSearchParams(window.location.search);
 
+const nameToMatch = searchParam.get('name');
+
+if(nameToMatch) {
+    for(let i = 0; i < applicants.length; i++) {
+        let currentApplicant = applicants[i];
+
+        if(currentApplicant.name === nameToMatch) {
+            applicant = currentApplicant;
+            break;
+        }
+    }
+}
+
+else {
+    applicant = applicants[applicants.length - 1];
+}
 
 applicantName.textContent = applicant.name;
 position.textContent = applicant.position;
