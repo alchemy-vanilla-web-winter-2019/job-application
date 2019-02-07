@@ -31,6 +31,11 @@ header {
     align-items: center;
 }
 
+#all-apps-nav {
+    background: none;
+    color: #F7AEF8;
+}
+
 header a {
     background: #F7AEF8;
     padding: 20px 35px;
