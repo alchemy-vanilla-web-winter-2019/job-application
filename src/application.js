@@ -16,7 +16,7 @@ application.addEventListener('submit', function(event) {
         combat: combatStyles,
         joinReason: joinReason.value
     };
-    
+    // part of getting combat choiceS into the array
     for(let i = 0; i < combatNodeList.length; i++) {
         const style = combatNodeList[i];
         if(style.checked) {
