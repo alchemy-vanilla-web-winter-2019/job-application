@@ -1,17 +1,25 @@
 const applicantJSON = window.localStorage.getItem('applicants');
-const applicant = JSON.parse(applicantJSON);
-
+const applicants = JSON.parse(applicantJSON); 
 
 const nameNode = document.getElementById('name');
 const cityNode = document.getElementById('city');
 const phoneNumberNode = document.getElementById('phone-number');
 const escapeReason = document.getElementsByName('escape-reason');
 
+const applicant = applicants[applicants.length - 1];
 
 nameNode.textContent = applicant.name;
 cityNode.textContent = applicant.city;
 phoneNumberNode.textContent = applicant.phone;
 escapeReason.textContent = applicant.escapeArray;
+
+// if(applicantJSON); {
+    //     window.location = './index.html';
+    // }
+    
+   
+    
+
 
 // if(applicant.realityCheck.length === 0) {
 //     escapeReason.textContent = 'none';
@@ -28,5 +36,3 @@ escapeReason.textContent = applicant.escapeArray;
     
     
 // }
-
-// console.log(escapeReason);
