@@ -1,4 +1,4 @@
-const jsonString = window.localStorage.getItem('applicant');
+const jsonString = window.localStorage.getItem('applicants');
 
 
 let applicants = [];
@@ -29,7 +29,7 @@ for(let index = 0; index < applicants.length; index++) {
     tr.appendChild(tdPopcorn);
 
     const tdRomCom = document.createElement('td');
-    tdRomCom.textContent = movieApplicant.romcom;
+    tdRomCom.textContent = movieApplicant.romCom;
     tr.appendChild(tdRomCom);
 
     const tdFilms = document.createElement('td');

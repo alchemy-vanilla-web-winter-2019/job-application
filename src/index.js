@@ -7,7 +7,6 @@ const popcornSpan = document.getElementById('popcorn-span');
 popcorn.addEventListener('change', function() {
     event.preventDefault();
     popcornSpan.textContent = popcorn.value; 
-
 });
 
 jobApp.addEventListener('submit', function(event) {
@@ -38,18 +37,15 @@ jobApp.addEventListener('submit', function(event) {
     };
 
     let applicants = [];
-    const jsonString = window.localStorage.getItem('applicant');
+    const jsonString = window.localStorage.getItem('applicants');
     if(jsonString) {
         applicants = JSON.parse(jsonString);
     }
     
     applicants.push(applicant);
-
+    window.location = 'thanks.html';
     
     const serialize = JSON.stringify(applicants);
-    window.localStorage.setItem('applicant', serialize);
-    
-    window.location = 'thanks.html';
-
+    window.localStorage.setItem('applicants', serialize);
 
 });
