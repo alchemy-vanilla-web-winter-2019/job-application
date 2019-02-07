@@ -14,7 +14,7 @@ let applicants = [];
 const existingApplicantsJSON = window.localStorage.getItem('applicants');
 
 if(existingApplicantsJSON) {
-    applicants = JSON.parse(existingApplicants);
+    applicants = JSON.parse(existingApplicantsJSON);
 }
 
 marriedNode.addEventListener('change', function() {
