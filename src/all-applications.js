@@ -19,7 +19,7 @@ for(let index = 0; index < applicants.length; index++) {
     const salary = document.createElement('td');
     const link = document.createElement('a');
     link.target = 'blank';
-    link.href = 'application-review.html?name=' + encodeURIComponent(applicant.name);
+    link.href = 'applicant-details.html?name=' + encodeURIComponent(applicant.name);
 
     name.textContent = applicant.name;
     city.textContent = applicant.city;
