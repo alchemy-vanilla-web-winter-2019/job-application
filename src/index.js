@@ -38,9 +38,17 @@ jobApp.addEventListener('submit', function(event) {
         films: filmNames
     };
     
-    window.location = 'thanks.html';
+    let applicants = [];
+    const jsonString = window.localStorage.getItem('applicant');
+    if(jsonString) {
+        applicants = JSON.parse(jsonString);
+    }
 
-    const serialize = JSON.stringify(applicant);
+    applicants.push('applicant');
+
+    // window.location = 'thanks.html';
+
+    const serialize = JSON.stringify(applicants);
     window.localStorage.setItem('applicant', serialize);
 });
 
