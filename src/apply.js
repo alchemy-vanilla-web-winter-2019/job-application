@@ -19,7 +19,7 @@ faireApplication.addEventListener('submit', function(event) {
         }
     }
 
-    const application = {
+    const applicant = {
         name: faireApplication.name.value,
         quest: faireApplication.quest.value,
         color: faireApplication.color.value,
@@ -27,8 +27,16 @@ faireApplication.addEventListener('submit', function(event) {
         loyalty: faireApplication.loyalty.value
     };
 
-    const serialized = JSON.stringify(application);
-    window.localStorage.setItem('application', serialized);
+    let applicants = [];
+
+    const jsonArray = window.localStorage.getItem('applicants');
+    if(jsonArray) {
+        applicants = JSON.parse(jsonArray);
+    }
+    applicants.push(applicant);
+
+    const serialized = JSON.stringify(applicants);
+    window.localStorage.setItem('applicants', serialized);
     window.location = 'thanks.html';
 
 });
