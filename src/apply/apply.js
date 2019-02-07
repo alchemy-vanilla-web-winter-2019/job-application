@@ -1,8 +1,5 @@
 const guildApplication = document.getElementById('guild-application');
 
-//Idea!
-//Use guildApplication.elements to initiate a for loop 
-//which collects all nodes with name attribute
 
 guildApplication.addEventListener('submit', function(event) {
     event.preventDefault();
