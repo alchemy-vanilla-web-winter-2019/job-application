@@ -23,6 +23,6 @@ for(let index = 0; index < applicants.length; index++) {
 
     const tdSpacegear = document.createElement('td');
     tr.appendChild(tdSpacegear);
-    tdSpacegear.textContent = applicant.spacegear;
+    tdSpacegear.textContent = applicant.spacegear.join(' ');
 
 }
