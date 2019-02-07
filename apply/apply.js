@@ -63,4 +63,6 @@ formNode.addEventListener('submit', function(event) {
         timeAvailable: howLongNode.value,
     };
     console.log(applicant);
+    const serializedApplicant = JSON.stringify(applicant);
+    window.localStorage.setItem('applicantOne', serializedApplicant);
 });
