@@ -14,7 +14,10 @@ for(let i = 0; i < allApplicants.length; i++) {
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
-    nameCell.textContent = applicant.name;
+    const a = document.createElement('a');
+    a.href = 'review.html?name=' + encodeURIComponent(applicant.name);
+    a.textContent = applicant.name;
+    nameCell.appendChild(a);
     tr.appendChild(nameCell);
     
     const realmCell = document.createElement('td');
