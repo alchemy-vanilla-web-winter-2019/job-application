@@ -46,7 +46,7 @@ application.addEventListener('submit', function(event) {
     // const serialized = JSON.stringify(applicant);
     // window.localStorage.setItem('applicant', serialized);
 
-    // window.location = 'thanks.html';
+    window.location = 'thanks.html';
 });
 
 

@@ -5,6 +5,7 @@ const heroCombat = document.getElementById('hero-combat');
 const heroReason = document.getElementById('hero-reason');
 
 const jsonObject = window.localStorage.getItem('applicant');
+
 const hydratedWannabe = JSON.parse(jsonObject);
 
 heroName.textContent = hydratedWannabe.name;
