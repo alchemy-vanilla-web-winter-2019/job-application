@@ -7,6 +7,8 @@ const yearsExperience = document.getElementById('years-experience');
 const yearsExperienceQuestion = document.getElementById('years');
 const yesCertified = document.getElementById('yes-cert');
 const noCertified = document.getElementById('no-cert');
+const numberNode = document.getElementById('number');
+
 let applicants = [];
 const jsonApplicants = window.localStorage.getItem('applicants');
 if(jsonApplicants) {
@@ -57,7 +59,8 @@ formNode.addEventListener('submit', function(event) {
         city: cityNode.value,
         experience: yearsExperience.value, 
         professional: isCertified,
-        cuddles: cuddleTypes
+        cuddles: cuddleTypes,
+        faveNumber: numberNode.value
     };
 
     applicants.push(applicant);

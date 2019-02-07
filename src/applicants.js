@@ -19,9 +19,11 @@ for(let i = 0; i < applicants.length; i++) {
     const name = document.createElement('td');
     const city = document.createElement('td');
     const cuddleTypes = document.createElement('td');
+    const favoriteNumber = document.createElement('td');
 
     name.textContent = applicant.name;
     city.textContent = applicant.city;
+    favoriteNumber.textContent = applicant.faveNumber;
 
     if(applicant.cuddles.length === 0) {
         cuddleTypes.textContent = 'none';
@@ -61,8 +63,11 @@ for(let i = 0; i < applicants.length; i++) {
     tr.appendChild(name);
     tr.appendChild(city);
     tr.appendChild(cuddleTypes);
+    tr.appendChild(favoriteNumber);
     tbody.appendChild(tr);
 }
+
+//create row to display sum of favorite numbers
 
 const cuddleTally = document.getElementById('tally-styles');
 const tallyRow = document.createElement('tr');
