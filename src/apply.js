@@ -1,6 +1,6 @@
 const formNode = document.getElementById('main-form');
 const nameNode = document.getElementById('name');
-const phoneNode = document.getElementById('phone')
+const phoneNode = document.getElementById('phone');
 const comfortNode = document.getElementById('comfort');
 const comfortFieldNode = document.getElementById('comfort-field');
 const burialNode = document.getElementById('burial');
@@ -14,7 +14,7 @@ comfortNode.addEventListener('change', function(){
         case '2': 
             messageSelector = 'I am mildly averse to being burnt to a crisp.';
             break;
-        case '3': 
+        case '3':
             messageSelector = 'I am neither pleased nor displeased by my calories being released as thermal energy.';
             break;
         case '4': 
@@ -35,6 +35,7 @@ formNode.addEventListener('submit', function(event) {
         comfort: comfortNode.value,
         burial: burialNode.value
     };
-    console.log(applicant);
-    
+    const serializeApplication = JSON.stringify(applicant);
+    window.localStorage.setItem('job-applicant', serializeApplication);
+    window.location = 'applicant-details.html';
 });
