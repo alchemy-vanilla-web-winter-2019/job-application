@@ -5,27 +5,14 @@ const newApplicationsStringArray = window.localStorage.getItem('newApplications'
 const newApplications = JSON.parse(newApplicationsStringArray);
 
 for(let i = 0; i < newApplications.length; i++) {
-    const applicant = newApplications[i];
-
     const newApplicantRow = document.createElement('tr');
-
+    const headerArray = [newApplications[i].name, newApplications[i].clothes, newApplications[i].skills.join(', ')];    
+    
     for(let j = 0; j < numberOfColumns.length; j++) {
         const newTD = document.createElement('td');
-        const applicantAttribute = numberOfColumns[j]
-        newTD.textContent = 
+        newTD.textContent = headerArray[j];
+        
+        newApplicantRow.appendChild(newTD);
     }
-
-    // const nameTD = document.createElement('td');
-    // const clothingTD = document.createElement('td');
-    // const skillsTD = document.createElement('td');
-
-    // nameTD.textContent = applicant.name;
-    // clothingTD.textContent = applicant.clothes;
-    // skillsTD.textContent = applicant.skills.join(', ');
-
-    // newApplicantRow.appendChild(nameTD);
-    // newApplicantRow.appendChild(clothingTD);
-    // newApplicantRow.appendChild(skillsTD);
-    
     applicantsTable.appendChild(newApplicantRow);
 }
