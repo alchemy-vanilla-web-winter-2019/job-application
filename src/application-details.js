@@ -30,7 +30,7 @@ nameNode.textContent = applicant.name;
 statusNode.textContent = applicant.status;
 employmentNode.textContent = applicant.employment;
 emailNode.textContent = applicant.email;
-headerNode.textContent = 'Application Details for ' + applicant.name
+headerNode.textContent = 'Application Details for ' + applicant.name;
 
 if(applicant.habitList.length === 0) {
     habitListNode.textContent = 'none specified';
