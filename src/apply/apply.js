@@ -41,17 +41,29 @@ applicationFormNode.addEventListener('submit', function(event) {
     if(newApplicationsString) {
         newApplications = JSON.parse(newApplicationsString);
     }
+    
+    let deletedApplications = [];
+    const deletedApplicationsString = window.localStorage.getItem('deletedApplications');
+    if(deletedApplicationsString) {
+        deletedApplications = JSON.parse(newApplicationsString);
+    }
 
     for(let i = 0; i < newApplications.length; i++) {
+        const newApplicationsID = newApplications[i].identification;
+        if(deletedApplications[0]) {            
+            const deletedApplicationID = deletedApplications[i].identification;
+            do{
+                newApplication.identification = Math.floor((Math.random() * 100000));
+            } while(deletedApplicationID === newApplication.identification);
+        }
         do{
             newApplication.identification = Math.floor((Math.random() * 100000));
-        } while(newApplications[i].identification === newApplication.identification);
+        } while(newApplicationsID === newApplication.identification);
     }    
     newApplications.push(newApplication);
 
     const serializedArray = JSON.stringify(newApplications);
     window.localStorage.setItem('newApplications', serializedArray);
     
-
     window.location = './thank-you.html';
 });

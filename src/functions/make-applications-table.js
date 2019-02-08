@@ -10,7 +10,7 @@ function makeApplicationsTable(tableID, arrayOfApplicants) {
 
     if(arrayOfApplicants[0].none !== true) {
         const applicationKeys = Object.keys(arrayOfApplicants[0]);
-        const tableHeadings = [applicationKeys[0], applicationKeys[3], applicationKeys[4], 'delete'];
+        const tableHeadings = [applicationKeys[1], applicationKeys[3], applicationKeys[4], 'delete'];
         const headingRow = document.createElement('tr');
         applicantsHeader.appendChild(headingRow);
         for(let i = 0; i < tableHeadings.length; i++) {
@@ -39,8 +39,7 @@ function makeApplicationsTable(tableID, arrayOfApplicants) {
                     newTD.appendChild(nameAnchor);
                 } else if(j === numberOfColumns.length - 1) {
                     const deleteButton = document.createElement('button');
-                    deleteButton.textContent = 'X';
-                    deleteButton.type = 'submit';                
+                    deleteButton.textContent = 'X';                    
                     deleteButton.addEventListener('click', function() {
                         deleteApplicant(arrayOfApplicants[i]);
                         makeApplicationsTable(tableID, arrayOfApplicants);
