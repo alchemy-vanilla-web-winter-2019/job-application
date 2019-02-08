@@ -20,13 +20,11 @@ const len = applicants.length;
 let applicantId = null;
 
 const urlParams = new URLSearchParams(window.location.search);
-let updateIdx = urlParams.get('updateIndex');
-if(updateIdx) {
-    updateIdx = Number(updateIdx);
+let updateIdxstr = urlParams.get('updateIndex');
+const updateIdx = Number(updateIdxstr);
+if(updateIdxstr) {
     console.log('update applicant at index', updateIdx);
-    //get applicant to update
     const updateApplicant = applicants[updateIdx];
-    console.log(updateApplicant);
 
     //prepopulate fields
     nameNode.value = updateApplicant.name;
@@ -51,7 +49,6 @@ if(updateIdx) {
     }
     for(let i = 0; i < updateApplicant.cuddles.length; i++){
         const cuddle = updateApplicant.cuddles[i];
-        console.log(cuddle);
         for(let k = 0; k < cuddleTypesNode.length; k++) {
             const cuddleBox = cuddleTypesNode[k];
             if(cuddleBox.value === cuddle) {
@@ -68,7 +65,6 @@ else {
         previousId = applicants[len - 1].id;
     }
     applicantId = previousId + 1;
-    console.log('new applicant');
 }
 
 
@@ -120,7 +116,7 @@ formNode.addEventListener('submit', function(event) {
     };
 
     
-    if(!updateIdx) {
+    if(!updateIdxstr) {
         applicants.push(applicant);
     }
     else {

@@ -57,7 +57,6 @@ for(let i = 0; i < applicants.length; i++) {
                 break;
             }
         }
-        console.log('update applicant with index', updateIdx);
         const sendTo = 'apply.html?updateIndex=' + encodeURIComponent(updateIdx);
         window.location = sendTo;
     });
@@ -115,7 +114,6 @@ for(let i = 0; i < applicants.length; i++) {
 }
 
 let favoriteSum = 0;
-//create row to display sum of favorite numbers
 const numCells = document.querySelectorAll('.num');
 for(let i = 0; i < numCells.length; i++) {
     const number = Number(numCells[i].textContent);
