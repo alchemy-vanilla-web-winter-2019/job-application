@@ -1,0 +1,33 @@
+body {
+    margin: 0px;
+}
+
+header {
+    background: rgba(128, 0, 128, 0.893);
+    border-bottom-right-radius: 5px;
+    float: left;
+    text-shadow: 2px 2px 4px #670293;
+    padding: 2px;
+}
+
+h1 {
+    margin-left: 4px;
+}
+
+section {
+    float: left;
+    padding: 2.5%;
+}
+
+footer {
+    float: right;
+    padding: 2.5%;
+}
+
+#img {
+    box-shadow: 8px 10px 10px 20px;
+    margin-top: 100px;
+    margin-left: 30px;
+    position: absolute;
+    float: left;
+}
