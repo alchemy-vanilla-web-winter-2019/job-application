@@ -42,7 +42,7 @@ if(applicant.experience === '0') {
 else {
     experience.textContent = applicant.experience + ' years';
 }
-if(applicant.certified) {
+if(applicant.professional) {
     certified.textContent = 'yes';
 }
 else {

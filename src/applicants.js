@@ -25,9 +25,13 @@ for(let i = 0; i < applicants.length; i++) {
     link.textContent = applicant.name;
     const deleteCell = document.createElement('td');
     const deleteButton = document.createElement('button');
+    const updateCell = document.createElement('td');
+    const updateButton = document.createElement('button');
 
     deleteButton.textContent = 'X';
     deleteButton.value = applicant.id;
+    updateButton.textContent = 'X';
+    updateButton.value = applicant.id;
 
     deleteButton.addEventListener('click', function() {
         let removeIdx = null;
@@ -42,6 +46,20 @@ for(let i = 0; i < applicants.length; i++) {
         const applicantsJSON = JSON.stringify(applicants);
         window.localStorage.setItem('applicants', applicantsJSON);
         window.location = 'applicants.html';
+    });
+
+    updateButton.addEventListener('click', function() {
+        let updateIdx = null;
+        for(let i = 0; i < applicants.length; i++) {
+            const currApplicant = applicants[i];
+            if(Number(currApplicant.id) === Number(updateButton.value)) {
+                updateIdx = i;
+                break;
+            }
+        }
+        console.log('update applicant with index', updateIdx);
+        const sendTo = 'apply.html?updateIndex=' + encodeURIComponent(updateIdx);
+        window.location = sendTo;
     });
 
 
@@ -91,6 +109,8 @@ for(let i = 0; i < applicants.length; i++) {
     tr.appendChild(favoriteNumber);
     deleteCell.appendChild(deleteButton);
     tr.appendChild(deleteCell);
+    updateCell.appendChild(updateButton);
+    tr.appendChild(updateCell);
     tbody.appendChild(tr);
 }
 
