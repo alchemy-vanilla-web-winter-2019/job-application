@@ -14,7 +14,7 @@ let allApplicants = [];
 const allApplicantsJSON = window.localStorage.getItem('applicants');
 if(allApplicantsJSON) {
     allApplicants = JSON.parse(allApplicantsJSON);
-    // console.log(allApplicantsJSON);
+    
 }
 
 
@@ -63,7 +63,7 @@ userInputNode.addEventListener('submit', function(event) {
             escapeArray.push(escapeReason[index].value);
         }
     }
-    // console.log(escapeArray);
+    
      
     const applicant = {
         name: nameNode.value,
