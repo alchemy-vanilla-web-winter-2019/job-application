@@ -11,16 +11,19 @@ if(!getPackage) {
 }
 
 for(let index = 0; index < applicantArray.length; index++) {
-    if(applicantArray[index].name === appName){
+    if(applicantArray[index].applicationNumber === parseInt(appName)){
         applicant = applicantArray[index];
         break;
     }
 }
-
 const build = [
     {
         item: 'Name:',
         value: applicant.name
+    },
+    {
+        item: 'Application ID Number',
+        value: applicant.applicationNumber
     },
     {
         item: 'Phone Number:',
@@ -55,5 +58,4 @@ for(let index = 0; index < build.length; index++) {
 
 buttonNode.addEventListener('click', function() {
     window.location = './index.html';
-    console.log('test');
 });

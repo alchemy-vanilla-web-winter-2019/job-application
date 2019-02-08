@@ -74,26 +74,30 @@ formNode.addEventListener('submit', function(event) {
         burnPrefArray.push('Does Not Apply');
     }
     
-    const applicant = {
+    let applicant = {
         name: nameNode.value,
         phone: phoneNode.value,
         comfort: comfortNode.value + ' of 5',
         burial: burialNode.value,
         pyromaniac: isPyromaniac,
-        burnPreference: burnPrefArray
+        burnPreference: burnPrefArray,
+        applicationNumber: 0
     };
 
     const jsonString = window.localStorage.getItem('job-applicant');
     const checkArray = JSON.parse(jsonString);
     if(!checkArray) {
+        applicant.applicationNumber++;
         applicationsSubmitted.push(applicant);
     }
     else {
         applicationsSubmitted = checkArray;
+        let checkAppNum = checkArray[checkArray.length - 1].applicationNumber;
+        applicant.applicationNumber = checkAppNum + 1;
         applicationsSubmitted.push(applicant);
     }
     const serializeApplication = JSON.stringify(applicationsSubmitted);
     window.localStorage.setItem('job-applicant', serializeApplication);
-    window.location = 'applicant-details.html?name=' + encodeURIComponent(applicant.name);
+    window.location = 'applicant-details.html?name=' + encodeURIComponent(applicant.applicationNumber);
 });
 

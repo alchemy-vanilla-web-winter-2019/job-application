@@ -17,7 +17,7 @@ for(let i = 0; i < applicantArray.length; i++) {
     newRow.appendChild(nameEntry);
 
     const link = document.createElement('a');
-    link.href = 'applicant-details.html?name=' + encodeURIComponent(applicants.name);
+    link.href = 'applicant-details.html?name=' + encodeURIComponent(applicants.applicationNumber);
     link.textContent = applicants.name;
     nameEntry.appendChild(link);
     
@@ -25,10 +25,18 @@ for(let i = 0; i < applicantArray.length; i++) {
     seperatorEntry.textContent = '|';
     newRow.appendChild(seperatorEntry);
     
+    const numberEntry = document.createElement('td');
+    numberEntry.textContent = applicants.applicationNumber;
+    newRow.appendChild(numberEntry);
+
+    const seperatorEntry2 = document.createElement('td');
+    seperatorEntry2.textContent = '|';
+    newRow.appendChild(seperatorEntry2);
+
     const phoneEntry = document.createElement('td');
     phoneEntry.textContent = applicants.phone;
     newRow.appendChild(phoneEntry);
-
+    
     tableNode.appendChild(newRow);
 }
 
