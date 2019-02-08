@@ -1,0 +1,105 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: .05em;
+}
+
+a {
+    color: #42cef4;  
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.centered {
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+h1, h2 {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border-color:#4286f4;
+    padding: 20px;
+}
+
+legend {
+    padding:10px;
+    background-color:#4286f4;
+    color:white;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+input[type="radio"] {
+    margin-left: 5px;
+    margin-right: 15px;
+  }
+
+input[type="checkbox"] {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+button {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #4286f4;
+    color: white;
+
+  }
+
+  dt {
+    padding:10px;
+    background-color:#4286f4;
+    color:white;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  table {
+      border-collapse: collapse;
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+  
+  thead {
+      background-color:#4286f4;
+  }
+  
+  table, td {
+      border-bottom: 1px solid #4286f4;
+      padding: 15px;
+      
+      
+  }
+
+footer {
+      margin-top: 40px;
+      text-align: center;
+  }
