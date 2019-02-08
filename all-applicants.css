@@ -1,0 +1,15 @@
+body {
+  background-color: gray;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 80px;
+}
+
+table, tr, td {
+  margin: auto;
+  border: solid black;
+  font-size: 20px;
+}
+
