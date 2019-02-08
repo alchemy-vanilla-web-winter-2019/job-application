@@ -108,6 +108,8 @@ applicationFormNode.addEventListener('submit', function() {
                 morality: morality,
                 salary: salaryRequirement
             };
+
+            newApplicant = newApplicants[index];
         }
     }
 
@@ -117,12 +119,11 @@ applicationFormNode.addEventListener('submit', function() {
 
     window.localStorage.setItem('applicant', newApplicantJSON);
 
-    location.reload();
+    
+    
 
-
-    // const urlSlug = '/pages/application-review.html?name=' + applicant.name;
-
-    // document.location = urlSlug;
+    const urlSlug = '/pages/application-review.html?name=' + newApplicant.name;
+    document.location = urlSlug;
 });
 
 
