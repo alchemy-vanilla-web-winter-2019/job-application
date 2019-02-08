@@ -4,12 +4,18 @@ const skillNode = document.getElementById('skill');
 const jobTitleNode = document.getElementById('job-title');
 const cityNode = document.getElementById('city');
 const salaryNode = document.getElementById('salary');
-const applicant = window.localStorage.getItem('applicant');
-const newApplicant = JSON.parse(applicant);
+const marketRateNode = document.getElementById('market-rate');
+const applicants = window.localStorage.getItem('applicant');
+const newApplicants = JSON.parse(applicants);
+const newApplicant = newApplicants[newApplicants.length - 1];
 
 let jobTitle = '';
 
 console.log(newApplicant.skill);
+
+const min = 3000;
+const max = 5000;
+const marketRate = Math.floor(Math.random() * (+max - +min) + min);
 
 if(newApplicant.skill === 'computers') {
     jobTitle = 'Junior Data Entry Clerk';
@@ -33,3 +39,4 @@ skillNode.textContent = newApplicant.skill;
 jobTitleNode.textContent = jobTitle;
 cityNode.textContent = newApplicant.city;
 salaryNode.textContent = newApplicant.salary;
+marketRateNode.textContent = marketRate;

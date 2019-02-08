@@ -1,3 +1,7 @@
+
+
+// console.log(applications);
+
 const applicationFormNode = document.getElementById('application-form');
 const nameNode = document.getElementById('name');
 const cityNode = document.getElementById('city');
@@ -16,6 +20,13 @@ moralityNode.addEventListener('change', function() {
 
 applicationFormNode.addEventListener('submit', function() {
     event.preventDefault();
+
+    let applications = [];
+
+    const applicantJSON = window.localStorage.getItem('applicant');
+    if(applicantJSON) {
+        applications = JSON.parse(applicantJSON);
+    }
 
     const skills = document.getElementsByName('skills');
     const philosophy = document.getElementsByName('philosophy');
@@ -49,15 +60,12 @@ applicationFormNode.addEventListener('submit', function() {
         salary: salaryRequirement
     };
 
-    const applicantJSON = JSON.stringify(applicant);
+    applications.push(applicant);
 
-    window.localStorage.setItem('applicant', applicantJSON);
-    
-    if(applicant.morality >= 3) {
-        document.location = '/pages/application-denied.html';
-    }
+    const newApplicantJSON = JSON.stringify(applications);
 
-    else {
-        document.location = '/pages/application-review.html';
-    }
+    window.localStorage.setItem('applicant', newApplicantJSON);
+
+    document.location = '/pages/application-review.html';
 });
+

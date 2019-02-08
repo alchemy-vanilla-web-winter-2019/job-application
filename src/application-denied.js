@@ -1,5 +1,8 @@
+const applicants = window.localStorage.getItem('applicant');
+const newApplicants = JSON.parse(applicants);
+
+const newApplicant = newApplicants[newApplicants.length - 1];
+
 const nameNode = document.getElementById('name');
-const applicant = window.localStorage.getItem('applicant');
-const newApplicant = JSON.parse(applicant);
 
 nameNode.textContent = newApplicant.name;
