@@ -20,6 +20,8 @@ for(let index = 0; index < newApplicants.length; index++) {
     }
 }
 
+console.log(newApplicants);
+
 nameReviewNode.textContent = newApplicant.name;
 philosophyReviewNode.textContent = newApplicant.philosophy;
 skillReviewNode.textContent = newApplicant.skill;
@@ -43,7 +45,6 @@ moralityTestNode.addEventListener('click', function() {
 });
 
 editNode.addEventListener('click', function() {
-    console.log('yes');
     formNode.style.display = 'block';
 });
 
@@ -66,12 +67,12 @@ moralityNode.addEventListener('change', function() {
 applicationFormNode.addEventListener('submit', function() {
     event.preventDefault();
 
-    let applications = [];
+    // let applications = [];
 
-    const applicantJSON = window.localStorage.getItem('applicant');
-    if(applicantJSON) {
-        applications = JSON.parse(applicantJSON);
-    }
+    // const applicantJSON = window.localStorage.getItem('applicant');
+    // if(applicantJSON) {
+    //     applications = JSON.parse(applicantJSON);
+    // }
 
     const skills = document.getElementsByName('skills');
     const philosophy = document.getElementsByName('philosophy');
@@ -96,24 +97,32 @@ applicationFormNode.addEventListener('submit', function() {
         }
     }
 
-    const applicant = {
-        name: nameNode.value,
-        city: cityNode.value,
-        skill: strongestSkill,
-        philosophy: mainPhilosophy,
-        morality: morality,
-        salary: salaryRequirement
-    };
+    for(let index = 0; index < newApplicants.length; index++) {
+        // const currentApplicant = newApplicants[index];
+        if(newApplicants[index].name === name) {
+            newApplicants[index] = {
+                name: nameNode.value,
+                city: cityNode.value,
+                skill: strongestSkill,
+                philosophy: mainPhilosophy,
+                morality: morality,
+                salary: salaryRequirement
+            };
+        }
+    }
 
-    applications.push(applicant);
 
-    const newApplicantJSON = JSON.stringify(applications);
+
+    const newApplicantJSON = JSON.stringify(newApplicants);
 
     window.localStorage.setItem('applicant', newApplicantJSON);
 
-    const urlSlug = '/pages/application-review.html?name=' + applicant.name;
+    location.reload();
 
-    document.location = urlSlug;
+
+    // const urlSlug = '/pages/application-review.html?name=' + applicant.name;
+
+    // document.location = urlSlug;
 });
 
 
