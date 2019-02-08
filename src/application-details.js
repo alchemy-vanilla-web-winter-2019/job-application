@@ -28,7 +28,7 @@ let numberToMatch = parseInt(applicantNumber);
 if(nameToMatch) {
     for(let i = 0; i < applicants.length; i++) {
         let currentApplicant = applicants[i];   
-        if(currentApplicant.name === nameToMatch && currentApplicant.applicationNumber == numberToMatch) {
+        if(currentApplicant.name === nameToMatch && currentApplicant.applicationNumber === numberToMatch) {
             applicant = currentApplicant;
             break;
         }
