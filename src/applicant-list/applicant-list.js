@@ -1,28 +1,14 @@
 const attributesNode = document.getElementById('attributes');
-const jsonObject = window.localStorage.getItem('applications');
 
-let applicationList = [];
-if(jsonObject) {
-    applicationList = JSON.parse(jsonObject);
-}
-
-function removeApplicant(identifier) {
+function removeApplicant(array, index) {
     let removed = [];
-    let stored = [];
     const jsonObject = window.localStorage.getItem('deleted-applications');
     if(jsonObject) {
         removed = JSON.parse(jsonObject);
     }
-
-    for(let i = 0; i < applicationList.length; i++) {
-        if(applicationList[i].identifier === identifier) {
-           //push to 'deleted-applicants' 
-            removed.push(applicationList[i]);
-        } else {
-            stored.push(applicationList[i]);
-        }
-    }
-    const storedSerialize = JSON.stringify(stored);
+    let pop = array.splice(index, 1);
+    removed.push(pop);
+    const storedSerialize = JSON.stringify(array);
     const removedSerialize = JSON.stringify(removed);
     window.localStorage.setItem('applications', storedSerialize);
     window.localStorage.setItem('deleted-applications', removedSerialize);
@@ -61,7 +47,7 @@ for(let i = 0; i < applicationsArray.length; i++) {
     attributesNode.appendChild(newRow);
 
     removeButton.addEventListener('click', function() {
-        removeApplicant(applicationsArray[i].identifier);
+        removeApplicant(applicationsArray, i);
         window.location = 'applicant-list.html';
     });
 
