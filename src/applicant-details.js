@@ -1,5 +1,4 @@
-const applicantJSON = window.localStorage.getItem('applicants');
-const applicants = JSON.parse(applicantJSON);
+const existingApplicants = window.localStorage.getItem('applicants');
 const firstNameNode = document.getElementById('first-name');
 const lastNameNode = document.getElementById('last-name');
 const zipCodeNode = document.getElementById('zip-code');
@@ -8,11 +7,33 @@ const lengthTimeNode = document.getElementById('length');
 const hoursNode = document.getElementById('hours');
 const genreNode = document.getElementById('genre');
 
-if(!applicantJSON) {
+let applicants = null;
+let applicant = null;
+
+
+if(existingApplicants) {
+    applicants = JSON.parse(existingApplicants);
+}
+else {
+    applicants = [];
     window.location = './index.html';
 }
 
-const applicant = applicants[applicants.length - 1];
+const searchParams = new URLSearchParams(window.location.search);
+const name = searchParams.get('name');
+
+console.log(name);
+
+for(let index = 0; index < applicants.length; index++) {
+    const currentApplicant = applicants[index];
+    if(currentApplicant.firstName === name) {
+        applicant = currentApplicant;
+        break;
+    }
+}
+
+// console.log(applicant);
+
 
 firstNameNode.textContent = applicant.firstName;
 lastNameNode.textContent = applicant.lastName;
