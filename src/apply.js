@@ -1,23 +1,21 @@
 const formNode = document.getElementById('form-example');
-const nameNode = document.getElementById('name');
+// const nameNode = document.getElementById('name');
 const locationNode = document.getElementById('location');
 const daysAvailableNode = document.getElementById('days-available');
 const weekdayAvailabilityNode = document.getElementById('weekday-availability');
 const weekendDayAvailabilityNode = document.getElementById('weekend-availability');
-const timeAvailabilityNode = document.getElementById('time-availability');
+const timeAvailabilityNode = document.getElementById('time');
 const strengthRangeNode = document.getElementById('coding-strength');
 const strengthNumberNode = document.getElementById('strength-number');
-const yesWeekendsOnlyNode = document.getElementById('yes-weekend');
-const mondayNode = document.getElementById('monday');
-const tuesdayNode = document.getElementById('tuesday');
-const wednesdayNode = document.getElementById('wednesday');
-const thursdayNode = document.getElementById('thursday');
-const fridayNode = document.getElementById('friday');
-const saturdayNode = document.getElementById('saturday');
-const sundayNode = document.getElementById('sunday');
+// const yesWeekendsOnlyNode = document.getElementById('yes-weekend');
+// const mondayNode = document.getElementById('monday');
+// const tuesdayNode = document.getElementById('tuesday');
+// const wednesdayNode = document.getElementById('wednesday');
+// const thursdayNode = document.getElementById('thursday');
+// const fridayNode = document.getElementById('friday');
+// const saturdayNode = document.getElementById('saturday');
+// const sundayNode = document.getElementById('sunday');
 const howLongNode = document.getElementById('how-long');
-
-console.log(document.getElementById('coding-strength'));
 
 strengthRangeNode.addEventListener('change', function() {
     strengthNumberNode.textContent = strengthRangeNode.value;
@@ -49,13 +47,14 @@ daysAvailableNode.addEventListener('change', function() {
 formNode.addEventListener('submit', function(event) {
     event.preventDefault();
     const name = formNode.elements.name.value;
-    
+
     const applicant = {
         name: name,
         location: locationNode.value,
         strength: strengthRangeNode.value,
         timeAvailable: howLongNode.value,
     };
+    // console.log(applicant.timeAvailable);
     let applicants = [];
     const jsonString = window.localStorage.getItem('applicants');
     if(jsonString) {
@@ -63,9 +62,9 @@ formNode.addEventListener('submit', function(event) {
     }
     applicants.push(applicant);
 
-    console.log(applicant);
+    console.log('blahhh', howLongNode.value);
 
-    const serializedApplicant = JSON.stringify(applicant);
-    window.localStorage.setItem('applicantOne', serializedApplicant);
+    const serializedApplicants = JSON.stringify(applicants);
+    window.localStorage.setItem('applicants', serializedApplicants);
     window.location = '/applicant-detail.html';
 });
