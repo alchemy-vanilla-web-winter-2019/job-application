@@ -27,7 +27,7 @@ faireApplication.addEventListener('submit', function(event) {
     }
 
     const applicant = {
-        id : applicants.length.toString(),
+        id : Date.now().toString(),
         name: faireApplication.name.value,
         quest: faireApplication.quest.value,
         color: faireApplication.color.value,

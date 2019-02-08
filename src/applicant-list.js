@@ -11,7 +11,7 @@ function deleteClicked(deleteIndex) {
     applicants.splice(deleteIndex, 1);
     const serialized = JSON.stringify(applicants);
     window.localStorage.setItem('applicants', serialized);
-    while (applicantList.firstChild) {
+    while(applicantList.firstChild) {
         applicantList.removeChild(applicantList.firstChild);
     }
     buildTable();
@@ -35,7 +35,6 @@ function buildTable() {
             const newCell = document.createElement('td');
             const key = keys[j];
             const value = applicants[i][key];
-            console.log(key, value);
             if(key === 'id') {
                 const newAnchor = document.createElement('a');
                 newAnchor.href = 'application-details.html?id=' + encodeURIComponent(value);
@@ -58,7 +57,7 @@ function buildTable() {
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteCell.appendChild(deleteButton);
-        deleteButton.addEventListener('click', function () {
+        deleteButton.addEventListener('click', function() {
             deleteClicked(i);
         });
     }
