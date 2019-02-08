@@ -13,7 +13,7 @@ for(let index = 0; index < applicants.length; index++) {
     const tr = document.createElement('tr');
     tbody.appendChild(tr);
     
-
+   //let randomNumber = Math.floor(Math.random() * 1000);
     const tdName = document.createElement('td');
     const link = document.createElement('a');
     tr.appendChild(tdName);
