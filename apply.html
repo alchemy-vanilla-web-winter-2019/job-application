@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/apply.css">
+    <title>Guild Application</title>
+</head>
+<body>
+    <header>
+        <h1>Complete our Application</h1>
+        <a href="index.html">Go Home</a>
+        <p>If you are selected, we will find you...</p>
+    </header>
+    <main>
+        <form id="guild-application">
+            <div> 
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label class="textfield">
+                        Name or Pseudonym: 
+                        <input type="text" id="input-name" name="name">   
+                    </label>
+                    <label class="textfield">
+                        Years of Previous Experience:
+                        <input type ="text" id="input-experience" name="experience">
+                    </label>
+                    <label class="textfield">
+                        Weapon of Choice:
+                        <input type ="text" id="input-weapon" name="weapon">
+                    </label>
+                    <label class="textfield">
+                        What was the first thing you stole?
+                        <input type ="text" id="input-first-theft" name="firsttheft">
+                    </label>
+                </fieldset>
+            </div>
+            <div>
+                <h2>Crew Roles</h2>
+                <p class="instructions">Select all that apply:</p>
+                <label>
+                    Peeper <input type="checkbox" name="roles" value="peeper">
+                </label>
+                <label>
+                    Shadow <input type="checkbox" name="roles" value="shadow">
+                </label>
+                <label>
+                    Grifter <input type="checkbox" name="roles" value="grifter">
+                </label>
+                <label>
+                    Fingers <input type="checkbox" name="roles" value="fingers">
+                </label>
+                <label>
+                    Muscle <input type="checkbox" name="roles" value="muscle">
+                </label>
+                <label>
+                    Mastermind <input type="checkbox" name="roles" value="mastermind">
+                </label>
+                <div>
+                    <h2>Define Your Lawfulness Alignment</h2>
+                    <p class="instructions">Select one:</p>
+                    <label>
+                        Chaotic <input type="radio" name="lawfulness" value="chaotic" required>
+                    </label>
+                    <label>
+                        Neutral <input type="radio" name="lawfulness" value="neutral">
+                    </label>
+                    <label>
+                        Lawful <input type="radio" name="lawfulness" value="lawful">
+                    </label>
+                </div>
+            </div>
+            <div>
+                <h2>Define Your Goodness Alignment</h2>
+                <p class="instructions">Select one:</p>
+                <div>
+                    <label>
+                        Evil <input type="radio" name="goodness" value="evil" required>
+                    </label>
+                    <label>
+                        Neutral <input type="radio" name="goodness" value="neutral">
+                    </label>
+                    <label>
+                        Good <input type="radio" name="goodness" value="good">
+                    </label>
+                </div>
+            </div>
+            <div>
+                <button type="submit">Submit Application!</button>
+            </div>
+        </form>
+    </main>
+    <script type="module" src="./src/apply/apply.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+header{
+    text-align: center;
+    border: 2px solid rgb(163, 15, 15);
+    padding: 5px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+body{
+    background: rgb(39, 37, 37);
+    color:slategray;
+}
+
+dl{
+    margin-left: 15px;
+}
+
+dt{
+    font-size:21px;
+    margin: 5px;
+    font-family: system-ui;
+}
+
+dd{
+    border: 2px solid slategray;
+    color: rgb(200, 200, 200);
+    width:200px;
+    text-align: right;
+    font-size:18px;
+}
+
+a{
+    color:rgb(114, 15, 11);
+    font-size: 20px;
+    margin:10px;
+}
