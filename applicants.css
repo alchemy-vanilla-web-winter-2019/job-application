@@ -1,4 +1,4 @@
-header {
+header, footer {
     border: 4px solid orange;
     padding: 3px;
     margin: 3px;
@@ -6,12 +6,10 @@ header {
 }
 html {
     background-color: black;
-    background-size: cover;
-    background-position: fill;
-    background-repeat: no-repeat;
 }
 h1 {
     font-family: 'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
+    margin: 5px;
 }
 h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -22,10 +20,24 @@ a {
     font-weight: bold;
 }
 main {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: 4px solid orange;
     padding: 3px;
     margin: 3px;
     background-color: wheat;
 }
 
+table {
+    margin: 5px;
+    padding: 5px;
+}
+
+td {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 3px;
+    padding: 3px;
+}
+
+th {
+    font-family: 'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
+    text-decoration: underline;
+}

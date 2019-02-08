@@ -1,17 +1,6 @@
 # Job Application
 
-Let's apply for a job somewhere wacky! Your choice. If it's hard to think of something fun, the default is apply to join the Mafia.
+Need to make an applicants details html file
 
-* Create a multi-page application using anchor tags 
+need to stringify and send application object to applicants detail js 
 
-    `<a href="page.html">`
-
-* No script tag for your `index.html` landing page - that's only necesary on the interactive pages of your application.
-
-* Your js should create `const` variables for all needed dom elements via `document.getElementBydId('id-you-want')`
-
-* You'll need to add an event listener to the form submission and prevent the page refreshing with `event.preventDefault()`
-
-* You only need to use simple input elements; radio buttons and text boxes, for example.
-
-* You'll log successful user applications to the console.

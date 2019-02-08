@@ -26,7 +26,7 @@ comfortNode.addEventListener('change', function(){
     }
     comfortFieldNode.textContent = messageSelector;
 });
-
+let applicationsSubmitted = [];
 formNode.addEventListener('submit', function(event) {
     event.preventDefault();
     const applicant = {
@@ -35,7 +35,17 @@ formNode.addEventListener('submit', function(event) {
         comfort: comfortNode.value,
         burial: burialNode.value
     };
-    const serializeApplication = JSON.stringify(applicant);
+    const jsonString = window.localStorage.getItem('job-applicant');
+    const checkArray = JSON.parse(jsonString);
+    if(!checkArray) {
+        applicationsSubmitted.push(applicant);
+    }
+    else {
+        applicationsSubmitted = checkArray;
+        applicationsSubmitted.push(applicant);
+    }
+    const serializeApplication = JSON.stringify(applicationsSubmitted);
     window.localStorage.setItem('job-applicant', serializeApplication);
     window.location = 'applicant-details.html';
 });
+
