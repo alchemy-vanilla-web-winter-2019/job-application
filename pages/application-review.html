@@ -42,7 +42,156 @@
             <p>Look good? Click below to approve and submit for review.</p>
         </section>
         <section id="buttons">
-            <a id="morality-test">Approve</a> <a>Apply Again</a>
+            <a id="morality-test">Approve</a> <a id="edit">Edit Application</a>
+        </section>
+
+        <section id="form-area">
+            <form id="application-form">
+                <section id="general-info">
+                    <h2>General Info</h2>
+                    <label>Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        autocomplete="off"
+                    >
+                    <label>Current City</label>
+                    <input
+                        type="text"
+                        name="city"
+                        id="city"
+                        autocomplete="off"
+                    >
+                </section>
+                <hr>
+
+                <section id="skills">
+                    <h2>Your Skills</h2>
+                    <p>How would you best describe your strongest skillset?</p>
+                    <section>
+                    <input
+                        type="radio"
+                        name="skills"
+                        id="computers"
+                        value="computers"
+                    >
+                    <label for="computers">Computers and techonology</label></section>
+                    <section>
+                    <input
+                        type="radio"
+                        name="skills"
+                        id="art"
+                        value="art"
+                    >
+                    <label for="art">Arts and the humanities</label></section>
+                    <section>
+                    <input
+                        type="radio"
+                        name="skills"
+                        id="music"
+                        value="music"
+                    >                    
+                    <label for="music">Music and performance</label>
+                    </section>
+                    <section>
+                    <input
+                        type="radio"
+                        name="skills"
+                        id="engineering"
+                        value="engineering"
+                    >
+                    <label for="engineering">Engineering and construction</label>
+                    </section>
+                    <section>
+                    <input
+                        type="radio"
+                        name="skills"
+                        id="cooking"
+                        value="cooking"
+                    >
+                    <label for="cooking">Domestic</label>
+                    </section>
+                </section>
+                <hr>
+
+
+                <section id="philosophy">
+                    <h2>Your Philosophy</h2>
+                    <section>How would you best describe your personal philosophy?</p>
+                    <section>
+                    <input
+                        type="radio"
+                        name="philosophy"
+                        id="logical"
+                        value="logical"
+                    >
+                    <label for="logical">Logic is the only truth</label>
+                    </section>
+                    <section>
+                    <input
+                        type="radio"
+                        name="philosophy"
+                        id="metaphysical"
+                        value="metaphysical"                
+                    >
+                    <label for="metaphysical">There is an unseen world that exists all around us.</label>
+                    </section>
+                    <section>
+                    <input
+                        type="radio"
+                        name="philosophy"
+                        id="fair"
+                        value="fair"                
+                    >
+                    <label for="fair">There are good points to glean from each side of an argument.</label>
+                    </section>
+                    <section>
+                    <input
+                        type="radio"
+                        name="philosophy"
+                        id="cultured"
+                        value="cultured"                
+                    >
+                    <label for="cultured">Beauty is the only thing that matters in this world.</label>
+                    </section>
+                </section>
+                <hr>
+
+
+                <section id="morality-area">
+                    <h2>Your Morality</h2>
+                    <p>On a scale of one to five, how likely are you to try to save a stranger's life if it meant risking your own?</p>
+                    <span id="morality-score-section">
+                    <span>Not Likely At All</span>
+                    <input
+                        type="range"
+                        min="0"
+                        max="5"
+                        name="morality"
+                        id="morality"
+                    >
+                    <span>Very Likely</span></span>
+                    <br />
+                    <p>Your morality score: <span id="morality-score">3</span></p>
+                </section>
+                <hr>
+
+                <section id="compensation">
+                    <h2>Compensation Requirements</h2>
+                    <label>How much do you think you deserve to be paid?</label>
+                    <select>
+                        <option name="salary" id="50">$50,000 - $75,000</option>
+                        <option name="salary" id="75">$75,000 - $100,000</option>
+                        <option name="salary" id="100">$100,000 - $125,000</option>
+                        <option name="salary" id="125">$125,000 - $150,000</option>
+                        <option name="salary" id="150">$150,000+</option>
+                    </select>
+                </section>
+                <section id="submit-button">
+                        <button>Submit</button>
+                </section>
+            </form>
         </section>
     </main>
     <footer>

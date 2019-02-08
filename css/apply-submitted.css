@@ -163,3 +163,10 @@ h2, h3 {
 #accept-job:hover {
     background: #92CDED;
 }
+
+/* form area*/
+
+#form-area {
+    display: none;
+    
+}

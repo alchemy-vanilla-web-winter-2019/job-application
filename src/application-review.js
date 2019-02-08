@@ -29,6 +29,9 @@ salaryNode.textContent = newApplicant.salary;
 
 const moralityTestNode = document.getElementById('morality-test');
 
+const editNode = document.getElementById('edit');
+const formNode = document.getElementById('form-area');
+
 moralityTestNode.addEventListener('click', function() {    
     if(newApplicant.morality >= 3) {
         document.location = '/pages/application-denied.html';
@@ -37,6 +40,11 @@ moralityTestNode.addEventListener('click', function() {
     else {
         document.location = '/pages/application-accepted.html';
     }
+});
+
+editNode.addEventListener('click', function() {
+    console.log('yes');
+    formNode.style.display = 'block';
 });
 
 

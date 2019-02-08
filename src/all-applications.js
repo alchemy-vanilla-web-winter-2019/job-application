@@ -1,7 +1,7 @@
 const applicantJSON = window.localStorage.getItem('applicant');
-if(!applicantJSON) {
-    document.location = '../index.html';
-}
+// if(!applicantJSON) {
+//     document.location = '../index.html';
+// }
 
 const applicants = JSON.parse(applicantJSON);
 
