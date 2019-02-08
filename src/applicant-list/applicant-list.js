@@ -17,7 +17,7 @@ applicantsTable.appendChild(applicantsBody);
 
 if(newApplications[0].none !== true) {
     const applicationKeys = Object.keys(newApplications[0]);
-    const tableHeadings = [applicationKeys[0], applicationKeys[3], applicationKeys[4]];
+    const tableHeadings = [applicationKeys[0], applicationKeys[3], applicationKeys[4], 'delete'];
     const headingRow = document.createElement('tr');
     applicantsHeader.appendChild(headingRow);
     for(let i = 0; i < tableHeadings.length; i++) {
@@ -30,6 +30,9 @@ if(newApplications[0].none !== true) {
     
     for(let i = 0; i < newApplications.length; i++) {
         const newApplicantRow = document.createElement('tr');
+        let rowClass = newApplications[i].name + newApplications[i].duplicate;
+        rowClass = rowClass.split(' ').join('');
+        newApplicantRow.classList.add(rowClass);
         if(i % 2 !== 0) {
             newApplicantRow.classList.add('even');
         }
@@ -46,7 +49,19 @@ if(newApplications[0].none !== true) {
                 nameAnchor.textContent = headerArray[j];
                 nameAnchor.classList.add('link');
                 newTD.appendChild(nameAnchor);
-            } else {
+            } else if(j === numberOfColumns.length - 1) {
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'X';
+                deleteButton.type = 'submit';
+                let buttonClass = newApplications[i].name + newApplications[i].duplicate;
+                buttonClass = buttonClass.split(' ').join('');
+                deleteButton.classList.add(buttonClass);
+                deleteButton.addEventListener('click', function() {
+                    console.log('click');
+                });
+                newTD.appendChild(deleteButton);
+                console.log(buttonClass);
+            } else {                
                 newTD.textContent = headerArray[j];
             }
     
@@ -55,3 +70,4 @@ if(newApplications[0].none !== true) {
         applicantsBody.appendChild(newApplicantRow);
     }
 }
+
