@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Job Application</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body> 
+    <header>
+        <h1>Apprentice Moonage Daydreamer</h1>
+    </header>
+    <main>
+        <form id="user-input">
+            <section id="about-user">
+                <h2>About You:</h2>
+                <p>
+                    <label for="name">Your Name:</label>
+                    <input 
+                    type="text"
+                    name="name"
+                    value=""
+                    id="name"
+                    autocomplete="off"
+                    minlength="1"
+                    >                                   
+            
+                </p>
+                <p>
+                    <label for="city">City:</label>
+                    <input 
+                    type="text"
+                    name="city"
+                    value=""
+                    id="city"
+                    autocomplete="off"
+                    minlength="1"
+                    >
+                </p>
+                <p>
+                    <label for="phone-number">Phone Number</label>
+                    <input type="number"
+                    name="phone-number"
+                    value=""
+                    id="phone-number"
+                    autocomplete="off"
+                    >
+                </p>
+            </section>
+            <section id="qualifications">
+                <p>
+                    <h2>Do you like to escape reality?</h2>
+                    
+                    <label for="yes-escape">Yes</label>
+                    <input 
+                     type="radio"
+                     value="yes"
+                     id="yes-escape"
+                     name="escape"
+                    >
+
+                     <label for="no-escape">No</label>
+                     <input 
+                     type="radio"
+                     value="no"
+                     id="no-escape"
+                     name="escape"
+                    >
+
+                </p>
+                <p class="escape-reason">If yes, Why?</p>
+                <p class="escape-reason" id="escape-reason">
+                    <label for="boredom">I'm Bored</label>
+                    <input 
+                    type="checkbox"
+                    id="boredom"
+                    name="escape-reason"
+                    value="boredom">
+
+                    <label for="delusional">I'm Delusional</label>
+                    <input 
+                    type="checkbox"
+                    id="delusional"
+                    name="escape-reason"
+                    value="delusional">
+
+                    <label for="bowie">I'm David Bowie</label>
+                    <input 
+                    type="checkbox"
+                    id="bowie"
+                    name="escape-reason"
+                    value="bowie"
+                    >
+                    
+                </p>
+
+            </section>
+            <section id="description">
+                <h2>How would you describe yourself?</h2>
+                <p>
+                    <label for="self-description"></label>
+                    <select name="self-description" id="self=description">
+                        <option value="alligator">I'm an Alligator</option>
+                        <option value="mama-papa">I'm a Mama Papa</option>
+                        <option value="space-invader">I'm the Space Invader</option>
+                        <option value="all">All of the Above</option>
+                    </select>
+                </p>
+            </section>
+            <button>Submit</button>
+        </form>
+    </main>
+    
+    
+</body>
+<footer>
+        <p>&copy;Major Tom 2019</p>
+</footer> 
+<script src="./src/apply.js"></script>
+</html>
