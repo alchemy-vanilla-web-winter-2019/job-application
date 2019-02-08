@@ -16,11 +16,14 @@ for(let index = 0; index < applicants.length; index++) {
 
     const row = document.createElement('tr');
     const firstName = document.createElement('td');
+    const link = document.createElement('a');
+    link.href = 'applicant-details.html' + encodeURIComponent('name');
+    link.textContent = applicant.firstName;
+    
     const lastName = document.createElement('td');
-
-    firstName.textContent = applicant.firstName;
     lastName.textContent = applicant.lastName;
 
+    firstName.appendChild(link);
     row.appendChild(firstName);
     row.appendChild(lastName);
 
