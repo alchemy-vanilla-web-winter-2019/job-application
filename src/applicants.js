@@ -17,8 +17,14 @@ for(let index = 0; index < applicants.length; index++) {
 
 
     const tdName = document.createElement('td');
-    tdName.textContent = movieApplicant.name;
     tr.appendChild(tdName);
+    
+    const link = document.createElement('a');
+    tdName.appendChild(link);
+    link.textContent = movieApplicant.name;
+    link.href = 'app-details.html?name=' + encodeURIComponent(movieApplicant.name);
+
+
 
     const tdPosition = document.createElement('td');
     tdPosition.textContent = movieApplicant.position;

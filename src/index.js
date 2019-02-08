@@ -24,7 +24,7 @@ jobApp.addEventListener('submit', function(event) {
     for(let index = 0; index < jobApp.films.length; index++) {
         const filmName = jobApp.films[index];
         if(filmName.checked) {
-            filmNames[index] = filmName.value;
+            filmNames.push(filmName.value);
         }
     }
 
@@ -43,9 +43,9 @@ jobApp.addEventListener('submit', function(event) {
     }
     
     applicants.push(applicant);
-    window.location = 'thanks.html';
     
     const serialize = JSON.stringify(applicants);
     window.localStorage.setItem('applicants', serialize);
-
+    
+    window.location = 'thanks.html';
 });
