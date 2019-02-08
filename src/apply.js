@@ -53,7 +53,7 @@ comfortNode.addEventListener('change', function(){
     comfortFieldNode.textContent = messageSelector;
 });
 let applicationsSubmitted = [];
-let burnPrefArray =[];
+let burnPrefArray = [];
 formNode.addEventListener('submit', function(event) {
     event.preventDefault();
     if(yesNode.checked === true){
