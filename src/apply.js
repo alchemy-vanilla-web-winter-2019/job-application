@@ -9,6 +9,12 @@ const lengthTimeNode = document.getElementById('length-time');
 const hoursNode = document.getElementById('hours');
 const lengthNode = document.querySelectorAll('.length');
 
+let applicants = [];
+
+const existingApplicantJSON = window.localStorage.getItem('applicants');
+if(existingApplicantJSON) {
+    applicants = JSON.parse(existingApplicantJSON);
+}
 
 yesNode.addEventListener('change', function() {
     if(yesNode.checked) {
@@ -50,6 +56,10 @@ formNode.addEventListener('submit', function(event) {
         hours: hoursNode.value,
         genres: genreSelections
     };
-    return applicant;
+  
+    applicants.push(applicant);
 
+    const applicantsJSON = JSON.stringify(applicants);
+    window.localStorage.setItem('applicants', applicantsJSON);
+    window.location = './applicant-details.html';
 });

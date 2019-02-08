@@ -11,7 +11,8 @@ footer {
 
 main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 body {
@@ -19,8 +20,9 @@ body {
 }
 
 h1 {
-    background-color: red;
+    background-color: #B4121D;
     color: white;
+    text-transform: uppercase;
 }
 
 a {
@@ -31,6 +33,11 @@ a {
 }
 
 a:hover {
-    background: red;
+    background: #B4121D;
     color: white;
+}
+
+img {
+    width: 270px;
+    height: auto; 
 }
