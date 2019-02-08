@@ -1,0 +1,13 @@
+body {
+    font-family: 'Permanent Marker', cursive;
+}
+h1 {
+    font-size: 40px;
+}
+p, dt {
+    font-weight: bold;
+}
+
+dl, dd {
+    font-size: 20px;
+}

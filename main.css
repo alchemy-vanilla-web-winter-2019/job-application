@@ -1,0 +1,23 @@
+.hidden {
+     color: white;
+}
+
+body {
+    background: lavender;
+    background-image:
+    font-family: 'Permanent Marker', cursive;
+}
+#apply-link {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    font-family: 'Permanent Marker', cursive;
+
+}
+header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+

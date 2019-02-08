@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="apply.css">
+
+    <title>Web Developer Tutor Application</title>
+</head>
+<body>
+    <header>
+        <h1>Application</h1>
+    </header>
+    <main>
+        <form id="form-example">
+            <fieldset id="about-section">
+                <legend>Tell Us About Yourself...</legend>
+                <p>
+                        <label for="name">Your name:</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            autocomplete="off"
+                            minlength="0"
+                            required
+                            maxlength="30"
+                        >
+                </p>
+                <br />
+                <p>
+                    <label for="location">Location:</label>
+                    <input
+                        type="text"
+                        name="location"
+                        id="location"
+                        minlength="2"
+                        autocomplete="on"
+                    >
+                </p>
+                
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>A few more questions...</legend>
+                <section>
+                <p>
+                    <label for="coding-strength">How strong do you feel your coding skills are?</label>
+                    <input
+                        type="range"
+                        id="coding-strength"
+                        min="1"
+                        max="10"
+                        name="strength"
+                        value = "1"
+                    >
+                    <span id="strength-number">1</span>
+                    <p>Beginner = 1 and Professional = 10</p>
+                </p>
+            </section>
+        </fieldset>
+            <fieldset>
+                    <legend>What Days Are You Available?</legend>
+                    <label for="days-available"></label>
+                    <select id="days-available" name="days-available">
+                       <option value = "" disable selected>Choose days:</option>
+                       <option value = "weekdays" >Weekdays</option>
+                       <option value = "weekends">Weekends</option>
+                       <option value = "both">Both</option>
+                   </select>
+                   <section id="weekday-availability" hidden>
+                       <p>What weekdays are you available?</p>
+                       <p>
+                           <label for="monday">Monday</label>
+                           <input
+                                type="checkbox"
+                                id="monday"
+                                value="monday"
+                                name="weekday"
+                           >
+                           <label for="tuesday">Tuesday</label>
+                           <input
+                                type="checkbox"
+                                id="tuesday"
+                                value="tuesday"
+                                name="weekday"
+                           >
+                           <label for="wednesday">Wednesday</label>
+                           <input
+                                type="checkbox"
+                                id="wednesday"
+                                value="wednesday"
+                                name="weekday"
+                           >
+                           <label for="thursday">Thursday</label>
+                           <input
+                                type="checkbox"
+                                id="thursday"
+                                value="thursday"
+                                name="weekday"
+                           >
+                           <label for="friday">Friday</label>
+                           <input
+                                type="checkbox"
+                                id="friday"
+                                value="friday"
+                                name="weekday"
+                           >
+                       </p>                                      
+                   </section>
+                </section>
+            <legend id="weekend-availability" hidden>
+                <h2>Weekends?</h2>
+                <p>
+                    <label for="yes-weekend">Yes:</label>
+                    <input 
+                        type="radio"
+                        value="yes"
+                        id="yes-weekend"
+                        name="weekend-availability"
+                    >
+                    <label for="no-weekend">No:</label>
+                    <input
+                        type="radio"
+                        value="no"
+                        id="no-weekend"
+                        name="weekend-availability"
+                    >
+                </p>
+                <h2>what days?</h2>
+            <label for="saturday">Saturday</label>
+                <input
+                    type="checkbox"
+                    value="saturday"
+                    id="saturday"
+                    name="saturday"
+                >
+            <label for="sunday">Sunday</label>
+                <input
+                    type="checkbox"
+                    value="sunday"
+                    id="sunday"
+                    name="sunday"
+                > 
+            </legend>
+            <section id="time" hidden>
+                <h3>Okay sweet, what time are you available?</h3>
+                    <br/>
+                    <label for="how-long">When are you available?</label>
+                     <select id="how-long" required>
+                        <option value = "" disabled selected>Choose a time:</option>
+                        <option value = "morning">8:00AM to NOON</option>
+                        <option value = "afternoon">NOON to 4:00PM</option>
+                        <option value = "evening">4:00PM to 7:00PM</option>
+                     </select>  
+            </section>
+            <section>
+                <button type="submit">
+                    <a href="./applicant-detail.html"></a>
+                    Submit Application Now!
+                </button>
+            </section>
+        </form>
+    </main>
+</body>
+<script type="module" src="./src/apply.js"></script>
+</html>
