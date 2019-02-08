@@ -27,6 +27,7 @@ applicationFormNode.addEventListener('submit', function(event) {
 
     const newApplication = {
         name: applicationFormNode.name.value,
+        // change duplicate to unique id
         duplicate: 0,
         assassination: applicationFormNode.assassination.value,
         clothes: applicationFormNode.clothes.value,

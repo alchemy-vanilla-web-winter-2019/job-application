@@ -1,3 +1,6 @@
+import removeWhiteSpace from '../functions/remove-white-space.js';
+import deleteApplicant from '../functions/delete-applicant.js';
+
 const newApplicationsStringArray = window.localStorage.getItem('newApplications');
 let newApplications = [];
 if(newApplicationsStringArray) {
@@ -30,8 +33,7 @@ if(newApplications[0].none !== true) {
     
     for(let i = 0; i < newApplications.length; i++) {
         const newApplicantRow = document.createElement('tr');
-        let rowClass = newApplications[i].name + newApplications[i].duplicate;
-        rowClass = rowClass.split(' ').join('');
+        let rowClass = removeWhiteSpace(newApplications[i].name + newApplications[i].duplicate);
         newApplicantRow.classList.add(rowClass);
         if(i % 2 !== 0) {
             newApplicantRow.classList.add('even');
@@ -53,14 +55,13 @@ if(newApplications[0].none !== true) {
                 const deleteButton = document.createElement('button');
                 deleteButton.textContent = 'X';
                 deleteButton.type = 'submit';
-                let buttonClass = newApplications[i].name + newApplications[i].duplicate;
-                buttonClass = buttonClass.split(' ').join('');
+                let buttonClass = removeWhiteSpace(newApplications[i].name + newApplications[i].duplicate);                 
                 deleteButton.classList.add(buttonClass);
                 deleteButton.addEventListener('click', function() {
-                    console.log('click');
+                    deleteApplicant(newApplications[i]);
+                    // makeApplicationsTable(newApplications);                
                 });
-                newTD.appendChild(deleteButton);
-                console.log(buttonClass);
+                newTD.appendChild(deleteButton);                
             } else {                
                 newTD.textContent = headerArray[j];
             }
