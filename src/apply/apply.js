@@ -25,10 +25,11 @@ applicationFormNode.addEventListener('submit', function(event) {
         skillsArray[0] = 'none';
     }
 
+    let identificationNumber = 0;
+
     const newApplication = {
-        name: applicationFormNode.name.value,
-        // change duplicate to unique id
-        duplicate: 0,
+        identification: identificationNumber,
+        name: applicationFormNode.name.value,        
         assassination: applicationFormNode.assassination.value,
         clothes: applicationFormNode.clothes.value,
         skills: skillsArray,
@@ -40,16 +41,17 @@ applicationFormNode.addEventListener('submit', function(event) {
     if(newApplicationsString) {
         newApplications = JSON.parse(newApplicationsString);
     }
-    
+
     for(let i = 0; i < newApplications.length; i++) {
-        if(newApplications[i].name === newApplication.name) {
-            newApplication.duplicate++;
-        }
-    }
+        do{
+            newApplication.identification = Math.floor((Math.random() * 100000));
+        } while(newApplications[i].identification === newApplication.identification);
+    }    
     newApplications.push(newApplication);
 
     const serializedArray = JSON.stringify(newApplications);
     window.localStorage.setItem('newApplications', serializedArray);
     
+
     window.location = './thank-you.html';
 });

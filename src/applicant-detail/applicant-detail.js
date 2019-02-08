@@ -13,12 +13,11 @@ if(newApplicationsStringArray) {
 } 
 
 const searchParams = new URLSearchParams(window.location.search);
-const nameToFind = searchParams.get('name');
+const idToFind = parseInt(searchParams.get('id'));
 
 let applicant = {};
-for(let i = 0; i < newApplications.length; i ++) {
-    const applicantIdentifier = newApplications[i].name + newApplications[i].duplicate;
-    if(nameToFind === applicantIdentifier) {
+for(let i = 0; i < newApplications.length; i ++) {    
+    if(idToFind === newApplications[i].identification) {
         applicant = newApplications[i];
         break;
     }

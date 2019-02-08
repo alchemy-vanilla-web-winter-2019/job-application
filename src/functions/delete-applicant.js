@@ -11,18 +11,20 @@ function deleteApplicant(object) {
         deletedApplications = JSON.parse(deletedApplicationsStringArray);
     }
     
-    for(let i = 0; i < newApplications.length; i++) {
-        const nameMatch = newApplications[i].name === object.name;
-        const dupMatch = newApplications[i].duplicate === object.duplicate;
-        if(nameMatch && dupMatch) {
+    for(let i = 0; i < newApplications.length; i++) {        
+        if(newApplications[i].identification === object.identification) {
             const deletedApplication = newApplications[i];
             deletedApplications.push(deletedApplication);
-            newApplications.splice(i, 1);            
+            newApplications.splice(i, 1);
+            console.log('deleted', deletedApplication, 'applications', newApplications);            
             break;
         }
     }
-//     const serializedArray = JSON.stringify(newApplications);
-//     window.localStorage.setItem('newApplications', serializedArray);
+    const serializedArray = JSON.stringify(newApplications);
+    window.localStorage.setItem('newApplications', serializedArray);
+
+    const serializedDeletedArray = JSON.stringify(deletedApplications);
+    window.localStorage.setItem('deletedApplications', serializedDeletedArray);
 }
 
 export default deleteApplicant;
