@@ -6,10 +6,11 @@ foodForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const foodChoices = [];
+
     for(let index = 0; index < foodForm.foods.length; index++) {
         const foodType = foodForm.foods[index];
         if(foodType.checked) {
-            foodChoices[index] = foodType.value;
+            foodChoices.push(foodType.value);
         }
     }
     
@@ -26,9 +27,8 @@ foodForm.addEventListener('submit', function(event) {
     }
 
     applicants.push(applicantInfo);
+    window.location = 'thanks.html';
 
     const serialize = JSON.stringify(applicants);
     window.localStorage.setItem('applicants', serialize);
-
-    window.location = 'thanks.html';
 });
