@@ -114,7 +114,6 @@ formNode.addEventListener('submit', function(event) {
         faveNumber: numberNode.value,
         id: applicantId
     };
-
     
     if(!updateIdxstr) {
         applicants.push(applicant);
