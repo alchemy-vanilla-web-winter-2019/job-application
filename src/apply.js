@@ -8,7 +8,6 @@ const noNode = document.getElementById('no');
 const lengthTimeNode = document.getElementById('length-time');
 const hoursNode = document.getElementById('hours');
 const lengthNode = document.querySelectorAll('.length');
-console.log(yesNode);
 
 let applicants = null;
 
@@ -21,13 +20,11 @@ else {
 }
 
 yesNode.addEventListener('change', function() {
-    console.log('hi');
     if(yesNode.checked) {
         for(let index = 0; index < lengthNode.length; index++) {
             lengthNode[index].classList.remove('hidden');
         }
         lengthTimeNode.disabled = false;
-        // lengthTimeNode.classList.remove('hidden');
     }
 });
 
@@ -37,8 +34,6 @@ noNode.addEventListener('change', function() {
             lengthNode[index].classList.add('hidden');
         }
         lengthTimeNode.disabled = true;
-        // lengthTimeNode.classList.add('hidden');
-        console.log(noNode.checked);
     }
 });
 

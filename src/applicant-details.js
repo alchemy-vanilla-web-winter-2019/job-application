@@ -10,7 +10,6 @@ const genreNode = document.getElementById('genre');
 let applicants = null;
 let applicant = null;
 
-
 if(existingApplicants) {
     applicants = JSON.parse(existingApplicants);
 }
@@ -22,8 +21,6 @@ else {
 const searchParams = new URLSearchParams(window.location.search);
 const name = searchParams.get('name');
 
-console.log(name);
-
 for(let index = 0; index < applicants.length; index++) {
     const currentApplicant = applicants[index];
     if(currentApplicant.firstName === name) {
@@ -31,9 +28,6 @@ for(let index = 0; index < applicants.length; index++) {
         break;
     }
 }
-
-// console.log(applicant);
-
 
 firstNameNode.textContent = applicant.firstName;
 lastNameNode.textContent = applicant.lastName;
