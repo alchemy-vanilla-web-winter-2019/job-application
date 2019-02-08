@@ -19,6 +19,8 @@ knittingSkills.addEventListener('change', function(event) {
     
 });
 
+let randomNumber = Math.floor(Math.random() * 1000);
+
 yarnForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -43,7 +45,8 @@ yarnForm.addEventListener('submit', function(event) {
         position: jobPosition.value,
         skillLevel: knittingSkills.value,
         allergy: allergyAnswer,
-        yarn: yarnNames
+        yarn: yarnNames,
+        applicationNumber: randomNumber
 
     };
 

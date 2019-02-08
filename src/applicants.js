@@ -13,13 +13,13 @@ for(let index = 0; index < applicants.length; index++) {
     const tr = document.createElement('tr');
     tbody.appendChild(tr);
     
-   //let randomNumber = Math.floor(Math.random() * 1000);
+   
     const tdName = document.createElement('td');
     const link = document.createElement('a');
     tr.appendChild(tdName);
     tdName.appendChild(link);
     link.textContent = applicant.name;
-    link.href = 'application-details.html?name=' + encodeURIComponent(applicant.name);
+    link.href = 'application-details.html?applicationNumber=' + encodeURIComponent(applicant.applicationNumber) + '&name=' + encodeURIComponent(applicant.name);
 
 
     const tdPosition = document.createElement('td');
@@ -37,5 +37,13 @@ for(let index = 0; index < applicants.length; index++) {
     const tdBrands = document.createElement('td');
     tr.appendChild(tdBrands);
     tdBrands.textContent = applicant.yarn.join(' ');
+
+    const tdNumber = document.createElement('td');
+    tr.appendChild(tdNumber);
+    tdNumber.textContent = applicant.applicationNumber;
+    tdNumber.className = 'hidden';
+
+
+
 
 }
