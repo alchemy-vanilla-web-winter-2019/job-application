@@ -1,12 +1,24 @@
-const name = document.getElementById('name');
-const position = document.getElementById('position');
-const foods = document.getElementById('foods');
+const name = document.getElementById('name'); //app-detail.html
+const position = document.getElementById('position');//app-detail.html
+const foods = document.getElementById('foods');//app-detail.html
 
-const json = window.localStorage.getItem('applicant');
-const foodApplicant = JSON.parse(json);
+const jsonString = window.localStorage.getItem('applicants');//get submitted applicant from local storage and store to variable jsonString
 
-name.textContent = foodApplicant.name;
-position.textContent = foodApplicant.position;
-foods.textContent = foodApplicant.foodChoices.join(' ');
+
+let applicantInfo = []; //empty array storing to variable applicant
+ 
+if(jsonString) { //if there is an applicant in json-run code below
+    const foodApplicant = JSON.parse(jsonString);//store json formatted data to variable foodApplicant
+    applicantInfo = foodApplicant[foodApplicant.length - 1];//json array length - 1
+
+}
+
+else {
+ //   window.location = '/';
+}
+
+name.textContent = applicantInfo.name; //plugging in name from applicant object on index.js
+position.textContent = applicantInfo.position;
+foods.textContent = applicantInfo.foodChoices.join(' ');
 
 

@@ -6,7 +6,6 @@ foodForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const foodChoices = [];
-
     for(let index = 0; index < foodForm.foods.length; index++) {
         const foodType = foodForm.foods[index];
         if(foodType.checked) {
@@ -14,14 +13,22 @@ foodForm.addEventListener('submit', function(event) {
         }
     }
     
-    const applicantInfo = {
+    const applicantInfo = { //creating object and assigning to applicantInfo
         name: name.value,
         position: position.value,
         foodChoices: foodChoices
     };
 
-    window.location = 'thanks.html';
+    let applicants = [];
+    const jsonString = window.localStorage.getItem('applicants');
+    if(jsonString) {
+        applicants = JSON.parse(jsonString);
+    }
 
-    const serialize = JSON.stringify(applicantInfo);
-    window.localStorage.setItem('applicant', serialize);
+    applicants.push(applicantInfo);
+
+    const serialize = JSON.stringify(applicants);
+    window.localStorage.setItem('applicants', serialize);
+
+    window.location = 'thanks.html';
 });
