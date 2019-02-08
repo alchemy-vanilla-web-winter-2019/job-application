@@ -9,7 +9,6 @@ if(json) {
 }
 
 const tbody = document.getElementById('applicants');
-console.log
 
 for(let i = 0; i < applicants.length; i++) {
     const applicant = applicants[i];

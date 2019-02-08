@@ -62,8 +62,6 @@ formNode.addEventListener('submit', function(event) {
     }
     applicants.push(applicant);
 
-    console.log('blahhh', howLongNode.value);
-
     const serializedApplicants = JSON.stringify(applicants);
     window.localStorage.setItem('applicants', serializedApplicants);
     window.location = '/applicant-detail.html';

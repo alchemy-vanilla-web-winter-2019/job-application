@@ -4,13 +4,15 @@
 
 body {
     background: lavender;
+    background-image:
+    font-family: 'Permanent Marker', cursive;
 }
 #apply-link {
     display: flex;
     justify-content: center;
     border: 1px solid black;
     padding: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Permanent Marker', cursive;
 
 }
 header {

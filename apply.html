@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" href="apply.css">
 
-    <title>Web Developer tutor application</title>
+    <title>Web Developer Tutor Application</title>
 </head>
 <body>
     <header>
@@ -14,9 +14,9 @@
     </header>
     <main>
         <form id="form-example">
-            <section id="about-section">
+            <fieldset id="about-section">
+                <legend>Tell Us About Yourself...</legend>
                 <p>
-                    <h2>Tell Us About Yourself...</h2>
                         <label for="name">Your name:</label>
                         <input
                             type="text"
@@ -40,10 +40,10 @@
                     >
                 </p>
                 
-            </section>
+            </fieldset>
             <br />
-            <section>
-                <h2>A few more questions...</h2>
+            <fieldset>
+                <legend>A few more questions...</legend>
                 <section>
                 <p>
                     <label for="coding-strength">How strong do you feel your coding skills are?</label>
@@ -58,11 +58,12 @@
                     <span id="strength-number">1</span>
                     <p>Beginner = 1 and Professional = 10</p>
                 </p>
-                </section>
             </section>
-            <section>
-                   <label for="days-available">What days are you available?</label>
-                   <select id="days-available" name="days-available">
+        </fieldset>
+            <fieldset>
+                    <legend>What Days Are You Available?</legend>
+                    <label for="days-available"></label>
+                    <select id="days-available" name="days-available">
                        <option value = "" disable selected>Choose days:</option>
                        <option value = "weekdays" >Weekdays</option>
                        <option value = "weekends">Weekends</option>
@@ -108,8 +109,8 @@
                            >
                        </p>                                      
                    </section>
-            </section>
-            <section id="weekend-availability" hidden>
+                </section>
+            <legend id="weekend-availability" hidden>
                 <h2>Weekends?</h2>
                 <p>
                     <label for="yes-weekend">Yes:</label>
@@ -142,7 +143,7 @@
                     id="sunday"
                     name="sunday"
                 > 
-            </section>
+            </legend>
             <section id="time" hidden>
                 <h3>Okay sweet, what time are you available?</h3>
                     <br/>
@@ -156,7 +157,7 @@
             </section>
             <section>
                 <button type="submit">
-                    <a href='./applicant-detail.html'></a>
+                    <a href="./applicant-detail.html"></a>
                     Submit Application Now!
                 </button>
             </section>

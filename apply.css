@@ -1,12 +1,13 @@
 header {
     display: flex;
     justify-content: flex-right;
-    font-family: font-family: 'Staatliches', cursive;
-}
+    font-family: 'Permanent Marker', cursive;
+
 #about-section {
     border: 1px solid black;
     padding: 10px;
 }
+
 #section-two {
     border: 1px solid black;
     padding: 10px;
