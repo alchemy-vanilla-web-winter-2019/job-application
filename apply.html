@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apply to ye Faire</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <head>
+        <h1>Apply to ye Faire</h1>
+    </head>
+    <main>
+        <section>
+            <p><a href="index.html">Go ye back.</a></p>
+        </section>
+        <section>
+            <form id="faire-application">
+                <fieldset>
+                    <legend>Answer me these questions three:</legend>
+                    <p>What is thy name? <input type="text" id="name-element" name="name"></p>
+                    <p>What is thy quest?</p>
+
+                    <p>
+                        <label>
+                            <input type="radio" name="quest" value="grail"> To seek the grail.
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="quest" value="knight"> To slay the black knight.
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="radio" name="quest" value="shrubbery"> To retrieve a shrubbery.
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <label>
+                            What is thy favorite color?
+                            <select id="color">
+                                <option value="blue">Blue</option>
+                                <option value="red">Red</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="green">Green</option>
+                            </select>
+                        </label>
+                    </p>        
+                </fieldset>
+                <label>
+                    <p>What are thine talents?</p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="talent" value="juggling"> Juggling
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="talent" value="singing"> Singing
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="talent" value="magic"> Magic
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="talent" value="sword-swallowing"> Sword swallowing
+                        </label>
+                    </p>
+                </label>
+                <label>
+                    <p>Rate thy loyalty to thy Queen</p>
+                    <p>
+                        <input type="range" id="loyalty-slider" name="loyalty" min="0" max="100" value="100">
+                        <span id="loyalty-display"></span>
+                    </p>
+                </label>
+                <input type="submit" value="Submit application">
+            </form>
+        </section>
+        <script src="src/apply.js"></script>
+    </main>
+</body>
+</html>
