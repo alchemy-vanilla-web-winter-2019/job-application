@@ -1,0 +1,72 @@
+body {
+    max-width: 800px;
+    margin: auto;
+}
+
+header {
+    display: flex run-in;
+    justify-content: center;
+    background: lightcoral;
+}
+
+nav {
+    border: 1px solid black;
+    background: yellow;
+    padding: 5px;
+}
+
+li {
+    display: inline;
+}
+
+.nav {
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+                    
+.nav:hover {
+    background: rgb(55, 55, 238);
+    font-weight: bold;
+}
+
+a:visited {
+    color: black;
+}
+
+main {
+    /* justify-content: center; */
+    background: lightblue;
+    padding: 30px 20px 100px;
+}
+
+footer {
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+table, td {
+    border: 1px solid black;
+    text-align: left;
+}
+
+table {
+    background: lightgreen;
+}
+
+td {
+    background: white;
+    padding: 3px;
+}
+
+th {
+    padding: 3px;
+    border: 1px solid gray;
+}

@@ -7,6 +7,13 @@ const yearsExperience = document.getElementById('years-experience');
 const yearsExperienceQuestion = document.getElementById('years');
 const yesCertified = document.getElementById('yes-cert');
 const noCertified = document.getElementById('no-cert');
+const numberNode = document.getElementById('number');
+
+let applicants = [];
+const jsonApplicants = window.localStorage.getItem('applicants');
+if(jsonApplicants) {
+    applicants = JSON.parse(jsonApplicants);
+}
 
 
 yesExperience.addEventListener('change', function() {
@@ -52,11 +59,13 @@ formNode.addEventListener('submit', function(event) {
         city: cityNode.value,
         experience: yearsExperience.value, 
         professional: isCertified,
-        cuddles: cuddleTypes
+        cuddles: cuddleTypes,
+        faveNumber: numberNode.value
     };
 
-    const applicantJSON = JSON.stringify(applicant);
-    window.localStorage.setItem('applicant', applicantJSON);
+    applicants.push(applicant);
+    const applicantsJSON = JSON.stringify(applicants);
+    window.localStorage.setItem('applicants', applicantsJSON);
     window.location = './application-detail.html';
 
 });
