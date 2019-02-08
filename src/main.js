@@ -18,19 +18,19 @@ form.addEventListener('submit', function() {
     const country = form.elements.country.value;
     const kills = form.elements.kills.value;
 
-    const skills = form.elements.skills;
+    // const skills = form.elements.skills;
     const skillPreferences = [];
  
-    for(let i = 0; i < skills.length; i++){
-        const choices = skills[i];
+    for(let i = 0; i < form.skills.length; i++){
+        const choices = form.skills[i];
         if(choices.checked) {
             skillPreferences.push(choices.value);
         }
     }
     
     const applicant = {
-        firstName:firstName,
-        lastName:lastName,
+        firstName: firstName,
+        lastName: lastName,
         phone: phone,
         email: email,
         street: street,
@@ -49,8 +49,8 @@ form.addEventListener('submit', function() {
     }
 
     allApplicants.push(applicant);
-    const serialize = JSON.stringify(applicant); 
+    const serialize = JSON.stringify(allApplicants); 
     window.localStorage.setItem('allApplicants', serialize); 
-    // window.location = 'thank-you.html';
+    window.location = 'thank-you.html';
 });
 

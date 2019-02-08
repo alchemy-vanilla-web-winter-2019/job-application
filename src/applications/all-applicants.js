@@ -8,33 +8,24 @@ if(json) {
     allApplicants = [];
 }
 
-const tbody = document.getElementById('tbody');
+const tbody = document.getElementById('all-applicants');
+
 for(let index = 0; index < allApplicants.length; index++) {
     const applicant = allApplicants[index];
 
     const tr = document.createElement('tr');
 
+    const firstNameCell = document.createElement('td');
+    // firstNameCell.textContent = applicant.firstName;
+    const a = document.createElement('a');
+    a.href = 'review.html?name=' + encodeURIComponent(applicant.firstName);
+    a.textContent = applicant.firstName;
+    firstNameCell.appendChild(a);
+    tr.appendChild(firstNameCell);
 
-
-
-
-    
-    const firstnameCell = document.createElement('td');
-    // const a = document.createElement('a');
-    // a.href = 'review.html?name=' + encodeURIComponent(applicant.name);
-    // a.textContent = applicant.name;
-    // nameCell.applicant.(a);
-    // tr.appendChild(nameCell)
-
-    firstnameCell.textContent = applicant.firstname;
-    // firstnameCell.applicant(a);
-    tr.appendChild(firstnameCell);
-
-    tr.appendChild(firstnameCell);
-    
-    const lastnameCell = document.createElement('td');
-    lastnameCell.textContent = applicant.lastname;
-    tr.appendChild(lastnameCell);
+    const lastNameCell = document.createElement('td');
+    lastNameCell.textContent = applicant.lastName;
+    tr.appendChild(lastNameCell);
     
     const emailCell = document.createElement('td');
     emailCell.textContent = applicant.email;

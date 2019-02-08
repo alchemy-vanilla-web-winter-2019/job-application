@@ -1,13 +1,16 @@
 const json = window.localStorage.getItem('allApplicants');
-let hydratedApplication = [];
-if(json){
-    const allApplicants = JSON.parse(json);
-    hydratedApplication = allApplicants[allApplicants.length - 1];
-}
 let allApplicants = [];
+let hydratedApplication = null;
+if(json) {
+    allApplicants = JSON.parse(json);
+} else {
+    window.location = '/';
+}
+console.log(allApplicants);
 
-const searchParam = new URLSearchParams(window.localStorage.search);
-const firstNameToFind = searchParam.get('first name');
+const searchParam = new URLSearchParams(window.location.search);
+const firstNameToFind = searchParam.get('name');
+console.log(firstNameToFind);
 
 for(let index = 0; index < allApplicants.length; index++) {
     const currentApplicant = allApplicants[index];
@@ -17,10 +20,10 @@ for(let index = 0; index < allApplicants.length; index++) {
         break;
     }
 }
+console.log(hydratedApplication);
 
-
-const first = document.getElementById('first');
-const last = document.getElementById('last');
+const firstName = document.getElementById('first');
+const lastName = document.getElementById('last');
 const phone = document.getElementById('phone');
 const email = document.getElementById('email');
 const street = document.getElementById('street');
@@ -30,8 +33,8 @@ const kills = document.getElementById('kills');
 const obedience = document.getElementById('obedience');
 const skill = document.getElementById('skill');
 
-first.textContent = hydratedApplication.firstName;
-last.textContent = hydratedApplication.lastName;
+firstName.textContent = hydratedApplication.firstName;
+lastName.textContent = hydratedApplication.lastName;
 phone.textContent = hydratedApplication.phone;
 email.textContent = hydratedApplication.email; 
 street.textContent = hydratedApplication.street;
@@ -39,5 +42,5 @@ city.textContent = hydratedApplication.city;
 country.textContent = hydratedApplication.country;
 kills.textContent = hydratedApplication.kills;
 obedience.textContent = hydratedApplication.obedience;
-skill.textContent = hydratedApplication.skill.join(', ');
+skill.textContent = hydratedApplication.skill;
 
