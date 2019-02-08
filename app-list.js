@@ -3,8 +3,9 @@ const json = window.localStorage.getItem('allApplicants');
 let allApplicants = [];
 
 if(json) {
-    allApplicants = JSON.parse(json)
+    allApplicants = JSON.parse(json);
 }
+
 
 
 const tbody = document.getElementById('tbody');
@@ -15,7 +16,10 @@ for(let i = 0; i < allApplicants.length; i++) {
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
-    nameCell.textContent = applicants.name;
+    const a = document.createElement('a');
+    a.href = 'app-review.html?timesubmitted=' + encodeURIComponent(applicants.timesubmitted);
+    a.textContent = applicants.name;
+    nameCell.appendChild(a);
     tr.appendChild(nameCell);
     
     const ageCell = document.createElement('td');
