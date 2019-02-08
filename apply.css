@@ -59,7 +59,24 @@ a {
     font-family: 'Playfair Display', serif;
     color: rgba(96, 99, 158, 1);
     font-size: 20px;
-    margin-top: 40px;
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+.thanks {
+    display: flex;
+    font-family: 'Playfair Display', serif;
+    align-content: center;
+}
+
+dd {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 

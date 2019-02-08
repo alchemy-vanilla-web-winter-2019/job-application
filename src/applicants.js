@@ -15,8 +15,12 @@ for(let index = 0; index < applicants.length; index++) {
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
-    nameCell.textContent = applicant.name;
+    const link = document.createElement('a');
+    link.href = 'application-details.html?name=' + encodeURIComponent(applicant.name);
+    link.textContent = applicant.name;
     tr.appendChild(nameCell);
+    nameCell.appendChild(link);
+
 
     const emailCell = document.createElement('td');
     emailCell.textContent = applicant.email;
