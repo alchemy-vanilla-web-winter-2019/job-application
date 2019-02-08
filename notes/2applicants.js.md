@@ -1,4 +1,5 @@
 let allApplicants = [];
+
 const jsonString = window.localStorage.getItem('applicants');
 
 if(jsonString) {
@@ -22,9 +23,9 @@ for(let index = 0; index < allApplicants.length; index++) {
     
     
     link.href = 'details-applicant.html?name=' + encodeURIComponent(applicant.name);
-    link.textContent = applicant.name;
     phoneCell.textContent = applicant.phone;
     cityCell.textContent = applicant.city;
+    link.textContent = applicant.name;
     
     nameCell.appendChild(link);
     row.appendChild(nameCell);
