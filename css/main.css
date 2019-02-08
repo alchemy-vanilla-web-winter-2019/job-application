@@ -1,33 +1,47 @@
 body {
+    font-family: 'Times New Roman', Times, serif;
     margin: 0px;
 }
 
 header {
-    background: rgba(128, 0, 128, 0.893);
+    color: rgba(255, 255, 255, 0.954);
+    background: rgba(2, 60, 159, 0.893);
     border-bottom-right-radius: 5px;
     float: left;
-    text-shadow: 2px 2px 4px #670293;
+    text-shadow: 2px 2px 4px #2a3b45;
     padding: 2px;
+    box-shadow: 2px 2px 2px 2px rgb(3, 42, 99);
+    z-index: -1;
 }
 
 h1 {
     margin-left: 4px;
+    z-index: -1;
 }
 
-section {
+#apply {
     float: left;
     padding: 2.5%;
+    margin-right: 150px;
+    z-index: 1;
 }
 
-footer {
-    float: right;
-    padding: 2.5%;
+#employer {
+    margin-left: 75px;
+    z-index: 1;
 }
 
 #img {
     box-shadow: 8px 10px 10px 20px;
     margin-top: 100px;
-    margin-left: 30px;
-    position: absolute;
-    float: left;
+    margin-right: 360px;
+    position: relative;
+    z-index: -1;
+}
+
+img {
+    margin-left: 20px;
+    border-radius: 23px;
+    box-shadow: -5px -2px 15px 1px rgb(3, 42, 99);
+    z-index: -1;
 }

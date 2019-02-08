@@ -1,7 +1,7 @@
-main {
-
+h1 {
+    font-family: monospace;
+    font-size: 35px;
 }
-
 #img {
     position: absolute;
     margin-left: 300px;
