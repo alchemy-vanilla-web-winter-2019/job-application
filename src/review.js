@@ -1,15 +1,23 @@
-const getApplicantsJSON = window.localStorage.applicants;
+import getApplicantsInfo from './get-applicants-info.js';
 
-let lastApplicant = {};
-if(getApplicantsJSON) {
-    const applicantsObjectArray = JSON.parse(getApplicantsJSON);
-    lastApplicant = applicantsObjectArray[applicantsObjectArray.length - 1];
-} else {
-    window.location = '/';
+let applicant = findApplicant(getApplicantsInfo());
+
+document.getElementById('name').textContent = applicant.name;
+document.getElementById('city-state').textContent = applicant.location.city + ', ' + applicant.location.state;
+document.getElementById('steak').textContent = applicant.steak;
+document.getElementById('curliness').textContent = applicant.curliness;
+document.getElementById('salad').textContent = applicant.salad.join(', ');
+
+function findApplicant(applicantsObjectArray) {
+    const searchParam = new URLSearchParams(window.location.search);
+    const findName = searchParam.get('name');
+    let applicant = {};
+    for(let i = 0; i < applicantsObjectArray.length; i++) {
+        const currentApplicant = applicantsObjectArray[i];
+        if(currentApplicant.name === findName) {
+            applicant = currentApplicant;
+            break;
+        }  
+    }
+    return applicant;
 }
-
-document.getElementById('name').textContent = lastApplicant.name;
-document.getElementById('city-state').textContent = lastApplicant.location.city + ', ' + lastApplicant.location.state;
-document.getElementById('steak').textContent = lastApplicant.steak;
-document.getElementById('curliness').textContent = lastApplicant.curliness;
-document.getElementById('salad').textContent = lastApplicant.salad.join(', ');

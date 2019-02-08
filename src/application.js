@@ -1,3 +1,5 @@
+import getApplicantsInfo from './get-applicants-info.js';
+
 const form = document.getElementById('form');
 const slider = form.curliness;
 
@@ -11,11 +13,13 @@ form.addEventListener('submit', function(event) {
     storeObjectArray(makeObject(form));
 });
 
+// Changes the display for the slider
 function changeCurlinessDisplay(slider) {
     const sliderDisplay = document.getElementById('slider-display');
     sliderDisplay.textContent = slider.value;
 }
 
+// Creates the applicant object
 function makeObject(form) {
     const saladAll = form.salad;
     const saladPreference = [];
@@ -37,12 +41,9 @@ function makeObject(form) {
     return applicant;
 }
 
+// Stores new applicant object into applicants array
 function storeObjectArray(applicantObject) {
-    let applicantsObjectArray = [];
-    const getApplicantsJSON = window.localStorage.applicants;
-    if(getApplicantsJSON) {
-        applicantsObjectArray = JSON.parse(getApplicantsJSON);
-    }
+    const applicantsObjectArray = getApplicantsInfo();
     applicantsObjectArray.push(applicantObject);
     window.localStorage.applicants = JSON.stringify(applicantsObjectArray);
     
