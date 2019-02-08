@@ -4,8 +4,6 @@ const jobPosition = document.getElementById('positions');
 const popcorn = document.getElementById('popcorn');
 const popcornSpan = document.getElementById('popcorn-span');
 
-
-
 popcorn.addEventListener('change', function() {
     event.preventDefault();
     popcornSpan.textContent = popcorn.value;
@@ -15,7 +13,7 @@ jobApp.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const romComClick = [];
-    for(let index = 0; index < jobApp.romcom.length; index++){
+    for(let index = 0; index < jobApp.romcom.length; index++) {
         const romComAnswer = jobApp.romcom[index];
         if(romComAnswer.checked) {
             romComClick[index] = romComAnswer.value;
@@ -23,10 +21,10 @@ jobApp.addEventListener('submit', function(event) {
     }
 
     const filmNames = [];
-    for(let index = 0; index < jobApp.films.length; index++){
+    for(let index = 0; index < jobApp.films.length; index++) {
         const filmName = jobApp.films[index];
         if(filmName.checked) {
-            filmNames[index] = filmName.value;
+            filmNames.push(filmName.value);
         }
     }
 
@@ -39,7 +37,7 @@ jobApp.addEventListener('submit', function(event) {
     };
     
     let applicants = [];
-    const jsonString = window.localStorage.getItem('applicant');
+    const jsonString = window.localStorage.getItem('applicants');
     if(jsonString) {
         applicants = JSON.parse(jsonString);
     }
@@ -47,7 +45,7 @@ jobApp.addEventListener('submit', function(event) {
     applicants.push(applicant);
 
     const serialize = JSON.stringify(applicants);
-    window.localStorage.setItem('applicant', serialize);
+    window.localStorage.setItem('applicants', serialize);
     
     window.location = 'thanks.html';
 });

@@ -1,11 +1,36 @@
 body {
-    background-color: rgb(11, 12, 29);
-    color: rgb(198, 202, 238);
+    background-color:rgb(218, 241, 247);    
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+}
+
+#main-home {
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
 }
 
 #theater {
     width: 500px;
-    border-radius: 25px;
+    border-radius: 35px;
+    padding: 10px;
+}
+
+td {
+    border: solid 1px;
+    padding: 3px;
+}
+
+footer {
+    padding: 5px;
+}
+
+button {
+    font-size: 12px;
+}
+
+a:visited {
+    color: rgb(107, 109, 116);
 }
