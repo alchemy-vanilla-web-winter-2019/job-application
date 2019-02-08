@@ -1,0 +1,22 @@
+html {
+  background: url(assets/earth.jpg) no-repeat center center fixed;
+  background-size: cover;
+  
+}
+
+
+body {
+  padding-top: 15%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 35px;
+  color: black;
+}
+
+a {
+  font-size: 17px;
+  color: rgb(233, 227, 227);
+}
+

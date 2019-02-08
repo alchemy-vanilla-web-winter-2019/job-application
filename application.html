@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./application.css">
+  <title>Space Travel Application Page</title>
+</head>
+<body>
+  <header>
+    <img src="./assets/astronaut.jpg" alt="astronaut in space">
+    <h1>Space Travel Application</h1>
+    <div>
+      <a href="index.html">Return Home</a>
+    </div>
+  </header>
+  <main>
+      <h3>Please complete and submit the following form</h3>
+    <form id="application">
+      <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+      </p>
+
+      <p>
+        <label for="spaceship">Available spaceships:</label>
+          <select name="spaceship" id="spaceship">
+            <option hidden disabled selected>Choose your spaceship</option>
+            <option value="iss-cyclops" >ISS Cyclops</option>
+            <option value="promise">Promise</option>
+            <option value="avadora">Avadora</option>
+            <option value="battlestar">Battlestar</option>
+          </select>
+      </p>
+
+      <p>
+        <label for="claustrophobic">How claustrophobic are you? (0 being not at all)</label>
+        <br>
+        <input type="range" name ="claustrophobic" id="claustrophobic" min="0" max="10">
+        <span id="slider-display"></span>
+      </p>
+
+      <fieldset>
+        <legend>Select Your Space Gear</legend>
+
+        <label for="space-suit">Extravehicular Mobility Unit (Spacesuit):</label>
+        <input type="checkbox" name="spacegear" id="space-suit" value="spacesuit"> 
+
+        <label for="space-boots">Spaceboots:</label>
+        <input type="checkbox" name="spacegear" id="space-boots" value="spaceboots">
+
+        <label for="helmet">Helmet:</label>
+        <input type="checkbox" name="spacegear" id="helmet" value="helmet">
+
+      </fieldset>
+
+        <button id="submit-button">Submit</button>
+    </form>
+  </main>
+  <footer>
+
+  </footer>
+  
+
+  <script type="module" src="src/index.js"></script>
+</body>
+</html>
