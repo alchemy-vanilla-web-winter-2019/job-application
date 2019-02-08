@@ -6,10 +6,14 @@ const buttonNode = document.getElementById('return-home');
 const searchParams = new URLSearchParams(window.location.search);
 const appName = searchParams.get('name');
 let applicant = null;
+if(!getPackage) {
+    window.location = './';
+}
 
 for(let index = 0; index < applicantArray.length; index++) {
     if(applicantArray[index].name === appName){
         applicant = applicantArray[index];
+        break;
     }
 }
 
@@ -21,6 +25,14 @@ const build = [
     {
         item: 'Phone Number:',
         value: applicant.phone
+    },
+    {
+        item: 'Is a Pyromaniac:',
+        value: applicant.pyromaniac
+    },
+    {
+        item: 'Prefers to Burn:',
+        value: applicant.burnPreference
     },
     {
         item: 'Level of Comfort with Immolation:', 
@@ -43,4 +55,5 @@ for(let index = 0; index < build.length; index++) {
 
 buttonNode.addEventListener('click', function() {
     window.location = './index.html';
+    console.log('test');
 });

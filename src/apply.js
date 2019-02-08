@@ -3,9 +3,8 @@ const nameNode = document.getElementById('name');
 const phoneNode = document.getElementById('phone');
 const yesNode = document.getElementById('yes');
 const noNode = document.getElementById('no');
-const isPyromaniac = null;
+let isPyromaniac = null;
 const checkboxNode = document.getElementById('checkboxes');
-const radioFormNode = document.getElementById('radio-form');
 const comfortNode = document.getElementById('comfort');
 const comfortFieldNode = document.getElementById('comfort-field');
 const burialNode = document.getElementById('burial');
@@ -20,9 +19,9 @@ yesNode.addEventListener('change', function() {
         hiddenNodeList[j].classList.remove('hidden');
     }
 });
+
 noNode.addEventListener('change', function() {
     let hiddenNodeList = checkboxNode.querySelectorAll('.checklabel');
-    console.log(hiddenNodeList);
     for(let index = 0; index < checkboxes.length; index++) {
         checkboxes[index].disabled = true;
     }
@@ -30,8 +29,6 @@ noNode.addEventListener('change', function() {
         hiddenNodeList[j].classList.add('hidden');
     }
 });
-
-
 
 comfortNode.addEventListener('change', function(){
     let messageSelector;
@@ -56,16 +53,36 @@ comfortNode.addEventListener('change', function(){
     comfortFieldNode.textContent = messageSelector;
 });
 let applicationsSubmitted = [];
+let burnPrefArray =[];
 formNode.addEventListener('submit', function(event) {
     event.preventDefault();
+    if(yesNode.checked === true){
+        isPyromaniac = 'Yes';
+        for(let i = 0; i < checkboxes.length; i++) {
+            let preferenceItem = checkboxes[i];
+            if(preferenceItem.checked === true) { 
+                let formatItem = ' ' + preferenceItem.value;
+                burnPrefArray.push(formatItem);
+            }
+        }
+        if(burnPrefArray.length === 0) {
+            burnPrefArray.push('none');
+        }
+    }
+    if(noNode.checked === true) {
+        isPyromaniac = 'No';
+        burnPrefArray.push('Does Not Apply');
+    }
+    
     const applicant = {
         name: nameNode.value,
         phone: phoneNode.value,
-        comfort: comfortNode.value,
+        comfort: comfortNode.value + ' of 5',
         burial: burialNode.value,
-        pyromaniac: isPyromaniac.value,
-        burnPreference: ''
+        pyromaniac: isPyromaniac,
+        burnPreference: burnPrefArray
     };
+
     const jsonString = window.localStorage.getItem('job-applicant');
     const checkArray = JSON.parse(jsonString);
     if(!checkArray) {
