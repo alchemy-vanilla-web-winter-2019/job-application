@@ -26,11 +26,6 @@ for(let i = 0; i < allApplicants.length; i++) {
     }
 }
 
-
-
-
-
-
 const name = document.getElementById('name');
 const loyalty = document.getElementById('loyalty');
 const realm = document.getElementById('realm');
