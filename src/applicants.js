@@ -2,23 +2,41 @@ const retrieveJson = window.localStorage.getItem('job-applicant');
 const applicantData = JSON.parse(retrieveJson);
 const tableNode = document.getElementById('table');
 const buttonNode = document.getElementById('return-home');
+let applicantArray = [];
 
-for(let i = 0; i < applicantData.length; i++) {
-    const applicants = applicantData[i];
+if(applicantData) {
+    applicantArray = applicantData;
+}
+
+for(let i = 0; i < applicantArray.length; i++) {
+    const applicants = applicantArray[i];
+
     const newRow = document.createElement('tr');
-
+    
     const nameEntry = document.createElement('td');
-    nameEntry.textContent = applicants.name;
     newRow.appendChild(nameEntry);
 
+    const link = document.createElement('a');
+    link.href = 'applicant-details.html?name=' + encodeURIComponent(applicants.applicationNumber);
+    link.textContent = applicants.name;
+    nameEntry.appendChild(link);
+    
     const seperatorEntry = document.createElement('td');
     seperatorEntry.textContent = '|';
     newRow.appendChild(seperatorEntry);
+    
+    const numberEntry = document.createElement('td');
+    numberEntry.textContent = applicants.applicationNumber;
+    newRow.appendChild(numberEntry);
+
+    const seperatorEntry2 = document.createElement('td');
+    seperatorEntry2.textContent = '|';
+    newRow.appendChild(seperatorEntry2);
 
     const phoneEntry = document.createElement('td');
     phoneEntry.textContent = applicants.phone;
     newRow.appendChild(phoneEntry);
-
+    
     tableNode.appendChild(newRow);
 }
 

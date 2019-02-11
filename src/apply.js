@@ -1,9 +1,35 @@
 const formNode = document.getElementById('main-form');
 const nameNode = document.getElementById('name');
 const phoneNode = document.getElementById('phone');
+const yesNode = document.getElementById('yes');
+const noNode = document.getElementById('no');
+let isPyromaniac = null;
+const checkboxNode = document.getElementById('checkboxes');
 const comfortNode = document.getElementById('comfort');
 const comfortFieldNode = document.getElementById('comfort-field');
 const burialNode = document.getElementById('burial');
+const checkboxes = document.getElementsByClassName('checkbox');
+
+yesNode.addEventListener('change', function() {
+    let hiddenNodeList = checkboxNode.querySelectorAll('.hidden.checklabel');
+    for(let i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].disabled = false;
+    }
+    for(let j = 0; j < hiddenNodeList.length; j++) {
+        hiddenNodeList[j].classList.remove('hidden');
+    }
+});
+
+noNode.addEventListener('change', function() {
+    let hiddenNodeList = checkboxNode.querySelectorAll('.checklabel');
+    for(let index = 0; index < checkboxes.length; index++) {
+        checkboxes[index].disabled = true;
+    }
+    for(let j = 0; j < hiddenNodeList.length; j++) {
+        hiddenNodeList[j].classList.add('hidden');
+    }
+});
+
 comfortNode.addEventListener('change', function(){
     let messageSelector;
     let select = comfortNode.value;
@@ -27,25 +53,51 @@ comfortNode.addEventListener('change', function(){
     comfortFieldNode.textContent = messageSelector;
 });
 let applicationsSubmitted = [];
+let burnPrefArray = [];
 formNode.addEventListener('submit', function(event) {
     event.preventDefault();
-    const applicant = {
+    if(yesNode.checked === true){
+        isPyromaniac = 'Yes';
+        for(let i = 0; i < checkboxes.length; i++) {
+            let preferenceItem = checkboxes[i];
+            if(preferenceItem.checked === true) { 
+                let formatItem = ' ' + preferenceItem.value;
+                burnPrefArray.push(formatItem);
+            }
+        }
+        if(burnPrefArray.length === 0) {
+            burnPrefArray.push('none');
+        }
+    }
+    if(noNode.checked === true) {
+        isPyromaniac = 'No';
+        burnPrefArray.push('Does Not Apply');
+    }
+    
+    let applicant = {
         name: nameNode.value,
         phone: phoneNode.value,
-        comfort: comfortNode.value,
-        burial: burialNode.value
+        comfort: comfortNode.value + ' of 5',
+        burial: burialNode.value,
+        pyromaniac: isPyromaniac,
+        burnPreference: burnPrefArray,
+        applicationNumber: 0
     };
+
     const jsonString = window.localStorage.getItem('job-applicant');
     const checkArray = JSON.parse(jsonString);
     if(!checkArray) {
+        applicant.applicationNumber++;
         applicationsSubmitted.push(applicant);
     }
     else {
         applicationsSubmitted = checkArray;
+        let checkAppNum = checkArray[checkArray.length - 1].applicationNumber;
+        applicant.applicationNumber = checkAppNum + 1;
         applicationsSubmitted.push(applicant);
     }
     const serializeApplication = JSON.stringify(applicationsSubmitted);
     window.localStorage.setItem('job-applicant', serializeApplication);
-    window.location = 'applicant-details.html';
+    window.location = 'applicant-details.html?name=' + encodeURIComponent(applicant.applicationNumber);
 });
 

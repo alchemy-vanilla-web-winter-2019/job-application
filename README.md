@@ -1,6 +1,3 @@
-# Job Application
-
-Need to make an applicants details html file
-
-need to stringify and send application object to applicants detail js 
+finish radio with question "Do you like to set things on fire?" 
+finish checkbox with: " what are your favorite things to set ablaze?"
 

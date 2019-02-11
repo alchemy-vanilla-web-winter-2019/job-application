@@ -13,33 +13,71 @@
         <form id="main-form">
             <section id="contact-info">
                     <h2>Contact Information</h2>
-                    <p>
-                        <label for="name">Full Name:</label>
-                        <input 
-                            type="text"
-                            placeholder="Thích Quang Duc"
-                            name="name"
-                            id="name"
-                            min="1"
-                            autocomplete="off"
-                            required
-                        >
-                    </p>
-                    <p>
-                        <label for="phone">Phone Number:</label>
-                        <input
-                            type="text"
-                            name="phone"
-                            id="phone"
-                            min="14"
-                            max="14"
-                            placeholder="503-555-5555"
-                            autocomplete="off"
-                            required
-                        >
-                    </p>
+                    <table>
+                        <tr><td><label for="name">Full Name:</label></td>
+                            <td>
+                                <input 
+                                    type="text"
+                                    placeholder="Thích Quang Duc"
+                                    name="name"
+                                    id="name"
+                                    min="1"
+                                    autocomplete="off"
+                                    required
+                                >
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td><label for="phone">Phone Number:</label></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    id="phone"
+                                    min="14"
+                                    max="14"
+                                    placeholder="503-555-5555"
+                                    autocomplete="off"
+                                    required
+                                >
+                            </td>
+                        </tr>
+                    </table>
             </section>
-            <section id="background-info">
+            <section id="radio-checkbox">
+                <h2>Something</h2>
+                <p>Do you like to set things on fire?</p>
+                <p id="radio-form">
+                    <label for="yes">Yes</label>
+                    <input
+                        type="radio"
+                        value="Yes"
+                        id="yes"
+                        name="TBD"   
+                    >
+                    <label for="yes">No</label>
+                    <input
+                        type="radio"
+                        value="No"
+                        id="no"
+                        name="TBD"
+                        checked
+                    >
+                </p>
+                <p>If so, what are your favorite thing to burn?<br>
+                (check all that apply)</p>
+                <p id="checkboxes">
+                    <input type="checkbox" id="excrement" name="excrement" value="Excrement" class="checkbox" disabled>
+                    <label for="excrement" class="hidden checklabel">Human Excrement</label>
+                    <input type="checkbox" id="socks" name="socks" value="Socks" class="checkbox" disabled>
+                    <label for="socks" class="hidden checklabel">Used Socks</label>
+                    <input type="checkbox" id="hair" name="hair" value="Hair" class="hidden checkbox" class="checkbox" disabled>
+                    <label for="hair" class="hidden checklabel">Hair</label>
+                    <input type="checkbox" id="self" name="self" value="elf" class="checkbox" disabled>
+                    <label for="self" class="hidden checklabel">Your Entire Body</label>
+                </p>
+
+            <section id="comfort-level">
                 <h2>Background Information</h2>
                 <p>Move the slider until the below sentence agrees with you:
                 </p>
@@ -56,13 +94,13 @@
                     I have a strong aversion to being incinerated.
                 </p>
                 <p>Please choose the appropriate place to scatter your ashes:</p>
-                <select id="burial" name="burial" required>
+                <select id="burial" name="burial">
                     <option value="" hidden disabled selected>Select Location</option>
-                    <option class="burial-item" id="mountain-top" value="mountain-top">Pristine Mountain Top</option>
-                    <option class="burial-item" id="alleyway" value="alleyway">Depraved Alleyway</option>
-                    <option class="burial-item" id="ocean" value="ocean">Sparkling Ocean</option>
-                    <option class="burial-item" id="backyard" value="backyard">Your Backyard</option>
-                    <option class="burial-item" id="porch" value="porch">Your Ex's Porch</option>
+                    <option class="burial-item" id="mountain-top" value="Mountain">Pristine Mountain Top</option>
+                    <option class="burial-item" id="alleyway" value="Alleyway">Depraved Alleyway</option>
+                    <option class="burial-item" id="ocean" value="Ocean">Sparkling Ocean</option>
+                    <option class="burial-item" id="backyard" value="Backyard">Your Backyard</option>
+                    <option class="burial-item" id="porch" value="Porch">Your Ex's Porch</option>
                 </select>
             </section>
             <button id="submit">Submit Application!</button>

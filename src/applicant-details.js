@@ -1,18 +1,60 @@
 const getPackage = window.localStorage.getItem('job-applicant');
 const applicantArray = JSON.parse(getPackage);
-const lastApp = applicantArray.length - 1;
+const detailsNode = document.getElementById('return-form');
 const buttonNode = document.getElementById('return-home');
-const formValue = [
-    applicantArray[lastApp].name, 
-    applicantArray[lastApp].phone, 
-    applicantArray[lastApp].comfort, 
-    applicantArray[lastApp].burial
+
+const searchParams = new URLSearchParams(window.location.search);
+const appName = searchParams.get('name');
+let applicant = null;
+if(!getPackage) {
+    window.location = './';
+}
+
+for(let index = 0; index < applicantArray.length; index++) {
+    if(applicantArray[index].applicationNumber === parseInt(appName)){
+        applicant = applicantArray[index];
+        break;
+    }
+}
+const build = [
+    {
+        item: 'Name:',
+        value: applicant.name
+    },
+    {
+        item: 'Application ID Number',
+        value: applicant.applicationNumber
+    },
+    {
+        item: 'Phone Number:',
+        value: applicant.phone
+    },
+    {
+        item: 'Is a Pyromaniac:',
+        value: applicant.pyromaniac
+    },
+    {
+        item: 'Prefers to Burn:',
+        value: applicant.burnPreference
+    },
+    {
+        item: 'Level of Comfort with Immolation:', 
+        value: applicant.comfort
+    },
+    {
+        item: 'Preferred Burial Location:',
+        value: applicant.burial
+    }
 ];
 
-for(let index = 0; index < 4; index++) {
-    const form = document.getElementsByTagName('dd');
-    form[index].textContent = formValue[index];
-}
+for(let index = 0; index < build.length; index++) {
+    const td = document.createElement('td');
+    td.textContent = build[index].item;
+    const dd = document.createElement('dd');
+    dd.textContent = build[index].value;
+    detailsNode.appendChild(td);
+    detailsNode.appendChild(dd);
+}    
 
 buttonNode.addEventListener('click', function() {
     window.location = './index.html';
