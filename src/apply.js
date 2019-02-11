@@ -57,6 +57,7 @@ formNode.addEventListener('submit', function(event) {
         hours: hoursNode.value,
         genres: genreSelections
     };
+
     applicants.push(applicant);
 
     const applicantsJSON = JSON.stringify(applicants);
