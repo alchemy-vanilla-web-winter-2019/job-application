@@ -9,6 +9,14 @@ const noEmployedNode = document.getElementById('no');
 const salaryNode = document.getElementById('salary');
 const emailNode = document.getElementById('email');
 
+let applicants = [];
+
+const existingApplicantsJSON = window.localStorage.getItem('applicants');
+
+if(existingApplicantsJSON) {
+    applicants = JSON.parse(existingApplicantsJSON);
+}
+
 marriedNode.addEventListener('change', function() {
     if(marriedNode.checked) {
         statusNode.value = 'married';
@@ -58,9 +66,11 @@ formNode.addEventListener('submit', function(event) {
         email: emailNode.value
     };
 
-    const jsonApplicant = JSON.stringify(applicant);
+    applicants.push(applicant);
 
-    window.localStorage.setItem('applicant', jsonApplicant);
+    const jsonApplicants = JSON.stringify(applicants);
 
-    window.location = './applicant-details.html';
+    window.localStorage.setItem('applicants', jsonApplicants);
+
+    window.location = '../thank-you.html';
 });
