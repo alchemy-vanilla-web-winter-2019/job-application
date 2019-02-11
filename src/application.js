@@ -1,55 +1,51 @@
-const sliderDisplay = document.getElementById('slider-display');
-const slider = document.getElementsByName('curliness')[0];
-slider.addEventListener('change', function(event) {
-    event.preventDefault();
-    sliderDisplay.textContent = slider.value;
-});
+import getApplicantsInfo from './get-applicants-info.js';
 
 const form = document.getElementById('form');
+const slider = form.curliness;
+
+slider.addEventListener('change', function(event) {
+    event.preventDefault();
+    changeCurlinessDisplay(slider);
+});
+
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    const name = form.name.value;
-    const city = form.city.value;
-    const state = form.state.value;
-    const steak = form.steak.value;
+    storeObjectArray(makeObject(form));
+});
+
+// Changes the display for the slider
+function changeCurlinessDisplay(slider) {
+    const sliderDisplay = document.getElementById('slider-display');
+    sliderDisplay.textContent = slider.value;
+}
+
+// Creates the applicant object
+function makeObject(form) {
     const saladAll = form.salad;
-    const saladChosen = [];
+    const saladPreference = [];
     for(let i = 0; i < saladAll.length; i++) {
         if(saladAll[i].checked) {
-            saladChosen.push(saladAll[i].value);
+            saladPreference.push(saladAll[i].value);
         }
     }
-    const curliness = form.curliness.value;
-    
-    // Creates object called applicant
     const applicant = {
-        name: name,
-        address: {
-            city: city,
-            state: state
+        name: form.name.value,
+        location: {
+            city: form.city.value,
+            state: form.state.value
         },
-        steak: steak,
-        salad: saladChosen,
-        curliness: curliness
+        steak: form.steak.value,
+        salad: saladPreference,
+        curliness: form.curliness.value
     };
-    console.log(applicant);
+    return applicant;
+}
 
-    // Converts applicant object into JSON string
-    const serialize = JSON.stringify(applicant);
+// Stores new applicant object into applicants array
+function storeObjectArray(applicantObject) {
+    const applicantsObjectArray = getApplicantsInfo();
+    applicantsObjectArray.push(applicantObject);
+    window.localStorage.applicants = JSON.stringify(applicantsObjectArray);
     
-    // localStorange can't store objects or arrays properly
-    // window.localStorage.Name = name;
-    // window.localStorage.address = JSON.stringify(applicant.address);
-    // window.localStorage.steak = steak;
-    // window.localStorage.salad = JSON.stringify(applicant.salad);
-    // window.localStorage.curliness = curliness;
-    
-    // Stores the value of serialize under the key of applicant in localStorage
-    window.localStorage.setItem('applicant', serialize);
-
-    // This does the same thing
-    // window.localStorage.applicant = serialize;
-
-    // Changes page 
     window.location = 'thanks.html';
-});
+}
