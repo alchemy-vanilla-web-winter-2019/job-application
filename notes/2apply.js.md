@@ -27,7 +27,11 @@ yesEscapeNode.addEventListener('change', function() {
         }
         boredomNode.disabled = false;
         delusionalNode.disabled = false;
-        bowieNode.disabled = false;        
+        bowieNode.disabled = false;
+        
+        
+        
+        
     }
 });
 
@@ -70,9 +74,16 @@ userInputNode.addEventListener('submit', function(event) {
             
     };
 
-    allApplicants.push(applicant);
+    // store arrays in let variable
+
+    allApplicants.push(applicant); //adds info to the end of the array
    
     const applicantsJSON = JSON.stringify(allApplicants); 
     window.localStorage.setItem('applicants', applicantsJSON);
     window.location = './details-applicant.html';
+
+
+    largeNumbers = [100, 101, 102, 103,];
+    for
+
 });
