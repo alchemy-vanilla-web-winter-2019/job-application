@@ -21,10 +21,14 @@ form.addEventListener('submit', function(event){
     for(let i = 0; i < weaponAll.length; i++) {
         const weaponPref = weaponAll[i];
         if(weaponPref.checked) {
-            weaponSelect[i] = weaponPref.value;
-            // weaponPref.push(weaponAll.value)
+            // weaponSelect[i] = weaponPref.value;
+            weaponSelect.push(weaponPref.value);
         }
     }
+
+    // use to somehow grab users by when theyve submitted their application
+    let timeStamp = Date.now(); 
+
 
     const applicant = {
         name: name,
@@ -32,12 +36,21 @@ form.addEventListener('submit', function(event){
         state: state,
         prank: prank,
         weapon: weaponSelect,
-        slider: slider.value
+        slider: slider.value,
+        timeStamp: timeStamp
     };
-    // console.log(applicant);
+    console.log(applicant);
 
-    const serialize = JSON.stringify(applicant);
-    window.localStorage.setItem('applicant', serialize);
+    let applicants = [];
+    const jsonString = window.localStorage.getItem('applicants');
+
+    if(jsonString) {
+        applicants = JSON.parse(jsonString);
+    }
+
+    applicants.push(applicant);
+    const serialize = JSON.stringify(applicants);
+    window.localStorage.setItem('applicants', serialize);
     window.location = 'hello.html';
-
+    
 });

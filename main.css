@@ -2,24 +2,47 @@
     background: pink;
 }
 
+dt {
+    display: inline-block;
+    background: lightblue;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 40px;
+}
+
 #first-page {
     background: lightgoldenrodyellow;
+    display: inline-block;
+    text-align: center;
 }
 
 #form-page {
     background: lightcyan;
+    display: inline-block;
+    text-align: center;
+}
+
+fieldset {
+   border-radius: 10px;
 }
 
 #thanks-page {
     background: lightcoral;
+    display: inline-block;
+    text-align: center;
+}
+
+#all-applicants {
+    background: lightgoldenrodyellow;
+    display: inline-block;
+    text-align: center;
 }
 
 img {
     height: 250px;
 }
 
-dt {
-    display: inline-block;
+td {
     margin-left: 40px;
     padding: 10px;
     background: lightblue;
@@ -31,4 +54,19 @@ dt {
 
 button {
     background: lightgoldenrodyellow;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    background: lightskyblue;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.top-color {
+    background: lightseagreen;
 }
