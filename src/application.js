@@ -20,24 +20,42 @@ submit.addEventListener('submit', function() {
     const allOptions = submit.elements.options;
     const chosenOptions = [];
 
+
+    
+    
+    
     for(let i = 0; i < allOptions.length; i++) {
         const selected = allOptions[i];
         if(selected.checked) {
             chosenOptions.push(selected.value);
         }
     }
+    
+    let timestamp = Date.now();
+    console.log(timestamp);
 
-    const submittedApp = {
+    const applicant = {
         name: name,
         ssn: ssn,
         read: read,
         shorts: shorts,
         favoriteOptions: chosenOptions,
-        hateShortsAmmount: slider.value
+        hateShortsAmmount: slider.value,
+        timestamped: timestamp
     };
 
-    const serialize = JSON.stringify(submittedApp);
-    window.localStorage.setItem('applicant', serialize);
+    let allApplicants = [];
+    const jsonString = window.localStorage.getItem('allApplicants');
 
-    window.location = 'applicant-detail.html';
+    if(jsonString) {
+        allApplicants = JSON.parse(jsonString);
+    }
+
+    allApplicants.push(applicant);
+    const serialize = JSON.stringify(allApplicants);
+    window.localStorage.setItem('allApplicants', serialize);
+
+    window.location = 'thanks.html';
+
+
 });
