@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Application</title>
+</head>
+<body id="application-page">
+    <header>
+        <h1 id="application">Ridiculous Club Application</h1>
+    </header>
+    <main>
+        <form id="personal-info">
+            <section>
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </p>
+            <p>
+                <label for="nickname">Nickname:</label>
+                <input type="text" id="nickname">
+            </p>
+
+            <fieldset id="name-preference">
+                <legend name="name-preference">Of the above, which do you prefer?</legend>
+                    <label for="yes-name">Name</label>
+                    <input type="radio" name="names" value="name">
+                    <label for="yes-nickname">Nickname</label>
+                    <input type="radio" name="names" value="nickname">
+            </fieldset>
+
+            <fieldset id="pizza-toppings">
+                <legend name="pizza-toppings">Select your favorite pizza topping(s)</legend>
+                <label for="mushrooms">Mushrooms</label>
+                <input type="checkbox" name="topping" id="mushrooms" value="mushrooms">
+                <label for="pepperoni">Pepperoni</label>
+                <input type="checkbox" name="topping" id="pepperoni" value="pepperoni">
+                <label for="olives">Olives</label>
+                <input type="checkbox" name="topping" id="olives" value="olives">
+                <label for="anchovies">Anchovies</label>
+                <input type="checkbox" name="topping" id="anchovies" value="anchovies">
+                <label for="peppers">Peppers</label>
+                <input type="checkbox" name="topping" id="peppers" value="peppers">
+                <label for="onions">Onions</label>
+                <input type="checkbox" name="topping" id="onions" value="onions">
+                <label for="sausage">Sausage</label>
+                <input type="checkbox" name="topping" id="sausage" value="sausage">
+                <label for="artichoke">Artichoke</label>
+                <input type="checkbox" name="topping" id="artichoke" value="artichoke">
+                <label for="feta">Feta</label>
+                <input type="checkbox" name="topping" id="feta" value="feta">
+                <label for="spinach">Spinach</label>
+                <input type="checkbox" name="topping" id="spinach" value="spinach">
+            </fieldset>
+
+            <p>
+                <label for="communication">How do you prefer to communicate</label>
+                <select id="communication" name="communication">
+                    <option hidden disabled selected>select one method</option>
+                    <option value="snail-mail">snail mail</option>
+                    <option value="email">email</option>
+                    <option value="singing-telegram">singing telegram</option>
+                    <option value="carrier-pigeon">carrer pigeon</option>
+                    <option value="ill-communication">Ill Communication</option>
+                </select>
+            </p>
+            <p>
+                <label for="dachsund">If you had a dachsund, would you dress it up as a hotdog:</label>
+                <select id="dachsund" name="dachsund">
+                    <option hidden disabled selected>select an answer</option>
+                    <option value="yes">Yes, and there would be pictues</option>
+                    <option value="no">No, that is animal cruelty</option>
+                    <option value="confusion">What is a dachsund?</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="volume">On a scale of 1 - 10, how loud does this amp go?</label>
+                <input type="range" min="0" max="11" name="volume" id="volume">
+                <span id="volume-display"> </span>
+            </p>
+        </section>
+        <section>
+            <button id="submit">Submit Your Application</button>
+        </section>
+
+    </form>
+    </main>
+    <footer>
+        <p id="go-home">
+            Forget it, go 
+            <a href="index.html">HOME</a>
+        </p>
+    </footer>
+    <script type="module" src="src/index.js"></script>
+</body>
+</html>
