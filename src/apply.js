@@ -127,3 +127,4 @@ formNode.addEventListener('submit', function(event) {
     window.localStorage.setItem('last-visited', 'application');
     window.location = './application-detail.html?id=' + encodeURIComponent(applicant.id);
 });
+
