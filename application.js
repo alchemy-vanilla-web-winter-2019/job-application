@@ -24,6 +24,8 @@ addEventListener('submit', function(){
             pizzaPreference.push(choices.value);
         }
     }
+
+    let timestamp = Date.now();
     
     const appSubmission = {
         name: name,
@@ -31,11 +33,23 @@ addEventListener('submit', function(){
         position: position,
         availability: availability,
         curl: curlyRange.value,
-        pizza: pizzaPreference
-
+        pizza: pizzaPreference,
+        timesubmitted: timestamp
     };
+
+    let allApplicants = [];
+
+    const jsonString = window.localStorage.getItem('allApplicants');
+    if(jsonString){
+        allApplicants = JSON.parse(jsonString);
+    }
     
-    const serialize = JSON.stringify(appSubmission);
-    window.localStorage.setItem('appSubmission', serialize);
-    window.open('./app-review.html');
+    allApplicants.push(appSubmission);
+    
+    
+    console.log(appSubmission);
+
+    const serialize = JSON.stringify(allApplicants);
+    window.localStorage.setItem('allApplicants', serialize);
+    // window.open('./app-list.html');
 });
