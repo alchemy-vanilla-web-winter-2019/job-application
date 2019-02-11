@@ -1,116 +1,22 @@
-fieldset {
-    width: 600px;
-    background-color: rgb(204, 168, 238);
-    color: blue;
-    font-weight: bold;
-    font-size: 25px;
-    margin-top: 8px;
-}
-
-legend {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
+#links {
+    background: rgb(196, 76, 76);
     font-size: 30px;
-    background-color: rgb(173, 113, 230);
-    border: 1px solid white;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    padding: 10px;
 }
 
 #dweeb-image {
-    height: 200px;
-    display: flex;
-    justify-content: center;
+    height: 250;
 }
 
-#splash-dweeb-image {
+img {
     height: 250px;
-    display: flex;
-    justify-content: center;
 }
 
-#apply-link {
-    font-size: 60px;
-    text-align: center;
-    font-weight: bold;
-    background: white;
+legend {
+    font-size: 20px;
 }
 
-h1 {
-    background: rgb(235, 190, 13);
-    color: rgb(48, 157, 225);
-    text-align: center;
-    font-size: 70px;
-}
-
-#splash-page {
-    background-image: url("./assets/keep-calm-nerds.jpg");
-    background-size: 25%;
-}
-
-#thank-you-page {
-    background-image: url("./assets/terminator.jpg");
-    background-size: 25%;
-}
-
-#application-page {
-    background-image: url("./assets/keep-calm-nerds.jpg");
-    background-size: 25%;
-}
-
-#review-page {
-    background-image: url("./assets/keep-calm-nerds.jpg");
-    background-size: 25%;
-}
-
-input {
-    font-size: 15px;
-}
-
-button {
-    padding: 20px;
-    margin-top: 10px;
-    font-size: 30px;
-}
-
-#review-my-application {
-    top: 160px;
-    font-size: 60px;
-    width: 450px;
-    background: red;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-top: 150px;    
-}
-
-dl {
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);    
-    width: 1000px;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-dt {
-  position: relative;
-  font-size: 40px;  
-}
-
-dd {
-    position: relative;
-    left: 325px;;
-    font-size: 35px;
-    text-transform: capitalize;
-}
-
-#reapply {
-    font-size: 60px;
-    text-align: center;
-    margin-top: 60px;
+#apply {
+    font-size: 25px;
+    background: rgb(48, 116, 161);
 }

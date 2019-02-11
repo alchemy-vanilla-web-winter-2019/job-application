@@ -1,13 +1,12 @@
 const json = window.localStorage.getItem('allApplicants');
 
-let allApplicants = null;
+let allApplicants = [];
+
 if(json) {
     allApplicants = JSON.parse(json);
-} else {
-    allApplicants = [];
 }
 
-const tbody = document.getElementById('allApplicants');
+const tbody = document.getElementById('tbody');
 
 for(let i = 0; i < allApplicants.length; i++) {
     const applicant = allApplicants[i];
@@ -15,20 +14,19 @@ for(let i = 0; i < allApplicants.length; i++) {
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
-    nameCell.textContent = applicant.name;
+    const a = document.createElement('a');
+    a.href = 'review.html?name=' + encodeURIComponent(applicant.name);
+    a.textContent = applicant.name;
+    nameCell.appendChild(a);
     tr.appendChild(nameCell);
-
-    const placeOfOriginCell = document.createElement('td');
-    placeOfOriginCell.textContent = applicant.placeOfOrigin;
-    tr.appendChild(placeOfOriginCell);
+    
+    const realmCell = document.createElement('td');
+    realmCell.textContent = applicant.realm;
+    tr.appendChild(realmCell);
     
     const loyaltyCell = document.createElement('td');
     loyaltyCell.textContent = applicant.loyalty;
     tr.appendChild(loyaltyCell);
-
-
+    
     tbody.appendChild(tr);
 }
-
-
-
