@@ -8,11 +8,63 @@ const yearsExperienceQuestion = document.getElementById('years');
 const yesCertified = document.getElementById('yes-cert');
 const noCertified = document.getElementById('no-cert');
 const numberNode = document.getElementById('number');
+const cuddleTypesNode = document.getElementsByName('types[]');
 
 let applicants = [];
 const jsonApplicants = window.localStorage.getItem('applicants');
 if(jsonApplicants) {
     applicants = JSON.parse(jsonApplicants);
+}
+
+const len = applicants.length;
+let applicantId = null;
+
+const urlParams = new URLSearchParams(window.location.search);
+let updateIdxstr = urlParams.get('updateIndex');
+const updateIdx = Number(updateIdxstr);
+if(updateIdxstr) {
+    console.log('update applicant at index', updateIdx);
+    const updateApplicant = applicants[updateIdx];
+
+    //prepopulate fields
+    nameNode.value = updateApplicant.name;
+    cityNode.value = updateApplicant.city;
+    numberNode.value = updateApplicant.faveNumber;
+    if(updateApplicant.professional) {
+        yesCertified.checked = true;
+    }
+    else {
+        noCertified.checked = true;
+    }
+    if(updateApplicant.experience === '0') {
+        noExperience.checked = true;
+        yearsExperienceQuestion.classList.add('hidden');
+        yearsExperience.value = 0;
+        yearsExperience.disabled = true;
+        yearsExperience.required = false;
+    }
+    else {
+        yesExperience.checked = true;
+        yearsExperience.value = updateApplicant.experience;
+    }
+    for(let i = 0; i < updateApplicant.cuddles.length; i++){
+        const cuddle = updateApplicant.cuddles[i];
+        for(let k = 0; k < cuddleTypesNode.length; k++) {
+            const cuddleBox = cuddleTypesNode[k];
+            if(cuddleBox.value === cuddle) {
+                cuddleBox.checked = true;
+            }
+        }
+    }
+    
+    applicantId = updateApplicant.id;
+}
+else {
+    let previousId = 0;
+    if(len > 0) {
+        previousId = applicants[len - 1].id;
+    }
+    applicantId = previousId + 1;
 }
 
 
@@ -44,8 +96,6 @@ formNode.addEventListener('submit', function(event) {
     else if(noCertified.checked) {
         isCertified = false;
     }
-
-    const cuddleTypesNode = document.getElementsByName('types[]');
    
     let cuddleTypes = [];
     for(let i = 0; i < cuddleTypesNode.length; i++) {
@@ -54,18 +104,27 @@ formNode.addEventListener('submit', function(event) {
         }
     }
 
+    
     const applicant = {
         name: nameNode.value,
         city: cityNode.value,
         experience: yearsExperience.value, 
         professional: isCertified,
         cuddles: cuddleTypes,
-        faveNumber: numberNode.value
+        faveNumber: numberNode.value,
+        id: applicantId
     };
+    
+    if(!updateIdxstr) {
+        applicants.push(applicant);
+    }
+    else {
+        applicants[updateIdx] = applicant;
+    }
 
-    applicants.push(applicant);
     const applicantsJSON = JSON.stringify(applicants);
     window.localStorage.setItem('applicants', applicantsJSON);
-    window.location = './application-detail.html';
-
+    window.localStorage.setItem('last-visited', 'application');
+    window.location = './application-detail.html?id=' + encodeURIComponent(applicant.id);
 });
+

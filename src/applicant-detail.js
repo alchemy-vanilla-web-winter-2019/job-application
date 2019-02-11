@@ -8,7 +8,22 @@ else {
     window.location = './index.html';
 }
 
-const applicant = applicants[applicants.length - 1];
+let applicant = null;
+
+const urlParams = new URLSearchParams(window.location.search);
+let appId = urlParams.get('id');
+appId = Number(appId);
+
+for(let i = 0; i < applicants.length; i++) {
+    const currApplicant = applicants[i];
+    if(currApplicant.id === appId) {
+        applicant = currApplicant;
+        break;
+    }
+}
+if(applicant === null) {
+    window.location = './index.html';
+}
 
 const name = document.getElementById('name');
 const city = document.getElementById('city');
@@ -27,7 +42,7 @@ if(applicant.experience === '0') {
 else {
     experience.textContent = applicant.experience + ' years';
 }
-if(applicant.certified) {
+if(applicant.professional) {
     certified.textContent = 'yes';
 }
 else {
@@ -43,5 +58,14 @@ else {
     type.textContent += applicant.cuddles[applicant.cuddles.length - 1];
 }
 
-const msg = 'Thank you for applying, ' + applicant.name + '. If we are interested, you will be hearing from the Human Resources Department within 3 business days.';
-message.textContent = msg;
+
+const lastVisited = window.localStorage.getItem('last-visited');
+
+if(lastVisited === 'application') {
+    const msg = 'Thank you for applying, ' + applicant.name + '. If we are interested, you will be hearing from the Human Resources Department within 3 business days.';
+    message.textContent = msg;
+}
+else {
+    const msg = 'Application pending review';
+    message.textContent = msg;
+}
