@@ -1,14 +1,13 @@
 const applicantJSON = window.localStorage.getItem('applicant');
-if(!applicantJSON) {
-    document.location = '../index.html';
-}
+// if(!applicantJSON) {
+//     document.location = '../index.html';
+// }
 
 const applicants = JSON.parse(applicantJSON);
 
 const applicantsNode = document.getElementById('applicants');
 
 for(let index = 0; index < applicants.length; index++) {
-    console.log('hey');
     const applicant = applicants[index];
 
     const row = document.createElement('tr');
@@ -18,6 +17,9 @@ for(let index = 0; index < applicants.length; index++) {
     const philosophy = document.createElement('td');
     const morality = document.createElement('td');
     const salary = document.createElement('td');
+    const link = document.createElement('a');
+    link.target = 'blank';
+    link.href = 'applicant-details.html?name=' + encodeURIComponent(applicant.name);
 
     name.textContent = applicant.name;
     city.textContent = applicant.city;
@@ -26,7 +28,8 @@ for(let index = 0; index < applicants.length; index++) {
     morality.textContent = applicant.morality;
     salary.textContent = applicant.salary;
     
-    row.appendChild(name);
+    link.appendChild(name);
+    row.appendChild(link);
     row.appendChild(city);
     row.appendChild(skill);
     row.appendChild(philosophy);

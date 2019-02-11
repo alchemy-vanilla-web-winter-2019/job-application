@@ -1,7 +1,3 @@
-
-
-// console.log(applications);
-
 const applicationFormNode = document.getElementById('application-form');
 const nameNode = document.getElementById('name');
 const cityNode = document.getElementById('city');
@@ -66,6 +62,8 @@ applicationFormNode.addEventListener('submit', function() {
 
     window.localStorage.setItem('applicant', newApplicantJSON);
 
-    document.location = '/pages/application-review.html';
+    const urlSlug = '/pages/application-review.html?name=' + applicant.name;
+
+    document.location = urlSlug;
 });
 
