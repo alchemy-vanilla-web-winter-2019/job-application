@@ -2,14 +2,9 @@ h1 {
     font-family: monospace;
     background-color: #B4121D;
     color: white;
-    text-transform: uppercase;
 }
 
 main {
     font-family: monospace;
     font-size: 15px;
-}
-
-dd {
-    margin: 0;
 }
