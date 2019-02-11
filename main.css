@@ -1,0 +1,175 @@
+body {
+    color: teal;
+    background-color: blanchedalmond;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+}
+
+a {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+h1 {
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+h3 {
+    color: #b71946;
+}
+
+fieldset {
+    margin: 10px;
+    border-radius: 15px;
+}
+
+legend {
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+
+button, input {
+    background-color: aliceblue;
+    border-radius: 16px;
+    font-size: 15px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+select {
+    background-color: aliceblue;
+
+}
+
+#app-detail {
+    margin: auto;
+
+}
+
+dd, dt {
+    display: inline-block;
+    text-align: left;
+}
+
+dt {
+    text-decoration: underline;
+}
+
+table {
+    text-align: left;
+    border: 1px solid;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+    background-color: white;
+    opacity: 0.9;
+    color: teal;
+}
+
+thead {
+    text-decoration:underline;
+}
+
+td {
+    padding: 5px;
+}
+
+#welcome-page {
+    background: url(assets/halloween.jpg)no-repeat center center fixed;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover;    
+    -o-background-size: cover;     
+    background-size: cover;
+    color: white;
+}
+
+#welcome-prompt,
+#welcome {
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+#apply-prompt, 
+#welcome-links, 
+#review-applicant-links {
+    border: solid 1px white;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 10px;
+    opacity: 0.9;
+    border-radius: 10px;
+    color: purple;
+}
+
+#go-home {
+    border: solid 1px white;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    opacity: 0.9;
+    border-radius: 10px;
+    color: purple;
+}
+
+#review-applicants-page {
+    background: url(assets/90sWomen.jpg)no-repeat center center fixed;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover;    
+    -o-background-size: cover;     
+    background-size: cover;
+}
+ 
+#application-page {
+    background: url(assets/ticketStubs.jpg)no-repeat center center fixed;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover;    
+    -o-background-size: cover;     
+    background-size: cover;
+}
+
+#personal-info {
+    border: solid 1px white;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 10px;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+#application {
+    background-clip: border-box;
+    -webkit-text-fill-color: black;
+    background-image: url(assets/cactus.jpg);
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
