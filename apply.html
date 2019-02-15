@@ -15,44 +15,52 @@
         <fieldset>
             <legend>Personal Info:</legend>
             <p>
-                <label>Name:</label>
-                <input type="text" id="name" value="" name="name">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
             </p>
             <p>
-                <label>Email:</label>
-                <input type="email" id="email" value="">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
             </p>
             <p>
-                <label>Phone No.:</label>
-                <input type="tel" id="phone" value="">
+                <label for="phone">Phone No.:</label>
+                <input type="tel" id="phone" name="phone">
             </p>
         </fieldset>
         
         <fieldset>
             <legend>Gender:</legend>
             <p>
-                <label>Gender:</label>
-                <input type="text" id="gender" value="">
+                <input type="checkbox" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </p>
+            <p>
+                <input type="checkbox" id="male" name="gender" value="male">
+                <label for="male">Female</label>
+            </p>
+            <p>
+                <input type="checkbox" id="unicorn" name="gender" value="unicorn">
+                <label for="unicorn">Unicorn</label>
             </p>
         </fieldset>
 
         <fieldset>
-            <legend>Full time or Part time desired:</legend>
+            <legend>Schedule Desired:</legend>
             <p>
-                <input type="radio" id="full-time" name="full-part" value="">
-                <label>Full time</label>
+                <input type="radio" id="full-time" name="schedule" value="full-time">
+                <label for="radio">Full time</label>
             </p>
             <p>
-                <input type="radio" id="part-time" name="full-part" value="">
-                <label for="dewey">Part time</label>
+                <input type="radio" id="part-time" name="schedule" value="part-time">
+                <label for="part-time">Part time</label>
             </p>
         </fieldset>
 
         <fieldset>
             <legend>Position Applying For:</legend>
-            <label>Positions Available:</label>
-            <select id="positions-available">
-                <option value="">-Please choose a position-</option>
+            <label for="positions">Positions Available:</label>
+            <select id="positions" name="positions">
+                <option>-Please choose a position-</option>
                 <option value="front-end">Front-end Developer</option>
                 <option value="back-end">Back-end Developer</option>
                 <option value="full-stack">Full Stack Developer</option>
@@ -60,7 +68,9 @@
             </select>
         </fieldset>
 
-        <button type="submit">Submit</button>
+        <section>
+            <button>Submit</button>
+        </section>
     </form>
 
     <script type="module" src="./src/apply/apply.js"></script>
