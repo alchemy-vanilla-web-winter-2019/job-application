@@ -11,6 +11,14 @@ applicationForm.addEventListener('submit', function(event) { //2
     event.preventDefault();
 
     // CHECKBOXES
+    let genderChecked = [];
+    for(let i = 0; i < applicationForm.gender.length; i++) {
+        const gender = applicationForm.gender[i];
+        if(gender.checked) {
+            genderChecked.push(gender.value);
+        }
+    }
+    console.log(genderChecked);
 
 
 
@@ -19,10 +27,10 @@ applicationForm.addEventListener('submit', function(event) { //2
 
     // OBJECT
     const applicant = {
-        name: nameNode.value,
-        email: emailNode.value,
-        phone: phoneNode.value,
-        gender: genderNode.value
+        nameKey: nameNode.value,
+        emailKey: emailNode.value,
+        phoneKey: phoneNode.value,
+        genderKey: genderChecked
     };
 
     const serialized = JSON.stringify(applicant);
@@ -41,7 +49,7 @@ applicationForm.addEventListener('submit', function(event) { //2
     // 3a console.log
     // 3b repeat for email and phone
     // 4 create for loop for check boxes
-        // a. empty array to push checked into
+        // a. empty array to push checked into (outside of for loop)
         // b. exit condition in for loop needs to drill down into what you need to grab (gender.length)
         // c. variable to hold index of gender being looped 
         // d. conditional - if statement - if gender.checked then push gender to empty array
