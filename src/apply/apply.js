@@ -2,7 +2,6 @@ const applicationForm = document.getElementById('application-form'); //1
 const nameNode = document.getElementById('name'); //3
 const emailNode = document.getElementById('email'); //3
 const phoneNode = document.getElementById('phone'); //3
-const genderNode = document.getElementById('gender');
 const fullTimeNode = document.getElementById('full-time'); //5
 const partTimeNode = document.getElementById('part-time'); //5
 const positionsNode = document.getElementById('positions'); //7
@@ -11,16 +10,13 @@ applicationForm.addEventListener('submit', function(event) { //2
     event.preventDefault();
 
     // CHECKBOXES
-    let genderChecked = [];
-    for(let i = 0; i < applicationForm.gender.length; i++) {
-        const gender = applicationForm.gender[i];
-        if(gender.checked) {
-            genderChecked.push(gender.value);
+    let genderChecked = []; //4a
+    for(let i = 0; i < applicationForm.gender.length; i++) { //4b
+        const gender = applicationForm.gender[i]; //4c
+        if(gender.checked) { //4d
+            genderChecked.push(gender.value); //4d
         }
     }
-    console.log(genderChecked);
-
-
 
     // RADIO BUTTONS
 
