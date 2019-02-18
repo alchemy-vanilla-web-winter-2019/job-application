@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/apply/apply.css">
+    <title>Application Page</title>
+</head>
+
+<body>
+    <header><h1>Application Page Header</h1></header>
+    <p><a href="./index.html">Home</a></p>
+
+    <form id="application-form">
+        <fieldset>
+            <legend>Personal Info:</legend>
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </p>
+            <p>
+                <label for="phone">Phone No.:</label>
+                <input type="tel" id="phone" name="phone">
+            </p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Gender:</legend>
+            <p>
+                <input type="checkbox" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </p>
+            <p>
+                <input type="checkbox" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+            </p>
+            <p>
+                <input type="checkbox" id="unicorn" name="gender" value="unicorn">
+                <label for="unicorn">Unicorn</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Schedule Desired:</legend>
+            <p>
+                <input type="radio" id="full-time" name="schedule" value="full-time">
+                <label for="radio">Full time</label>
+            </p>
+            <p>
+                <input type="radio" id="part-time" name="schedule" value="part-time">
+                <label for="part-time">Part time</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Position Applying For:</legend>
+            <label for="positions">Positions Available:</label>
+            <select id="positions" name="positions">
+                <option>-Please choose a position-</option>
+                <option value="front-end">Front-end Developer</option>
+                <option value="back-end">Back-end Developer</option>
+                <option value="full-stack">Full Stack Developer</option>
+                <option value="devops">DevOps</option>
+            </select>
+        </fieldset>
+
+        <section>
+            <button>Submit</button>
+        </section>
+    </form>
+
+    <script type="module" src="./src/apply/apply.js"></script>
+</body>
+</html>
