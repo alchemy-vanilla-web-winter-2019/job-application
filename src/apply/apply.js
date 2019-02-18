@@ -14,7 +14,7 @@ applicationForm.addEventListener('submit', function(event) { //2
     for(let i = 0; i < applicationForm.gender.length; i++) { //4b
         const gender = applicationForm.gender[i]; //4c
         if(gender.checked) { //4d
-            genderChecked.push(gender.value); //4d
+            genderChecked.push(applicationForm.gender.value); //4d
         }
     }
 
@@ -33,12 +33,19 @@ applicationForm.addEventListener('submit', function(event) { //2
         emailKey: emailNode.value,
         phoneKey: phoneNode.value,
         genderKey: genderChecked,
-        scheduleKey: schedule,
+        scheduleKey: schedule.value,
         positionsKey: positionsNode.value
     };
 
-    const serialized = JSON.stringify(applicantObject);
-    window.localStorage.setItem('applicant', serialized);
+    const jsonApplicant = window.localStorage.getItem('applicant');
+    let applicants = [];
+    if(jsonApplicant) {
+        applicants = JSON.parse(jsonApplicant);
+    }
+    applicants.push(applicantObject);
 
-    // window.location = 'thanks.html'; //9
+    const serialized = JSON.stringify(applicants); //11
+    window.localStorage.setItem('applicant', serialized); //12
+
+    window.location = 'thanks.html'; //9
 });

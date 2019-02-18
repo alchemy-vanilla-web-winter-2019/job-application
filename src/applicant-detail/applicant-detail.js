@@ -1,12 +1,29 @@
-const name = document.getElementById('name');
-const email = document.getElementById('email');
-const phone = document.getElementById('phone');
-const gender = document.getElementById('gender');
+const nameDetailNode = document.getElementById('name');
+const emailDetailNode = document.getElementById('email');
+const phoneDetailNode = document.getElementById('phone');
+// const scheduleDetailNode = document.getElementById('schedule');
+const positionDetailNode = document.getElementById('position');
 
-const jsonObject = window.localStorage.getItem('applicant');
-const hydratedApplicant = JSON.parse(jsonObject);
+const jsonApplicant = window.localStorage.getItem('applicant');
 
-name.textContent = hydratedApplicant.name;
-email.textContent = hydratedApplicant.email;
-phone.textContent = hydratedApplicant.phone;
-gender.textContent = hydratedApplicant.gender;
+let applicantList = [];
+if(jsonApplicant) {
+    applicantList = JSON.parse(jsonApplicant);
+}
+
+const searchParamsList = new URLSearchParams(window.location.search);
+const nameToFind = searchParamsList.get('name');
+
+let applicantSelected = [];
+for(let i = 0; i < applicantList.length; i++) {
+    if(applicantList[i].name === nameToFind) {
+        applicantSelected = applicantList[i];
+        break;
+    }
+}
+
+nameDetailNode.textContent = applicantSelected.name;
+emailDetailNode.textContent = applicantSelected.email;
+phoneDetailNode.textContent = applicantSelected.phone;
+// scheduleDetailNode.textContent = applicantSelected.schedule.join(', ');
+positionDetailNode.textContent = applicantSelected.position;
