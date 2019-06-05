@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./css/apply.css">
+    <title>Apply !</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Live your Dream
+        </h1>
+    </header>
+    <main>
+        <section>
+            <p>
+            <a href="./index.html">Home</a>
+            </p>
+        </section>
+        <section>
+            <p class="bosser">
+                Become a Bosser Arounder: <br><br>
+                <a id="fill-form">Fill out the Form !</a>
+                <br>
+            </p>
+        </section>
+        <section>
+            <form id="app-form">
+                <p>
+                    <fieldset>
+                        <legend>
+                            Contact Details
+                        </legend>
+                        <label>
+                            Name: <br>
+                            <input id="name-input" type="text" name="appname" required>
+                        </label>
+                            <br>
+                        <label>
+                            Digits: <br>
+                            <input id="digits-input" type="tel" name="digits">
+                        </label>
+                            <br>
+                        <label>
+                            Email: <br>
+                            <input id="email-input" type="email" name="email">
+                        </label>
+                    </fieldset>
+                </p>
+                <p>
+                    <fieldset>
+                        <legend>
+                            Talk Boss to Us
+                        </legend>
+                            <p>
+                                Select All That Apply
+                                <br><br>
+                                <label>
+                                    <input type="checkbox" name="checkboxes" value="Demanding">Demanding
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="checkboxes" value="Impatient">Impatient
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="checkboxes" value="In Control">Being in Control
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Desired Salary: <br>
+                                    <select name="pay" id="pay" required>
+                                        <option value="$80,000 - $100,000">$80,000 - $100,00</option>
+                                        <option value="$100,000 - $200,000">$100,000 - $200,000</option>
+                                        <option value="$200,000 - $750,000">$200,00 - $750,000</option>
+                                    </select>
+                                </label>
+                            </p>
+                        </label>
+                    </fieldset>
+                </p>
+                <p>
+                    <label>
+                        <button id="submit" type="submit" name="submit" value="submit">
+                            Submit dat Boss
+                        </button>
+                    </label>
+                </p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+    <script type="module" src="./src/apply.js"></script>
+</body>
+</html>
